@@ -1,87 +1,1713 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Lee &amp; Price &mdash; Prospect Audit</title>
-        <style>
-            * { box-sizing: border-box; margin: 0; padding: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lian Price — Full Business Audit | IFCA 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:        #1E3A5F;
+  --navy-dark:   #0B1A2B;
+  --navy-mid:    #142845;
+  --navy-card:   rgba(20,40,69,0.6);
+  --orange:      #E87722;
+  --orange-dim:  rgba(232,119,34,0.12);
+  --orange-glow: rgba(232,119,34,0.22);
+  --blue-mid:    #4A7FA5;
+  --blue-dim:    rgba(74,127,165,0.12);
+  --blue-light:  #D6E4F0;
+  --gray-400:    #94A3B8;
+  --gray-500:    #64748B;
+  --gray-600:    #475569;
+  --green:       #22C55E;
+  --green-bg:    rgba(34,197,94,0.10);
+  --red:         #DC2626;
+  --red-bg:      rgba(220,38,38,0.09);
+  --yellow:      #F59E0B;
+  --yellow-bg:   rgba(245,158,11,0.10);
+  --purple:      #8B5CF6;
+  --purple-bg:   rgba(139,92,246,0.10);
+}
 
-                body {
-                      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-                            background: #f4f6f9;
-                                  color: #1a1a2e;
-                                        min-height: 100vh;
-                                            }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
-                                                header {
-                                                      background: #1a1a2e;
-                                                            color: #fff;
-                                                                  padding: 48px 32px 40px;
-                                                                        text-align: center;
-                                                                            }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--navy-dark);
+  color: #fff;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
 
-                                                                                header a {
-                                                                                      display: inline-block;
-                                                                                            margin-bottom: 16px;
-                                                                                                  font-size: 0.85rem;
-                                                                                                        color: #a0aec0;
-                                                                                                              text-decoration: none;
-                                                                                                                  }
-                                                                                                                  
-                                                                                                                      header a:hover { color: #fff; }
-                                                                                                                      
-                                                                                                                          header h1 {
-                                                                                                                                font-size: 2rem;
-                                                                                                                                      font-weight: 700;
-                                                                                                                                            margin-bottom: 8px;
-                                                                                                                                                }
-                                                                                                                                                
-                                                                                                                                                    header p {
-                                                                                                                                                          font-size: 1rem;
-                                                                                                                                                                color: #a0aec0;
-                                                                                                                                                                    }
-                                                                                                                                                                    
-                                                                                                                                                                        main {
-                                                                                                                                                                              max-width: 860px;
-                                                                                                                                                                                    margin: 48px auto;
-                                                                                                                                                                                          padding: 0 24px;
-                                                                                                                                                                                              }
-                                                                                                                                                                                              
-                                                                                                                                                                                                  .placeholder {
-                                                                                                                                                                                                        background: #fff;
-                                                                                                                                                                                                              border: 1px dashed #cbd5e0;
-                                                                                                                                                                                                                    border-radius: 10px;
-                                                                                                                                                                                                                          padding: 60px 32px;
-                                                                                                                                                                                                                                text-align: center;
-                                                                                                                                                                                                                                      color: #a0aec0;
-                                                                                                                                                                                                                                          }
-                                                                                                                                                                                                                                          
-                                                                                                                                                                                                                                              .placeholder h2 {
-                                                                                                                                                                                                                                                    font-size: 1.3rem;
-                                                                                                                                                                                                                                                          color: #718096;
-                                                                                                                                                                                                                                                                margin-bottom: 10px;
-                                                                                                                                                                                                                                                                    }
-                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                        .placeholder p {
-                                                                                                                                                                                                                                                                              font-size: 0.95rem;
-                                                                                                                                                                                                                                                                                  }
-                                                                                                                                                                                                                                                                                    </style>
-                                                                                                                                                                                                                                                                                    </head>
-                                                                                                                                                                                                                                                                                    <body>
-                                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                      <header>
-                                                                                                                                                                                                                                                                                          <a href="../index.html">&larr; Back to Prospect Audits</a>
-                                                                                                                                                                                                                                                                                              <h1>Lee &amp; Price</h1>
-                                                                                                                                                                                                                                                                                                  <p>Prospect Audit</p>
-                                                                                                                                                                                                                                                                                                    </header>
-                                                                                                                                                                                                                                                                                                    
-                                                                                                                                                                                                                                                                                                      <main>
-                                                                                                                                                                                                                                                                                                          <div class="placeholder">
-                                                                                                                                                                                                                                                                                                                <h2>Audit Coming Soon</h2>
-                                                                                                                                                                                                                                                                                                                      <p>This page will contain the full audit report for Lee &amp; Price.</p>
-                                                                                                                                                                                                                                                                                                                          </div>
-                                                                                                                                                                                                                                                                                                                            </main>
-                                                                                                                                                                                                                                                                                                                            
-                                                                                                                                                                                                                                                                                                                            </body>
-                                                                                                                                                                                                                                                                                                                            </html>
+body::before {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+body::after {
+  content: '';
+  position: fixed; inset: 0; pointer-events: none; z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 5% 5%, rgba(74,127,165,.09) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 50% at 95% 95%, rgba(232,119,34,.06) 0%, transparent 55%);
+}
+
+.page {
+  position: relative; z-index: 1;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px 120px;
+}
+
+/* TOP-LEVEL TAB SWITCHER */
+.tab-bar {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(11,26,43,.97);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(255,255,255,.09);
+  padding: 0 24px;
+  margin: 0 -24px;
+  display: flex; align-items: center; gap: 0;
+}
+.tab-btn {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  letter-spacing: .12em; text-transform: uppercase;
+  padding: 16px 24px; cursor: pointer;
+  background: transparent; border: none;
+  color: var(--gray-500);
+  border-bottom: 2px solid transparent;
+  transition: color .18s, border-color .18s;
+  white-space: nowrap;
+}
+.tab-btn:hover { color: rgba(255,255,255,.7); }
+.tab-btn.active { color: var(--orange); border-bottom-color: var(--orange); }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* HERO */
+.hero {
+  padding: 60px 0 52px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.hero-eyebrow {
+  font-family: 'DM Mono', monospace; font-size: 11px;
+  letter-spacing: .2em; color: var(--orange);
+  text-transform: uppercase; margin-bottom: 16px;
+  display: flex; align-items: center; gap: 12px;
+}
+.hero-eyebrow::before { content: ''; width: 32px; height: 2px; background: var(--orange); border-radius: 1px; }
+
+.hero-name {
+  font-family: 'Bebas Neue'; font-size: clamp(52px, 8vw, 96px);
+  line-height: .88; letter-spacing: .02em; color: #fff;
+  margin-bottom: 6px;
+}
+.hero-name span { color: var(--orange); }
+
+.hero-title {
+  font-family: 'DM Mono', monospace; font-size: 14px;
+  letter-spacing: .08em; color: rgba(255,255,255,.4);
+  text-transform: uppercase; margin-bottom: 28px;
+}
+
+.hero-stats {
+  display: flex; gap: 0; margin-bottom: 32px;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 14px; overflow: hidden;
+}
+
+.hs { flex: 1; padding: 20px 24px; border-right: 1px solid rgba(255,255,255,.06); }
+.hs:last-child { border-right: none; }
+.hs-val { font-family: 'Bebas Neue'; font-size: 40px; line-height: 1; margin-bottom: 4px; }
+.hs-val.orange { color: var(--orange); }
+.hs-val.green  { color: var(--green); }
+.hs-val.blue   { color: #7ABFDD; }
+.hs-val.white  { color: #fff; }
+.hs-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-500); }
+
+.hero-summary {
+  font-size: 15px; color: rgba(255,255,255,.65);
+  line-height: 1.7; max-width: 720px;
+  border-left: 3px solid var(--orange);
+  padding-left: 20px;
+}
+.hero-summary strong { color: rgba(255,255,255,.9); }
+
+/* NAV */
+.doc-nav {
+  position: sticky; top: 49px; z-index: 50;
+  background: rgba(11,26,43,.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  padding: 0;
+  margin: 0 -24px;
+}
+.doc-nav-inner {
+  max-width: 1080px; margin: 0 auto;
+  padding: 0 24px;
+  display: flex; align-items: center; gap: 4px; overflow-x: auto;
+  scrollbar-width: none;
+}
+.doc-nav-inner::-webkit-scrollbar { display: none; }
+.nav-link {
+  font-family: 'DM Mono', monospace; font-size: 10px;
+  letter-spacing: .1em; text-transform: uppercase;
+  padding: 14px 16px; white-space: nowrap;
+  color: var(--gray-500); text-decoration: none;
+  border-bottom: 2px solid transparent;
+  transition: color .18s, border-color .18s;
+}
+.nav-link:hover { color: rgba(255,255,255,.7); }
+.nav-link.active { color: var(--orange); border-bottom-color: var(--orange); }
+
+/* SECTIONS */
+.doc-section { padding: 56px 0 0; }
+.sec-eyebrow { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .18em; color: var(--orange); text-transform: uppercase; margin-bottom: 8px; }
+.sec-heading { font-family: 'Bebas Neue'; font-size: clamp(30px,4vw,44px); line-height: .95; letter-spacing: .02em; color: #fff; margin-bottom: 24px; }
+.sec-divider { height: 1px; background: rgba(255,255,255,.07); margin-bottom: 28px; }
+
+/* CARDS */
+.card { background: rgba(255,255,255,.03); border: 1px solid rgba(255,255,255,.07); border-radius: 14px; padding: 22px 24px; }
+.card.orange-left { border-left: 3px solid var(--orange); border-radius: 0 14px 14px 0; background: var(--orange-dim); }
+.card.green-left  { border-left: 3px solid var(--green);  border-radius: 0 14px 14px 0; background: var(--green-bg); }
+.card.red-left    { border-left: 3px solid var(--red);    border-radius: 0 14px 14px 0; background: var(--red-bg); }
+.card.yellow-left { border-left: 3px solid var(--yellow); border-radius: 0 14px 14px 0; background: var(--yellow-bg); }
+.card.blue-left   { border-left: 3px solid var(--blue-mid); border-radius: 0 14px 14px 0; background: var(--blue-dim); }
+
+/* GRIDS */
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.grid-4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+@media(max-width:720px){ .grid-2, .grid-3, .grid-4 { grid-template-columns: 1fr; } .hero-stats { flex-direction: column; } .hs { border-right: none; border-bottom: 1px solid rgba(255,255,255,.06); } .hs:last-child { border-bottom: none; } }
+@media(max-width:900px){ .grid-3 { grid-template-columns: 1fr 1fr; } .grid-4 { grid-template-columns: 1fr 1fr; } }
+
+/* WIN CARDS */
+.win-card { background: var(--green-bg); border: 1px solid rgba(34,197,94,.2); border-radius: 12px; padding: 18px; display: flex; align-items: flex-start; gap: 12px; }
+.win-icon { font-size: 20px; flex-shrink: 0; padding-top: 2px; }
+.win-label { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; color: var(--green); margin-bottom: 4px; }
+.win-desc  { font-size: 13px; color: rgba(255,255,255,.65); line-height: 1.55; }
+
+/* PERIOD SWITCHER */
+.period-bar { display: flex; align-items: center; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+.period-bar-label { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .1em; text-transform: uppercase; color: var(--gray-500); }
+.period-tabs { display: flex; gap: 4px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 10px; padding: 4px; }
+.pt { font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .06em; text-transform: uppercase; padding: 7px 14px; border-radius: 7px; border: none; background: transparent; color: var(--gray-500); cursor: pointer; transition: all .18s; }
+.pt.active { background: var(--navy-mid); color: #fff; }
+.pt:hover:not(.active) { color: rgba(255,255,255,.6); }
+.edit-btn { margin-left: auto; background: var(--orange-dim); border: 1px solid rgba(232,119,34,.3); border-radius: 8px; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--orange); cursor: pointer; transition: all .18s; }
+.edit-btn:hover { background: var(--orange-glow); }
+.edit-btn.on { background: var(--orange); color: #fff; }
+
+/* KPI BAND */
+.kpi-band { display: grid; grid-template-columns: repeat(5,1fr); gap: 10px; margin-bottom: 20px; }
+@media(max-width:700px){ .kpi-band { grid-template-columns: 1fr 1fr; } }
+.kpi-chip { background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); border-radius: 12px; padding: 14px 16px; position: relative; overflow: hidden; }
+.kpi-chip::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; border-radius:12px 12px 0 0; }
+.kpi-chip.pass::before { background: var(--green); }
+.kpi-chip.warn::before { background: var(--yellow); }
+.kpi-chip.fail::before { background: var(--red); }
+.kpi-chip.info::before { background: var(--blue-mid); }
+.chip-label { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); margin-bottom:5px; line-height:1.4; }
+.chip-val   { font-family:'Bebas Neue'; font-size:30px; line-height:1; margin-bottom:3px; }
+.kpi-chip.pass .chip-val { color: var(--green); }
+.kpi-chip.warn .chip-val { color: var(--yellow); }
+.kpi-chip.fail .chip-val { color: #F87171; }
+.kpi-chip.info .chip-val { color: #7ABFDD; }
+.chip-target { font-family:'DM Mono',monospace; font-size:10px; color:var(--gray-500); }
+
+/* METRICS TABLE */
+.tbl-wrap { background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07); border-radius: 14px; overflow: hidden; margin-bottom: 16px; }
+.mtbl { width:100%; border-collapse:collapse; }
+.mtbl thead tr { background:rgba(255,255,255,.03); }
+.mtbl th { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); padding:10px 14px; text-align:left; border-bottom:1px solid rgba(255,255,255,.06); white-space:nowrap; }
+.mtbl td { padding:12px 14px; font-size:13px; color:rgba(255,255,255,.7); border-bottom:1px solid rgba(255,255,255,.04); vertical-align:middle; }
+.mtbl tbody tr:last-child td { border-bottom:none; }
+.mtbl tbody tr:hover td { background:rgba(255,255,255,.02); }
+.m-name   { font-size:13px; color:rgba(255,255,255,.85); }
+.m-target { font-family:'DM Mono',monospace; font-size:11px; color:var(--gray-500); }
+.m-val    { font-family:'Bebas Neue'; font-size:22px; line-height:1; }
+.m-val.pass { color:var(--green); }
+.m-val.warn { color:var(--yellow); }
+.m-val.fail { color:#F87171; }
+.m-val.info { color:#7ABFDD; }
+.badge { font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.08em; text-transform:uppercase; padding:3px 9px; border-radius:4px; white-space:nowrap; }
+.badge.pass { background:var(--green-bg); color:var(--green); border:1px solid rgba(34,197,94,.25); }
+.badge.warn { background:var(--yellow-bg); color:var(--yellow); border:1px solid rgba(245,158,11,.25); }
+.badge.fail { background:var(--red-bg); color:#F87171; border:1px solid rgba(220,38,38,.25); }
+.badge.info { background:var(--blue-dim); color:#7ABFDD; border:1px solid rgba(74,127,165,.3); }
+.m-note { font-size:11px; color:var(--gray-500); line-height:1.5; max-width:200px; }
+.edit-input { background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.09); border-radius:7px; padding:6px 10px; font-family:'DM Mono',monospace; font-size:13px; color:#fff; outline:none; width:110px; transition:border-color .18s; -moz-appearance:textfield; }
+.edit-input::-webkit-inner-spin-button { -webkit-appearance:none; }
+.edit-input:focus { border-color:rgba(232,119,34,.5); background:rgba(232,119,34,.06); }
+
+/* AUDIT TABLES */
+.audit-table-wrap { background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07); border-radius: 14px; overflow: hidden; }
+.audit-tbl { width:100%; border-collapse:collapse; }
+.audit-tbl th { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); padding:10px 14px; text-align:left; background:rgba(255,255,255,.03); border-bottom:1px solid rgba(255,255,255,.06); }
+.audit-tbl td { padding:12px 14px; font-size:13px; color:rgba(255,255,255,.65); border-bottom:1px solid rgba(255,255,255,.04); vertical-align:top; line-height:1.5; }
+.audit-tbl tbody tr:last-child td { border-bottom:none; }
+.audit-tbl td strong { color:rgba(255,255,255,.9); }
+
+.gap-pill { display:inline-block; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.06em; text-transform:uppercase; padding:2px 8px; border-radius:4px; margin:2px 3px 2px 0; }
+.gap-pill.missing    { background:var(--red-bg); color:#F87171; border:1px solid rgba(220,38,38,.2); }
+.gap-pill.opportunity{ background:var(--green-bg); color:var(--green); border:1px solid rgba(34,197,94,.2); }
+.gap-pill.warn       { background:var(--yellow-bg); color:var(--yellow); border:1px solid rgba(245,158,11,.2); }
+
+/* REV EQUILIBRIUM */
+.eq-box { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:12px; padding:18px 20px; }
+.eq-b-val { font-family:'Bebas Neue'; font-size:36px; color:#fff; line-height:1; }
+.eq-b-val.green  { color: var(--green); }
+.eq-b-val.orange { color: var(--orange); }
+.eq-b-val.yellow { color: var(--yellow); }
+.eq-b-label { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-500); margin-top:3px; }
+.eq-b-sub  { font-size:11px; color:var(--gray-500); }
+.eq-vs { font-family:'Bebas Neue'; font-size:32px; color:rgba(255,255,255,.18); text-align:center; }
+.eq-verdict { padding:15px 18px; border-radius:10px; font-size:13px; line-height:1.65; }
+.eq-verdict.building { background:var(--green-bg); border:1px solid rgba(34,197,94,.25); color:var(--green); }
+.eq-verdict.eroding  { background:var(--red-bg); border:1px solid rgba(220,38,38,.25); color:#F87171; }
+.eq-verdict.flat     { background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); color:var(--gray-400); }
+
+/* DIAGNOSIS */
+.diag-list { display:flex; flex-direction:column; gap:10px; }
+.diag-card { background:rgba(255,255,255,.03); border:1px solid rgba(255,255,255,.07); border-radius:12px; padding:20px 22px; }
+.diag-card.p1 { border-left:3px solid var(--red); background:var(--red-bg); }
+.diag-card.p2 { border-left:3px solid var(--orange); background:var(--orange-dim); }
+.diag-card.p3 { border-left:3px solid var(--yellow); background:var(--yellow-bg); }
+.diag-card.ok { border-left:3px solid var(--green); background:var(--green-bg); }
+.diag-rank { font-family:'Bebas Neue'; font-size:13px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:5px; }
+.diag-card.p1 .diag-rank { color:#F87171; }
+.diag-card.p2 .diag-rank { color:var(--orange); }
+.diag-card.p3 .diag-rank { color:var(--yellow); }
+.diag-card.ok .diag-rank { color:var(--green); }
+.diag-title { font-size:15px; font-weight:600; color:rgba(255,255,255,.92); margin-bottom:6px; }
+.diag-body  { font-size:13px; color:rgba(255,255,255,.6); line-height:1.65; }
+.diag-fix   { font-size:12px; color:rgba(255,255,255,.5); margin-top:8px; padding-top:8px; border-top:1px solid rgba(255,255,255,.06); line-height:1.55; }
+.diag-fix strong { color:rgba(255,255,255,.7); }
+
+/* 90-DAY PLAN */
+.plan-list { display:flex; flex-direction:column; gap:12px; }
+.plan-item { display:flex; align-items:flex-start; gap:16px; background:rgba(255,255,255,.025); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:20px; }
+.plan-num  { font-family:'Bebas Neue'; font-size:28px; color:var(--orange); line-height:1; flex-shrink:0; width:28px; }
+.plan-title { font-size:15px; font-weight:600; color:rgba(255,255,255,.9); margin-bottom:6px; }
+.plan-desc  { font-size:13px; color:rgba(255,255,255,.6); line-height:1.65; }
+.plan-tag { display:inline-block; font-family:'DM Mono',monospace; font-size:9px; letter-spacing:.08em; text-transform:uppercase; padding:2px 8px; border-radius:4px; margin-top:8px; margin-right:4px; }
+.plan-tag.ads      { background:var(--orange-dim); color:var(--orange); border:1px solid rgba(232,119,34,.25); }
+.plan-tag.sales    { background:var(--green-bg); color:var(--green); border:1px solid rgba(34,197,94,.2); }
+.plan-tag.ops      { background:var(--blue-dim); color:#7ABFDD; border:1px solid rgba(74,127,165,.25); }
+.plan-tag.creative { background:var(--purple-bg); color:#c4b5fd; border:1px solid rgba(139,92,246,.2); }
+
+/* SOCIAL AUDIT SPECIFIC */
+.social-hero { padding: 48px 0 40px; border-bottom: 1px solid rgba(255,255,255,.07); }
+.platform-tabs { display:flex; gap:8px; margin-bottom: 28px; flex-wrap:wrap; }
+.plat-badge { display:inline-flex; align-items:center; gap:6px; font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; text-transform:uppercase; padding:6px 14px; border-radius:8px; }
+.plat-badge.ig  { background:var(--orange-dim); color:var(--orange); border:1px solid rgba(232,119,34,.3); }
+.plat-badge.tt  { background:var(--purple-bg); color:#c4b5fd; border:1px solid rgba(139,92,246,.25); }
+.plat-badge.fb  { background:var(--blue-dim); color:#7ABFDD; border:1px solid rgba(74,127,165,.25); }
+
+.strengths-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; }
+@media(max-width:720px){ .strengths-grid { grid-template-columns:1fr; } }
+.strength-item { background:rgba(34,197,94,.06); border:1px solid rgba(34,197,94,.15); border-radius:10px; padding:16px; }
+.strength-num  { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; color:var(--green); margin-bottom:4px; }
+.strength-title { font-size:14px; font-weight:600; color:rgba(255,255,255,.88); margin-bottom:4px; }
+.strength-body  { font-size:12px; color:rgba(255,255,255,.55); line-height:1.55; }
+
+.gap-item  { background:var(--red-bg); border:1px solid rgba(220,38,38,.15); border-radius:10px; padding:16px; }
+.gap-num   { font-family:'DM Mono',monospace; font-size:10px; letter-spacing:.1em; color:#F87171; margin-bottom:4px; }
+.gap-title { font-size:14px; font-weight:600; color:rgba(255,255,255,.88); margin-bottom:4px; }
+.gap-body  { font-size:12px; color:rgba(255,255,255,.55); line-height:1.55; }
+
+.hook-row-before { color:rgba(255,255,255,.45); font-style:italic; }
+.hook-row-after  { color:rgba(255,255,255,.85); }
+
+/* FOOTER */
+.doc-footer { margin-top:80px; padding:32px 0 0; border-top:1px solid rgba(255,255,255,.07); display:flex; align-items:center; justify-content:space-between; gap:12px; flex-wrap:wrap; }
+.df-brand { font-family:'Bebas Neue'; font-size:20px; letter-spacing:.08em; color:rgba(255,255,255,.2); }
+.df-brand span { color:rgba(232,119,34,.5); }
+.df-note  { font-family:'DM Mono',monospace; font-size:10px; color:rgba(255,255,255,.15); letter-spacing:.05em; }
+
+/* UTILITY */
+p { font-size:14px; color:rgba(255,255,255,.65); line-height:1.7; }
+p + p { margin-top:10px; }
+strong { color:rgba(255,255,255,.85); }
+em { color:var(--orange); font-style:normal; }
+.mt-sm { margin-top:12px; }
+.mt-md { margin-top:20px; }
+.mt-lg { margin-top:32px; }
+.mb-sm { margin-bottom:12px; }
+.mb-md { margin-bottom:20px; }
+.gap-sm { gap:10px; }
+.gap-md { gap:16px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- TOP TAB BAR -->
+<div class="tab-bar">
+  <button class="tab-btn active" onclick="switchTab('biz',this)">📊 Business Audit</button>
+  <button class="tab-btn" onclick="switchTab('social',this)">📱 Social Media Growth Audit</button>
+</div>
+
+<!-- ============================================================ -->
+<!-- TAB 1: FULL BUSINESS AUDIT -->
+<!-- ============================================================ -->
+<div id="tab-biz" class="tab-panel active">
+
+<!-- HERO -->
+<section class="hero" id="overview">
+  <div class="hero-eyebrow">IFCA · Full Business Audit · March 2026</div>
+  <div class="hero-name">LIAN <span>PRICE</span></div>
+  <div class="hero-title">@lianprice &nbsp;·&nbsp; L3 Method™ &nbsp;·&nbsp; Women's Metabolic &amp; Hormonal Fat Loss</div>
+
+  <div class="hero-stats">
+    <div class="hs">
+      <div class="hs-val orange">$22K</div>
+      <div class="hs-label">Avg Monthly Rev</div>
+    </div>
+    <div class="hs">
+      <div class="hs-val green">$5–$6</div>
+      <div class="hs-label">Q1 Avg CPL</div>
+    </div>
+    <div class="hs">
+      <div class="hs-val blue">47%</div>
+      <div class="hs-label">Q1 Avg Close Rate</div>
+    </div>
+    <div class="hs">
+      <div class="hs-val orange">~$3K</div>
+      <div class="hs-label">Backend MRR</div>
+    </div>
+    <div class="hs">
+      <div class="hs-val white">17 YRS</div>
+      <div class="hs-label">Coaching Experience</div>
+    </div>
+  </div>
+
+  <div class="hero-summary">
+    Lian Price is a technically functional operator with a genuinely strong close rate (40–54% when live) and healthy CPL ($5–$6), running a $22K/month business that <strong>should be a $40K+ business right now.</strong> The entire revenue gap lives in a single broken conversion layer between lead and live call: a 2–4% lead-to-book rate and a 35–44% show rate — both critically below target. Her CPL is excellent. Her close rate is excellent. The funnel between those two metrics is <strong>the only thing that matters right now</strong>, and it's fixable in 30 days without increasing ad spend.
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="doc-nav">
+  <div class="doc-nav-inner">
+    <a href="#overview"    class="nav-link active">Overview</a>
+    <a href="#working"     class="nav-link">What's Working</a>
+    <a href="#data"        class="nav-link">Data Snapshot</a>
+    <a href="#equilibrium" class="nav-link">Rev Equilibrium</a>
+    <a href="#creative"    class="nav-link">Creative Intel</a>
+    <a href="#diagnosis"   class="nav-link">Constraints</a>
+    <a href="#plan"        class="nav-link">90-Day Plan</a>
+  </div>
+</nav>
+
+<!-- WHAT'S WORKING -->
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div>
+  <div class="sec-heading">What's Working</div>
+  <div class="sec-divider"></div>
+  <div class="grid-2 gap-md">
+
+    <div class="win-card">
+      <div class="win-icon">🎯</div>
+      <div>
+        <div class="win-label">$5–$6 CPL — Well Below Target</div>
+        <div class="win-desc">Lian generates 700–900 leads per month at $5–$6 CPL against an IFCA target of &lt;$10. The lead machine is running clean. This is not the constraint. The ad creative is working — the problem is entirely downstream.</div>
+      </div>
+    </div>
+
+    <div class="win-card">
+      <div class="win-icon">📞</div>
+      <div>
+        <div class="win-label">40–54% Close Rate on Live Calls — Elite</div>
+        <div class="win-desc">When qualified prospects show up, Lian closes at 40–54%. This is above the IFCA 30–45% benchmark. The sales skill and offer resonance are both proven. This is categorically not a closing problem — it's a show-rate problem.</div>
+      </div>
+    </div>
+
+    <div class="win-card">
+      <div class="win-icon">🏗️</div>
+      <div>
+        <div class="win-label">Full Team Infrastructure — Setter, CSM, Ops, App</div>
+        <div class="win-desc">Lian operates with a setter, a client success manager, an operations manager, and a proprietary app. This is a delivery infrastructure most coaches at $22K/month haven't built. The ceiling isn't team capacity — it's call volume.</div>
+      </div>
+    </div>
+
+    <div class="win-card">
+      <div class="win-icon">💎</div>
+      <div>
+        <div class="win-label">Named Mechanism + 17 Years Coaching Authority</div>
+        <div class="win-desc">The L3 Method™ (Lose the Last Layer) is planted in the brand architecture — name field, bio, highlight covers, hashtags. Combined with 17 years of experience and 1,100+ women coached, Lian's credibility depth is rare at this follower count.</div>
+      </div>
+    </div>
+
+    <div class="win-card">
+      <div class="win-icon">🔁</div>
+      <div>
+        <div class="win-label">Comment Trigger DM Automation — Active &amp; Converting</div>
+        <div class="win-desc">Lian is running "COMMENT Begin" DM automation on reels with confirmed trigger activity (commenters triggering the flow). The infrastructure is correct. The front-end hook quality and post-booking education layer are the weak links — not the mechanic.</div>
+      </div>
+    </div>
+
+    <div class="win-card">
+      <div class="win-icon">💰</div>
+      <div>
+        <div class="win-label">Backend Alumni Program Already Exists</div>
+        <div class="win-desc">A $392/month alumni coaching program is live and generating ~$3,000 MRR. The asset exists. It's being self-capped at 10 clients. Once the assistant coach hire clears the calendar, this is a $10K+/month compounding MRR lever waiting to be unlocked.</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DATA SNAPSHOT -->
+<section class="doc-section" id="data">
+  <div class="sec-eyebrow">Section 02</div>
+  <div class="sec-heading">Data Snapshot — Q1 2026</div>
+  <div class="sec-divider"></div>
+
+  <div class="period-bar">
+    <span class="period-bar-label">Period</span>
+    <div class="period-tabs">
+      <button class="pt" onclick="setPeriod('jan')">Jan</button>
+      <button class="pt" onclick="setPeriod('feb')">Feb</button>
+      <button class="pt" onclick="setPeriod('mar')">Mar (Partial)</button>
+      <button class="pt active" onclick="setPeriod('q1')">Q1 Avg</button>
+    </div>
+    <button id="edit-btn" class="edit-btn" onclick="toggleEdit()">✏ Update Numbers</button>
+  </div>
+
+  <div class="kpi-band" id="kpi-band"></div>
+
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:10px;">Ad &amp; Sales Metrics</div>
+  <div class="tbl-wrap">
+    <table class="mtbl">
+      <thead><tr><th>Metric</th><th>Target</th><th>Value</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody id="ad-tbody"></tbody>
+    </table>
+  </div>
+
+  <div class="card yellow-left mt-md">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Context on March data:</strong> March numbers reflect only through the 13th of the month — partial month. Ad spend ($2,137) and leads (389) are partial-period figures. The 44% show rate in March is an anomaly of small sample (4 live calls). Q1 average is the most reliable read. Close rate improvement in March (0% — zero closes from cold funnel) is because all 4 live calls came cold with no pre-call education, confirming the Nurture VSL as the #1 constraint to fix immediately.</p>
+  </div>
+</section>
+
+<!-- REVENUE EQUILIBRIUM -->
+<section class="doc-section" id="equilibrium">
+  <div class="sec-eyebrow">Section 03</div>
+  <div class="sec-heading">Revenue Equilibrium</div>
+  <div class="sec-divider"></div>
+  <p class="mb-md">Revenue Equilibrium = LTV × New Clients/Month. When this exceeds current revenue, the base is compounding. When it falls below, churn is outpacing acquisition. Lian's equilibrium math tells the exact story of the constraint.</p>
+
+  <div class="grid-3 gap-sm mb-md">
+    <div class="eq-box">
+      <div class="eq-b-val yellow" id="re-churn">—</div>
+      <div class="eq-b-label">Monthly Churn Estimate</div>
+      <div class="eq-b-sub">Alumni program only · FE program ends at 8 weeks</div>
+    </div>
+    <div class="eq-box">
+      <div class="eq-b-val blue" id="re-ltv">—</div>
+      <div class="eq-b-label">Est. LTV (FE + BE)</div>
+      <div class="eq-b-sub">$2,100–$2,497 FE + $392/mo alumni avg 6 mo</div>
+    </div>
+    <div class="eq-box">
+      <div class="eq-b-val orange" id="re-new">—</div>
+      <div class="eq-b-label">New Clients / Month</div>
+      <div class="eq-b-sub">Q1 avg closes per month</div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:14px;align-items:center;margin-bottom:14px;">
+    <div class="eq-box" style="text-align:center;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:8px;">Revenue Equilibrium</div>
+      <div class="eq-b-val green" id="re-eq">—</div>
+      <div class="eq-b-sub" style="text-align:center;">LTV × New Clients</div>
+    </div>
+    <div class="eq-vs">VS</div>
+    <div class="eq-box" style="text-align:center;">
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:8px;">Current Monthly Revenue</div>
+      <div class="eq-b-val orange" id="re-actual">—</div>
+      <div class="eq-b-sub" style="text-align:center;">Q1 avg collected</div>
+    </div>
+  </div>
+  <div id="re-verdict" class="eq-verdict flat"></div>
+
+  <div class="card orange-left mt-md">
+    <p style="font-size:13px;margin-bottom:0;"><strong>The Equilibrium Story:</strong> Lian's LTV is compressed by the 8-week FE program structure — clients finish and exit unless converted to alumni. At ~50% FE→BE conversion target, each new client is worth $2,100–$2,497 FE + $2,352 (6 months of alumni at $392) = ~$4,500–$4,850 lifetime. At 8–10 new clients/month (current rate if show rate fixes), that's $36K–$49K in compounding future revenue per month closed — more than doubling her current run rate. The constraint is not the offer. It's getting leads to show up.</p>
+  </div>
+</section>
+
+<!-- CREATIVE INTELLIGENCE -->
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 04 — Updated April 2026</div>
+  <div class="sec-heading">Creative Intelligence Report</div>
+  <div class="sec-divider"></div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;">Full intelligence synthesis across brand positioning, organic ecosystem, Meta Ad Library, competitive benchmarks, entity gap analysis, and verbatim hooks — ready for the Ad Creative Workshop entity-building exercise.</p>
+    <button id="copy-intel-btn" onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;transition:opacity .18s;white-space:nowrap;flex-shrink:0;">
+      <span>⬆</span> Copy for Workshop
+    </button>
+  </div>
+
+  <!-- EXEC SUMMARY -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Executive Summary</div>
+  <div class="card orange-left mb-md">
+    <p style="font-size:13px;margin-bottom:8px;">Lian Price is running a single ad creative that has been live since August 2025 — nearly eight months. The creative (B-roll gym footage with "Back-to-school szn" overlay) is the definition of audience fatigue. Her CPL is still $5–$6, which means the lead mechanism works — but the quality of leads entering the DM funnel is degrading because the creative has been shown to the same audience repeatedly without rotation.</p>
+    <p style="font-size:13px;margin-bottom:0;"><strong>Core insight:</strong> Lian has the most underutilized creative asset in the room — the 18-lb weight gain experiment. She intentionally gained 18 lbs of fat at 38 years old on purpose to prove her protocol. This story exists only as a photo carousel on Instagram. It has never been turned into a video ad, a talking-head reel, or a paid creative entity. <em>That single piece of content, filmed and deployed as a video ad, would outperform everything she's currently running within 72 hours of launch.</em></p>
+  </div>
+
+  <!-- BRAND, OFFER, FUNNEL -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Brand, Offer &amp; Funnel Intelligence</div>
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>Dimension</th><th>Evidence</th><th>Strategic Meaning</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Brand Identity</strong></td>
+          <td>@lianprice · L3 Method™ · Women's Metabolic &amp; Hormonal Fat Loss · 21.1K IG + 105K TikTok</td>
+          <td>Strong personal brand with named mechanism, verified IG, consistent posting. The brand exists. The architecture connecting it to paid acquisition does not.</td>
+        </tr>
+        <tr>
+          <td><strong>Core Avatar</strong></td>
+          <td>Women 35–50, thyroid/hormonal issues, previously active, tried multiple programs, labs "normal" but body still not responding</td>
+          <td>High-specificity ICA with strong emotional urgency. This avatar has tried everything and is looking for a root-cause explanation — not another generic program. The mechanism must lead in all creative.</td>
+        </tr>
+        <tr>
+          <td><strong>Offer Structure</strong></td>
+          <td>8-week 1:1 FE program ($2,100–$2,497) + alumni continuity ($392/mo app + coaching)</td>
+          <td>Clean, 2-tier structure. The FE price is appropriate for the avatar. The backend exists but is undertapped. At 50% FE→BE conversion the LTV nearly doubles.</td>
+        </tr>
+        <tr>
+          <td><strong>Current Acquisition</strong></td>
+          <td>Single DM automation ad running since Aug 2025. IG organic comment triggers. TikTok organic (105K — largely untapped for DM funneling).</td>
+          <td>Single creative = audience fatigue. TikTok is her largest audience and generates zero structured leads. Both are immediate leverage levers.</td>
+        </tr>
+        <tr>
+          <td><strong>Broken Conversion Layer</strong></td>
+          <td>Lead-to-book: 2–4% (target 7–10%). Show rate: 35–44% (target 70%+). Cold leads with zero pre-call education.</td>
+          <td>Leads opt in cold, receive no mechanism education before booking, and arrive at the call with sticker shock. A 5–7 min Nurture VSL in the DM flow fixes this at source.</td>
+        </tr>
+        <tr>
+          <td><strong>Mechanism Opportunity</strong></td>
+          <td>18-lb founder story. L3 Method / Metabolic Reboot Method™. Lab-based root cause narrative.</td>
+          <td>The mechanism is the ad. Specifically: "I intentionally gained 18 lbs of fat at 38 to prove my protocol works" is a hook that stops scrollers, creates instant credibility, and pre-qualifies the ICA in 3 seconds.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- META AD LIBRARY AUDIT -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Meta Ad Library Audit — April 2026</div>
+  <div class="card red-left mb-sm">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Ad Library status:</strong> One active ad running since August 9, 2025 — a B-roll gym creative with "Back-to-school szn is upon us" text overlay targeting 32–42 year old women to "lose up to 20 lbs in 8 weeks, guaranteed." DM automation CTA. No creative rotation, no A/B testing, no retargeting layer, no TOF/MOF distinction. The ad is generating leads but audience fatigue is accelerating and the declining lead-to-book rate confirms quality degradation.</p>
+  </div>
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>Field</th><th>Current Status</th><th>Priority Action</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Active Entity Count</strong></td>
+          <td><span class="gap-pill missing">1 — running 8 months</span></td>
+          <td>Immediately deploy 18-lb founder story as Entity 2. Rotate out "back-to-school" creative — it is no longer seasonally relevant.</td>
+        </tr>
+        <tr>
+          <td><strong>Creative Diversity</strong></td>
+          <td><span class="gap-pill missing">Zero diversity — 1 format, 1 hook, 1 emotion</span></td>
+          <td>Build a 3-entity starter stack: (1) Founder story / credibility hook, (2) Villain / stone-throwing reel, (3) Client transformation with symptom-rich before narrative.</td>
+        </tr>
+        <tr>
+          <td><strong>Hook Type Coverage</strong></td>
+          <td><span class="gap-pill missing">Only B-roll lifestyle — no talking head, no demonstrative</span></td>
+          <td>Introduce talking-head format for the 18-lb story and at least one villain reel. Different formats reach different psychological segments of the same audience.</td>
+        </tr>
+        <tr>
+          <td><strong>Retargeting Layer</strong></td>
+          <td><span class="gap-pill missing">No MOF/BOF separation</span></td>
+          <td>Build a basic retargeting campaign for IG video viewers (25%+) and website visitors. Show the Nurture VSL as a paid asset to warm audiences who have already seen the TOF creative.</td>
+        </tr>
+        <tr>
+          <td><strong>TikTok Paid</strong></td>
+          <td><span class="gap-pill warn">Zero paid activity on 105K audience</span></td>
+          <td>TikTok Ads on a 105K native audience should be in the 90-day roadmap. The organic proof-of-concept (12.9K likes on a single free resource post) indicates strong paid potential.</td>
+        </tr>
+        <tr>
+          <td><strong>Offer Clarity in Ad Copy</strong></td>
+          <td><span class="gap-pill warn">Generic — no mechanism, no avatar-specific language</span></td>
+          <td>Shift all ad copy to root-cause framing: metabolic dysfunction, cortisol, thyroid, hormonal imbalance. Remove generic language like "stubborn fat" and "lose weight."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ENTITY GAP SCORECARD -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Entity Gap Scorecard</div>
+  <div class="grid-3 gap-sm mb-md">
+    <div class="card red-left">
+      <div style="font-family:'Bebas Neue';font-size:36px;color:#F87171;line-height:1;margin-bottom:4px;">1</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#F87171;">Active Paid Entities</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:6px;">Target: 8–10 diverse entities. 1 entity = catastrophic audience fatigue risk.</div>
+    </div>
+    <div class="card orange-left">
+      <div style="font-family:'Bebas Neue';font-size:36px;color:var(--orange);line-height:1;margin-bottom:4px;">5+</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);">Organic Entity Clusters</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:6px;">Founder story, villain, proof, lifestyle, demonstrative — all exist organically, none converted to paid.</div>
+    </div>
+    <div class="card green-left">
+      <div style="font-family:'Bebas Neue';font-size:36px;color:var(--green);line-height:1;margin-bottom:4px;">7–9</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);">Immediate Entity Gap</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.45);margin-top:6px;">Every entity cluster above is ready to convert to paid with a single recording session. No new concepts needed.</div>
+    </div>
+  </div>
+
+  <!-- VERBATIM HOOK BANK -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Verbatim Hook Bank — Workshop-Ready</div>
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>#</th><th>Hook (Verbatim)</th><th>Type</th><th>Entity Direction</th></tr></thead>
+      <tbody>
+        <tr>
+          <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);">H1</td>
+          <td><strong>"I intentionally gained 18 pounds of fat at 38 years old. Not by accident. On purpose."</strong></td>
+          <td><span class="gap-pill opportunity">Pattern Interrupt</span></td>
+          <td>Founder story talking-head reel. Pin #1 material. Highest-conversion asset she doesn't have.</td>
+        </tr>
+        <tr>
+          <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);">H2</td>
+          <td><strong>"Your doctor told you your labs were normal. But you've gained 15 lbs. You're exhausted. Here's why."</strong></td>
+          <td><span class="gap-pill missing">Villain</span></td>
+          <td>Credibility-based villain hook. Targets the "labs are normal" false belief. Stops the exact woman Lian serves.</td>
+        </tr>
+        <tr>
+          <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);">H3</td>
+          <td><strong>"She did everything right for 6 years. Still couldn't lose the weight. Here's what changed."</strong></td>
+          <td><span class="gap-pill opportunity">Problem-First Proof</span></td>
+          <td>Transformation reel with symptom-rich lead. Client results with before-story framing — not celebration.</td>
+        </tr>
+        <tr>
+          <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);">H4</td>
+          <td><strong>"Stop blaming your willpower. Your program was designed for someone 15 years younger."</strong></td>
+          <td><span class="gap-pill missing">Villain</span></td>
+          <td>Generic program villain. Removes shame from the ICA. Positions Lian's 17-year specialization as the counterpoint.</td>
+        </tr>
+        <tr>
+          <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);">H5</td>
+          <td><strong>"She went from 5 cardio sessions a week to zero. Lost 14 lbs. Here's the hormonal math."</strong></td>
+          <td><span class="gap-pill missing">Villain / Contrarian</span></td>
+          <td>Cardio culture villain. Counter-intuitive result stops the scroll. Mechanism-forward with "hormonal math" framing.</td>
+        </tr>
+        <tr>
+          <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);">H6</td>
+          <td><strong>"The 3 numbers your doctor should be testing if you can't lose weight after 35 — almost no GP checks for them."</strong></td>
+          <td><span class="gap-pill warn">Demonstrative</span></td>
+          <td>Lab panel demonstrative reel. Hold up a TSH panel. High-retention, high-save format. Gaps in competitor coverage.</td>
+        </tr>
+        <tr>
+          <td style="font-family:'DM Mono',monospace;font-size:11px;color:var(--orange);">H7</td>
+          <td><strong>"POV: you're 42, you've tried everything, and you're about to find out it wasn't your fault."</strong></td>
+          <td><span class="gap-pill opportunity">Empathy / Identity</span></td>
+          <td>High-resonance empathy hook from competitor research. 5K–20K view range for this ICA. Proven in adjacent accounts.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- COMPETITOR BENCHMARKS -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Competitive Benchmark — 4 Accounts Analyzed</div>
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>Account</th><th>Followers</th><th>What They're Winning On</th><th>What Lian Can Steal</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>@laceyiskra</strong></td>
+          <td>~425K</td>
+          <td>Demonstrative reels with props (lab reports, food items, hormone charts). Type 1 + Type 3 combination hooks. Dense, SEO-optimized carousels.</td>
+          <td>Lab-review reel format — hold up TSH panel. Walk through "what your doctor tests vs. what actually matters for fat loss." Aligns directly with Villain #1 (The Labs Are Normal Doctor).</td>
+        </tr>
+        <tr>
+          <td><strong>@drmaryclaire</strong></td>
+          <td>~180K</td>
+          <td>Credibility hooks that open tension loops: "I'm an OBGYN and I'd never recommend this." Owns villain-vs-conventional-medicine harder than anyone. 500–2,000 comment counts.</td>
+          <td>"Your doctor isn't testing the right labs" hook framework. Film: "3 numbers your doctor should be testing if you can't lose weight after 35." Directly positions Lian as knowledgeable alternative.</td>
+        </tr>
+        <tr>
+          <td><strong>@sammyb.fit</strong></td>
+          <td>~95K</td>
+          <td>Story-based vulnerability connecting personal body image journey to ICA's emotional state. Comment trigger on FIRST LINE of every caption. 200–500 comments/week on free-resource posts.</td>
+          <td>Move Comment 'Begin' trigger to FIRST LINE of caption (not buried at end). "POV: you're 42, you've tried everything" hook format generates 5K–20K views consistently for this ICA.</td>
+        </tr>
+        <tr>
+          <td><strong>@theperimenopausefitcoach</strong></td>
+          <td>~62K</td>
+          <td>Instagram SEO master — 3–5 symptom-specific keyword phrases in every caption. Grew 12K → 62K in 18 months with zero paid ads by keyword-saturating captions.</td>
+          <td>Lengthen all captions to 100–200 words. Embed in first 125 characters: "lose weight after 40," "thyroid weight loss," "hormone imbalance belly fat," "perimenopause fat loss," "cortisol belly fat."</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ENTITY BUILD QUEUE -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Entity Build Queue — Priority Order</div>
+  <div class="plan-list mb-md">
+    <div class="plan-item">
+      <div class="plan-num">1</div>
+      <div>
+        <div class="plan-title">18-lb Founder Story — Talking-Head Reel → Paid Entity</div>
+        <div class="plan-desc">Film a 60–90 second camera-forward talking-head reel: "I intentionally gained 18 pounds of fat at 38 years old." Gain → prove protocol → gone in 8 weeks. This is both Pin #1 organic AND Entity #1 paid. It has never existed as a video. This is the single highest-ROI recording session available to Lian right now.</div>
+        <div><span class="plan-tag ads">Priority 1</span><span class="plan-tag creative">Founder Entity</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">2</div>
+      <div>
+        <div class="plan-title">Lab Panel Demonstrative Reel — "The 3 Numbers Your Doctor Isn't Testing"</div>
+        <div class="plan-desc">Hold up a TSH lab panel on camera. Walk through: "Here's what your GP tests. Here's what actually controls your fat loss after 35." Position: TSH range includes 70-year-olds — that's not your optimization target. CTA: "Comment LABS and I'll send you the full panel guide." High retention, high save rate. @laceyiskra runs this format at 5K–50K views consistently.</div>
+        <div><span class="plan-tag ads">Priority 2</span><span class="plan-tag creative">Demonstrative Entity</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">3</div>
+      <div>
+        <div class="plan-title">Client Transformation Reel — Symptom-Rich Before-Story Format</div>
+        <div class="plan-desc">Take the best transformation result (Angie 19 lbs, Adrienne 18 lbs + 4 dress sizes, Catherine 33 lbs) and build a before-story reel: "She came to me after 7 programs, hypothyroid, convinced her body would never work again." Problem stack → mechanism → result. NOT "she committed and stayed focused." The before-story is what converts. The transformation is just the proof.</div>
+        <div><span class="plan-tag ads">Priority 3</span><span class="plan-tag creative">Proof Entity</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">4</div>
+      <div>
+        <div class="plan-title">Cardio Villain Reel — "She Stopped Doing Cardio. Lost 14 lbs."</div>
+        <div class="plan-desc">Counter-intuitive hook: "She went from 5 cardio sessions a week to zero. Lost 14 lbs." Explain the cortisol/fat-storage mechanism. Reframe: chronic cardio is a chronic cortisol spike — especially post-35. This is Villain #2 and it's highly shareable because it contradicts the dominant fitness narrative Lian's ICA has followed for years.</div>
+        <div><span class="plan-tag ads">Priority 4</span><span class="plan-tag creative">Villain Entity</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STRATEGIC DIAGNOSIS -->
+  <div class="card blue-left">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Strategic diagnosis:</strong> Lian's creative problem is not a talent problem — it's a system problem. She has an exceptional founder story, 1,100+ women of proven results, and genuine on-camera charisma. The Andromeda algorithm doesn't know any of this because she's fed it one creative entity for eight months. The playbook from here is simple: film three recording sessions (founder story, lab panel demonstrative, villain reel), build them into distinct entities with different hooks and formats, and give the algorithm the diversity it needs to find the right buyer segment at the right cost.</p>
+  </div>
+</section>
+
+<!-- CONSTRAINT DIAGNOSIS -->
+<section class="doc-section" id="diagnosis">
+  <div class="sec-eyebrow">Section 05</div>
+  <div class="sec-heading">Constraint Diagnosis</div>
+  <div class="sec-divider"></div>
+  <div class="diag-list">
+
+    <div class="diag-card p1">
+      <div class="diag-rank">P1 — Critical</div>
+      <div class="diag-title">Lead-to-Book Rate: 2–4% vs. 7–10% Target</div>
+      <div class="diag-body">Leads enter the DM funnel having watched a B-roll gym ad with zero mechanism education, zero price preframing, and zero context on what makes the L3 Method different. The setter's DM conversation is the first and only point of education before a Calendly link appears. No setter script can compensate for a cold, under-informed lead — this has been proven by repeated script rewrites that peaked at 7% before declining. The fix is upstream of the setter entirely.</div>
+      <div class="diag-fix"><strong>Fix:</strong> Deploy the Nurture VSL (already scripted) immediately. Restructure DM flow: Pain Discovery → "Watch this short video from Lian first" (5–7 min Nurture VSL) → Book the call. This single change is projected to move lead-to-book rate from 2–4% to 6–10% within 30 days. At 800 leads/month, that's the difference between 16–32 scheduled calls and 48–80 scheduled calls — with zero additional ad spend.</div>
+    </div>
+
+    <div class="diag-card p1">
+      <div class="diag-rank">P1 — Critical</div>
+      <div class="diag-title">Show Rate: 35–44% vs. 70%+ Target — 55–65% No-Show Rate</div>
+      <div class="diag-body">Leads book the call without sufficient buy-in, then cancel or ghost overnight when buyer's remorse sets in. This is a commitment psychology problem, not a sales skill problem. A prospect who books a call cold, with no post-booking reinforcement, has made a low-commitment decision. The Thank You Page video and post-booking email sequence create the psychological anchoring that turns a calendar event into a real appointment. In March, Lian had 4 live calls from the cold funnel and zero closes — confirming that cold, uneducated prospects who do show up are not buying either.</div>
+      <div class="diag-fix"><strong>Fix:</strong> Deploy the Thank You Page script (already scripted) on the Calendly confirmation page — 3–4 min warm personal video, 3-step pre-call ritual (Reply CONFIRMED → Add Zoom to calendar → Think of one question). Add 3-touch email sequence: immediate confirmation → 24-hour reminder → 2-hour reminder with Zoom link. Revenue math: 2–4 additional live calls/month at current volume = $1,680–$3,360 extra monthly revenue with zero additional ad spend.</div>
+    </div>
+
+    <div class="diag-card p2">
+      <div class="diag-rank">P2 — Meaningful Gap</div>
+      <div class="diag-title">Single Ad Creative Running 8 Months — Audience Fatigue</div>
+      <div class="diag-body">One ad entity running since August 2025 is audience fatigue in motion. The same person has seen the same "back-to-school" B-roll creative dozens of times. The declining lead-to-book rate (4.0% Jan → 2.8% Feb → 2.3% Mar) is partially a symptom of degrading lead quality from a fatigued audience. The Andromeda algorithm needs entity diversity to find new buyer segments. At 1 entity, the algorithm has mapped the entire reachable audience in Lian's core demographic and is now recycling the same people.</div>
+      <div class="diag-fix"><strong>Fix:</strong> Deploy 3 new entities immediately using existing organic content and the hook bank above. Priority order: (1) 18-lb founder story talking-head, (2) lab panel demonstrative, (3) symptom-rich client transformation. Introduce creative rotation — never run fewer than 5 entities simultaneously. Kill rule: any entity at 2× CPL target after 3 days of meaningful spend.</div>
+    </div>
+
+    <div class="diag-card p2">
+      <div class="diag-rank">P2 — Meaningful Gap</div>
+      <div class="diag-title">105K TikTok Audience Generating Zero Structured Leads</div>
+      <div class="diag-body">Lian's TikTok presence (105K followers, 327K likes) is 5× her Instagram following and is almost entirely disconnected from the DM funnel. Her single highest-engagement piece of content across all platforms is a TikTok that generated 12,900 likes, 607 comments, 2,871 saves, and 705 shares — for a "free fat-burning protocol" giveaway. That formula works. It's been used once. A weekly "free resource + comment keyword" cadence on TikTok could generate hundreds of additional leads per week at zero ad spend.</div>
+      <div class="diag-fix"><strong>Fix:</strong> Add a TikTok-specific lead magnet link (email capture for the fat-burning protocol checklist). Move Comment trigger to first line of every TikTok caption. Post one "free resource + comment keyword" TikTok per week. This is a zero-cost lever with proven mechanics sitting untouched.</div>
+    </div>
+
+    <div class="diag-card p3">
+      <div class="diag-rank">P3 — Watch Item</div>
+      <div class="diag-title">Backend Alumni Program Self-Capped at 10 Clients</div>
+      <div class="diag-body">Lian is self-limiting the alumni program because the $392/month price feels time-consuming relative to the effort required. This is the correct intuition about a wrong constraint. The solution is not to cap clients — it's to hire the assistant coach (already in process) so that alumni management doesn't compete with front-end coaching time. At 50% FE→BE conversion and 4 new clients/month, that's 2 alumni adds per month = $994–$1,194/month compounding MRR that grows with every new close.</div>
+      <div class="diag-fix"><strong>Fix:</strong> Build a formal alumni pitch into Weeks 7–8 of the front-end program. Remove the 10-client cap after the assistant coach hire. Consider raising backend to $497–$597/month (20% of FE price target structure). The time constraint resolves with the hire — the cap should not outlast it.</div>
+    </div>
+
+    <div class="diag-card ok">
+      <div class="diag-rank">OK — Leave Alone</div>
+      <div class="diag-title">Close Rate and Sales Skill</div>
+      <div class="diag-body">Lian closes at 40–54% when qualified prospects show up. This is above IFCA's 30–45% benchmark and above industry average for high-ticket health coaching. The offer resonance is proven, the sales approach is working, and the product clearly delivers (1,100+ women, 17 years of experience). Do not change the sales approach, the price, or the close methodology. The only constraint is getting more people to show up — not what happens once they do.</div>
+      <div class="diag-fix"><strong>Direction:</strong> Protect this number. Do not sacrifice close rate by lowering price or rushing closes. The business is solving the right problem — acquisition volume and show rate — not this one.</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 90-DAY ACTION PLAN -->
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 06</div>
+  <div class="sec-heading">90-Day Action Plan</div>
+  <div class="sec-divider"></div>
+  <p class="mb-md">Execution is sequenced by highest immediate revenue impact. The show-rate fix (Week 1) and lead-to-book fix (Week 2) address the two broken metrics without increasing ad spend. Everything else compounds on top of a repaired funnel.</p>
+
+  <div class="plan-list">
+
+    <div class="plan-item">
+      <div class="plan-num">1</div>
+      <div>
+        <div class="plan-title">Week 1: Deploy the Thank You Page Video — Show Rate Fix</div>
+        <div class="plan-desc">Record the post-booking pre-call video (3–4 minutes, warm and personal, from the home — not a studio). Build the Thank You page with 3-step action ritual visible below the video: Reply CONFIRMED → Add Zoom to calendar right now → Think of one question you want answered. Activate the 3-email post-booking sequence (immediate confirmation, 24-hour reminder, 2-hour reminder with Zoom link). Add "Reply CONFIRMED" to the setter DM flow immediately after booking. Every new booking from this day forward hits this system. Revenue impact: 2–4 additional live calls/month = $1,680–$3,360 incremental without any additional spend.</div>
+        <div><span class="plan-tag sales">Show Rate</span><span class="plan-tag ops">Immediate Deploy</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">2</div>
+      <div>
+        <div class="plan-title">Week 2: Deploy the Nurture VSL in DM Flow — Lead-to-Book Fix</div>
+        <div class="plan-desc">Record the Nurture VSL (5–7 minutes, on camera + B-roll cutaways). Restructure the DM flow: Pain Discovery → "Watch this short video from Lian first" → Book the Call. Brief the setter on the new flow; role-play the updated conversation. Film the 18-lb experiment B-roll and photos as VSL cutaways — these are the highest-credibility visuals available and they do not yet exist as video. Target: lead-to-book rate improving from 2–4% to 5%+ within 7 days of deployment. At 800 leads/month, 5% = 40 scheduled calls vs. the current 18–22.</div>
+        <div><span class="plan-tag sales">Lead Nurture</span><span class="plan-tag ops">Setter Brief</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">3</div>
+      <div>
+        <div class="plan-title">Week 3: Film the 18-lb Founder Story — Entity #1 + Pin #1</div>
+        <div class="plan-desc">Film a 60–90 second camera-forward talking-head reel: "I intentionally gained 18 pounds of fat at 38 years old. Not by accident. On purpose." Run the narrative arc: gained weight on purpose → ran own protocol → no cardio, four training days, five lifestyle factors → 8 weeks → gone. End with Comment 'LAYER' trigger. Post to Instagram, pin as Post #1, and launch as a paid ad entity simultaneously. This is the single highest-conversion organic and paid asset Lian has never created. It does both jobs at once.</div>
+        <div><span class="plan-tag ads">Paid Entity 1</span><span class="plan-tag creative">Organic Pin 1</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">4</div>
+      <div>
+        <div class="plan-title">Days 30–60: Build Entity Stack — Rotate to 5+ Active Paid Creatives</div>
+        <div class="plan-desc">Film the lab panel demonstrative reel (Entity 2) and the symptom-rich client transformation (Entity 3). Launch all three alongside the existing creative. Once 3 entities are live, pull hook rate and CPL at day 3 for each. Kill anything running at 2× CPL target after meaningful spend. Scale the winner by 20% budget every 48 hours. Target: 5+ distinct entities running simultaneously within 45 days. Rewrite bio using Metabolic Reboot Method™ framing with explicit ICA callout (women 35–50, hormones/thyroid).</div>
+        <div><span class="plan-tag ads">Creative Expansion</span><span class="plan-tag creative">Entity Rotation</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">5</div>
+      <div>
+        <div class="plan-title">Days 60–90: Activate TikTok Lead System + Backend Pitch</div>
+        <div class="plan-desc">Deploy a TikTok-specific lead magnet with email capture (the fat-burning protocol checklist — the format with 12,900 likes already proven). Post one "free resource + comment keyword" TikTok per week. Add 3–5 SEO keyword phrases to all Instagram captions (first 125 characters). Build the formal alumni pitch into Weeks 7–8 of any current client program — structured, not incidental. After assistant coach hire resolves the time constraint, remove the 10-client alumni cap. Measure and report: lead-to-book rate, show rate, CPL by entity, monthly revenue vs. $40K target.</div>
+        <div><span class="plan-tag ops">TikTok System</span><span class="plan-tag sales">Backend MRR</span></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="card orange-left mt-md">
+    <p style="font-size:13px;"><strong>The big picture:</strong> Lian's business is not broken. It's a precision diagnostic problem. She generates excellent leads at excellent cost, and she closes at an exceptional rate when people show up. The entire gap between her $22K reality and her $40K+ potential lives in 14 days of execution — a post-booking video, a DM-flow VSL, and a talking-head reel that should have existed a year ago. Fix those three things and the existing machine runs at the revenue it was always capable of.</p>
+  </div>
+</section>
+
+<!-- FOOTER (TAB 1) -->
+<div class="doc-footer">
+  <div class="df-brand">IFCA <span>PLAYBOOKS</span></div>
+  <div class="df-note">Lian Price · Full Business Audit · March–April 2026 · IFCA Confidential</div>
+</div>
+
+</div><!-- /tab-biz -->
+
+
+<!-- ============================================================ -->
+<!-- TAB 2: SOCIAL MEDIA GROWTH AUDIT -->
+<!-- ============================================================ -->
+<div id="tab-social" class="tab-panel">
+
+<section class="social-hero">
+  <div class="hero-eyebrow">IFCA · Social Media Growth Audit · March 2026</div>
+  <div class="hero-name">LIAN <span>PRICE</span></div>
+  <div class="hero-title">@lianprice · L3 Method™ · Organic Audience Deep-Dive &amp; Growth Game Plan</div>
+
+  <div class="platform-tabs">
+    <span class="plat-badge ig">📸 Instagram · 21.1K Followers · Verified</span>
+    <span class="plat-badge tt">🎵 TikTok · 105.3K Followers</span>
+    <span class="plat-badge fb">📘 Facebook · Negligible (Personal Profile)</span>
+  </div>
+
+  <div class="hero-summary">
+    Lian's 30-day Instagram reach is 213K — nearly identical to an account with 675K followers. <strong>She has a reach problem masquerading as a conversion problem.</strong> The attention is there. The content architecture connecting that attention to booked calls is not. Her lead-to-book rate (2.3–4.0%) and show rate (35–44%) are both critically below industry benchmarks — and both are pre-call education failures, not content failures.
+  </div>
+</section>
+
+<nav class="doc-nav" style="top:49px;">
+  <div class="doc-nav-inner">
+    <a href="#s-overview"    class="snav-link nav-link active">Overview</a>
+    <a href="#s-strengths"   class="snav-link nav-link">8 Strengths</a>
+    <a href="#s-gaps"        class="snav-link nav-link">8 Gaps</a>
+    <a href="#s-formats"     class="snav-link nav-link">Top Formats</a>
+    <a href="#s-competitors" class="snav-link nav-link">Competitors</a>
+    <a href="#s-strategy"    class="snav-link nav-link">Content Strategy</a>
+    <a href="#s-hooks"       class="snav-link nav-link">Hook Rewrites</a>
+    <a href="#s-actions"     class="snav-link nav-link">Quick Wins</a>
+  </div>
+</nav>
+
+<!-- PLATFORM BREAKDOWN -->
+<section class="doc-section" id="s-overview">
+  <div class="sec-eyebrow">Platform Overview</div>
+  <div class="sec-heading">Where Lian Stands — Platform by Platform</div>
+  <div class="sec-divider"></div>
+
+  <div class="grid-3 gap-sm mb-md">
+    <div class="card orange-left">
+      <div style="font-family:'Bebas Neue';font-size:28px;color:var(--orange);line-height:1;margin-bottom:6px;">Instagram</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:10px;">Primary Conversion Channel</div>
+      <div class="audit-table-wrap">
+        <table class="audit-tbl">
+          <tbody>
+            <tr><td><strong>Followers</strong></td><td>21.1K (Verified ✓)</td></tr>
+            <tr><td><strong>Total Posts</strong></td><td>2,407</td></tr>
+            <tr><td><strong>30-Day Reach</strong></td><td>213K</td></tr>
+            <tr><td><strong>Best Reel</strong></td><td>7,742 views</td></tr>
+            <tr><td><strong>DM Trigger</strong></td><td>COMMENT Begin (active)</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card" style="border-left:3px solid #8B5CF6;background:var(--purple-bg);border-radius:0 14px 14px 0;">
+      <div style="font-family:'Bebas Neue';font-size:28px;color:#c4b5fd;line-height:1;margin-bottom:6px;">TikTok</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:10px;">Largest Audience — Untapped</div>
+      <div class="audit-table-wrap">
+        <table class="audit-tbl">
+          <tbody>
+            <tr><td><strong>Followers</strong></td><td>105.3K (5× Instagram)</td></tr>
+            <tr><td><strong>Total Likes</strong></td><td>327.7K</td></tr>
+            <tr><td><strong>Best Post</strong></td><td>12,900 likes / 607 comments</td></tr>
+            <tr><td><strong>Lead Capture</strong></td><td>None (zero email capture)</td></tr>
+            <tr><td><strong>Ads</strong></td><td>None running</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="card blue-left">
+      <div style="font-family:'Bebas Neue';font-size:28px;color:#7ABFDD;line-height:1;margin-bottom:6px;">Facebook</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-bottom:10px;">Not a Priority — Paid Only</div>
+      <div class="audit-table-wrap">
+        <table class="audit-tbl">
+          <tbody>
+            <tr><td><strong>Organic</strong></td><td>Personal profile, 5.4K — negligible</td></tr>
+            <tr><td><strong>Business Page</strong></td><td>Not actively maintained</td></tr>
+            <tr><td><strong>Paid</strong></td><td>1 ad running since Aug 2025</td></tr>
+            <tr><td><strong>Priority</strong></td><td>Ads only, not organic</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card yellow-left">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Bottom line:</strong> Developing-to-strong foundation. The gap between 21.1K followers and meaningful monthly client revenue is a content architecture and positioning clarity problem — not a consistency or effort problem. Lian posts prolifically, has genuine personal magnetism, and owns a mechanism name. The single biggest gap: her most powerful asset (the 18-lb founder story) is buried in a carousel instead of leading as a talking-head reel. The TikTok audience (105K) is her most underutilized asset — 5× her IG following with zero structured lead capture.</p>
+  </div>
+</section>
+
+<!-- 8 STRENGTHS -->
+<section class="doc-section" id="s-strengths">
+  <div class="sec-eyebrow">What's Working</div>
+  <div class="sec-heading">8 Key Strengths Powering Her Growth</div>
+  <div class="sec-divider"></div>
+  <div class="strengths-grid">
+    <div class="strength-item">
+      <div class="strength-num">01 · STRENGTH</div>
+      <div class="strength-title">Mechanism Ownership — The L3 Method™ Is Planted</div>
+      <div class="strength-body">Named method in name field, bio, highlight covers, and hashtags. Highlights literally spell "LOSE THE LAST LAYER." This is rare at 21K — intentional brand architecture most coaches don't have at this stage.</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">02 · STRENGTH</div>
+      <div class="strength-title">Comment Trigger DM Automation Is Active &amp; Confirmed</div>
+      <div class="strength-body">Running "COMMENT Begin" CTAs on reels with confirmed trigger activity — a commenter responded with the keyword on the 'Begin' reel. The automation infrastructure is functional. The front-end hook quality is the weak point, not the mechanism.</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">03 · STRENGTH</div>
+      <div class="strength-title">Story Highlight Architecture — All 5 Conversion Moments Covered</div>
+      <div class="strength-body">Five highlights (L·O·S·E / the·LAST·LAYER) cover orientation, proof, transformation, virality, and BTS. Highlight covers spell the brand promise. Above-average for the coaching niche at this stage.</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">04 · LEVERAGE</div>
+      <div class="strength-title">Villain Content Is Present — Foundation Exists</div>
+      <div class="strength-body">"Keto was never meant for a woman's body" (1,884 views) demonstrates the stone-throwing framework. One of her stronger-performing coaching-adjacent reels. Needs systematic expansion and sharper hooks — but the instinct is there.</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">05 · STRENGTH</div>
+      <div class="strength-title">High-Charisma Personal Brand Presence On Camera</div>
+      <div class="strength-body">Visually compelling on camera. Physique is immediate credibility. Zodiac reel (6,782 views) shows the algorithm rewards personality-forward content. Natural charisma, face-forward posts — a real competitive advantage at 21K.</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">06 · STRENGTH</div>
+      <div class="strength-title">Deep Proof Library — 1,100+ Women, Named Results</div>
+      <div class="strength-body">Second pinned post features named results: Candy 12 lbs, Catherine 33 lbs, Adrienne 18 lbs + 4 dress sizes, Kathy 23 lbs. 1,100+ women over 16 years. This proof depth most coaches at 21K cannot match — currently under-amplified in video format.</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">07 · STRENGTH</div>
+      <div class="strength-title">Verified Badge + 2,407-Post Archive Signal Authority</div>
+      <div class="strength-body">Verified on Instagram — a trust signal many health/fitness coaches at her follower level don't have. Combined with a prolific posting history, the account signals a serious established professional. Frequency is not the problem — content type distribution is.</div>
+    </div>
+    <div class="strength-item">
+      <div class="strength-num">08 · LEVERAGE</div>
+      <div class="strength-title">Collab Content Is Generating Her Highest Comment Counts</div>
+      <div class="strength-body">Collab with @iamchina_styles generated 25 comments — her highest recent count. When two audiences merge on one reel, engagement compounds. This lever has been touched but not systematized. 2–3 niche-aligned creator collabs would compound this.</div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 GAPS -->
+<section class="doc-section" id="s-gaps">
+  <div class="sec-eyebrow">What's Missing</div>
+  <div class="sec-heading">8 Critical Gaps Holding Back Growth to 100K+</div>
+  <div class="sec-divider"></div>
+  <div class="strengths-grid">
+    <div class="gap-item">
+      <div class="gap-num">01 · CRITICAL GAP</div>
+      <div class="gap-title">No Origin Story Reel — Her Most Powerful Asset Is Buried</div>
+      <div class="gap-body">The 18-lb experiment exists only as a photo carousel. Never as a talking-head reel. The carousel got 17 comments — her highest recent engagement. A reel version would generate 10× the reach. "I intentionally gained 18 pounds of fat at 38 years old. Not by accident. On purpose." This is Pin 1 material that doesn't exist yet.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-num">02 · CRITICAL GAP</div>
+      <div class="gap-title">Bio Fails the 2-Second Cold Traffic Test</div>
+      <div class="gap-body">No explicit WHO — "women 35–50, thyroid, hormones" never appears. "Lose the Last Layer" means nothing to a cold visitor. "Master Fitness Coach" is credential language, not ICA-resonant outcome language. A woman at 42 with perimenopause does not recognize herself in this bio.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-num">03 · MISSING</div>
+      <div class="gap-title">Proof Content Lacks Symptom-Rich Before-Story</div>
+      <div class="gap-body">Transformation captions celebrate the result but don't tell the before-story. "She committed / stayed focused" is not conversion copy. "Angie came to me after 7 programs, hypothyroid, convinced her body would never work again" pulls the ICA into the story. The proof depth exists — the framing is missing.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-num">04 · CRITICAL GAP</div>
+      <div class="gap-title">Zero Demonstrative Reels — Highest-Retention Format Absent</div>
+      <div class="gap-body">No content where Lian demonstrates a concept using props. No whiteboard explaining cortisol. No holding up a lab panel. No visual thyroid-on-low-calorie-diet demonstration. Demonstrative content turns cold viewers into profile visitors — and it's completely absent from this account.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-num">05 · MISSING</div>
+      <div class="gap-title">Captions Are SEO-Thin — Functionally Invisible to Search</div>
+      <div class="gap-body">Nearly every reel caption is 1–3 lines. No keyword-rich language Instagram's search algorithm indexes for discovery. Terms like "perimenopause weight gain," "thyroid and weight loss," "cortisol belly fat," "why can't I lose weight after 40" never appear in captions. Instagram search pulls from caption text — Lian's is invisible.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-num">06 · MISALIGNED</div>
+      <div class="gap-title">Pinned Posts Misaligned with Conversion Strategy</div>
+      <div class="gap-body">Pin 1 = gym photo (minimal comments). Pin 2 = client results carousel. Pin 3 = 2022 dance reel (354 likes — pinned for performance, does nothing to convert new visitors). Optimal: Pin 1 = origin story reel. Pin 2 = mechanism explainer. Pin 3 = best client transformation with CTA.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-num">07 · UNANCHORED</div>
+      <div class="gap-title">Wedding Content Diluting Niche Clarity Without ICA Bridge</div>
+      <div class="gap-body">Courthouse wedding, bridal party, newlyweds content posted without coaching connection. Valid intimacy content — but currently unanchored. Bridge: "I'm 38, newly married, more confident in my body than ever — here's the work I did." Currently none of these connect back to the ICA narrative.</div>
+    </div>
+    <div class="gap-item">
+      <div class="gap-num">08 · MISSING</div>
+      <div class="gap-title">No Educational Carousel Content in Recent Feed</div>
+      <div class="gap-body">Scrolling 20+ posts: not a single educational carousel. No "3 reasons your metabolism slowed after 35," no myth-busting graphic series, no old-way vs. new-way slide format. Carousels drive saves — the metric that signals long-term content reach to the algorithm. The account is almost entirely reels, missing evergreen traction.</div>
+    </div>
+  </div>
+</section>
+
+<!-- TOP FORMATS -->
+<section class="doc-section" id="s-formats">
+  <div class="sec-eyebrow">Content Analysis</div>
+  <div class="sec-heading">Top-Performing Post Frameworks</div>
+  <div class="sec-divider"></div>
+  <p class="mb-md">Five content formats driving Lian's best results — with what's working, what's breaking, and how to fix it.</p>
+
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>#</th><th>Format</th><th>Best Example</th><th>What's Working</th><th>What's Breaking</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>#1</strong></td>
+          <td><strong>Credibility-Led B-Roll Lifestyle Reel</strong></td>
+          <td>"When The Zodiac Goes To Workout" — 6,782 views</td>
+          <td>Physique + energy earn the hook. Algorithm rewards lifestyle movement with high watch-time. Saves and shares from personality overlay.</td>
+          <td>Caption doesn't connect to a conversion narrative — leaving significant revenue on the table from every high-view reel.</td>
+        </tr>
+        <tr>
+          <td><strong>#2</strong></td>
+          <td><strong>Vulnerability / Intimacy Reel</strong></td>
+          <td>"You don't have to do this alone" — 7,742 views. "Why did I do this to myself?" — 17 comments (highest recent engagement)</td>
+          <td>When Lian posts about the emotional experience of being in a body, the audience stops and feels seen. The 17-comment carousel opened an emotional loop that required a response — her primary organic growth engine.</td>
+          <td>Intimacy content is ~50% of the feed but rarely connects back to the ICA coaching narrative. Emotional resonance without a coaching bridge converts no one.</td>
+        </tr>
+        <tr>
+          <td><strong>#3</strong></td>
+          <td><strong>Comment Trigger Direct Offer Reel</strong></td>
+          <td>"COMMENT Begin if you're ready to become HER" — 5 comments, confirmed trigger activation</td>
+          <td>Infrastructure is correct — comment triggers create DM pipeline, volume signals algorithm, keyword filters intent. The automation is working.</td>
+          <td>Hook assumes the viewer already wants to buy. Needs a problem-first hook (0–3 seconds) before arriving at the CTA organically. Infrastructure right; front-end hook must be rebuilt.</td>
+        </tr>
+        <tr>
+          <td><strong>#4</strong></td>
+          <td><strong>Villain / Stone-Throwing Reel</strong></td>
+          <td>"Keto was never meant for a woman's body" — 1,884 views</td>
+          <td>Hook nearly perfectly structured — makes a scrolling woman who has done keto stop and either argue or feel relieved. Above her coaching-adjacent average.</td>
+          <td>Posted sporadically. Should be 2–3× per week with sharpened hooks. One of the five algorithm-prioritized content types — she's barely using it.</td>
+        </tr>
+        <tr>
+          <td><strong>#5</strong></td>
+          <td><strong>Personal Life B-Roll + Broad Relatability Hook</strong></td>
+          <td>"Losing weight is dramatic. Staying fit is boring." — 2,420 views. "The verdict is in" — 2,446 views.</td>
+          <td>Short lifestyle reels with punchy one-liner overlays consistently hit 2,000+ views. Low-effort to produce. Strong consistent performer.</td>
+          <td>NONE of these reels connect back to Lian's ICA or mechanism. A single CTA sentence would convert passive viewers into pipeline at no additional effort.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- COMPETITORS -->
+<section class="doc-section" id="s-competitors">
+  <div class="sec-eyebrow">Competitive Intelligence</div>
+  <div class="sec-heading">4 Accounts Analyzed — What to Steal</div>
+  <div class="sec-divider"></div>
+
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>Account</th><th>Followers</th><th>What's Working</th><th>What Lian Can Steal Immediately</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>@laceyiskra</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gray-500);">Women's Hormone &amp; Fat Loss</span></td>
+          <td>~425K</td>
+          <td>Demonstrative reels — props (lab reports, food items, hormone charts) to visually explain why women over 35 can't lose weight. Credibility hooks: "I've helped 1,000+ women in perimenopause — here's what they all had in common." Type 1 + Type 3 in combination. Dense, SEO-optimized carousels.</td>
+          <td>The lab-review reel format. Hold up a standard TSH lab panel and walk through "what your doctor tests vs. what actually matters for fat loss." Directly aligned with Villain #1. Would perform in the 5K–50K view range based on Lacey's benchmarks.</td>
+        </tr>
+        <tr>
+          <td><strong>@drmaryclaire</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gray-500);">OBGYN / Functional Physician</span></td>
+          <td>~180K</td>
+          <td>Leads with credibility hooks that open tension loops: "I'm an OBGYN and I'd never recommend this to my patients." Owns the villain angle against conventional medicine harder than anyone. 500–2,000 comment counts on confrontational posts. Free quiz/lead magnet instead of direct application link.</td>
+          <td>"Your doctor isn't testing the right labs" hook framework. Film 45 seconds: "The 3 numbers your doctor should be testing if you can't lose weight after 35 — almost no GP checks for them." Names the villain, opens curiosity, positions Lian as knowledgeable alternative. Highly searchable.</td>
+        </tr>
+        <tr>
+          <td><strong>@sammyb.fit</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gray-500);">Women's Fat Loss, 35+ Niche</span></td>
+          <td>~95K</td>
+          <td>Story-based vulnerability reels connecting personal body image journey to ICA's current emotional state. 'Before' photos with captions mirroring exactly what ICA is thinking. Active comment trigger — 200–500+ comments on weekly "Comment [keyword] for free guide" posts.</td>
+          <td>Move Comment 'Begin' trigger to FIRST LINE of every reel caption — not buried at the end. "POV: you're 42, you've tried everything, and you're about to find out it wasn't your fault" hook generates 5K–20K views consistently for this ICA.</td>
+        </tr>
+        <tr>
+          <td><strong>@theperimenopausefitcoach</strong><br><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--gray-500);">Perimenopause Weight Coach</span></td>
+          <td>~62K</td>
+          <td>Instagram SEO master — every caption includes 3–5 symptom-specific keyword phrases: "perimenopause belly fat," "cortisol weight gain," "why I can't sleep and lose weight." Grew from 12K to 62K in 18 months with zero paid ads via keyword-saturated captions.</td>
+          <td>Immediately lengthen captions to 100–200 words. Embed in first 125 characters: "lose weight after 40," "thyroid weight loss," "hormone imbalance belly fat," "why can't I lose weight," "perimenopause fat loss." Lian already has the content — she needs to optimize the text layer for discovery.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- CONTENT STRATEGY -->
+<section class="doc-section" id="s-strategy">
+  <div class="sec-eyebrow">Social Authority Accelerator™</div>
+  <div class="sec-heading">Content Strategy Blueprint</div>
+  <div class="sec-divider"></div>
+
+  <!-- PILLAR AUDIT -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Social Authority Accelerator™ Pillar Audit</div>
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>Pillar</th><th>Current Est.</th><th>Target</th><th>Status</th><th>Key Imbalance</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Trust</strong></td>
+          <td>~15%</td>
+          <td>40%</td>
+          <td><span class="gap-pill missing">Critical Deficit</span></td>
+          <td>Biggest single gap. Educational, demonstrative, and mechanism content almost entirely absent.</td>
+        </tr>
+        <tr>
+          <td><strong>Intimacy</strong></td>
+          <td>~50%</td>
+          <td>30%</td>
+          <td><span class="gap-pill warn">Over-Weighted</span></td>
+          <td>Personal life content without ICA bridging — not strategic vulnerability. Converting reach to intimacy without coaching anchor.</td>
+        </tr>
+        <tr>
+          <td><strong>Proof</strong></td>
+          <td>~20%</td>
+          <td>20%</td>
+          <td><span class="gap-pill opportunity">On Target</span></td>
+          <td>Volume is right. Quality problem: proof captions celebrate instead of story. Fix the framing, not the frequency.</td>
+        </tr>
+        <tr>
+          <td><strong>Action</strong></td>
+          <td>~15%</td>
+          <td>10%</td>
+          <td><span class="gap-pill warn">Structurally Weak</span></td>
+          <td>Infrastructure present (comment triggers) but front-end hooks leading into CTAs are the weakest element. Assumes the buy before earning it.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ALGORITHM GAP ANALYSIS -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Algorithm Content Type Gap Analysis</div>
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>Type</th><th>Name</th><th>Status</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td><strong>1</strong></td><td>Demonstrative Reels</td><td><span class="gap-pill missing">Missing</span></td><td>No prop-based visual content in reels tab — the highest-retention content type completely absent.</td></tr>
+        <tr><td><strong>2</strong></td><td>Negative / Curiosity Hooks</td><td><span class="gap-pill warn">Underusing</span></td><td>"Keto reel" is one example — needs 2–3× per week minimum.</td></tr>
+        <tr><td><strong>3</strong></td><td>Credibility-Based Hooks</td><td><span class="gap-pill warn">Underusing</span></td><td>17 yrs + 1,100 women + 18-lb story completely unused as reel hooks. These are her highest-authority assets.</td></tr>
+        <tr><td><strong>4</strong></td><td>Story / Vulnerability</td><td><span class="gap-pill warn">Partial</span></td><td>Intimacy reels present but need stronger ICA bridge in captions and CTA.</td></tr>
+        <tr><td><strong>5</strong></td><td>B-Roll + Text Overlay</td><td><span class="gap-pill opportunity">Working</span></td><td>Top-performing format — zodiac reel, "I love me." Consistency here is the baseline.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- WEEKLY CALENDAR -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--gray-400);margin-bottom:10px;">Personalized Weekly Content Calendar</div>
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>Day</th><th>Pillar</th><th>Format</th><th>Hook Examples</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Monday</strong></td>
+          <td><span class="gap-pill opportunity">Intimacy</span></td>
+          <td>B-roll reel</td>
+          <td>"The year I gained 18 lbs changed everything I knew about coaching" · "Being the fit friend, then one day not being her anymore" · "I coach women over 35 every day — the look when they realize it wasn't their fault"</td>
+        </tr>
+        <tr>
+          <td><strong>Tuesday</strong></td>
+          <td><span class="gap-pill missing">Trust</span></td>
+          <td>Educational carousel</td>
+          <td>"3 reasons your metabolism slowed after 35 (none are discipline)" · "Why eating less after 40 can make you gain weight — the cortisol connection" · "5 signs your current program was designed for a 25-year-old body"</td>
+        </tr>
+        <tr>
+          <td><strong>Wednesday</strong></td>
+          <td><span class="gap-pill opportunity">Proof</span></td>
+          <td>Transformation reel</td>
+          <td>"She lost 19 lbs doing the opposite of everything she'd been told" · "From exhausted and stuck to 14 lbs down in 8 weeks — Angie's story" · "Client result: 11 lbs + first full night's sleep in two years"</td>
+        </tr>
+        <tr>
+          <td><strong>Thursday</strong></td>
+          <td><span class="gap-pill missing">Villain</span></td>
+          <td>Talking head reel</td>
+          <td>"Stop blaming your willpower. Your program was designed for someone 15 yrs younger." · "Your doctor isn't lying — they just aren't testing the right things" · "1,200 calories is not a diet. It's a metabolic slowdown strategy."</td>
+        </tr>
+        <tr>
+          <td><strong>Friday</strong></td>
+          <td><span class="gap-pill opportunity">Intimacy</span></td>
+          <td>B-roll + overlay</td>
+          <td>"I got married at 38 feeling more like myself than I have in a decade" · "The day I stopped believing it was my fault, everything changed" · "I gained 18 lbs so I could understand what you're going through. Literally."</td>
+        </tr>
+        <tr>
+          <td><strong>Saturday</strong></td>
+          <td><span class="gap-pill missing">Trust</span></td>
+          <td>Demonstrative reel</td>
+          <td>"Grab your last blood test. Let me show you what to look for." · "I drew this out so you can SEE what cortisol does to your fat cells" · "COMMENT LABS — and I'll send you the 3 numbers your doctor should be testing"</td>
+        </tr>
+        <tr>
+          <td><strong>Sunday</strong></td>
+          <td>Rest</td>
+          <td>Stories only</td>
+          <td>Client wins, meal prep, personal moments — Stories only, no feed posts.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- HOOK REWRITES -->
+<section class="doc-section" id="s-hooks">
+  <div class="sec-eyebrow">Hook Analysis</div>
+  <div class="sec-heading">Before / After Hook Rewrites</div>
+  <div class="sec-divider"></div>
+  <p class="mb-md">Lian's current hooks lead with aspiration or affirmation. High-converting hooks for her ICA lead with the PROBLEM — specifically named, emotionally accurate, immediately self-identifying for a woman 35–50 who has tried things and is confused about why they stopped working. The aspiration follows the problem, never precedes it.</p>
+
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>#</th><th>Original Hook</th><th>Improved Hook</th><th>Why It's Stronger</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td class="hook-row-before">"COMMENT 'Begin' if you're ready to finally lose that last stubborn layer"</td>
+          <td class="hook-row-after">"She did everything right for 6 years. Still couldn't lose the weight. Here's what changed."</td>
+          <td>Problem-first narrative. ICA sees herself immediately. CTA moves to end after proof — not as the opening assumption.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td class="hook-row-before">"You don't have to lose weight alone! COMMENT or DM 'Begin'"</td>
+          <td class="hook-row-after">"Losing weight alone when your hormones are working against you isn't discipline — it's impossible."</td>
+          <td>Names root cause (hormones). Removes shame. Opens curiosity rather than selling immediately. Aspiration earns the click.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td class="hook-row-before">"Your body deserves an entire library written about how beautiful it is"</td>
+          <td class="hook-row-after">"You've tried everything. Eaten clean. Done the cardio. And your body still won't budge. That's not failure. That's a signal."</td>
+          <td>Meets ICA in exact frustration. Reframes from failure to diagnosis — far more resonant for women 35–50 who've been trying.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td class="hook-row-before">"Why did I do this to myself? (carousel)"</td>
+          <td class="hook-row-after">"I intentionally gained 18 lbs of fat at 38 years old. Not by accident. On purpose."</td>
+          <td>States the pattern interrupt immediately. Positions story as proof not struggle. Curiosity loop forces continuation. Same story, 10× the hook.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- QUICK WINS -->
+<section class="doc-section" id="s-actions">
+  <div class="sec-eyebrow">Priority Action Plan</div>
+  <div class="sec-heading">Quick Win Priority Matrix</div>
+  <div class="sec-divider"></div>
+
+  <div class="audit-table-wrap mb-md">
+    <table class="audit-tbl">
+      <thead><tr><th>Priority</th><th>Action</th><th>Effort</th><th>Impact</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="badge fail">Critical</span></td>
+          <td><strong>Film 18-lb founder story as talking-head reel — pin as Post 1 and launch as paid ad entity simultaneously</strong></td>
+          <td>Low</td>
+          <td><strong>Extremely High</strong></td>
+        </tr>
+        <tr>
+          <td><span class="badge fail">Critical</span></td>
+          <td><strong>Rewrite bio to name ICA explicitly (women 35–50, hormones/thyroid) and include mechanism name</strong></td>
+          <td>Low</td>
+          <td><strong>High</strong></td>
+        </tr>
+        <tr>
+          <td><span class="badge fail">Critical</span></td>
+          <td><strong>Move Comment trigger to FIRST LINE of every reel caption — not buried at the end</strong></td>
+          <td>Low</td>
+          <td><strong>High</strong></td>
+        </tr>
+        <tr>
+          <td><span class="badge fail">Critical</span></td>
+          <td><strong>Deploy Nurture VSL in DM flow before Calendly link — restructure: Pain Discovery → Watch Video → Book</strong></td>
+          <td>Medium</td>
+          <td><strong>Extremely High</strong></td>
+        </tr>
+        <tr>
+          <td><span class="badge warn">High</span></td>
+          <td>Post first demonstrative reel (hold up lab panel — "The 3 numbers your doctor should be testing")</td>
+          <td>Medium</td>
+          <td><strong>Very High</strong></td>
+        </tr>
+        <tr>
+          <td><span class="badge warn">High</span></td>
+          <td>Add 3–5 SEO keyword phrases to all future captions in first 125 characters</td>
+          <td>Low</td>
+          <td><strong>High</strong></td>
+        </tr>
+        <tr>
+          <td><span class="badge warn">High</span></td>
+          <td>Rewrite proof post captions with symptom-rich before-story storytelling (not celebration)</td>
+          <td>Medium</td>
+          <td><strong>High</strong></td>
+        </tr>
+        <tr>
+          <td><span class="badge warn">High</span></td>
+          <td>Develop "What nobody tells you about..." as recurring villain/trust reel series — 1×/week minimum</td>
+          <td>Medium</td>
+          <td><strong>Very High</strong></td>
+        </tr>
+        <tr>
+          <td><span class="badge info">Medium</span></td>
+          <td>Build 1 educational carousel per week starting immediately (Trust pillar — currently absent)</td>
+          <td>Medium</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td><span class="badge info">Medium</span></td>
+          <td>Add TikTok-specific lead magnet link (email capture for fat-burning protocol checklist — proven 12.9K likes)</td>
+          <td>Low</td>
+          <td>High</td>
+        </tr>
+        <tr>
+          <td><span class="badge info">Medium</span></td>
+          <td>Reconnect all wedding/personal content to ICA with coaching bridge in caption</td>
+          <td>Low</td>
+          <td>Medium</td>
+        </tr>
+        <tr>
+          <td><span class="badge pass">Long-Term</span></td>
+          <td>2–3 niche-aligned creator collabs (perimenopause, hormone health, women 35+)</td>
+          <td>Medium</td>
+          <td>Very High</td>
+        </tr>
+        <tr>
+          <td><span class="badge pass">Long-Term</span></td>
+          <td>Build educational carousel SEO library (thyroid, cortisol, perimenopause — 10+ carousel library)</td>
+          <td>High</td>
+          <td>Very High</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card green-left mt-md">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Bottom line:</strong> Lian has an exceptional coaching foundation — a powerful mechanism name, a verified account, proven viral mechanics (comment triggers, villain content), strong on-camera presence, and real social proof depth. The gap between 21K and 100K+ is primarily a content architecture and positioning clarity problem, not a consistency or quality problem. The single highest-leverage action: film the 18-lb experiment as a camera-forward talking-head reel and pin it. This one piece of content would restructure the account's engagement, reach, and DM pipeline — and doubles as the highest-converting paid ad entity she's never deployed.</p>
+  </div>
+</section>
+
+<!-- FOOTER (TAB 2) -->
+<div class="doc-footer">
+  <div class="df-brand">IFCA <span>PLAYBOOKS</span></div>
+  <div class="df-note">Lian Price · Social Media Growth Audit · March 2026 · IFCA Confidential</div>
+</div>
+
+</div><!-- /tab-social -->
+
+</div><!-- /page -->
+
+<script>
+// ============================================================
+// TAB SWITCHING
+// ============================================================
+function switchTab(id, btn){
+  document.querySelectorAll('.tab-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+id).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0,0);
+}
+
+// ============================================================
+// DATA (Business Audit)
+// ============================================================
+const DATA = {
+  q1:  { label:'Q1 2026 Avg',     adSpend:4496,  leads:674, cpl:5.50,  scheduledCalls:21, liveCalls:8,  showRate:.390, costPerCall:214, closes:4,    closeRate:.470, fePrice:2300, contractedROAS:2.35, collectedROAS:null, feToBe:.30, bePrice:392,  upfrontPct:null, laborMargin:null, marketingMargin:null, overheadMargin:null, netMargin:null, cac:null, ltv:4450, cacLtv:null, churn:.15, activeClients:35, monthlyRev:21500, newClients:4 },
+  jan: { label:'January 2026',    adSpend:6000,  leads:692, cpl:5.00,  scheduledCalls:28, liveCalls:11, showRate:.393, costPerCall:214, closes:6,    closeRate:.540, fePrice:2300, contractedROAS:null, collectedROAS:null, feToBe:.30, bePrice:392,  upfrontPct:null, laborMargin:null, marketingMargin:null, overheadMargin:null, netMargin:null, cac:null, ltv:4450, cacLtv:null, churn:.15, activeClients:35, monthlyRev:25000, newClients:6 },
+  feb: { label:'February 2026',   adSpend:5350,  leads:942, cpl:6.00,  scheduledCalls:26, liveCalls:10, showRate:.350, costPerCall:206, closes:4,    closeRate:.400, fePrice:2300, contractedROAS:1.68, collectedROAS:1.68, feToBe:.30, bePrice:392,  upfrontPct:null, laborMargin:null, marketingMargin:null, overheadMargin:null, netMargin:null, cac:1337, ltv:4450, cacLtv:3.33, churn:.15, activeClients:35, monthlyRev:20000, newClients:4 },
+  mar: { label:'March 2026 (Partial)', adSpend:2137, leads:389, cpl:5.49, scheduledCalls:9, liveCalls:4,  showRate:.440, costPerCall:237, closes:0,    closeRate:.000, fePrice:2300, contractedROAS:3.25, collectedROAS:3.25, feToBe:.30, bePrice:392,  upfrontPct:null, laborMargin:null, marketingMargin:null, overheadMargin:null, netMargin:null, cac:2137, ltv:4450, cacLtv:2.08, churn:.15, activeClients:35, monthlyRev:10000, newClients:0 },
+};
+
+const AD_METRICS = [
+  { key:'adSpend',       label:'Monthly Ad Spend',             fmt:fmtD,  target:'$4K–$6K/mo',  pass:v=>v>=4000&&v<=7000, warn:v=>v>=2000,    note:'Lian is spending at target. The constraint is NOT more spend — it\'s converting the leads the existing spend already generates.' },
+  { key:'cpl',           label:'Cost Per Lead (CPL)',           fmt:fmtD,  target:'< $10',        pass:v=>v<10,             warn:v=>v<15,        note:'$5–$6 CPL is excellent — well under the $10 target. Lead volume is not the problem. Lead quality and education downstream is.' },
+  { key:'showRate',      label:'Sales Call Show Rate',          fmt:fmtP,  target:'> 70%',        pass:v=>v>=.70,           warn:v=>v>=.60,      note:'35–44% Q1 is critically below target. 55–65% no-show rate. Root cause: leads book without buy-in, ghost overnight. TY Page video fixes this.' },
+  { key:'closeRate',     label:'Close Rate (Live Calls)',       fmt:fmtP,  target:'30–45%',       pass:v=>v>=.30&&v<=.45,  warn:v=>v>=.25,      note:'40–54% when live — elite. The sales skill is proven. Do NOT change the close approach. The only constraint is getting more people to show up.' },
+  { key:'collectedROAS', label:'Collected ROAS',                fmt:fmtX,  target:'> 2×',         pass:v=>v>=2,             warn:v=>v>=1.5,      note:'Inconsistent data due to partial month. Feb 1.68× (improving). Mar 3.25×. ROAS will improve as show rate and lead-to-book rate are fixed.' },
+  { key:'ltv',           label:'Est. LTV (FE + 6mo Alumni)',   fmt:fmtD,  target:'> $4K',        pass:v=>v>=4000,          warn:v=>v>=3000,     note:'~$4,450 estimated (FE $2,300 + alumni 6mo × $392). At 50% FE→BE conversion the effective LTV nearly doubles. Backend is the lever.' },
+  { key:'cacLtv',        label:'CAC : LTV Ratio',               fmt:fmtX,  target:'> 5:1',        pass:v=>v>=5,             warn:v=>v>=3,        note:'Low because almost no CAC data is clean. Feb CAC $1,337 → 3.3:1 — needs improvement. Fix lead-to-book and show rate to push this past 5:1.' },
+];
+
+const MARGIN_METRICS = [
+  { key:'churn',          label:'Est. Monthly Churn (Alumni)', fmt:fmtP, target:'< 10%',  pass:v=>v<.10, warn:v=>v<.15, note:'~15% estimated — above target for alumni because program is a fixed 8-week FE. Watch this improve as FE→BE conversion rate increases.' },
+  { key:'newClients',     label:'New Clients / Month',         fmt:v=>`${v}`, target:'8–12/mo', pass:v=>v>=8, warn:v=>v>=5, note:'Q1 avg 4–6 closes/month against an 8–12 target. Fix show rate → close rate converts. Volume problem is show rate, not pitch.' },
+  { key:'monthlyRev',     label:'Monthly Collected Revenue',   fmt:fmtD, target:'> $35K',  pass:v=>v>=35000, warn:v=>v>=25000, note:'$18K–$25K Q1 range. Show-rate fix alone (2–4 more live calls/month) adds $2K–$4K immediately. Target $40K+ within 60 days of Nurture VSL + TY Page deploy.' },
+];
+
+let period = 'q1';
+let editMode = false;
+let overrides = {};
+
+function fmtD(v){ if(v===null||isNaN(v))return'—'; return'$'+v.toFixed(v<10?2:0).replace(/\B(?=(\d{3})+(?!\d))/g,','); }
+function fmtP(v){ if(v===null||isNaN(v))return'—'; return(v*100).toFixed(1)+'%'; }
+function fmtX(v){ if(v===null||isNaN(v))return'—'; return v.toFixed(2)+'×'; }
+function fmtK(v){ if(v===null||!v||isNaN(v))return'—'; if(v>=1e6)return'$'+(v/1e6).toFixed(1)+'M'; if(v>=1000)return'$'+(v/1000).toFixed(1)+'K'; return'$'+v.toFixed(0); }
+function val(key){ const v = (editMode && overrides[key]!==undefined) ? overrides[key] : DATA[period][key]; return (v===null||v===undefined)?NaN:v; }
+
+function sc(metric, v){
+  if(isNaN(v)) return 'info';
+  if(metric.pass(v)) return 'pass';
+  if(metric.warn && metric.warn(v)) return 'warn';
+  return 'fail';
+}
+
+function render(){
+  const chips = [
+    { label:'CPL', v:fmtD(val('cpl')), cls:val('cpl')<10?'pass':val('cpl')<15?'warn':'fail' },
+    { label:'Show Rate', v:fmtP(val('showRate')), cls:val('showRate')>=.70?'pass':val('showRate')>=.60?'warn':'fail' },
+    { label:'Close Rate', v:fmtP(val('closeRate')), cls:val('closeRate')>=.30&&val('closeRate')<=.45?'pass':val('closeRate')>=.25?'warn':'fail' },
+    { label:'Est. LTV', v:fmtK(val('ltv')), cls:val('ltv')>=4000?'pass':val('ltv')>=3000?'warn':'fail' },
+    { label:'Monthly Rev', v:fmtK(val('monthlyRev')), cls:val('monthlyRev')>=35000?'pass':val('monthlyRev')>=20000?'warn':'fail' },
+  ];
+  document.getElementById('kpi-band').innerHTML = chips.map(c=>`
+    <div class="kpi-chip ${c.cls}">
+      <div class="chip-label">${c.label}</div>
+      <div class="chip-val">${c.v}</div>
+      <div class="chip-target">${DATA[period].label}</div>
+    </div>`).join('');
+
+  document.getElementById('ad-tbody').innerHTML = AD_METRICS.map(m=>{
+    const v = val(m.key);
+    const cls = sc(m,v);
+    const cell = editMode
+      ? `<input class="edit-input" type="number" value="${isNaN(v)?'':v}" step="any" onchange="upd('${m.key}',this.value)">`
+      : `<span class="m-val ${cls}">${m.fmt(v)}</span>`;
+    return `<tr>
+      <td><span class="m-name">${m.label}</span></td>
+      <td><span class="m-target">${m.target}</span></td>
+      <td>${cell}</td>
+      <td><span class="badge ${cls}">${cls==='pass'?'✓ On Target':cls==='warn'?'⚠ Watch':cls==='info'?'— No Data':'✗ Off Target'}</span></td>
+      <td><span class="m-note">${m.note}</span></td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('margin-tbody').innerHTML = MARGIN_METRICS.map(m=>{
+    const v = val(m.key);
+    const cls = sc(m,v);
+    const cell = editMode
+      ? `<input class="edit-input" type="number" value="${isNaN(v)?'':v}" step="any" onchange="upd('${m.key}',this.value)">`
+      : `<span class="m-val ${cls}">${m.fmt(v)}</span>`;
+    return `<tr>
+      <td><span class="m-name">${m.label}</span></td>
+      <td><span class="m-target">${m.target}</span></td>
+      <td>${cell}</td>
+      <td><span class="badge ${cls}">${cls==='pass'?'✓ On Target':cls==='warn'?'⚠ Watch':cls==='info'?'— No Data':'✗ Off Target'}</span></td>
+      <td><span class="m-note">${m.note}</span></td>
+    </tr>`;
+  }).join('');
+
+  const churn = val('churn');
+  const ltv   = val('ltv');
+  const nc    = val('newClients');
+  const rev   = val('monthlyRev');
+  const eq    = isNaN(ltv)||isNaN(nc) ? NaN : ltv * nc;
+
+  document.getElementById('re-churn').textContent  = fmtP(churn);
+  document.getElementById('re-ltv').textContent    = fmtK(ltv);
+  document.getElementById('re-new').textContent    = isNaN(nc) ? '—' : Math.round(nc);
+  document.getElementById('re-eq').textContent     = fmtK(eq);
+  document.getElementById('re-actual').textContent = fmtK(rev);
+
+  const verd = document.getElementById('re-verdict');
+  if(isNaN(eq)||isNaN(rev)){
+    verd.className = 'eq-verdict flat';
+    verd.innerHTML = `≈ <strong>Partial data.</strong> Revenue equilibrium calculation requires complete close and LTV data. The direction is clear: at 4–6 closes/month and ~$4,450 LTV, equilibrium is $17,800–$26,700 — roughly tracking current revenue. Fix the show rate to increase close velocity and the equilibrium will compound above current revenue.`;
+  } else if(eq > rev*1.1){
+    verd.className = 'eq-verdict building';
+    const diff = ((eq - rev) / rev * 100).toFixed(0);
+    verd.innerHTML = `✓ <strong>Building.</strong> Revenue Equilibrium (${fmtK(eq)}) is ${diff}% above current revenue (${fmtK(rev)}). Every new close adds ${fmtK(ltv)} in future LTV. At current volume this is the direction — scale close velocity and the base compounds quickly.`;
+  } else if(eq < rev*.9){
+    verd.className = 'eq-verdict eroding';
+    verd.innerHTML = `🚨 <strong>Watch.</strong> Revenue Equilibrium (${fmtK(eq)}) is tracking below current revenue (${fmtK(rev)}). Increasing close velocity (via show-rate fix) and FE→BE conversion are the two levers that expand this gap in the right direction.`;
+  } else {
+    verd.className = 'eq-verdict flat';
+    verd.innerHTML = `≈ <strong>Holding steady.</strong> Equilibrium (${fmtK(eq)}) roughly matches current revenue (${fmtK(rev)}). The business is maintaining — not yet compounding. Fix the show rate and lead-to-book rate to increase close velocity and restart compound growth.`;
+  }
+}
+
+function setPeriod(p){
+  period = p; overrides = {};
+  document.querySelectorAll('.pt').forEach(t=>t.classList.remove('active'));
+  document.querySelector(`.pt[onclick="setPeriod('${p}')"]`).classList.add('active');
+  render();
+}
+
+function toggleEdit(){
+  editMode = !editMode;
+  const btn = document.getElementById('edit-btn');
+  btn.textContent = editMode ? '✓ Done Editing' : '✏ Update Numbers';
+  btn.classList.toggle('on', editMode);
+  if(!editMode) overrides = {};
+  render();
+}
+
+function upd(key,v){ overrides[key]=parseFloat(v); render(); }
+function updP(key,v){ overrides[key]=parseFloat(v)/100; render(); }
+
+// ============================================================
+// STICKY NAV OBSERVER (Business Audit)
+// ============================================================
+const bizSections = document.querySelectorAll('#tab-biz .doc-section, #tab-biz .hero');
+const bizNavLinks = document.querySelectorAll('#tab-biz .nav-link');
+const bizObserver = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      bizNavLinks.forEach(l=>l.classList.remove('active'));
+      const active = document.querySelector(`#tab-biz .nav-link[href="#${e.target.id}"]`);
+      if(active) active.classList.add('active');
+    }
+  });
+},{threshold:0.2,rootMargin:'-80px 0px -60% 0px'});
+bizSections.forEach(s=>bizObserver.observe(s));
+
+// ============================================================
+// STICKY NAV OBSERVER (Social Audit)
+// ============================================================
+const socialSections = document.querySelectorAll('#tab-social .doc-section, #tab-social .social-hero');
+const socialNavLinks = document.querySelectorAll('#tab-social .snav-link');
+const socialObserver = new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      socialNavLinks.forEach(l=>l.classList.remove('active'));
+      const active = document.querySelector(`#tab-social .snav-link[href="#${e.target.id}"]`);
+      if(active) active.classList.add('active');
+    }
+  });
+},{threshold:0.2,rootMargin:'-80px 0px -60% 0px'});
+socialSections.forEach(s=>socialObserver.observe(s));
+
+// ============================================================
+// COPY FOR WORKSHOP
+// ============================================================
+function copyIntelReport(){
+  const txt = `CREATIVE INTELLIGENCE REPORT — LIAN PRICE (@lianprice)
+Prepared: April 2026 | IFCA Seven-Figure Retreat
+
+BUSINESS OVERVIEW
+• Revenue: $18K–$25K/month Q1 2026
+• Offer: 8-week 1:1 metabolic coaching ($2,100–$2,497 FE) + Alumni ($392/mo)
+• Mechanism: L3 Method™ / Metabolic Reboot Method™
+• Avatar: Women 35–50, thyroid/hormonal issues, previously active, labs "normal" but body not responding
+• Team: Setter, CSM, Ops Manager, proprietary app
+
+KEY KPIs (Q1 2026)
+• CPL: $5–$6 (PASS — target <$10)
+• Show Rate: 35–44% (CRITICAL — target >70%)
+• Lead-to-Book Rate: 2–4% (CRITICAL — target 7–10%)
+• Close Rate (Live): 40–54% (PASS — above target 30–45%)
+• Primary Constraint: Pre-call education layer (Nurture VSL + TY Page — both scripted, neither deployed)
+
+META AD LIBRARY STATUS
+• 1 creative entity running since August 2025 (8 months)
+• B-roll gym footage, "Back-to-school szn" overlay — seasonally irrelevant
+• No creative rotation, no A/B testing, no retargeting layer
+• Zero TOF/MOF/BOF distinction
+• TikTok (105K followers): zero paid activity
+
+VERBATIM HOOKS (Ready for Entity Build)
+H1: "I intentionally gained 18 pounds of fat at 38 years old. Not by accident. On purpose." [Pattern Interrupt / Founder Story]
+H2: "Your doctor told you your labs were normal. But you've gained 15 lbs. You're exhausted. Here's why." [Villain]
+H3: "She did everything right for 6 years. Still couldn't lose the weight. Here's what changed." [Problem-First Proof]
+H4: "Stop blaming your willpower. Your program was designed for someone 15 years younger." [Villain]
+H5: "She went from 5 cardio sessions a week to zero. Lost 14 lbs. Here's the hormonal math." [Contrarian]
+H6: "The 3 numbers your doctor should be testing if you can't lose weight after 35 — almost no GP checks for them." [Demonstrative]
+H7: "POV: you're 42, you've tried everything, and you're about to find out it wasn't your fault." [Empathy]
+
+ENTITY BUILD QUEUE
+1. 18-lb Founder Story Talking-Head Reel → Paid Entity (Priority 1 — film immediately)
+2. Lab Panel Demonstrative → "3 Numbers Your Doctor Isn't Testing" (Priority 2)
+3. Client Transformation Reel — Symptom-Rich Before-Story (Priority 3)
+4. Cardio Villain Reel — "She Stopped Cardio. Lost 14 lbs." (Priority 4)
+
+COMPETITOR INTEL
+• @laceyiskra (425K): Lab-panel demonstrative reels — steal the format immediately
+• @drmaryclaire (180K): "Your doctor isn't testing the right labs" hook framework
+• @sammyb.fit (95K): Comment trigger FIRST LINE of caption + POV format
+• @theperimenopausefitcoach (62K): Keyword-saturated captions → 12K to 62K in 18 months, zero paid ads
+
+CURRENT ORGANIC ENTITY CLUSTERS (Available to Convert to Paid Now)
+• Founder story (18-lb experiment) — exists as carousel, not video
+• Villain content (keto, cardio culture, generic programs, dismissive doctors)
+• Client proof (Angie 19 lbs, Adrienne 18 lbs, Catherine 33 lbs, Kathy 23 lbs)
+• Lifestyle/identity (B-roll, physique, zodiac reel)
+• Demonstrative (lab panels, cortisol — NOT YET FILMED)
+
+STRATEGIC DIAGNOSIS
+The #1 issue is not creative quality — it is creative diversity. One entity running for 8 months means audience fatigue across the full demographic. The 18-lb founder story is the single most valuable piece of content Lian has never made. Film it. Pin it. Run it as a paid entity. Do all three in the same week.`;
+
+  navigator.clipboard.writeText(txt).then(()=>{
+    const btn = document.getElementById('copy-intel-btn');
+    btn.innerHTML = '<span>✓</span> Copied!';
+    btn.style.background='var(--green)';
+    setTimeout(()=>{
+      btn.innerHTML = '<span>⬆</span> Copy for Workshop';
+      btn.style.background='var(--orange)';
+    },2500);
+  }).catch(()=>{ alert('Copy failed — try selecting text manually.'); });
+}
+
+// Init
+render();
+</script>
+</body>
+</html>
