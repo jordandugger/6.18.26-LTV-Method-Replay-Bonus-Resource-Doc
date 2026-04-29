@@ -66,9 +66,6 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
 .tb-quote{font-size:14px;color:rgba(255,255,255,.82);line-height:1.65;font-style:italic;}
 .tb-quote strong{color:var(--green);font-style:normal;}
 .tb-source{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--muted);margin-top:6px;}
-.tb-link{color:var(--orange);text-decoration:none;font-size:12px;margin-left:auto;
-  flex-shrink:0;display:flex;align-items:center;gap:5px;margin-top:2px;}
-.tb-link:hover{text-decoration:underline;}
 
 /* ── SECTIONS ── */
 .section{margin-bottom:52px;}
@@ -136,11 +133,9 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
 .ac-audit-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(232,119,34,.1);
   border:1px solid rgba(232,119,34,.25);border-radius:4px;padding:2px 7px;
   font-family:'DM Mono',monospace;font-size:9px;color:var(--orange);margin-top:6px;}
-
-/* ── SESSION DIVIDER ── */
-.session-divider{grid-column:1/-1;display:flex;align-items:center;gap:12px;padding:8px 0 4px;}
-.sd-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);white-space:nowrap;}
-.sd-line{flex:1;height:1px;background:rgba(255,255,255,.06);}
+.ac-intel-badge{display:inline-flex;align-items:center;gap:5px;background:rgba(59,130,246,.1);
+  border:1px solid rgba(59,130,246,.25);border-radius:4px;padding:2px 7px;
+  font-family:'DM Mono',monospace;font-size:9px;color:var(--blue);margin-top:6px;}
 
 /* ── CTA ── */
 .cta-section{background:var(--navy-mid);border:1px solid var(--border);
@@ -288,15 +283,15 @@ footer strong{color:var(--orange);}
     <div class="section-header">
       <div class="section-label">Tonight's <span class="orange">Hot Seat</span> Attendees</div>
       <div class="section-divider"></div>
-      <div class="section-count" id="visible-count">34 Coaches</div>
+      <div class="section-count" id="visible-count">23 Coaches</div>
     </div>
     <p style="font-size:12px;color:var(--muted);margin-bottom:16px;font-family:'DM Mono',monospace;letter-spacing:.05em;">
-      Coaches with a pre-built audit have a clickable card. Audits added as they are completed.
+      Coaches with a <span style="color:var(--orange);">📋 Full Audit</span> have a clickable card — opens your personalized intelligence report. Audits added as they're completed post-session.
     </p>
 
     <!-- FILTER BAR -->
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
-      <button class="filter-btn active" onclick="filterCards('all',this)">All (34)</button>
+      <button class="filter-btn active" onclick="filterCards('all',this)">All (23)</button>
       <button class="filter-btn" onclick="filterCards('audit',this)">📋 Has Audit</button>
       <button class="filter-btn" onclick="filterCards('scale',this)">Scale</button>
       <button class="filter-btn" onclick="filterCards('growth',this)">Growth</button>
@@ -306,168 +301,187 @@ footer strong{color:var(--orange);}
 
     <div class="attendee-grid" id="attendee-grid">
 
-      <!-- ══ ORIGINAL SESSION ATTENDEES ══ -->
-      <div class="session-divider">
-        <div class="sd-label">Original Session</div>
-        <div class="sd-line"></div>
-      </div>
-
-      <!-- LOREN CHAPMAN — has audit -->
+      <!-- ── LOREN CHAPMAN — FULL AUDIT LIVE ── -->
       <div class="attendee-card has-audit" data-phase="growth" data-audit="true" onclick="window.open('hot-seat-loren-chapman.html','_blank')">
         <div class="ac-name">Loren Chapman <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Functional lab + hormone coaching for high-performing women 35–45. HRC group ($147/mo) + 1:1 Precision Rebuild (~$2,500/3mo).</div>
-        <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo consistent with predictable acquisition</div>
+        <div class="ac-offer">Hormone Reset Club ($147/mo) + 1:1 Precision Rebuild ($2,500/3mo). Functional labs + training + nutrition for high-performing women 35–45 whose bodies stopped responding.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo with predictable acquisition system</div>
         <div class="ac-audit-badge">📋 Full Audit Ready →</div>
       </div>
 
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Nicole Auquilla Maggio <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">90-day private mentorship for high-capacity Christian women — nervous system, metabolism, identity coaching. $3,000–$4,500.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $5–10K/mo + quit full-time finance job</div>
-      </div>
-
-      <div class="attendee-card" data-phase="scale">
-        <div class="ac-name">Craig Stevenson <span class="ac-phase scale">Scale</span></div>
-        <div class="ac-offer">In-person small group training. 100 current clients. 3,000+ total clients over career. Running ads + organic.</div>
-        <div class="ac-goal"><span class="arrow">→</span> 30 high-ticket online clients, $15K/mo, 25 hrs/wk</div>
-      </div>
-
-      <div class="attendee-card" data-phase="growth">
-        <div class="ac-name">Wendy Goodine <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Menopause specialist + athletes + general population. Specialty: permanent lifestyle change. Personal 95lb loss maintained 25 years. Referral-based.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Well into 6 figures, work from anywhere</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Kristal Couper <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Perimenopause/menopause fitness coaching. 1:1 program at $200. Pivoting to narrow niche from broad audience. 1 active online client.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Quit job, $45K CAD/yr minimum</div>
-      </div>
-
-      <div class="attendee-card" data-phase="zero">
-        <div class="ac-name">Anastasia Riley <span class="ac-phase zero">Pre-Launch</span></div>
-        <div class="ac-offer">Still figuring out offer. No clients yet. Interested in ads as primary acquisition channel.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Successful online coaching business</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Brent Thomas <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Veterans with physical limitations (back pain, etc.) who are family men and former athletes. 1 current client, 3 total. IG organic.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Impact hundreds of clients in 12 months</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Crystal Harrington <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Monthly virtual programs $100–150/mo for busy moms. 16 current clients, 237 total. Referral + organic only.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $10K/month revenue</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">VonRay Johnson <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Performance athletics + weight loss. $70–90/session. 15–20 current clients. Word of mouth only. 1,000+ lifetime clients.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $25K/month online</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Leah Natera <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Gym confidence, nutrition/macro coaching, accountability. $300/mo. 1 current client, 8 total. FB group leads that don't convert.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $20K/month</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Jameel Courtney <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Body transformations. $25 (30-min) / $55 (hr). 17 current clients, hundreds total. Struggling to explain/prove system online.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $150K/year</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Henry Matthews <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Rehab Meets Performance Method — athletes + active adults with knee/shoulder/back pain. In rehab clinic setting. $720/mo. 6 current clients.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $8–15K/mo, performance brand</div>
-      </div>
-
-      <!-- ══ NEW APRIL 28 REGISTRANTS ══ -->
-      <div class="session-divider">
-        <div class="sd-label">New April 28 Registrants</div>
-        <div class="sd-line"></div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Nicole Auquilla Maggio <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">The Regulated Leader Reset — 90-day private mentorship for high-capacity Christian women. Nervous system + metabolism + identity. $3,000–$4,500. Chicago-based, IG + DM acquisition.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $5–10K/mo + quit full-time finance job</div>
-      </div>
-
-      <div class="attendee-card" data-phase="growth">
-        <div class="ac-name">Drew Gatto <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Coaching for people with physical limitations. 12 current clients, 20+ total. Organic only. Networking as primary bottleneck.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Live comfortably</div>
-      </div>
-
-      <div class="attendee-card" data-phase="scale">
-        <div class="ac-name">Craig Stevenson <span class="ac-phase scale">Scale</span></div>
-        <div class="ac-offer">In-person small group training (Phoenix area). 100 current clients, 3,000+ career total. Running ads + organic. Transitioning to high-ticket online.</div>
-        <div class="ac-goal"><span class="arrow">→</span> 30 HT online clients, $15K/mo, 25 hrs/wk max</div>
-      </div>
-
-      <div class="attendee-card" data-phase="growth">
-        <div class="ac-name">Loren Chapman <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Hormone Reset Club ($147/mo group) + 1:1 Precision Rebuild ($2,500/3mo). Functional labs + training + nutrition for women 35–45 whose bodies stopped responding.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo, predictable acquisition system</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">LeeAnn Potochney <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Amplify PTP — physical therapist. Active adults + athletes, stay competitive + get out of pain. In-person $700+/mo + 2 remote clients. Ads + in-person workshops.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $15K/mo total net revenue</div>
-      </div>
-
+      <!-- CARLOS NOLASCO -->
       <div class="attendee-card" data-phase="growth">
         <div class="ac-name">Carlos Nolasco <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Wolf Pro Community — tennis coaching. Competitive juniors + USTA 3.5–4.0 players. 3 tiers: $450 / $700 / $1,100/mo. 15 clients. Meta ads + GHL funnels. High LTV once in.</div>
+        <div class="ac-offer">Wolf Pro Community — tennis coaching for competitive juniors + USTA 3.5–4.0 players. 3 tiers: $450 / $700 / $1,100/mo. Running Meta ads + GHL funnels. High LTV once in.</div>
         <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo with team of coaches</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
       </div>
 
+      <!-- LEEANN POTOCHNEY -->
       <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Cindy Sember <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">High-achieving Christian women — fat loss + muscle + elite mindset. 3 current clients. Running ads + organic. Attracting younger, low-budget audience instead of ideal client.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Consistent $5K months</div>
+        <div class="ac-name">LeeAnn Potochney <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Amplify PTP — licensed physical therapist. Active adults + athletes, get out of pain + stay competitive. In-person $700+/mo, 2 remote clients. Already running ads.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $15K/mo total net revenue</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
       </div>
 
+      <!-- CRAIG STEVENSON -->
+      <div class="attendee-card" data-phase="scale">
+        <div class="ac-name">Craig Stevenson <span class="ac-phase scale">Scale</span></div>
+        <div class="ac-offer">In-person small group training, Phoenix AZ. 100 current clients, 3,000+ career total. Running ads + organic. Transitioning to high-ticket online coaching.</div>
+        <div class="ac-goal"><span class="arrow">→</span> 30 HT online clients, $15K/mo, ≤25 hrs/wk</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- WENDY GOODINE -->
+      <div class="attendee-card" data-phase="growth">
+        <div class="ac-name">Wendy Goodine <span class="ac-phase growth">Growth</span></div>
+        <div class="ac-offer">Menopause specialist coach. Specialty: permanent lifestyle change. Personal 95-lb weight loss 25+ years maintained. 10 online clients. Referral-only — zero digital marketing currently.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Well into 6 figures, work from anywhere</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- NICOLE AUQUILLA MAGGIO -->
       <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Joyce Barton <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Strength training with muscle awareness + LMT massage integration. 2 clients. In-person + gym owner referrals. Core bottleneck: self-confidence + promotion.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Enough to bring husband home from out-of-state work</div>
+        <div class="ac-name">Nicole Auquilla Maggio <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">The Regulated Leader Reset — 90-day private mentorship for high-capacity Christian women. Dig Deep Protocol: nervous system + metabolism + identity coaching. $3,000–$4,500.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $5–10K/mo + quit full-time finance job</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
       </div>
 
+      <!-- HENRY MATTHEWS -->
       <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Scott Dunn <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">High-performing couples + individuals — discipline through health. $70–100/wk. 8 clients. Organic + cold DMs + word of mouth. Australia-based.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Consistent $10K/month</div>
+        <div class="ac-name">Henry Matthews <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Rehab Meets Performance Method — athletes + active adults with knee/shoulder/back injuries. Works in rehab clinic. In-person $720/mo. 6 clients, 50+ total.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $8–15K/mo online performance brand</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
       </div>
 
-      <div class="attendee-card" data-phase="zero">
-        <div class="ac-name">James Porter <span class="ac-phase zero">Pre-Revenue</span></div>
-        <div class="ac-offer">NW Tactical Methods — military + LE fitness. 3-tier: beginner → intermediate → operator. Running dept fitness program for free. 5–10 unpaid clients. No pricing established.</div>
-        <div class="ac-goal"><span class="arrow">→</span> 20–30 paying clients in 8–12 week program</div>
-      </div>
-
+      <!-- TASHA HALL -->
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Tasha Hall <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Body Gawd — rebranding to healthy lifestyle for women 27–45 (faith/fitness + lifestyle + marriage). 400–500 lifetime clients. Relaunching via IG. 0 current active clients.</div>
+        <div class="ac-offer">Body Gawd — relaunching after hiatus. Women 27–45 who want permanent healthy lifestyle (faith + fitness + lifestyle + marriage pillars). 400–500 lifetime clients. IG organic, restarting consistently.</div>
         <div class="ac-goal"><span class="arrow">→</span> $15–20K/mo recurring</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
       </div>
 
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Shannon Cushman <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">BYLT Athletics — men's strength and conditioning. 4 current clients, cold DM + friends. Marketing is the stated bottleneck. Long-term goal: own a gym.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Build toward owning a gym</div>
-      </div>
-
+      <!-- ALEX KNOWLES -->
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Alex Knowles <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">12-session Zoom package ($360) + $149 start / $100/mo ongoing. 25 current clients, 60 total. 8 yrs bodybuilding + 12 yrs PT. Referral + Crunch Fitness floor.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $6K/mo, minimize in-person, get time back</div>
+        <div class="ac-offer">Air3 — 12 virtual Zoom sessions ($360). 8 years competitive bodybuilding + 12 years personal training. 25 current clients (mix Zoom + Crunch Fitness floor). Pure referral acquisition.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $6K/mo, minimize in-person, reclaim time</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- CINDY SEMBER -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Cindy Sember <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">High-achieving Christian women — fat loss + muscle + elite mindset. 3 clients. Running ads + organic. Attracting younger, broke audience instead of premium ICA.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Consistent $5K months</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- KRISTAL COUPER -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Kristal Couper <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Pivoting to perimenopause/menopause coaching. 1:1 program at $200 (major pricing gap). Has run ads + lead magnets. 1 active online client, 20 total. Toronto, Canada.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Quit job, $45K CAD/year</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- SCOTT DUNN -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Scott Dunn <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Dunn Physique Coach — high-performing couples + individuals who want to be leaders in their relationships through health. $70–100/wk. 8 clients. Organic + cold DMs. Brisbane, Australia.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Consistent $10K/month</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- BRENT THOMAS -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Brent Thomas <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Veterans with physical limitations (back pain, etc.) who are family men and former athletes. 1 current client, 3 total. IG organic only. Strong niche identity, pre-offer stage.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Impact hundreds of clients in 12 months</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- CRYSTAL HARRINGTON -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Crystal Harrington <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Monthly virtual programs $100–150/mo for busy moms. 16 current clients, 237 total. Referral + organic only. Classic pricing ceiling problem blocking growth.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $10K/month revenue</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- JAMES PORTER -->
+      <div class="attendee-card" data-phase="zero">
+        <div class="ac-name">James Porter <span class="ac-phase zero">Pre-Revenue</span></div>
+        <div class="ac-offer">NW Tactical Methods — military + LE fitness. 3-tier: beginner → intermediate → operator-level prep for special unit assessments. Running free dept. program. 5–10 unpaid clients. No pricing yet.</div>
+        <div class="ac-goal"><span class="arrow">→</span> 20–30 paying clients in 8–12 week program</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- JAMEEL COURTNEY -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Jameel Courtney <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Body By Jameel — body transformations. $25 (30-min) / $55/hr session rates. 17 current clients, hundreds total. Bottleneck: explaining/proving the system works online.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $150K/year</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- SHANNON CUSHMAN -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Shannon Cushman <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">BYLT Athletics — men's strength and conditioning. 4 clients. Cold DMs + friends. Marketing is the stated bottleneck. Long-term goal: own a gym.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Build toward owning a gym</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- STEPHEN TURNEE -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Stephen Turner <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Gym-based PT + word of mouth. Philosophy: "I want my client to be educated enough to fire me." 5 current clients, 20–30 total. Re-entering coaching career. Capacity bottleneck (too many clients, not enough time).</div>
+        <div class="ac-goal"><span class="arrow">→</span> Re-establishing coaching career</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- LEAH NATERA -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Leah Natera <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Gym confidence + macro coaching + accountability. $300/mo. 1 current client, 8 total. FB group leads that don't convert — classic conversion + positioning problem.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $20K/month</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- VONRAY JOHNSON -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">VonRay Johnson <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Performance athletics (strength, speed, power) + weight loss. $70–90/session. 15–20 current clients. 1,000+ lifetime clients. Word of mouth + brochures only — zero digital.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $25K/month online</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- JOYCE BARTON -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Joyce Barton <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Strength training with muscle awareness + Licensed Massage Therapist integration. 2 clients, in-person Boise ID. Referrals from gym owner only. Unique LMT + coaching combination.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Enough to bring husband home from out-of-state</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- DREW GATTO -->
+      <div class="attendee-card" data-phase="growth">
+        <div class="ac-name">Drew Gatto <span class="ac-phase growth">Growth</span></div>
+        <div class="ac-offer">Coaching for people with physical limitations. 12 current clients, 20+ total. Organic acquisition only. Networking as primary stated bottleneck.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Live comfortably</div>
+        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+      </div>
+
+      <!-- ANASTASIA RILEY -->
+      <div class="attendee-card" data-phase="zero">
+        <div class="ac-name">Anastasia Riley <span class="ac-phase zero">Pre-Launch</span></div>
+        <div class="ac-offer">Still defining offer. No clients yet. Interested in ads as primary future acquisition channel. Starting from scratch — niche + offer architecture needed first.</div>
+        <div class="ac-goal"><span class="arrow">→</span> Successful online coaching business</div>
       </div>
 
     </div>
@@ -537,7 +551,6 @@ function filterCards(type, btn) {
   btn.classList.add('active');
 
   const cards = document.querySelectorAll('#attendee-grid .attendee-card');
-  const dividers = document.querySelectorAll('#attendee-grid .session-divider');
   let visible = 0;
 
   cards.forEach(card => {
@@ -551,7 +564,6 @@ function filterCards(type, btn) {
     if (show) visible++;
   });
 
-  dividers.forEach(d => d.style.display = (type === 'all') ? '' : 'none');
   document.getElementById('visible-count').textContent = visible + ' Coach' + (visible !== 1 ? 'es' : '');
 }
 </script>
