@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Katie Dickson — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.olympian-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(232,119,34,.12));border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.olympian-badge .ob-icon{font-size:24px;}
+.olympian-badge .ob-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit &middot; April 2026</div>
+  <div class="hero-name">Katie <span>Dickson</span></div>
+  <div class="hero-title">@kfitphysique &middot; KFit Personal Training &amp; Nutrition &middot; 7-Year Coach &middot; Starter Phase</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">$2-5K</div><div class="hs-label">Est. Monthly Revenue</div></div>
+    <div class="hs"><div class="hs-val blue">6-Month</div><div class="hs-label">Digital Program</div></div>
+    <div class="hs"><div class="hs-val orange">0-10</div><div class="hs-label">Current Clients</div></div>
+    <div class="hs"><div class="hs-val green">Scale</div><div class="hs-label">Goal (Unstated)</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Katie Dickson has been coaching online and in-person for <strong>7+ years</strong>, has <strong>two named mechanisms</strong> (Food Freedom Formula and MRT Training), a 6-month program structure, 7 strong client testimonials, and the offer infrastructure of a coach who should be doing $15-20K/month. Instead she is at $2-5K with 0-10 clients because her <strong>Instagram is private</strong>, her ads are inactive, and her content strategy &#8212; her own word &#8212; is "terrible." She was referred by Jeremy Keech, which means she is motivated and coachable. The assets are all there. The distribution is the only thing missing.
+  </p>
+</div><nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What's Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav><section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div><div class="sec-heading">What's Working</div><div class="sec-divider"></div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">&#127381;</div><div><div class="win-label">Food Freedom Formula &#8212; Named Mechanism Is a Major Asset</div><div class="win-desc">"Food Freedom Formula" is one of the best mechanism names in this entire cohort. It directly attacks the No. 1 enemy (restrictive diets), delivers an aspirational outcome (freedom), and is specific enough to be trademarked and owned. This mechanism name alone, properly deployed in content and ads, will separate Katie from 95% of female nutrition coaches in the market. It just needs to be visible.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128170;</div><div><div class="win-label">MRT Training &#8212; Second Named Method Reinforces Scientific Authority</div><div class="win-desc">Metabolic Resistance Training as a named method gives the fitness side of Katie's offer the same specificity that Food Freedom Formula gives the nutrition side. Together, they create a dual-mechanism offer that sounds more advanced and more proprietary than anything most competitors in the women's fat loss space are presenting. Two named mechanisms is rare and valuable.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#11088;</div><div><div class="win-label">7 Client Testimonials on Website &#8212; Strong Proof Bank Exists</div><div class="win-desc">7 visible testimonials including specific wins (30 lbs lost, post-baby body confidence, energy transformation) provide a real social proof foundation. This is more proof than many coaches have when they start running ads. These testimonials need to be converted into case study reels and deployed as organic content and ad creative &#8212; not hidden on a website page that cold prospects never reach.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128197;</div><div><div class="win-label">6-Month Program Structure &#8212; Timeline Commitment Signals Premium</div><div class="win-desc">A 6-month digital transformation program signals serious commitment &#8212; from both the coach and the client. This is not a 4-week challenge. It attracts buyers who want real transformation, not a quick fix, and it generates 6 months of recurring revenue per client. The program architecture is already premium. The problem is no one is finding it.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128176;</div><div><div class="win-label">Financing Offered &#8212; High-Ticket Price Architecture Already Present</div><div class="win-desc">Offering program financing signals that Katie is selling at a price point that warrants a payment plan &#8212; which means she has a high-ticket mindset built into her offer already. This is a significant advantage. Coaches who have never offered financing often under-price their services to avoid the conversation. Katie has already solved this.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128101;</div><div><div class="win-label">Jeremy Keech Referral &#8212; Motivated, Coachable, Ready to Execute</div><div class="win-desc">Being referred by a credible source in the coaching education ecosystem signals motivation and seriousness. Katie has been coaching for 7 years and knows something is wrong with her marketing &#8212; she described it herself as "terrible." This level of self-awareness combined with a referral from someone she trusts makes her a high-probability execution candidate if she gets a clear, specific prescription to follow.</div></div></div>
+  </div>
+</section>
+
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div><div class="sec-heading">Business Phase Diagnosis</div><div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item active"><div class="phase-label">Current Phase &#9660;</div><div class="phase-name">Starter</div><div class="phase-range">$2K-$5K/mo (7 years in)</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K-$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Potential</div><div class="phase-name">Scale</div><div class="phase-range">$15K-$100K+/mo</div></div>
+  </div>
+  <div class="card orange-left mb-md"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>The 7-year starter paradox:</strong> Katie has been in business for 7 years with all the right assets &#8212; named mechanisms, proof, program structure, high-ticket pricing &#8212; and is still in the Starter phase. This is not a credential problem, an offer problem, or a client delivery problem. It is entirely and specifically a distribution problem. Her private Instagram and inactive ads mean that no one who isn't already in her personal network can find her. Fix the distribution and the offer converts. The 7-year delay makes this the highest-urgency case in this cohort.</p></div>
+  <div class="math-box">
+    <div class="math-box-title">The Math &#8212; What the Offer Structure Should Generate</div>
+    <div class="math-row"><span class="lbl">Current revenue with 0-10 clients</span><span class="val orange">$2,000-5,000/month</span></div>
+    <div class="math-row"><span class="lbl">6-month program price (estimated based on financing offered)</span><span class="val">$3,000-5,000 total / $500-833/month</span></div>
+    <div class="math-row"><span class="lbl">New clients needed/month at $4,000 to reach $15K/mo</span><span class="val green">4 new closes/month</span></div>
+    <div class="math-row"><span class="lbl">Calls needed (35% close rate)</span><span class="val green">11-12 calls/month</span></div>
+    <div class="math-row"><span class="lbl">7 testimonials converted to case study reels</span><span class="val green">Immediate proof deployment &#8212; zero cost</span></div>
+    <div class="math-row"><span class="lbl">DM automation "Comment FREEDOM" potential</span><span class="val green">High &#8212; mechanism name is the CTA magnet</span></div>
+  </div>
+</section>
+
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03 &#8212; Updated April 2026</div><div class="sec-heading">Creative Intelligence Report</div><div class="sec-divider"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;font-size:14px;color:rgba(255,255,255,.55);">Full intelligence synthesis across brand positioning, website content audit, Meta Ad Library, entity gaps, and hook bank.</p>
+    <button onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;"><span>&#11014;</span> Copy for Workshop</button>
+  </div>
+  <div class="card orange-left mb-lg">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:12px;"><strong>Executive Summary.</strong> Katie Dickson has built, in 7 years, all of the components of a high-converting coaching business &#8212; and has kept them entirely invisible. Her named mechanisms are buried on a website no one can reach. Her testimonials are not deployed as content. Her Instagram is private. Her ads are inactive. She has self-described her content as "terrible," but the deeper issue is that there is almost no content in distribution at all. This is not a content quality problem. It is a content volume and distribution problem. The fix is immediate and specific.</p>
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Highest-leverage insight:</strong> "Food Freedom Formula" is one of the best mechanism names in the women's nutrition coaching space. It is catchy, it names the enemy (restrictive diets), and it delivers the aspiration (freedom) in three words. This name alone, deployed as a DM automation trigger ("Comment FREEDOM"), will immediately generate inbound leads from any audience that hears it. The mechanism name is the marketing. Katie just needs to say it out loud, on camera, to an audience that can hear her.</p>
+  </div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Instagram Status</td><td>Private / login-gated &#8212; zero organic reach to non-followers</td><td>Make public immediately. Bio: "7-Year Coach &#8594; Food Freedom Formula + MRT Training &#8594; 6-month body transformation without restrictive diets &#8594; Comment FREEDOM." This is the single highest-leverage action available right now.</td></tr>
+        <tr><td class="t-strong">Content Strategy</td><td>Self-described as "terrible" &#8212; likely minimal, inconsistent, generic</td><td>3-5 posts/week. Content pillars: (1) Diet villain content &#8212; call out Keto, Noom, excessive cardio; (2) Case study reels from 7 existing testimonials; (3) Mechanism education &#8212; what Food Freedom Formula and MRT actually mean. Every post ends with "Comment FREEDOM."</td></tr>
+        <tr><td class="t-strong">Named Mechanisms</td><td>Exist on website but not deployed in content or ads</td><td>Every piece of content should reference Food Freedom Formula or MRT Training. The mechanism name is the primary content differentiator. Make it unavoidable in all organic and paid creative.</td></tr>
+        <tr><td class="t-strong">Paid Ads</td><td>Previously run, not currently active</td><td>Relaunch with 2-3 case study creative + mechanism hook creative. "She lost 30 lbs without Keto, without hours of cardio, and without giving up the foods she loves &#8212; here is what she used." Low production, high specificity, mechanism in every ad.</td></tr>
+        <tr><td class="t-strong">Fear of Group Calls</td><td>Explicitly mentioned as a constraint &#8212; preventing scale</td><td>Reframe: hybrid model. 1:1 onboarding session + weekly group Q&A &#8212; not group coaching. "Group Q&A" is not the same as "group coaching" and requires significantly less 1:1 time while maintaining personal connection. This framing removes the fear and enables scale.</td></tr>
+        <tr><td class="t-strong">Facebook Page</td><td>237 followers after 7 years &#8212; inactive</td><td>Deprioritize Facebook; focus on Instagram as primary platform. Repurpose any Instagram content to Facebook as a secondary distribution channel. Do not invest separately in Facebook content strategy.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Existing Proof Assets &#8212; Website Testimonials to Convert</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Testimonial Signal</th><th>Content Format</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"I lost 30 lbs and gained a new confidence in my post-baby body"</td><td>Case Study Reel &#8212; Before/After framing + emotional outcome</td><td><span class="gap-pill opportunity">Deploy First &#8212; Highest Emotion</span></td></tr>
+        <tr><td class="t-strong">Any testimonial mentioning "no restrictive diet" or "didn't stop eating"</td><td>Short clip or quote card with "No Keto. No Noom. Just the Food Freedom Formula." CTA</td><td><span class="gap-pill opportunity">Deploy First &#8212; Mechanism Proof</span></td></tr>
+        <tr><td class="t-strong">Any testimonial mentioning less cardio + better results</td><td>"She stopped doing 5 hours of cardio per week and lost more weight &#8212; here is how MRT works."</td><td><span class="gap-pill opportunity">Deploy First &#8212; MRT Proof</span></td></tr>
+        <tr><td class="t-strong">General transformation testimonials (energy, confidence, lifestyle)</td><td>Quote overlay on video or text-based carousel</td><td><span class="gap-pill warn">Deploy Second &#8212; Social Proof Volume</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Entity Clusters &#8212; Current vs. Needed</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Status</th><th>Emotional Driver</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Restrictive Diet Villain &#8212; Keto/Noom Enemy Frame</td><td><span class="gap-pill missing">Not Created</span></td><td><span class="gap-pill missing">Frustration + Validation + Relief</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Cardio Villain &#8212; Excessive Cardio Enemy Frame</td><td><span class="gap-pill missing">Not Created</span></td><td><span class="gap-pill missing">Frustration + Curiosity</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Food Freedom Formula Education</td><td><span class="gap-pill missing">Website Only &#8212; Not in Content</span></td><td><span class="gap-pill info">Aspiration + System</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Case Study Reels from 7 Testimonials</td><td><span class="gap-pill warn">Assets Exist &#8212; Not Deployed</span></td><td><span class="gap-pill info">Hope + Proof + Identity</span></td><td><span class="badge fail">Deploy First</span></td></tr>
+        <tr><td class="t-strong">MRT Training Education</td><td><span class="gap-pill missing">Website Only</span></td><td><span class="gap-pill info">Curiosity + Science Authority</span></td><td><span class="badge warn">Build Second</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Meta Ad Library Findings</div>
+  <div class="card yellow-left mb-lg"><p style="font-size:14px;margin-bottom:6px;"><strong>Zero active ads.</strong> No ads visible under kfitphysique or Katie Dickson Fitness. Previous ad runs not visible &#8212; may have been short-lived or under a different account name.</p><p style="font-size:13px;color:rgba(255,255,255,.55);">Katie should not relaunch ads until Instagram is public and has at least 5 active posts with "Comment FREEDOM" CTA. The sequence that works: (1) public Instagram with mechanism content; (2) DM automation installed; (3) organic posts live; (4) ads launched sending to landing page. Without step 1, ad traffic has no social proof destination and conversion rates stay low regardless of creative quality.</p></div>
+  <div class="grid-3 mb-lg">
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:#F87171;line-height:1;">0</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Ads</div><span class="badge fail" style="margin-top:8px;display:inline-block;">Fix IG First</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--green);line-height:1;">7</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Testimonials Ready to Deploy</div><span class="badge pass" style="margin-top:8px;display:inline-block;">Best Proof Asset</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">2</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Named Mechanisms Ready</div><span class="badge pass" style="margin-top:8px;display:inline-block;">Best in Class Names</span></div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Priority Entity Build Queue</div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 01 &middot; TOF &middot; Restrictive Diet Villain</span><span class="badge fail">Build First</span></div><div class="entity-hook">"Stop doing hours of cardio. It's ruining your metabolism. Here is why MRT Training works faster."</div><div class="entity-meta">Core enemy frame. Attacks the two behaviors every client has tried before. Positions Katie's dual mechanism as the superior solution. Talking-head reel, 30-45 sec. CTA: "Comment FREEDOM for my free Food Freedom Formula starter guide." This is the primary TOF hook for all paid and organic content.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 02 &middot; TOF &middot; Failed Diet History &#8212; Willpower Reframe</span><span class="badge fail">Build First</span></div><div class="entity-hook">"You've tried Keto. You've tried Noom. You lost the weight and gained it back. The reason it didn't work is not willpower. It was the wrong approach."</div><div class="entity-meta">Empathy + validation + mechanism introduction. Directly speaks to the failed diet history of the entire target audience. Every woman who has tried Keto and failed self-identifies immediately. Highest-resonance content possible for this avatar.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 03 &middot; BOF &middot; Case Study Reel &#8212; 30 lbs Post-Baby Transformation</span><span class="badge fail">Deploy First &#8212; Already Have Assets</span></div><div class="entity-hook">"She had just had a baby, had tried every diet, and felt disconnected from her body. Here is what 6 months of the Food Freedom Formula actually looked like."</div><div class="entity-meta">Use the "30 lbs, post-baby confidence" testimonial immediately. This is already the most emotionally resonant proof asset Katie has. Convert to reel or video testimonial. If video not available, produce a quote-based reel with the written testimonial. Deploy as organic and as paid ad creative simultaneously.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 04 &middot; MOF &middot; Food Freedom Formula Introduction</span><span class="badge warn">Build Second</span></div><div class="entity-hook">"Here is what the Food Freedom Formula actually is &#8212; and why it works when every other nutrition approach has failed."</div><div class="entity-meta">Mechanism education content. Explains the framework in simple terms &#8212; no restrictive diets, what you eat and how much matters differently than most coaches teach. Positions FFF as a legitimate proprietary system. Use "Comment FREEDOM" CTA.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 05 &middot; MOF &middot; MRT Training Education</span><span class="badge warn">Build Second</span></div><div class="entity-hook">"Most women are doing the wrong type of exercise for fat loss. Here is what Metabolic Resistance Training actually does to your metabolism &#8212; and why it outperforms cardio."</div><div class="entity-meta">Science-adjacent education content that builds authority for the exercise method. Walks through why MRT works for fat loss without excessive cardio. Positions Katie above generic "do more cardio" fitness coaches.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 06 &middot; TOF &middot; 7-Year Coach Authority Statement</span><span class="badge info">Build Month 2</span></div><div class="entity-hook">"I have been coaching women's nutrition and fitness for 7 years. Here is the one thing every woman I've worked with had wrong before she started &#8212; and it was never about the diet."</div><div class="entity-meta">Experience-authority hook. 7 years is a credibility lever &#8212; it just needs to be deployed. "Here is what I've learned after coaching hundreds of women" is a high-trust opening that compounds the mechanism content already in distribution.</div></div>
+  <div class="card orange-left" style="margin-top:28px;"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Strategic diagnosis:</strong> Katie Dickson has been coaching for 7 years with two standout named mechanisms, 7 strong testimonials, and a well-structured offer &#8212; and has generated almost no visible distribution in that time. The fix is not complicated: make Instagram public, deploy the 7 testimonials as case study reels this week, install "Comment FREEDOM" DM automation, and post 5 content pieces using the villain hooks before relaunching ads. All of the hard work is done. The mechanism is named. The proof exists. The offer is built. The only remaining task is to say it out loud where people can hear it.</p></div>
+</section>
+
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div><div class="sec-heading">Constraint Diagnosis</div><div class="sec-divider"></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 &middot; Primary Constraint</div><div class="diag-title">Private Instagram &#8212; 7 Years of Brand Building Invisible to Cold Prospects</div><div class="diag-desc">A private Instagram account is a zero-distribution channel for new business growth. No cold prospect, no ad click, no referral, and no organic discovery will convert if the profile they land on requires a follow request to see any content. Katie has been building credibility and mechanisms for 7 years while keeping the window shuttered. Every marketing effort made while the account is private is wasted for anyone outside her existing network.</div><div class="diag-fix"><strong>The Fix:</strong> Make @kfitphysique public immediately. This is a 30-second fix that unlocks 7 years of built content for organic discovery and provides a social proof destination for all future ad traffic. Update bio to feature Food Freedom Formula and MRT Training. Add "Comment FREEDOM" CTA. Every hour this remains private is a compounding cost.</div></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 &middot; Primary Constraint</div><div class="diag-title">Two Named Mechanisms Sitting Dormant &#8212; Not in Content or Ads</div><div class="diag-desc">The Food Freedom Formula and MRT Training are the most valuable marketing assets Katie has &#8212; and they are currently hidden on a website page that only appears after multiple clicks from a cold ad or organic post. They are not in her bio, not in her content, not in her ad creative, and not in the CTAs that drive new leads. Named mechanisms are the primary differentiator in a saturated market. Keeping them invisible is the core content strategy failure.</div><div class="diag-fix"><strong>The Fix:</strong> Every single piece of content from this point forward references "Food Freedom Formula" or "MRT Training." Bio features both. Every post CTA uses "Comment FREEDOM." Ad creative leads with mechanism name and testimonial proof. The mechanism name goes in the subject line of the first email sequence. Within 30 days of consistent mechanism deployment, unaided brand recall from her target avatar will begin to build.</div></div>
+  <div class="diag-card p2"><div class="diag-rank">P2 &middot; Meaningful Gap</div><div class="diag-title">Inactive Paid Ads + Dormant Proof Assets = Zero Scaled Distribution</div><div class="diag-desc">Katie has 7 testimonials strong enough to be case study ad creative and no active ads running to distribute them. She has tried paid ads in the past and stopped &#8212; which suggests either the creative wasn't working, the destination wasn't converting, or the budget ran out before results came. The proof assets are already built and the offer is already priced. The distribution infrastructure is the only missing piece.</div><div class="diag-fix"><strong>The Fix:</strong> Relaunch ads after Instagram is public and has 5+ posts live with mechanism content. Creative: (1) Case study from the 30-lb post-baby testimonial &#8212; highest emotional resonance; (2) Villain hook "Stop doing hours of cardio &#8212; here is why MRT works faster"; (3) Mechanism intro "What the Food Freedom Formula actually is." Target: women 28-45, weight loss, nutrition, female fitness interests. Budget: $30-50/day. Destination: landing page with Food Freedom Formula overview and booking CTA.</div></div>
+  <div class="diag-card p3"><div class="diag-rank">P3 &middot; Watch Item</div><div class="diag-title">Fear of Group Calls &#8212; Scale Ceiling Mindset Block</div><div class="diag-desc">Katie explicitly mentioned fear of implementing weekly group calls as a constraint. In a 6-month program with growing client volume, individual 1:1 calls become a time bottleneck that caps revenue regardless of lead flow. If she cannot transition to any group delivery model, her maximum monthly revenue is capped by the number of 1:1 hours she can physically provide.</div><div class="diag-fix"><strong>The Reframe:</strong> "Group coaching" and "group Q&A" are different things. The prescription is a hybrid model: individual onboarding call (1:1, high-touch, relationship-building) + weekly group Q&A session (30-45 min, all clients together, question-driven, not presentation-driven). The group Q&A is not coaching &#8212; it is a community call. This format is significantly less emotionally demanding and can be positioned to clients as an added bonus rather than a replacement for 1:1 access.</div></div>
+  <div class="diag-card ok"><div class="diag-rank">OK &middot; Validated Asset &#8212; Protect This</div><div class="diag-title">Food Freedom Formula + MRT Training + 6-Month Program + 7 Testimonials</div><div class="diag-desc">The combination of two named mechanisms, a structured 6-month program timeline, program financing, and 7 strong transformation testimonials is a full-stack offer architecture that most coaches take 3-5 years to build. Katie has spent 7 years building exactly the right foundation. None of this needs to be changed or rebuilt. The offer is correct. The proof is sufficient. The only work required is distribution.</div><div class="diag-fix"><strong>Maintain everything:</strong> Keep the Food Freedom Formula name &#8212; do not rebrand or rename. Keep the 6-month structure &#8212; it attracts the right buyer. Keep the financing option &#8212; it removes the price objection. Keep the MRT Training name &#8212; it differentiates the exercise methodology. Build on this foundation with content and ads. Do not tear down and rebuild what already works.</div></div>
+</section>
+
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div><div class="sec-heading">90-Day Action Plan</div><div class="sec-divider"></div>
+  <div class="card blue-left mb-md"><p style="font-size:13px;margin-bottom:0;"><strong>Priority override:</strong> Make Instagram public today. This is the single highest-leverage action available and it takes 30 seconds. Every other step builds on this. Do not wait.</p></div>
+  <div class="plan-item"><div class="plan-num">1</div><div class="plan-body"><div class="plan-title">Make Instagram Public + Update Bio + Install DM Automation (Day 1)</div><div class="plan-desc">Make @kfitphysique public immediately. Update bio: "7-Year Coach &#8594; Food Freedom Formula + MRT Training &#8594; 6-Month Digital Transformation &#8594; No restrictive diets, no hours of cardio &#8594; Comment FREEDOM for free Food Freedom Formula starter guide." Set up ManyChat: "Comment FREEDOM" trigger &#8594; auto-DM with free guide &#8594; 2-step follow-up to booking link. This single combination &#8212; public account + mechanism bio + DM automation &#8212; will generate the first inbound leads before any ad spend.</div><div class="plan-tags"><span class="plan-tag ops">Day 1</span><span class="plan-tag content">Critical</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">2</div><div class="plan-body"><div class="plan-title">Deploy 7 Testimonials as Case Study Reels (Days 1-14)</div><div class="plan-desc">Convert all 7 website testimonials into social content this week. Format: (1) video testimonial clip if available; (2) quote card with result stat and brief context if video not available; (3) "Here is what X achieved with the Food Freedom Formula in 6 months" overlay. Lead with the 30-lb post-baby transformation &#8212; highest emotional resonance. Post 1 per day for 7 days to immediately fill the content calendar with proof. These also become the first ad creative library.</div><div class="plan-tags"><span class="plan-tag content">Proof Deployment</span><span class="plan-tag ads">Ad Ready</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">3</div><div class="plan-body"><div class="plan-title">Build Landing Page for Food Freedom Formula Program (Days 1-10)</div><div class="plan-desc">Build one landing page: mechanism name (Food Freedom Formula + MRT Training), 6-month program overview, 3 testimonials with specific outcomes, "NO restrictive diets, NO hours of cardio" promise, and "Book Your Free Transformation Assessment" CTA. Link from Instagram bio. All organic content CTAs and ad traffic point here. This landing page is the pre-qualification step that improves close rate on calls booked.</div><div class="plan-tags"><span class="plan-tag offer">Landing Page</span><span class="plan-tag ops">Funnel Fix</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">4</div><div class="plan-body"><div class="plan-title">Build Core Villain Hook Content &#8212; Diet + Cardio Attack (Days 7-45)</div><div class="plan-desc">Produce and post the 3 primary villain hooks: (1) "Stop doing hours of cardio &#8212; it's ruining your metabolism"; (2) "You've tried Keto, you've tried Noom, here is what was actually missing"; (3) "The reason diets don't work is not willpower &#8212; it's the wrong approach." Post 3-5 times per week. Every post ends with "Comment FREEDOM." These hooks are the top-of-funnel filter that attracts the right buyer profile &#8212; women who have already failed on standard diets and are ready to invest in something different.</div><div class="plan-tags"><span class="plan-tag content">Villain Hooks</span><span class="plan-tag sales">Avatar Filter</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">5</div><div class="plan-body"><div class="plan-title">Relaunch Paid Ads &#8212; Case Study Creative First (Days 14-45)</div><div class="plan-desc">After Instagram is public with 5+ posts live: relaunch ads. Creative: (1) 30-lb post-baby transformation case study; (2) "Stop doing hours of cardio &#8212; MRT works faster" villain hook. Targeting: women 28-45, weight loss, nutrition, fitness, Keto/Noom interests (these are the avatar who has already tried and failed). Budget: $30-50/day. Destination: Food Freedom Formula landing page. Monitor close rate on calls. If above 35%, scale budget at Day 30.</div><div class="plan-tags"><span class="plan-tag ads">Paid Launch</span><span class="plan-tag sales">Case Study Creative</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">6</div><div class="plan-body"><div class="plan-title">Reframe Group Calls &#8212; Implement Hybrid Delivery Model (Days 30-60)</div><div class="plan-desc">Introduce the hybrid delivery model for all new client onboarding: (1) individual 1:1 onboarding call (60 min, relationship + goal setting + program preview); (2) weekly 30-min group Q&A session for all active clients (community call format &#8212; not coaching); (3) asynchronous check-ins via voice message or portal. Frame to new clients: "You get personalized programming plus live weekly group support sessions." This model is not group coaching &#8212; it is a community layer that adds perceived value while reducing 1:1 time by 40-60% per client.</div><div class="plan-tags"><span class="plan-tag ops">Delivery Model</span><span class="plan-tag sales">Scale Unlock</span></div></div></div>
+</section><footer>
+  <div class="footer-brand"><strong>IFCA</strong> &middot; Prospect Intelligence Audit &middot; Confidential</div>
+  <div class="footer-tag">Jordan Dugger &middot; Impact Fitness Coaching Academy &middot; April 2026</div>
+</footer>
+</div><script>
+const sections=document.querySelectorAll('.doc-section');
+const navLinks=document.querySelectorAll('.nav-link');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(l=>l.classList.remove('active'));const id=entry.target.getAttribute('id');const active=document.querySelector('.nav-link[href="#'+id+'"]');if(active)active.classList.add('active');}});},{threshold:0.2,rootMargin:'-60px 0px 0px 0px'});
+sections.forEach(s=>observer.observe(s));
+function copyIntelReport(){navigator.clipboard.writeText("KATIE DICKSON - CREATIVE INTELLIGENCE REPORT\n@kfitphysique | KFit Personal Training and Nutrition Coaching | 7-Year Coach | April 2026\n\nBRAND SNAPSHOT\nAvatar: Women seeking body transformation without restrictive diets or excessive cardio\nCurrent revenue: $2,000-5,000/month | 0-10 clients\nMechanism: Food Freedom Formula + MRT Training - BOTH EXIST and are named - strongest assets in the business\nEnemy: Restrictive diets (Keto, Noom) and excessive cardio (Peloton, running culture)\nInstagram: Private/login-gated | Facebook: 237 followers after 7 years\nAd status: Previously run, not currently active | 7 strong testimonials on website\nKey bottleneck: Content strategy described as 'terrible' | Fear of group calls = mindset block\n\nCONFIRMED ASSETS (website)\n1. Food Freedom Formula - NAMED MECHANISM - excellent\n2. MRT Training (Metabolic Resistance Training) - NAMED METHOD - excellent  \n3. 6-Month Digital Transformation Program - good timeline structure\n4. Program financing offered - high-ticket price mindset present\n5. 7 client testimonials including: 30lb loss, post-baby confidence, specific wins\n\nHOOKS TO BUILD\n1. Stop doing hours of cardio. It's ruining your metabolism. Here is why MRT Training works faster.\n2. You've tried Keto. You've tried Noom. You lost the weight and gained it back. Here is what was actually missing.\n3. Comment FREEDOM for my free Food Freedom Formula starter guide.\n4. The reason you can't stick to a diet is not willpower. It's the wrong diet. Here is the proof.\n\nPRIMARY CONSTRAINTS\nP1: Private/inaccessible Instagram = invisible to cold prospects despite 7 years\nP1: Two named mechanisms sitting dormant - not deployed in content, not visible in ads\nP2: Zero active ads - strong proof assets not being distributed\nP3: Fear of group calls = scale ceiling - mindset block preventing efficient delivery").then(()=>{const btn=event.target.closest('button');const orig=btn.innerHTML;btn.innerHTML='&#10003; Copied!';setTimeout(()=>btn.innerHTML=orig,2000);});}
+</script>
+</body>
+</html>
