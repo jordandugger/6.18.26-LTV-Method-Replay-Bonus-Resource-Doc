@@ -1,0 +1,1097 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IFCA — Business Math & Constraints Calculator</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+<style>
+:root {
+  --navy:#0f172a;--bg:#f1f5f9;--white:#fff;
+  --text:#1e293b;--muted:#64748b;--border:#e2e8f0;
+  --blue:#2563eb;--blue-l:#eff6ff;--blue-b:#bfdbfe;
+  --green:#16a34a;--green-l:#f0fdf4;--green-b:#bbf7d0;
+  --red:#dc2626;--red-l:#fef2f2;--red-b:#fecaca;
+  --amber:#d97706;--amber-l:#fffbeb;--amber-b:#fde68a;
+  --purple:#7c3aed;--purple-l:#f5f3ff;--purple-b:#ddd6fe;
+  --teal:#0d9488;--teal-l:#f0fdfa;--teal-b:#99f6e4;
+  --orange:#ea580c;--orange-l:#fff7ed;--orange-b:#fed7aa;
+  --ifca:#E87722;
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;overflow:hidden;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:13px;}
+input[type=number]{-moz-appearance:textfield;}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
+::-webkit-scrollbar{width:5px;}::-webkit-scrollbar-track{background:transparent;}::-webkit-scrollbar-thumb{background:#cbd5e1;border-radius:10px;}
+
+/* ── HEADER ── */
+.header{height:50px;background:var(--navy);display:flex;align-items:center;justify-content:space-between;padding:0 16px;flex-shrink:0;border-bottom:1px solid rgba(255,255,255,.06);}
+.brand{font-family:'Syne',sans-serif;font-size:15px;font-weight:800;color:#f8fafc;letter-spacing:-.3px;margin-right:20px;}
+.tab-nav{display:flex;gap:2px;}
+.tab-nav button{padding:6px 13px;border:none;border-radius:6px;font-size:12px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;background:transparent;color:#64748b;transition:all .15s;}
+.tab-nav button.active{background:rgba(255,255,255,.12);color:#f1f5f9;}
+.tab-nav button:hover:not(.active){background:rgba(255,255,255,.06);color:#cbd5e1;}
+.header-right{display:flex;align-items:center;gap:8px;}
+.hdr-btn{padding:5px 11px;border:1px solid rgba(255,255,255,.1);background:transparent;border-radius:6px;font-size:11px;color:#64748b;cursor:pointer;font-family:'DM Sans',sans-serif;transition:all .15s;}
+.hdr-btn:hover{color:#94a3b8;border-color:rgba(255,255,255,.18);}
+.hdr-btn.primary{background:var(--ifca);border-color:var(--ifca);color:#fff;}
+.hdr-btn.primary:hover{opacity:.88;}
+
+/* ── APP ── */
+#app{display:flex;flex-direction:column;height:100vh;}
+.panels{flex:1;overflow:hidden;display:flex;}
+.panel{display:none;flex:1;overflow:hidden;}
+.panel.active{display:flex;}
+
+/* ── TWO-PANE ── */
+.inputs-col{width:290px;min-width:290px;background:var(--white);border-right:1px solid var(--border);overflow-y:auto;flex-shrink:0;}
+.results-col{flex:1;overflow-y:auto;padding:16px 18px 48px;}
+
+/* ── INPUT SECTIONS ── */
+.input-section{padding:12px 14px;border-bottom:1px solid var(--border);}
+.input-section:last-child{border-bottom:none;}
+.section-title{font-family:'Syne',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-bottom:10px;display:flex;align-items:center;gap:7px;}
+.step-badge{width:18px;height:18px;border-radius:4px;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:800;color:#fff;flex-shrink:0;}
+.field{margin-bottom:8px;}
+.field:last-child{margin-bottom:0;}
+.field label{display:block;font-size:11px;font-weight:500;color:var(--text);margin-bottom:3px;}
+.field label .hint{font-weight:400;color:var(--muted);font-size:10px;}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
+.field input,.field select{width:100%;height:32px;padding:0 9px;border:1px solid var(--border);border-radius:6px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text);background:#fafafa;outline:none;transition:border .15s;}
+.field input:focus,.field select:focus{border-color:#3b82f6;background:#fff;}
+.field .prefix{position:relative;}
+.field .prefix input{padding-left:20px;}
+.field .prefix::before{content:attr(data-pre);position:absolute;left:8px;top:50%;transform:translateY(-50%);font-size:12px;color:var(--muted);pointer-events:none;z-index:1;}
+.field .suffix{position:relative;}
+.field .suffix input{padding-right:22px;}
+.field .suffix::after{content:attr(data-suf);position:absolute;right:8px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--muted);pointer-events:none;}
+.input-note{font-size:10.5px;color:var(--teal);background:var(--teal-l);border:1px solid var(--teal-b);border-radius:5px;padding:6px 9px;margin-top:8px;line-height:1.4;}
+
+/* ── RESULTS ── */
+.rs-title{font-family:'Syne',sans-serif;font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin:4px 0 10px;display:flex;align-items:center;gap:7px;}
+.rs-title::after{content:'';flex:1;height:1px;background:var(--border);}
+.card-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px;}
+.card-grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px;}
+.card-grid-4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:9px;margin-bottom:14px;}
+.mcard{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:13px 15px;}
+.mcard.red{background:var(--red-l);border-color:var(--red-b);}
+.mcard.green{background:var(--green-l);border-color:var(--green-b);}
+.mcard.blue{background:var(--blue-l);border-color:var(--blue-b);}
+.mcard.amber{background:var(--amber-l);border-color:var(--amber-b);}
+.mcard.teal{background:var(--teal-l);border-color:var(--teal-b);}
+.mcard.purple{background:var(--purple-l);border-color:var(--purple-b);}
+.mcard.orange{background:var(--orange-l);border-color:var(--orange-b);}
+.mcard.dark{background:var(--navy);border-color:#1e3a5f;}
+.mlabel{font-size:10px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);margin-bottom:5px;}
+.mcard.dark .mlabel{color:#64748b;}
+.mval{font-family:'Syne',sans-serif;font-weight:800;line-height:1;}
+.mval.xl{font-size:30px;} .mval.lg{font-size:22px;} .mval.md{font-size:17px;} .mval.sm{font-size:14px;}
+.mval.red{color:var(--red);} .mval.green{color:var(--green);} .mval.blue{color:var(--blue);}
+.mval.amber{color:var(--amber);} .mval.teal{color:var(--teal);} .mval.purple{color:var(--purple);}
+.mval.orange{color:var(--orange);} .mval.white{color:#f8fafc;} .mval.ifca{color:var(--ifca);}
+.msub{font-size:11px;color:var(--muted);margin-top:5px;line-height:1.45;}
+.mcard.dark .msub{color:#475569;}
+
+/* ── FUNNEL ── */
+.funnel{display:flex;flex-direction:column;gap:3px;}
+.funnel-row{display:flex;align-items:center;gap:10px;padding:5px 0;}
+.funnel-label{width:140px;font-size:11px;color:var(--text);font-weight:500;flex-shrink:0;text-align:right;}
+.funnel-bar-wrap{flex:1;height:20px;background:#f1f5f9;border-radius:4px;overflow:hidden;}
+.funnel-bar{height:100%;border-radius:4px;transition:width .4s ease;min-width:2px;}
+.funnel-val{width:60px;font-family:'Syne',sans-serif;font-size:13px;font-weight:700;flex-shrink:0;}
+
+/* ── CONSTRAINT ROWS ── */
+.c-table{width:100%;border-collapse:collapse;margin-bottom:14px;}
+.c-table th{font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px 10px;border-bottom:2px solid var(--border);text-align:left;background:var(--bg);font-family:'Syne',sans-serif;}
+.c-table td{padding:7px 10px;border-bottom:1px solid var(--border);font-size:12px;vertical-align:middle;}
+.c-table tbody tr:hover td{background:#fafafa;}
+.c-table tbody tr:last-child td{border-bottom:none;}
+.c-name{font-weight:600;color:var(--text);}
+.c-auto{font-size:10px;color:var(--muted);font-style:italic;}
+.c-input-wrap{width:110px;}
+.c-input-wrap input{width:100%;height:28px;padding:0 8px;border:1px solid var(--border);border-radius:5px;font-size:12px;font-family:'DM Sans',sans-serif;background:#fafafa;outline:none;}
+.c-input-wrap input:focus{border-color:#3b82f6;background:#fff;}
+.c-val{font-family:'DM Mono',monospace;font-size:12px;font-weight:500;min-width:80px;}
+.c-bench{font-size:11px;color:var(--muted);}
+.status-pill{display:inline-flex;align-items:center;gap:4px;padding:3px 9px;border-radius:20px;font-size:10px;font-weight:600;white-space:nowrap;}
+.status-pill.pass{background:var(--green-l);color:var(--green);border:1px solid var(--green-b);}
+.status-pill.fail{background:var(--red-l);color:var(--red);border:1px solid var(--red-b);}
+.status-pill.warn{background:var(--amber-l);color:var(--amber);border:1px solid var(--amber-b);}
+.status-pill.empty{background:#f8fafc;color:#94a3b8;border:1px solid var(--border);}
+.c-section-head td{background:var(--navy)!important;color:#94a3b8;font-family:'Syne',sans-serif;font-size:10px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:7px 10px;border:none;}
+
+/* ── MONTHLY TRACKER ── */
+.mt-wrap{overflow-x:auto;margin-bottom:14px;}
+.mt-table{border-collapse:collapse;min-width:700px;width:100%;}
+.mt-table th{font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);padding:6px 8px;border-bottom:2px solid var(--border);text-align:center;background:var(--bg);white-space:nowrap;}
+.mt-table th.left{text-align:left;}
+.mt-table td{padding:5px 7px;border-bottom:1px solid var(--border);font-size:11.5px;vertical-align:middle;}
+.mt-table .metric-name{font-weight:600;color:var(--text);font-size:11px;white-space:nowrap;}
+.mt-table .metric-target{font-size:10px;color:var(--muted);}
+.mt-table input.mt-input{width:62px;height:26px;padding:0 6px;border:1px solid var(--border);border-radius:4px;font-size:11px;font-family:'DM Sans',sans-serif;text-align:right;background:#fafafa;outline:none;}
+.mt-table input.mt-input:focus{border-color:#3b82f6;background:#fff;}
+.mt-table .calc-cell{font-family:'DM Mono',monospace;font-size:11px;text-align:center;color:var(--muted);}
+.mt-table .q-cell{font-family:'DM Mono',monospace;font-size:11px;text-align:center;font-weight:600;background:rgba(59,130,246,.04);}
+.mt-table .ytd-cell{font-family:'DM Mono',monospace;font-size:11px;text-align:center;font-weight:700;background:rgba(14,165,233,.06);color:#0369a1;}
+.mt-section-row td{background:var(--navy);color:#94a3b8;font-family:'Syne',sans-serif;font-size:9.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:6px 8px;}
+.mt-table tbody tr:hover td{background:#fafafa;}
+
+/* ── CONSTRAINT SUMMARY BADGES ── */
+.constraint-banner{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-bottom:14px;}
+.cb-item{border-radius:8px;padding:10px 12px;text-align:center;border:1px solid var(--border);}
+.cb-item.p1{background:var(--red-l);border-color:var(--red-b);}
+.cb-item.ok{background:var(--green-l);border-color:var(--green-b);}
+.cb-item.warn{background:var(--amber-l);border-color:var(--amber-b);}
+.cb-num{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;line-height:1;}
+.cb-item.p1 .cb-num{color:var(--red);}
+.cb-item.ok .cb-num{color:var(--green);}
+.cb-item.warn .cb-num{color:var(--amber);}
+.cb-label{font-size:9.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);margin-top:3px;}
+
+/* ── GUIDE SECTION ── */
+.guide-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:16px 18px;margin-bottom:12px;}
+.guide-step{display:flex;gap:12px;margin-bottom:12px;align-items:flex-start;}
+.guide-step:last-child{margin-bottom:0;}
+.guide-num{width:24px;height:24px;border-radius:6px;background:var(--navy);color:#fff;font-family:'Syne',sans-serif;font-size:11px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:1px;}
+.guide-content h4{font-size:12px;font-weight:600;color:var(--text);margin-bottom:3px;}
+.guide-content p{font-size:11px;color:var(--muted);line-height:1.6;}
+.code-block{background:#0f172a;color:#e2e8f0;border-radius:6px;padding:10px 13px;font-family:'DM Mono',monospace;font-size:11px;line-height:1.6;margin-top:6px;overflow-x:auto;}
+.code-block .hl{color:#7dd3fc;}
+.code-block .str{color:#86efac;}
+
+/* ── CHART ── */
+.chart-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:14px 16px;margin-bottom:14px;}
+.chart-card-title{font-size:12px;font-weight:600;color:var(--text);margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+.chart-wrap.h200{height:200px;position:relative;}
+.chart-wrap.h180{height:180px;position:relative;}
+
+/* ── BOTTLENECK ALERT ── */
+.bottleneck-alert{border-radius:10px;padding:12px 15px;margin-bottom:14px;display:flex;gap:10px;align-items:flex-start;}
+.bottleneck-alert.red{background:var(--red-l);border:1px solid var(--red-b);}
+.bottleneck-alert.amber{background:var(--amber-l);border:1px solid var(--amber-b);}
+.bottleneck-alert.green{background:var(--green-l);border:1px solid var(--green-b);}
+.ba-icon{font-size:18px;flex-shrink:0;}
+.ba-title{font-size:12px;font-weight:700;margin-bottom:2px;}
+.bottleneck-alert.red .ba-title{color:var(--red);}
+.bottleneck-alert.amber .ba-title{color:var(--amber);}
+.bottleneck-alert.green .ba-title{color:var(--green);}
+.ba-desc{font-size:11px;color:var(--muted);line-height:1.5;}
+
+/* ── MISC ── */
+.calc-footer{font-size:10px;color:#94a3b8;text-align:center;padding:10px 0 4px;}
+.divider-line{height:1px;background:var(--border);margin:14px 0;}
+</style>
+</head>
+<body>
+<div id="app">
+
+<!-- ── HEADER ── -->
+<div class="header">
+  <div style="display:flex;align-items:center;">
+    <span class="brand">IFCA</span>
+    <nav class="tab-nav">
+      <button class="active" onclick="switchTab('goal',this)">📊 Goal Math</button>
+      <button onclick="switchTab('constraint',this)">🔍 Constraint Finder</button>
+      <button onclick="switchTab('tracker',this)">📈 Monthly Tracker</button>
+      <button onclick="switchTab('guide',this)">📋 JSON Guide</button>
+    </nav>
+  </div>
+  <div class="header-right">
+    <button class="hdr-btn" onclick="exportJSON()">⬇ Export Data</button>
+    <button class="hdr-btn" onclick="document.getElementById('import-file').click()">⬆ Import JSON</button>
+    <input type="file" id="import-file" accept=".json" style="display:none" onchange="importJSON(event)">
+    <button class="hdr-btn primary" onclick="window.open('https://www.impactcoachacademy.com/apply-viralcontentworkshop','_blank')">Book Audit Call →</button>
+  </div>
+</div>
+
+<div class="panels">
+
+<!-- ══════════════════════════════ TAB 1: GOAL MATH ══════════════════════════════ -->
+<div class="panel active" id="panel-goal">
+  <div class="inputs-col">
+    <div class="input-section">
+      <div class="section-title"><span class="step-badge" style="background:#1d4ed8">1</span>Your Situation</div>
+      <div class="field-row">
+        <div class="field"><label>Current Monthly Revenue</label><div class="prefix" data-pre="$"><input type="number" id="g-cur" value="3000" oninput="calcGoal()"></div></div>
+        <div class="field"><label>Monthly Revenue Goal</label><div class="prefix" data-pre="$"><input type="number" id="g-goal" value="15000" oninput="calcGoal()"></div></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Current Clients</label><input type="number" id="g-clients" value="4" oninput="calcGoal()"></div>
+        <div class="field"><label>Months at Current Level</label><input type="number" id="g-stuck" value="6" oninput="calcGoal()"></div>
+      </div>
+    </div>
+    <div class="input-section">
+      <div class="section-title"><span class="step-badge" style="background:#7c3aed">2</span>Your Offer</div>
+      <div class="field"><label>Front-End Program Price <span class="hint">(what you charge)</span></label><div class="prefix" data-pre="$"><input type="number" id="g-fe" value="3000" oninput="calcGoal()"></div></div>
+      <div class="field-row">
+        <div class="field"><label>Back-End Price</label><div class="prefix" data-pre="$"><input type="number" id="g-be" value="5000" oninput="calcGoal()"></div></div>
+        <div class="field"><label>FE → BE Rate %</label><div class="suffix" data-suf="%"><input type="number" id="g-febe" value="50" oninput="calcGoal()"></div></div>
+      </div>
+      <div class="input-note">💡 LTV = FE price + (BE price × FE→BE rate). Target: $6K–$12K+</div>
+    </div>
+    <div class="input-section">
+      <div class="section-title"><span class="step-badge" style="background:#0d9488">3</span>Funnel Rates</div>
+      <div class="field-row">
+        <div class="field"><label>Close Rate %</label><div class="suffix" data-suf="%"><input type="number" id="g-close" value="30" oninput="calcGoal()"></div></div>
+        <div class="field"><label>Show Rate %</label><div class="suffix" data-suf="%"><input type="number" id="g-show" value="70" oninput="calcGoal()"></div></div>
+      </div>
+      <div class="field-row">
+        <div class="field"><label>Lead → Book Rate %</label><div class="suffix" data-suf="%"><input type="number" id="g-book" value="7" oninput="calcGoal()"></div></div>
+        <div class="field"><label>Cost Per Lead ($)</label><div class="prefix" data-pre="$"><input type="number" id="g-cpl" value="8" oninput="calcGoal()"></div></div>
+      </div>
+    </div>
+    <div class="input-section">
+      <div class="section-title"><span class="step-badge" style="background:#ea580c">4</span>Revenue Split</div>
+      <div class="field-row">
+        <div class="field"><label>Upfront Cash % <span class="hint">(at close)</span></label><div class="suffix" data-suf="%"><input type="number" id="g-upfront" value="50" oninput="calcGoal()"></div></div>
+        <div class="field"><label>Ad Budget / Mo</label><div class="prefix" data-pre="$"><input type="number" id="g-adspend" value="1500" oninput="calcGoal()"></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="results-col">
+    <div class="rs-title">Revenue Gap</div>
+    <div class="card-grid-3" id="goal-gap"></div>
+
+    <div class="rs-title">What You Need Per Month to Hit Your Goal</div>
+    <div class="card-grid-4" id="goal-need"></div>
+
+    <div class="rs-title">Daily Activity Requirements</div>
+    <div class="card-grid-4" id="goal-daily"></div>
+
+    <div class="rs-title">Funnel Visualization</div>
+    <div class="mcard" style="margin-bottom:14px;padding:16px 18px;">
+      <div class="funnel" id="goal-funnel"></div>
+    </div>
+
+    <div class="rs-title">LTV & Economics</div>
+    <div class="card-grid-3" id="goal-ltv"></div>
+
+    <div class="rs-title">Ad Spend Economics</div>
+    <div class="card-grid-4" id="goal-ads"></div>
+
+    <div id="goal-bottleneck"></div>
+
+    <div class="calc-footer">IFCA · Goal Syntax Calculator · For planning purposes only. Results depend on execution.</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ TAB 2: CONSTRAINT FINDER ══════════════════════════════ -->
+<div class="panel" id="panel-constraint">
+  <div class="inputs-col" style="width:0;min-width:0;overflow:hidden;display:none;"></div>
+  <div class="results-col" style="padding:16px 20px 48px;max-width:100%;">
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px;">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--text);">Data Constraints Finder</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">Enter your numbers · Auto-calculated metrics flag instantly · Identify your #1 bottleneck</div>
+      </div>
+      <button class="hdr-btn" onclick="resetConstraints()" style="border-color:var(--border);color:var(--muted);">↺ Clear All</button>
+    </div>
+
+    <div class="constraint-banner" id="c-summary-badges">
+      <div class="cb-item p1"><div class="cb-num" id="cb-fail">—</div><div class="cb-label">❌ Below Target</div></div>
+      <div class="cb-item warn"><div class="cb-num" id="cb-warn">—</div><div class="cb-label">⚠️ Watch</div></div>
+      <div class="cb-item ok"><div class="cb-num" id="cb-pass">—</div><div class="cb-label">✅ On Track</div></div>
+      <div class="cb-item" style="background:var(--bg);"><div class="cb-num" id="cb-empty" style="color:var(--muted);">—</div><div class="cb-label">Not Entered</div></div>
+      <div class="cb-item" style="background:var(--purple-l);border-color:var(--purple-b);"><div class="cb-num" id="cb-p1name" style="color:var(--purple);font-size:13px;font-weight:700;padding-top:4px;">—</div><div class="cb-label">Primary Constraint</div></div>
+    </div>
+
+    <div id="constraint-alert"></div>
+
+    <table class="c-table" id="constraint-table">
+      <thead><tr>
+        <th style="width:38%">KPI</th>
+        <th style="width:15%">Your Number</th>
+        <th style="width:12%">Calculated</th>
+        <th style="width:13%">Benchmark</th>
+        <th style="width:12%">Status</th>
+      </tr></thead>
+      <tbody id="c-tbody"></tbody>
+    </table>
+
+    <div class="calc-footer">IFCA · Advanced Data Constraints Finder · Problem Syntax calls · Enter numbers and watch the status column auto-flag</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ TAB 3: MONTHLY TRACKER ══════════════════════════════ -->
+<div class="panel" id="panel-tracker">
+  <div class="inputs-col" style="width:0;min-width:0;overflow:hidden;display:none;"></div>
+  <div class="results-col" style="padding:16px 20px 48px;max-width:100%;">
+
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:14px;flex-wrap:wrap;gap:10px;">
+      <div>
+        <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--text);">Monthly KPI Tracker</div>
+        <div style="font-size:11px;color:var(--muted);margin-top:3px;">Enter monthly data → Q1/Q2/Q3/Q4 and YTD auto-calculate · Export JSON to save · Import to restore</div>
+      </div>
+      <div style="display:flex;gap:8px;">
+        <select id="tracker-year" onchange="renderTracker()" style="height:30px;padding:0 10px;border:1px solid var(--border);border-radius:6px;font-size:12px;background:#fff;font-family:'DM Sans',sans-serif;">
+          <option value="2025">2025</option>
+          <option value="2026" selected>2026</option>
+          <option value="2027">2027</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="tracker-summary" class="card-grid-4" style="margin-bottom:14px;"></div>
+
+    <div class="mt-wrap">
+      <table class="mt-table" id="mt-table">
+        <thead>
+          <tr>
+            <th class="left" style="min-width:160px;">KPI</th>
+            <th>Target</th>
+            <th class="ytd-cell" style="background:rgba(14,165,233,.1)">YTD</th>
+            <th>Jan</th><th>Feb</th><th>Mar</th>
+            <th class="q-cell" style="background:rgba(59,130,246,.06)">Q1</th>
+            <th>Apr</th><th>May</th><th>Jun</th>
+            <th class="q-cell" style="background:rgba(59,130,246,.06)">Q2</th>
+            <th>Jul</th><th>Aug</th><th>Sep</th>
+            <th class="q-cell" style="background:rgba(59,130,246,.06)">Q3</th>
+            <th>Oct</th><th>Nov</th><th>Dec</th>
+            <th class="q-cell" style="background:rgba(59,130,246,.06)">Q4</th>
+          </tr>
+        </thead>
+        <tbody id="mt-tbody"></tbody>
+      </table>
+    </div>
+
+    <div class="rs-title" style="margin-top:14px;">Quarterly Trend</div>
+    <div class="card-grid-2">
+      <div class="chart-card"><div class="chart-card-title">Revenue by Quarter</div><div class="chart-wrap h180"><canvas id="chart-revenue"></canvas></div></div>
+      <div class="chart-card"><div class="chart-card-title">Leads & Closes by Quarter</div><div class="chart-wrap h180"><canvas id="chart-leads"></canvas></div></div>
+    </div>
+
+    <div class="calc-footer">IFCA · Monthly KPI Tracker · Blue cells = Enter your data · Gray = Auto-calculated from your inputs</div>
+  </div>
+</div>
+
+<!-- ══════════════════════════════ TAB 4: JSON GUIDE ══════════════════════════════ -->
+<div class="panel" id="panel-guide">
+  <div class="inputs-col" style="width:0;min-width:0;overflow:hidden;display:none;"></div>
+  <div class="results-col" style="max-width:720px;">
+
+    <div style="margin-bottom:20px;">
+      <div style="font-family:'Syne',sans-serif;font-size:18px;font-weight:800;color:var(--text);margin-bottom:4px;">How to Save & Restore Your Data</div>
+      <div style="font-size:12px;color:var(--muted);">This tool runs locally in your browser — no account needed. Use JSON export/import to save your numbers and reload them anytime, or drop your data into a Claude conversation to get AI analysis.</div>
+    </div>
+
+    <div class="guide-card">
+      <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px;">Step 1 — Saving Your Data</div>
+      <div class="guide-step">
+        <div class="guide-num">1</div>
+        <div class="guide-content">
+          <h4>Click "Export Data" in the top-right header</h4>
+          <p>This downloads a file called <code style="font-family:'DM Mono',monospace;background:#f1f5f9;padding:1px 5px;border-radius:3px;">ifca-tracker-[year].json</code> to your Downloads folder. It contains all numbers you've entered across every tab — Goal Math, Constraint Finder, and Monthly Tracker.</p>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="guide-num">2</div>
+        <div class="guide-content">
+          <h4>Store it somewhere you'll remember</h4>
+          <p>Save it to Google Drive, Dropbox, or a folder called "IFCA Business Tracking." The file name includes the year so you can keep separate files per year.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-card">
+      <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px;">Step 2 — Restoring Your Data</div>
+      <div class="guide-step">
+        <div class="guide-num">1</div>
+        <div class="guide-content">
+          <h4>Click "Import JSON" in the top-right header</h4>
+          <p>Select your saved <code style="font-family:'DM Mono',monospace;background:#f1f5f9;padding:1px 5px;border-radius:3px;">.json</code> file. All your numbers will restore instantly across every tab. Works even after closing and reopening your browser.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-card">
+      <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin-bottom:12px;">Step 3 — Getting AI Analysis from Claude</div>
+      <div class="guide-step">
+        <div class="guide-num">1</div>
+        <div class="guide-content">
+          <h4>Export your JSON file</h4>
+          <p>Download your data using the "Export Data" button after you've entered your monthly numbers.</p>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="guide-num">2</div>
+        <div class="guide-content">
+          <h4>Go to claude.ai and start a new conversation</h4>
+          <p>Drag and drop (or upload via the paperclip) your JSON file into the Claude chat window.</p>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="guide-num">3</div>
+        <div class="guide-content">
+          <h4>Paste this prompt:</h4>
+          <div class="code-block"><span class="str">You are an IFCA business coach. I've uploaded my Data Constraints Tracker JSON file containing my monthly KPI data. Please analyze my numbers across the 5 business levers (Traffic, Pipeline, Sales Conversion, Back-End, Financials) and tell me:
+
+1. What is my #1 constraint right now based on my data?
+2. Which metrics are below IFCA benchmarks and by how much?
+3. What is the math showing about my path to [YOUR GOAL $X/month]?
+4. What are the 3 highest-leverage actions I should take in the next 30 days?
+
+Here are the IFCA benchmarks for context:
+- CPL target: &lt;$10 | Show Rate: &gt;70% | Close Rate: 30-40%
+- AOV: $3K-$6K | LTV: $6K-$12K+ | Net Margin: &gt;50%
+- FE→BE conversion: &gt;50% | Contracted ROAS: &gt;5x | Collected ROAS: &gt;2x</span></div>
+        </div>
+      </div>
+      <div class="guide-step">
+        <div class="guide-num">4</div>
+        <div class="guide-content">
+          <h4>Claude will diagnose your constraint and give you a prioritized action plan</h4>
+          <p>You can then ask follow-up questions: "What should my ad creative focus on?", "How do I fix my show rate?", "What does a backend offer look like for my niche?" — Claude will give specific recommendations based on your actual numbers.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-card" style="background:var(--navy);border-color:#1e3a5f;">
+      <div style="font-family:'Syne',sans-serif;font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:#475569;margin-bottom:12px;">Pro Tip — Monthly Tracking Rhythm</div>
+      <div style="font-size:12px;color:#94a3b8;line-height:1.7;">
+        <strong style="color:#cbd5e1;">Every 1st of the month:</strong> Open this tool, import your previous JSON, fill in last month's numbers across all 5 sections, export the updated JSON and save it. Takes about 5 minutes. After 90 days, you'll have a clear picture of your quarter — which levers moved, which didn't, and exactly where to focus next.<br><br>
+        <strong style="color:#cbd5e1;">Quarterly:</strong> Drop the JSON into Claude with the analysis prompt above. Print the constraint diagnosis. This is the exact data your IFCA success coach will want to review on your calls.
+      </div>
+    </div>
+
+  </div>
+</div>
+
+</div><!-- /panels -->
+</div><!-- /app -->
+
+<script>
+// ══════════════════════════════════════════════════════════
+// DATA STORE
+// ══════════════════════════════════════════════════════════
+let trackerData = {};
+for(let m of ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']) {
+  trackerData[m] = {};
+}
+
+// Tracker metric definitions
+const TRACKER_METRICS = [
+  { section:'① TRAFFIC', rows:[
+    { id:'adspend',  name:'Ad Spend (Paid Media)',         target:'Varies', type:'input', fmt:'$' },
+    { id:'leads',    name:'Total Leads Generated',         target:'Varies', type:'input', fmt:'#' },
+    { id:'cpl',      name:'Cost Per Lead (CPL) ←',         target:'< $10',  type:'calc',  fmt:'$' },
+    { id:'organic',  name:'Organic / Referral Leads',      target:'—',      type:'input', fmt:'#' },
+  ]},
+  { section:'② PIPELINE', rows:[
+    { id:'sched',    name:'Scheduled Calls (Booked)',      target:'Varies', type:'input', fmt:'#' },
+    { id:'live',     name:'Live Sales Calls (Showed)',     target:'Varies', type:'input', fmt:'#' },
+    { id:'showrate', name:'Show Rate ←',                   target:'> 70%',  type:'calc',  fmt:'%' },
+    { id:'bookrate', name:'Lead → Call Booked Rate ←',     target:'> 5%',   type:'calc',  fmt:'%' },
+    { id:'costcall', name:'Cost Per Live Call ←',          target:'< $100', type:'calc',  fmt:'$' },
+  ]},
+  { section:'③ SALES CONVERSION', rows:[
+    { id:'closes',   name:'Closes (Not Deposits)',         target:'Varies', type:'input', fmt:'#' },
+    { id:'closerate',name:'Close Rate ←',                  target:'> 30%',  type:'calc',  fmt:'%' },
+    { id:'feprice',  name:'FE Price Point (Avg Deal Size)',target:'≥ $3K',  type:'input', fmt:'$' },
+    { id:'fecont',   name:'New Contracted FE Revenue ←',  target:'Varies', type:'calc',  fmt:'$' },
+    { id:'upfront',  name:'Upfront Cash Collected',        target:'Varies', type:'input', fmt:'$' },
+    { id:'cashrate', name:'Cash Collection Rate ←',        target:'> 50%',  type:'calc',  fmt:'%' },
+    { id:'cpa',      name:'Cost Per Acquisition (CPA) ←', target:'< $500', type:'calc',  fmt:'$' },
+    { id:'croas',    name:'Contracted ROAS ←',             target:'> 5x',   type:'calc',  fmt:'x' },
+    { id:'cofroas',  name:'Collected ROAS ←',              target:'> 2x',   type:'calc',  fmt:'x' },
+  ]},
+  { section:'④ BACK-END', rows:[
+    { id:'feberate', name:'FE → BE Conversion Rate (%)',  target:'> 50%',  type:'input', fmt:'%' },
+    { id:'beprice',  name:'BE Price Point (Avg Deal Size)',target:'≥ $5K', type:'input', fmt:'$' },
+    { id:'becloses', name:'New BE Clients ←',              target:'Varies', type:'calc',  fmt:'#' },
+    { id:'becont',   name:'New Contracted BE Revenue ←',  target:'Varies', type:'calc',  fmt:'$' },
+    { id:'totalcont',name:'Total New Contracted Revenue ←',target:'Varies',type:'calc',  fmt:'$' },
+  ]},
+  { section:'⑤ FINANCIALS (P&L)', rows:[
+    { id:'grossrev', name:'Gross Revenue (Cash Collected)',target:'Varies', type:'input', fmt:'$' },
+    { id:'labor',    name:'Labor Expenses',                target:'Varies', type:'input', fmt:'$' },
+    { id:'labormgn', name:'Labor Margin ←',                target:'30–35%', type:'calc',  fmt:'%' },
+    { id:'mktexp',   name:'Marketing / Ad Expenses',       target:'Varies', type:'input', fmt:'$' },
+    { id:'mktmgn',   name:'Marketing Margin ←',            target:'10–20%', type:'calc',  fmt:'%' },
+    { id:'overhead', name:'Overhead / Ops Expenses',       target:'Varies', type:'input', fmt:'$' },
+    { id:'ovhdmgn',  name:'Overhead Margin ←',             target:'3–8%',   type:'calc',  fmt:'%' },
+    { id:'totexp',   name:'Total Operating Expenses ←',   target:'Varies', type:'calc',  fmt:'$' },
+    { id:'netprofit',name:'Net Operating Profit ←',        target:'Varies', type:'calc',  fmt:'$' },
+    { id:'netmgn',   name:'Net Operating Margin ←',        target:'> 50%',  type:'calc',  fmt:'%' },
+  ]},
+];
+
+// Constraint Finder state
+let CF = {};
+
+// ══════════════════════════════════════════════════════════
+// TAB SWITCHING
+// ══════════════════════════════════════════════════════════
+function switchTab(name, btn) {
+  document.querySelectorAll('.tab-nav button').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+  if(name === 'tracker') renderTracker();
+  if(name === 'constraint') renderConstraintTable();
+}
+
+// ══════════════════════════════════════════════════════════
+// HELPER FORMATTERS
+// ══════════════════════════════════════════════════════════
+const fmtD = v => isNaN(v)||!isFinite(v) ? '—' : '$'+Math.round(v).toLocaleString();
+const fmtP = v => isNaN(v)||!isFinite(v) ? '—' : (v*100).toFixed(1)+'%';
+const fmtN = v => isNaN(v)||!isFinite(v) ? '—' : Math.round(v).toLocaleString();
+const fmtX = v => isNaN(v)||!isFinite(v) ? '—' : v.toFixed(1)+'x';
+const n = id => parseFloat(document.getElementById(id)?.value)||0;
+
+function card(label, val, cls='', sub='') {
+  return `<div class="mcard ${cls}"><div class="mlabel">${label}</div><div class="mval lg ${cls?cls.replace(/mcard\s*/g,''):''}">${val}</div>${sub?`<div class="msub">${sub}</div>`:''}</div>`;
+}
+
+// ══════════════════════════════════════════════════════════
+// TAB 1: GOAL MATH CALCULATOR
+// ══════════════════════════════════════════════════════════
+function calcGoal() {
+  const cur=n('g-cur'), goal=n('g-goal'), fe=n('g-fe'), be=n('g-be'),
+    febe=n('g-febe')/100, close=n('g-close')/100, show=n('g-show')/100,
+    book=n('g-book')/100, cpl=n('g-cpl'), upf=n('g-upfront')/100, ad=n('g-adspend'),
+    clients=n('g-clients'), stuck=n('g-stuck');
+
+  const ltv = fe + (be * febe);
+  const gap = goal - cur;
+  const gapPct = cur>0 ? (gap/cur)*100 : 0;
+  const lostRev = gap * stuck;
+
+  // What you need per month
+  const newClients = goal / fe;
+  const liveCalls = close>0 ? newClients/close : 0;
+  const schedCalls = show>0 ? liveCalls/show : 0;
+  const leadsNeeded = book>0 ? schedCalls/book : 0;
+  const adBudgetNeeded = leadsNeeded * cpl;
+
+  // Daily
+  const leadsDay = leadsNeeded/30;
+  const callsDay = liveCalls/30;
+  const closesDay = newClients/30;
+  const revDay = goal/30;
+
+  // Ads economics
+  const cac = close>0&&show>0&&book>0 ? cpl/(book*show*close) : 0;
+  const cRoas = cac>0 ? fe/cac : 0;
+  const coll = fe * upf;
+  const collRoas = adBudgetNeeded>0 ? (newClients*coll)/adBudgetNeeded : 0;
+  const beRev = newClients * febe * be;
+  const totalContracted = newClients * fe + beRev;
+
+  // Gap cards
+  document.getElementById('goal-gap').innerHTML =
+    card('Current Monthly',''+fmtD(cur),'','') +
+    card('Revenue Gap','+'+fmtD(gap), gapPct>50?'red':'amber', `${gapPct.toFixed(0)}% increase needed`) +
+    card('Revenue Lost While Stuck',fmtD(lostRev),'red',`${stuck} months × gap = cost of inaction`);
+
+  // Needs
+  document.getElementById('goal-need').innerHTML =
+    card('New Closes / Mo',fmtN(newClients),'blue','at FE price') +
+    card('Live Calls / Mo',fmtN(Math.ceil(liveCalls)),'teal',`at ${(close*100).toFixed(0)}% close rate`) +
+    card('Scheduled Calls / Mo',fmtN(Math.ceil(schedCalls)),'teal',`at ${(show*100).toFixed(0)}% show rate`) +
+    card('Leads / Mo',fmtN(Math.ceil(leadsNeeded)),'purple',`at ${(book*100).toFixed(0)}% book rate`);
+
+  // Daily
+  document.getElementById('goal-daily').innerHTML =
+    card('Leads / Day',leadsDay.toFixed(1),'','') +
+    card('Live Calls / Day',callsDay.toFixed(2),'','≈ '+(callsDay*7).toFixed(1)+'/wk') +
+    card('Closes / Day',closesDay.toFixed(2),'','') +
+    card('Revenue / Day',fmtD(revDay),'green','');
+
+  // Funnel
+  const funnelMax = Math.max(leadsNeeded,1);
+  document.getElementById('goal-funnel').innerHTML = [
+    ['Leads Generated', leadsNeeded, '#7c3aed', fmtN(Math.ceil(leadsNeeded))],
+    ['Calls Booked ('+((book)*100).toFixed(0)+'%)', schedCalls, '#2563eb', fmtN(Math.ceil(schedCalls))],
+    ['Live Calls ('+((show)*100).toFixed(0)+'%)', liveCalls, '#0d9488', fmtN(Math.ceil(liveCalls))],
+    ['New Closes ('+((close)*100).toFixed(0)+'%)', newClients, '#16a34a', fmtN(Math.ceil(newClients))],
+  ].map(([label, val, color, display]) =>
+    `<div class="funnel-row">
+      <div class="funnel-label">${label}</div>
+      <div class="funnel-bar-wrap"><div class="funnel-bar" style="width:${Math.min(100,(val/funnelMax)*100)}%;background:${color};"></div></div>
+      <div class="funnel-val" style="color:${color};">${display}</div>
+    </div>`
+  ).join('');
+
+  // LTV
+  document.getElementById('goal-ltv').innerHTML =
+    card('LTV (FE + BE)',fmtD(ltv),'green',`FE: ${fmtD(fe)} · BE: ${fmtD(be*febe)} avg`) +
+    card('FE Revenue / Mo',fmtD(newClients*fe),'blue','') +
+    card('BE Revenue / Mo',fmtD(beRev),'purple',`${(febe*100).toFixed(0)}% FE→BE conversion`);
+
+  // Ads
+  document.getElementById('goal-ads').innerHTML =
+    card('Budget Needed',fmtD(adBudgetNeeded),'','vs '+fmtD(ad)+' current') +
+    card('CAC',fmtD(cac), cac>fe*0.25?'red':'green', cac>fe*0.25?'> 25% of FE price':'✓ Under 25% of FE') +
+    card('Contracted ROAS',fmtX(cRoas), cRoas>=5?'green':cRoas>=2?'amber':'red','target > 5x') +
+    card('Collected ROAS',fmtX(collRoas), collRoas>=2?'green':collRoas>=1?'amber':'red','target > 2x');
+
+  // Bottleneck alert
+  let alert = '';
+  if(close < 0.25) {
+    alert = `<div class="bottleneck-alert red"><div class="ba-icon">⚠️</div><div><div class="ba-title">P4 Constraint — Low Close Rate</div><div class="ba-desc">Your ${(close*100).toFixed(0)}% close rate is below the 30% IFCA target. Before scaling ad spend, focus on sales framework and pre-call nurture. Every point of close rate improvement is worth ${fmtD(liveCalls * fe * 0.01)} in monthly revenue.</div></div></div>`;
+  } else if(book < 0.05) {
+    alert = `<div class="bottleneck-alert amber"><div class="ba-icon">⚠️</div><div><div class="ba-title">P3 Constraint — Low Lead → Book Rate</div><div class="ba-desc">Your ${(book*100).toFixed(1)}% lead-to-book rate is below the 5% target. Fix your DM automation sequence and nurture before scaling lead volume.</div></div></div>`;
+  } else if(show < 0.60) {
+    alert = `<div class="bottleneck-alert amber"><div class="ba-icon">⚠️</div><div><div class="ba-title">P3 Constraint — Low Show Rate</div><div class="ba-desc">Your ${(show*100).toFixed(0)}% show rate means you're losing ${fmtN(Math.ceil(schedCalls - liveCalls))} calls/month. Add a confirmation video, SMS reminders, and a pre-call nurture sequence to recover this.</div></div></div>`;
+  } else if(fe < 2000) {
+    alert = `<div class="bottleneck-alert red"><div class="ba-icon">⚠️</div><div><div class="ba-title">P1 Constraint — Under-Priced Offer</div><div class="ba-desc">At ${fmtD(fe)}/client, you need ${fmtN(Math.ceil(newClients))} new closes/month to hit your goal. A price increase to $3K–$5K would cut that to ${fmtN(Math.ceil(goal/3000))}–${fmtN(Math.ceil(goal/5000))} closes. Fix pricing before scaling acquisition.</div></div></div>`;
+  } else {
+    alert = `<div class="bottleneck-alert green"><div class="ba-icon">✅</div><div><div class="ba-title">Funnel Math Looks Solid</div><div class="ba-desc">Your inputs produce viable unit economics. Focus on consistent lead volume and weekly ad creative testing to compound toward your goal.</div></div></div>`;
+  }
+  document.getElementById('goal-bottleneck').innerHTML = alert;
+}
+
+// ══════════════════════════════════════════════════════════
+// TAB 2: CONSTRAINT FINDER
+// ══════════════════════════════════════════════════════════
+function renderConstraintTable() {
+  const tbody = document.getElementById('c-tbody');
+  tbody.innerHTML = '';
+
+  const inputIds = ['adspend','leads','organic','sched','live','closes','feprice','upfront','feberate','beprice','grossrev','labor','mktexp','overhead'];
+
+  const sections = [
+    { label:'① TRAFFIC — Are enough leads coming in?', rows:[
+      { id:'adspend',  name:'Monthly Ad Spend',                auto:false, bench:'Varies', pass:null },
+      { id:'leads',    name:'Total Leads Generated',           auto:false, bench:'Varies', pass:null },
+      { id:'cpl',      name:'Cost Per Lead (CPL) ← auto',     auto:true,  bench:'< $10',
+        calc: d => d.adspend && d.leads ? d.adspend/d.leads : NaN,
+        fmt: fmtD, pass: v => v <= 10, warn: v => v <= 15 },
+      { id:'organic',  name:'Organic / Referral Leads',        auto:false, bench:'—',     pass:null },
+    ]},
+    { label:'② PIPELINE — Are leads converting to calls?', rows:[
+      { id:'sched',    name:'Scheduled Sales Calls (Booked)',  auto:false, bench:'Varies', pass:null },
+      { id:'live',     name:'Live Sales Calls (Showed)',       auto:false, bench:'Varies', pass:null },
+      { id:'showrate', name:'Show Rate ← auto',               auto:true,  bench:'> 70%',
+        calc: d => d.sched && d.live ? d.live/d.sched : NaN,
+        fmt: fmtP, pass: v => v >= 0.70, warn: v => v >= 0.60 },
+      { id:'bookrate', name:'Lead → Call Booked Rate ← auto', auto:true,  bench:'> 5%',
+        calc: d => d.leads && d.sched ? d.sched/d.leads : NaN,
+        fmt: fmtP, pass: v => v >= 0.05, warn: v => v >= 0.03 },
+      { id:'costcall', name:'Cost Per Live Call ← auto',      auto:true,  bench:'< $100',
+        calc: d => d.adspend && d.live ? d.adspend/d.live : NaN,
+        fmt: fmtD, pass: v => v <= 100, warn: v => v <= 150 },
+    ]},
+    { label:'③ SALES CONVERSION — Are calls turning into clients?', rows:[
+      { id:'closes',   name:'New Closes This Month',          auto:false, bench:'Varies', pass:null },
+      { id:'closerate',name:'Close Rate ← auto',             auto:true,  bench:'> 30%',
+        calc: d => d.live && d.closes ? d.closes/d.live : NaN,
+        fmt: fmtP, pass: v => v >= 0.30, warn: v => v >= 0.25 },
+      { id:'feprice',  name:'FE Program Price (Avg Deal Size)',auto:false,bench:'≥ $3K',  pass: v => v >= 3000, warn: v => v >= 2000, fmt:fmtD },
+      { id:'fecont',   name:'New Contracted FE Revenue ← auto',auto:true,bench:'Varies',
+        calc: d => d.closes && d.feprice ? d.closes*d.feprice : NaN,
+        fmt: fmtD, pass: null },
+      { id:'upfront',  name:'Upfront Cash Collected',         auto:false, bench:'Varies', pass:null },
+      { id:'cashrate', name:'Cash Collection Rate ← auto',   auto:true,  bench:'> 50%',
+        calc: d => d.fecont_calc && d.upfront ? d.upfront/d.fecont_calc : NaN,
+        fmt: fmtP, pass: v => v >= 0.50, warn: v => v >= 0.35 },
+      { id:'cpa',      name:'Cost Per Acquisition ← auto',   auto:true,  bench:'< $500',
+        calc: d => d.adspend && d.closes ? d.adspend/d.closes : NaN,
+        fmt: fmtD, pass: v => v <= 500, warn: v => v <= 750 },
+      { id:'croas',    name:'Contracted ROAS ← auto',         auto:true,  bench:'> 5x',
+        calc: d => d.fecont_calc && d.adspend ? d.fecont_calc/d.adspend : NaN,
+        fmt: fmtX, pass: v => v >= 5, warn: v => v >= 3 },
+      { id:'colroas',  name:'Collected ROAS ← auto',          auto:true,  bench:'> 2x',
+        calc: d => d.upfront && d.adspend ? d.upfront/d.adspend : NaN,
+        fmt: fmtX, pass: v => v >= 2, warn: v => v >= 1.5 },
+    ]},
+    { label:'④ BACK-END — Are FE clients ascending to BE?', rows:[
+      { id:'feberate', name:'FE → BE Conversion Rate (%)',    auto:false, bench:'> 50%', pass: v => v >= 50, warn: v => v >= 35, fmt: v => v+'%' },
+      { id:'beprice',  name:'Back-End Program Price',         auto:false, bench:'≥ $5K', pass: v => v >= 5000, warn: v => v >= 3000, fmt:fmtD },
+      { id:'becloses', name:'New BE Clients ← auto',          auto:true,  bench:'Varies',
+        calc: d => d.closes && d.feberate ? (d.closes*(d.feberate/100)) : NaN,
+        fmt: v => fmtN(v)+' clients', pass:null },
+      { id:'becont',   name:'New Contracted BE Revenue ← auto',auto:true, bench:'Varies',
+        calc: d => d.becloses_calc && d.beprice ? d.becloses_calc*d.beprice : NaN,
+        fmt: fmtD, pass:null },
+      { id:'totalcont',name:'Total New Contracted Revenue ← auto',auto:true,bench:'Varies',
+        calc: d => (d.fecont_calc||0) + (d.becont_calc||0),
+        fmt: fmtD, pass:null },
+    ]},
+    { label:'⑤ FINANCIALS — Is the business profitable?', rows:[
+      { id:'grossrev', name:'Gross Revenue (Cash Collected)', auto:false, bench:'Varies', pass:null },
+      { id:'labor',    name:'Labor / Team Expenses',          auto:false, bench:'Varies', pass:null },
+      { id:'labormgn', name:'Labor Margin ← auto',           auto:true,  bench:'30–35%',
+        calc: d => d.grossrev && d.labor ? d.labor/d.grossrev : NaN,
+        fmt: fmtP, pass: v => v >= 0.30 && v <= 0.38, warn: v => v >= 0.25 && v <= 0.45 },
+      { id:'mktexp',   name:'Marketing / Ad Expenses',        auto:false, bench:'Varies', pass:null },
+      { id:'mktmgn',   name:'Marketing Margin ← auto',       auto:true,  bench:'10–20%',
+        calc: d => d.grossrev && d.mktexp ? d.mktexp/d.grossrev : NaN,
+        fmt: fmtP, pass: v => v >= 0.10 && v <= 0.25, warn: v => v < 0.30 },
+      { id:'overhead', name:'Overhead / Ops Expenses',        auto:false, bench:'Varies', pass:null },
+      { id:'ovhdmgn',  name:'Overhead Margin ← auto',        auto:true,  bench:'3–8%',
+        calc: d => d.grossrev && d.overhead ? d.overhead/d.grossrev : NaN,
+        fmt: fmtP, pass: v => v >= 0.03 && v <= 0.10, warn: v => v < 0.15 },
+      { id:'totexp',   name:'Total Operating Expenses ← auto',auto:true, bench:'Varies',
+        calc: d => (d.labor||0)+(d.mktexp||0)+(d.overhead||0),
+        fmt: fmtD, pass:null },
+      { id:'netprofit',name:'Net Operating Profit ← auto',   auto:true,  bench:'Varies',
+        calc: d => d.grossrev ? d.grossrev - ((d.labor||0)+(d.mktexp||0)+(d.overhead||0)) : NaN,
+        fmt: fmtD, pass: v => v > 0 },
+      { id:'netmgn',   name:'Net Operating Margin ← auto',   auto:true,  bench:'> 50%',
+        calc: d => d.grossrev && d.netprofit_calc ? d.netprofit_calc/d.grossrev : NaN,
+        fmt: fmtP, pass: v => v >= 0.50, warn: v => v >= 0.35 },
+    ]},
+  ];
+
+  // Compute all values
+  const vals = {};
+  const getV = id => CF[id] ? parseFloat(CF[id]) : NaN;
+  for(const id of inputIds) vals[id] = getV(id);
+
+  // Two-pass calc
+  for(const sec of sections) for(const row of sec.rows) {
+    if(row.auto && row.calc) {
+      const v = row.calc(vals);
+      vals[row.id+'_calc'] = v;
+      vals[row.id] = v; // also store for downstream calcs
+    }
+  }
+
+  let failCount=0, warnCount=0, passCount=0, emptyCount=0;
+  let p1Name = '—';
+  let p1Priority = 999;
+  const sectionOrder = ['① Traffic','② Pipeline','③ Sales','④ Back-End','⑤ Financials'];
+
+  sections.forEach((sec, si) => {
+    const htr = tbody.insertRow();
+    htr.className = 'c-section-head';
+    const htd = htr.insertCell();
+    htd.colSpan = 5;
+    htd.textContent = sec.label;
+
+    sec.rows.forEach(row => {
+      const tr = tbody.insertRow();
+      const val = row.auto ? vals[row.id+'_calc'] ?? vals[row.id] : vals[row.id];
+      const hasVal = !isNaN(val) && isFinite(val);
+      const isEntered = !row.auto && CF[row.id];
+
+      // Status
+      let status = 'empty', statusTxt = '—';
+      if(hasVal && row.pass) {
+        if(row.pass(val)) { status='pass'; statusTxt='✅ On Track'; passCount++; }
+        else if(row.warn && row.warn(val)) { status='warn'; statusTxt='⚠️ Watch'; warnCount++; }
+        else { status='fail'; statusTxt='❌ Below Target'; failCount++;
+          if(si < p1Priority) { p1Priority=si; p1Name=sectionOrder[si]||sec.label.split(' ')[1]; }
+        }
+      } else if(hasVal && !row.pass && (isEntered || row.auto)) {
+        status='empty'; statusTxt='—';
+      } else if(!hasVal && !isEntered) {
+        status='empty'; statusTxt='—'; if(!row.auto) emptyCount++;
+      }
+
+      const tdName = tr.insertCell();
+      tdName.innerHTML = `<div class="c-name">${row.name}${row.auto?'':''}</div>`;
+      if(row.auto) tdName.innerHTML += `<div class="c-auto">auto-calculated</div>`;
+
+      const tdInput = tr.insertCell();
+      if(!row.auto) {
+        tdInput.innerHTML = `<div class="c-input-wrap"><input type="number" value="${CF[row.id]||''}" placeholder="0" oninput="CF['${row.id}']=this.value;renderConstraintTable()" style="width:100%;"></div>`;
+      } else {
+        tdInput.innerHTML = `<span class="c-val" style="color:var(--muted);">—</span>`;
+      }
+
+      const tdCalc = tr.insertCell();
+      tdCalc.innerHTML = row.auto ? `<span class="c-val">${hasVal ? (row.fmt ? row.fmt(val) : val.toFixed(2)) : '—'}</span>` : (hasVal&&row.fmt ? `<span class="c-val" style="color:var(--muted);font-size:10px;">${row.fmt(val)}</span>` : '<span class="c-val" style="color:var(--muted);">—</span>');
+
+      const tdBench = tr.insertCell();
+      tdBench.innerHTML = `<span class="c-bench">${row.bench}</span>`;
+
+      const tdStatus = tr.insertCell();
+      tdStatus.innerHTML = `<span class="status-pill ${status}">${statusTxt}</span>`;
+    });
+  });
+
+  document.getElementById('cb-fail').textContent = failCount||'0';
+  document.getElementById('cb-warn').textContent = warnCount||'0';
+  document.getElementById('cb-pass').textContent = passCount||'0';
+  document.getElementById('cb-empty').textContent = emptyCount||'0';
+  document.getElementById('cb-p1name').textContent = failCount ? p1Name : 'None Yet';
+
+  // Constraint alert
+  const alertEl = document.getElementById('constraint-alert');
+  if(failCount>0) {
+    const sectionLabels = ['Traffic (P2)', 'Pipeline (P3)', 'Sales Conversion (P4a)', 'Back-End LTV (P4b)', 'Financials'];
+    alertEl.innerHTML = `<div class="bottleneck-alert red"><div class="ba-icon">🔴</div><div><div class="ba-title">Primary Constraint Detected: ${p1Name}</div><div class="ba-desc">${failCount} metric${failCount>1?'s are':' is'} below IFCA targets. Focus on the first failing section — fixing downstream issues before the upstream constraint is like patching a leaky boat while still taking on water.</div></div></div>`;
+  } else if(passCount>0) {
+    alertEl.innerHTML = `<div class="bottleneck-alert green"><div class="ba-icon">✅</div><div><div class="ba-title">All Entered Metrics On Track</div><div class="ba-desc">Looking solid across entered metrics. Keep entering numbers to get a complete picture of all 5 business levers.</div></div></div>`;
+  } else {
+    alertEl.innerHTML = '';
+  }
+}
+
+function resetConstraints() { CF = {}; renderConstraintTable(); }
+
+// ══════════════════════════════════════════════════════════
+// TAB 3: MONTHLY TRACKER
+// ══════════════════════════════════════════════════════════
+const MONTHS = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+const MONTH_LABELS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+
+// Rows that are inputs vs calculated
+const INPUT_ROWS = ['adspend','leads','organic','sched','live','closes','feprice','upfront','feberate','beprice','grossrev','labor','mktexp','overhead'];
+
+function calcMonth(d) {
+  const g = id => parseFloat(d[id])||0;
+  const adspend=g('adspend'), leads=g('leads'), sched=g('sched'), live=g('live'),
+    closes=g('closes'), feprice=g('feprice'), upfront=g('upfront'),
+    feberate=g('feberate'), beprice=g('beprice'),
+    grossrev=g('grossrev'), labor=g('labor'), mktexp=g('mktexp'), overhead=g('overhead');
+
+  const fecont = closes * feprice;
+  const becloses = closes * (feberate/100);
+  const becont = becloses * beprice;
+  const totexp = labor + mktexp + overhead;
+  const netprofit = grossrev - totexp;
+
+  return {
+    ...d,
+    cpl: adspend&&leads ? adspend/leads : NaN,
+    showrate: sched&&live ? live/sched : NaN,
+    bookrate: leads&&sched ? sched/leads : NaN,
+    costcall: adspend&&live ? adspend/live : NaN,
+    closerate: live&&closes ? closes/live : NaN,
+    fecont, cashrate: fecont ? upfront/fecont : NaN,
+    cpa: adspend&&closes ? adspend/closes : NaN,
+    croas: fecont&&adspend ? fecont/adspend : NaN,
+    colroas: upfront&&adspend ? upfront/adspend : NaN,
+    becloses, becont,
+    totalcont: fecont+becont,
+    totexp, netprofit,
+    labormgn: grossrev ? labor/grossrev : NaN,
+    mktmgn: grossrev ? mktexp/grossrev : NaN,
+    ovhdmgn: grossrev ? overhead/grossrev : NaN,
+    netmgn: grossrev ? netprofit/grossrev : NaN,
+  };
+}
+
+const TRACKER_ROW_DEFS = [
+  { section:'① TRAFFIC', rows:[
+    { id:'adspend',   name:'Ad Spend (Paid Media)',        target:'Varies', input:true,  fmt:v=>fmtD(v) },
+    { id:'leads',     name:'Total Leads Generated',        target:'Varies', input:true,  fmt:v=>fmtN(v) },
+    { id:'cpl',       name:'Cost Per Lead (CPL) ←',        target:'<$10',   input:false, fmt:v=>isNaN(v)?'—':fmtD(v), pass:v=>v<=10, warn:v=>v<=15 },
+    { id:'organic',   name:'Organic Leads',                target:'—',      input:true,  fmt:v=>fmtN(v) },
+  ]},
+  { section:'② PIPELINE', rows:[
+    { id:'sched',     name:'Scheduled Calls',              target:'Varies', input:true,  fmt:v=>fmtN(v) },
+    { id:'live',      name:'Live Sales Calls (Showed)',    target:'Varies', input:true,  fmt:v=>fmtN(v) },
+    { id:'showrate',  name:'Show Rate ←',                  target:'>70%',   input:false, fmt:v=>isNaN(v)?'—':fmtP(v), pass:v=>v>=0.70, warn:v=>v>=0.60 },
+    { id:'closerate', name:'Close Rate ←',                 target:'>30%',   input:false, fmt:v=>isNaN(v)?'—':fmtP(v), pass:v=>v>=0.30, warn:v=>v>=0.25 },
+  ]},
+  { section:'③ SALES CONVERSION', rows:[
+    { id:'closes',    name:'Closes (Not Deposits)',        target:'Varies', input:true,  fmt:v=>fmtN(v) },
+    { id:'feprice',   name:'FE Price Point',               target:'≥$3K',   input:true,  fmt:v=>fmtD(v) },
+    { id:'fecont',    name:'Contracted FE Revenue ←',     target:'Varies', input:false, fmt:v=>isNaN(v)?'—':fmtD(v) },
+    { id:'upfront',   name:'Upfront Cash Collected',       target:'Varies', input:true,  fmt:v=>fmtD(v) },
+    { id:'croas',     name:'Contracted ROAS ←',            target:'>5x',    input:false, fmt:v=>isNaN(v)?'—':fmtX(v), pass:v=>v>=5, warn:v=>v>=3 },
+    { id:'colroas',   name:'Collected ROAS ←',             target:'>2x',    input:false, fmt:v=>isNaN(v)?'—':fmtX(v), pass:v=>v>=2, warn:v=>v>=1.5 },
+  ]},
+  { section:'④ BACK-END', rows:[
+    { id:'feberate',  name:'FE → BE Rate (%)',             target:'>50%',   input:true,  fmt:v=>v?v+'%':'—' },
+    { id:'beprice',   name:'BE Price Point',               target:'≥$5K',   input:true,  fmt:v=>fmtD(v) },
+    { id:'totalcont', name:'Total Contracted Revenue ←',  target:'Varies', input:false, fmt:v=>isNaN(v)?'—':fmtD(v) },
+  ]},
+  { section:'⑤ FINANCIALS', rows:[
+    { id:'grossrev',  name:'Gross Revenue (Cash)',         target:'Varies', input:true,  fmt:v=>fmtD(v) },
+    { id:'labor',     name:'Labor Expenses',               target:'Varies', input:true,  fmt:v=>fmtD(v) },
+    { id:'mktexp',    name:'Marketing / Ad Expenses',      target:'Varies', input:true,  fmt:v=>fmtD(v) },
+    { id:'overhead',  name:'Overhead / Ops Expenses',      target:'Varies', input:true,  fmt:v=>fmtD(v) },
+    { id:'netprofit', name:'Net Operating Profit ←',      target:'Varies', input:false, fmt:v=>isNaN(v)?'—':fmtD(v) },
+    { id:'netmgn',    name:'Net Margin ←',                 target:'>50%',   input:false, fmt:v=>isNaN(v)?'—':fmtP(v), pass:v=>v>=0.50, warn:v=>v>=0.35 },
+  ]},
+];
+
+let chartRevenue = null, chartLeads = null;
+
+function renderTracker() {
+  const tbody = document.getElementById('mt-tbody');
+  tbody.innerHTML = '';
+
+  // Compute all months
+  const computed = {};
+  for(const m of MONTHS) computed[m] = calcMonth(trackerData[m]||{});
+
+  // Quarter aggregation (sum inputs, avg rates)
+  function qSum(months, id) {
+    const vals = months.map(m => parseFloat(trackerData[m]?.[id])||0);
+    return vals.reduce((a,b)=>a+b,0);
+  }
+  function qCalc(months, id) {
+    const vals = months.map(m => computed[m][id]).filter(v=>!isNaN(v)&&isFinite(v));
+    return vals.length ? vals.reduce((a,b)=>a+b,0)/vals.length : NaN;
+  }
+
+  const Q = {
+    q1: { months:['jan','feb','mar'] },
+    q2: { months:['apr','may','jun'] },
+    q3: { months:['jul','aug','sep'] },
+    q4: { months:['oct','nov','dec'] },
+  };
+
+  // Build quarterly computed
+  for(const [qk, qv] of Object.entries(Q)) {
+    const qd = {};
+    for(const id of INPUT_ROWS) qd[id] = qSum(qv.months, id);
+    Q[qk].vals = calcMonth(qd);
+    Q[qk].vals.feprice = qCalc(qv.months, 'feprice')||0;
+    Q[qk].vals.beprice = qCalc(qv.months, 'beprice')||0;
+    Q[qk].vals.feberate = qCalc(qv.months, 'feberate')||0;
+  }
+
+  // YTD
+  const ytdInputs = {};
+  for(const id of INPUT_ROWS) ytdInputs[id] = qSum(MONTHS, id);
+  const ytd = calcMonth(ytdInputs);
+
+  // Render rows
+  TRACKER_ROW_DEFS.forEach(sec => {
+    const secRow = tbody.insertRow();
+    secRow.className = 'mt-section-row';
+    const secTd = secRow.insertCell();
+    secTd.colSpan = 20;
+    secTd.textContent = sec.section;
+
+    sec.rows.forEach(row => {
+      const tr = tbody.insertRow();
+
+      // Name + target
+      const tdName = tr.insertCell();
+      tdName.innerHTML = `<div class="metric-name">${row.name}</div><div class="metric-target">${row.target}</div>`;
+
+      // Target col (just label again, keep table clean)
+      const tdTgt = tr.insertCell();
+      tdTgt.style.cssText = 'font-size:10px;color:var(--muted);text-align:center;';
+      tdTgt.textContent = row.target;
+
+      // YTD
+      const tdYtd = tr.insertCell();
+      const ytdVal = row.input ? (parseFloat(ytdInputs[row.id])||0) : ytd[row.id];
+      tdYtd.className = 'ytd-cell';
+      tdYtd.textContent = (ytdVal||ytdVal===0) && !isNaN(ytdVal) ? row.fmt(ytdVal) : '—';
+
+      // Monthly columns: Jan–Dec, Q1–Q4
+      const qKeys = ['q1','q2','q3','q4'];
+      let qIdx = 0;
+      MONTHS.forEach((m, mi) => {
+        const td = tr.insertCell();
+        const mdata = computed[m];
+        let val = row.input ? (parseFloat(trackerData[m]?.[row.id])||0) : mdata[row.id];
+        if(row.input) {
+          td.innerHTML = `<input class="mt-input" type="number" value="${trackerData[m]?.[row.id]||''}" placeholder="" oninput="trackerData['${m}']['${row.id}']=this.value;renderTracker()">`;
+        } else {
+          const hasVal = !isNaN(val) && isFinite(val) && val !== 0;
+          let color = 'var(--muted)';
+          if(hasVal && row.pass) color = row.pass(val) ? 'var(--green)' : (row.warn && row.warn(val) ? 'var(--amber)' : 'var(--red)');
+          td.className = 'calc-cell';
+          td.innerHTML = hasVal ? `<span style="color:${color};font-weight:600;">${row.fmt(val)}</span>` : `<span style="color:#e2e8f0;">—</span>`;
+        }
+
+        // After Mar, Jun, Sep, Dec — insert Q column
+        if(mi === 2 || mi === 5 || mi === 8 || mi === 11) {
+          const qk = qKeys[qIdx++];
+          const qtd = tr.insertCell();
+          const qvals = Q[qk].vals;
+          let qval = row.input ? qSum(Q[qk].months, row.id) : qvals[row.id];
+          qtd.className = 'q-cell';
+          const qHasVal = !isNaN(qval) && isFinite(qval) && qval !== 0;
+          let qColor = 'var(--muted)';
+          if(qHasVal && row.pass) qColor = row.pass(qval) ? 'var(--green)' : (row.warn && row.warn(qval) ? 'var(--amber)' : 'var(--red)');
+          qtd.innerHTML = qHasVal ? `<span style="color:${qColor}">${row.fmt(qval)}</span>` : '—';
+        }
+      });
+    });
+  });
+
+  // Summary cards
+  const qRevs = [Q.q1.vals.grossrev, Q.q2.vals.grossrev, Q.q3.vals.grossrev, Q.q4.vals.grossrev];
+  const annualRev = qRevs.reduce((a,b)=>a+b,0);
+  const qCloses = [qSum(['jan','feb','mar'],'closes'), qSum(['apr','may','jun'],'closes'), qSum(['jul','aug','sep'],'closes'), qSum(['oct','nov','dec'],'closes')];
+  document.getElementById('tracker-summary').innerHTML =
+    card('YTD Revenue',fmtD(ytd.grossrev),'teal','cash collected') +
+    card('YTD Closes',fmtN(ytd.closes),'blue','new clients') +
+    card('YTD Net Profit',fmtD(ytd.netprofit), ytd.netprofit>0 ? 'green':'red','') +
+    card('YTD Avg Net Margin',fmtP(ytd.netmgn), !isNaN(ytd.netmgn)&&ytd.netmgn>=0.5?'green':!isNaN(ytd.netmgn)?'amber':'','target > 50%');
+
+  // Charts
+  const qLabels = ['Q1','Q2','Q3','Q4'];
+  if(chartRevenue) chartRevenue.destroy();
+  if(chartLeads) chartLeads.destroy();
+
+  const ctx1 = document.getElementById('chart-revenue').getContext('2d');
+  chartRevenue = new Chart(ctx1, {
+    type:'bar', data:{ labels:qLabels, datasets:[{
+      label:'Gross Revenue', data:qRevs.map(v=>Math.round(v||0)),
+      backgroundColor:'rgba(13,148,136,.7)', borderRadius:5
+    },{
+      label:'Net Profit', data:[Q.q1.vals.netprofit,Q.q2.vals.netprofit,Q.q3.vals.netprofit,Q.q4.vals.netprofit].map(v=>Math.round(v||0)),
+      backgroundColor:'rgba(37,99,235,.7)', borderRadius:5
+    }]},
+    options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ labels:{ font:{size:10}, boxWidth:12 }}},
+      scales:{ y:{ ticks:{ font:{size:9}, callback:v=>'$'+v.toLocaleString() }, grid:{ color:'#f1f5f9' }}, x:{ ticks:{ font:{size:10} }, grid:{ display:false }}}}
+  });
+
+  const ctx2 = document.getElementById('chart-leads').getContext('2d');
+  chartLeads = new Chart(ctx2, {
+    type:'bar', data:{ labels:qLabels, datasets:[{
+      label:'Total Leads', data:[qSum(['jan','feb','mar'],'leads'),qSum(['apr','may','jun'],'leads'),qSum(['jul','aug','sep'],'leads'),qSum(['oct','nov','dec'],'leads')],
+      backgroundColor:'rgba(124,58,237,.7)', borderRadius:5
+    },{
+      label:'New Closes', data:qCloses, backgroundColor:'rgba(22,163,74,.7)', borderRadius:5
+    }]},
+    options:{ responsive:true, maintainAspectRatio:false, plugins:{ legend:{ labels:{ font:{size:10}, boxWidth:12 }}},
+      scales:{ y:{ ticks:{ font:{size:9} }, grid:{ color:'#f1f5f9' }}, x:{ ticks:{ font:{size:10} }, grid:{ display:false }}}}
+  });
+}
+
+// ══════════════════════════════════════════════════════════
+// JSON EXPORT / IMPORT
+// ══════════════════════════════════════════════════════════
+function exportJSON() {
+  const year = document.getElementById('tracker-year')?.value || '2026';
+  const goalInputs = ['g-cur','g-goal','g-fe','g-be','g-febe','g-close','g-show','g-book','g-cpl','g-upfront','g-adspend','g-clients','g-stuck'].reduce((o,id)=>{o[id]=document.getElementById(id)?.value||'';return o;},{});
+  const payload = {
+    version: '1.0',
+    exported: new Date().toISOString(),
+    year,
+    goalInputs,
+    constraintFinder: CF,
+    monthlyTracker: trackerData,
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type:'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `ifca-tracker-${year}.json`;
+  a.click();
+}
+
+function importJSON(e) {
+  const file = e.target.files[0];
+  if(!file) return;
+  const reader = new FileReader();
+  reader.onload = ev => {
+    try {
+      const d = JSON.parse(ev.target.result);
+      if(d.goalInputs) { for(const [k,v] of Object.entries(d.goalInputs)) { const el=document.getElementById(k); if(el) el.value=v; } calcGoal(); }
+      if(d.constraintFinder) { CF = d.constraintFinder; renderConstraintTable(); }
+      if(d.monthlyTracker) { trackerData = d.monthlyTracker; for(const m of MONTHS) if(!trackerData[m]) trackerData[m]={}; renderTracker(); }
+      if(d.year && document.getElementById('tracker-year')) document.getElementById('tracker-year').value = d.year;
+      alert('✅ Data imported successfully!');
+    } catch(err) { alert('❌ Could not read file. Make sure it is a valid IFCA tracker JSON file.'); }
+  };
+  reader.readAsText(file);
+  e.target.value = '';
+}
+
+// ══════════════════════════════════════════════════════════
+// INIT
+// ══════════════════════════════════════════════════════════
+for(const m of MONTHS) trackerData[m] = {};
+calcGoal();
+renderConstraintTable();
+</script>
+</body>
+</html>
