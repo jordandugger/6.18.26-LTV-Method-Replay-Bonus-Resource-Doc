@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rajan Baliaris — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.olympian-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(232,119,34,.12));border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.olympian-badge .ob-icon{font-size:24px;}
+.olympian-badge .ob-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit · April 2026</div>
+  <div class="hero-name">Rajan <span>Baliaris</span></div>
+  <div class="hero-title">@rajan_fitness_badminton · Fitness + Badminton Coaching · Hawaii / India · Pre-Launch Phase</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">$0</div><div class="hs-label">Online Monthly Revenue</div></div>
+    <div class="hs"><div class="hs-val blue">820</div><div class="hs-label">Instagram Followers</div></div>
+    <div class="hs"><div class="hs-val orange">382</div><div class="hs-label">Posts Published</div></div>
+    <div class="hs"><div class="hs-val green">$10K+</div><div class="hs-label">10 Clients Goal</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Rajan Baliaris sits on top of the <strong>most uncontested coaching niche in this entire cohort</strong>: the intersection of fitness training and competitive badminton. No major online coach exists at this crossroads. Yet after 382 posts, he has 820 followers and zero online revenue. Why? Every post is generic motivational content— not a single post speaks to a badminton player’s specific problem. The niche is there. The credibility is there. The content strategy is <strong>actively burying both</strong>.
+  </p>
+</div>
+
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What’s Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div>
+  <div class="sec-heading">What’s Working</div>
+  <div class="sec-divider"></div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">🏸</div><div>
+      <div class="win-label">Zero-Competition Niche — Uncontested Online</div>
+      <div class="win-desc">Fitness coaching for competitive badminton players is essentially an empty lane online. No dominant coach occupies this space. First-mover advantage is enormous here— the person who builds the authority brand gets the category by default. Rajan is already positioned inside the sport. He just needs to show up with specificity.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🌏</div><div>
+      <div class="win-label">Dual Market — Hawaii + India</div>
+      <div class="win-desc">Badminton has massive participation rates in India and Southeast Asia, and a growing recreational player base in Hawaii. This gives Rajan two organic audiences to build with: English-language coaching content for the US/international market, plus the Indian diaspora audience where badminton culture is deeply embedded and spend on competitive improvement is high.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">📲</div><div>
+      <div class="win-label">DM Automation Infrastructure Active</div>
+      <div class="win-desc">A DM automation trigger (“START”) is already running in his profile. The technical infrastructure for lead capture exists. The problem is the content feeding it is generic, so the wrong people (or no one) is triggering it. Swap the CTA to “Comment SMASH for my free court speed guide” and the existing automation starts capturing qualified leads.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🏋️</div><div>
+      <div class="win-label">In-Person Client Base — Proof Exists</div>
+      <div class="win-desc">5–10 active in-person clients means results are already being generated. These clients are the first wave of testimonials, case studies, and transformation stories. Online coaching does not require starting from zero— the proof base exists and can be documented into content and social proof assets immediately.</div>
+    </div></div>
+  </div>
+</section>
+
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div>
+  <div class="sec-heading">Business Phase Diagnosis</div>
+  <div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item active"><div class="phase-label">Current Phase ▼</div><div class="phase-name">Starter</div><div class="phase-range">Pre-Launch / $0 Online</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K–$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Potential</div><div class="phase-name">Scale</div><div class="phase-range">$15K–$100K+/mo</div></div>
+  </div>
+  <div class="math-box">
+    <div class="math-box-title">The Math to First $10K/Month</div>
+    <div class="math-row"><span class="lbl">Target monthly revenue</span><span class="val orange">$10,000</span></div>
+    <div class="math-row"><span class="lbl">Recommended offer price (Court Dominance Protocol, 6mo)</span><span class="val orange">$500/mo × 6 months = $3,000</span></div>
+    <div class="math-row"><span class="lbl">New clients needed per month</span><span class="val">4 clients</span></div>
+    <div class="math-row"><span class="lbl">Calls needed (at 40% close rate)</span><span class="val">10 calls/mo</span></div>
+    <div class="math-row"><span class="lbl">Leads needed (at 30% show rate)</span><span class="val">~33 leads/mo</span></div>
+    <div class="math-row"><span class="lbl">Step 1: Warm network launch (in-person clients + connections)</span><span class="val">Closes 2–4 clients before any ads</span></div>
+    <div class="math-row"><span class="lbl">Step 2: Badminton-specific content + DM automation</span><span class="val">30–60 day build to consistent lead flow</span></div>
+    <div class="math-row"><span class="lbl">Step 3: Paid amplification of best performing organic hooks</span><span class="val">Days 60–90</span></div>
+  </div>
+  <div class="card yellow-left mb-md">
+    <strong style="color:rgba(255,255,255,.9);">Critical Decision Point:</strong>
+    <p style="font-size:13px;color:rgba(255,255,255,.6);margin-top:8px;line-height:1.6;">Rajan needs to make one avatar choice before building content: <strong>(A)</strong> Competitive badminton players who want sport-specific fitness to win more, or <strong>(B)</strong> General fitness clients who happen to play badminton recreationally. These are very different hooks, prices, and content strategies. Option A supports $3,000+ offers. Option B competes with every generic fitness coach at $100/mo. The correct choice is A.</p>
+  </div>
+</section>
+
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03</div>
+  <div class="sec-heading">Creative Intelligence Report</div>
+  <div class="sec-divider"></div>
+
+  <div class="card orange-left mb-md">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;">Executive Summary</div>
+    <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;">382 posts. 820 followers. $0 online revenue. The math is damning: a ratio of <strong>0.46 followers per post</strong>, which is one of the worst content-to-growth ratios possible. The cause is straightforward— every post is a generic motivational quote or generic fitness tip. “No Noise. No Flex. Just Work.” does not convert a competitive badminton player into a coaching inquiry. The niche is Rajan’s greatest asset and he has not used it once in visible content strategy. A <strong>100% pivot to badminton-specific content</strong> is not optional— it is the only path forward.</p>
+  </div>
+
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Brand Name</td><td>Rajan Fitness &amp; Badminton</td><td>Keep — descriptive and clear for SEO/discoverability</td></tr>
+        <tr><td class="t-strong">Avatar</td><td>Undefined — generic fitness audience</td><td>Competitive badminton players (3.0–5.0 level) who plateau and can’t figure out why</td></tr>
+        <tr><td class="t-strong">Mechanism</td><td>None named</td><td>“The Court Dominance Protocol” — sport-specific conditioning + movement + match IQ</td></tr>
+        <tr><td class="t-strong">Enemy / Villain</td><td>None identified</td><td>“Just playing more games” — the myth that match reps alone improve performance</td></tr>
+        <tr><td class="t-strong">Content Style</td><td>Generic motivational clichés</td><td>Sport-specific education + false belief destruction + live drill breakdowns</td></tr>
+        <tr><td class="t-strong">Offer Structure</td><td>None defined online</td><td>6-month Court Dominance Protocol at $500/mo + $350/mo backend maintenance</td></tr>
+        <tr><td class="t-strong">DM CTA</td><td>“START” (generic)</td><td>“Comment SMASH for my free court speed guide”</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Organic Content Audit</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Hook / Post Type</th><th>Format</th><th>Assessment</th><th>Ad Potential</th></tr></thead>
+      <tbody>
+        <tr><td>“No Noise. No Flex. Just Work.”</td><td>Static graphic</td><td>Generic gym bro cliché. Zero sport specificity. No one clicks.</td><td><span class="badge fail">None</span></td></tr>
+        <tr><td>Generic fitness motivation posts</td><td>Static graphic</td><td>100% of visible content is this format. Zero differentiation from 10M+ other accounts.</td><td><span class="badge fail">None</span></td></tr>
+        <tr><td>DM automation “START” active</td><td>Bio CTA</td><td>Infrastructure exists but wrong CTA for niche. Needs sport-specific keyword.</td><td><span class="badge warn">After pivot</span></td></tr>
+        <tr><td class="t-strong">MISSING: Badminton drill breakdowns</td><td>—</td><td>This is the entire opportunity. Zero video content showing actual badminton expertise.</td><td><span class="badge pass">High priority build</span></td></tr>
+        <tr><td class="t-strong">MISSING: On-court conditioning content</td><td>—</td><td>Sport-specific fitness content that no one else is making online.</td><td><span class="badge pass">High priority build</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Entity Clusters — What Needs to Be Built</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Funnel Stage</th><th>Hook Driver</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Sport-Specific False Belief Destruction</td><td>TOF Cold</td><td>Anger / Frustration</td><td><span class="badge fail">Missing — Build First</span></td></tr>
+        <tr><td class="t-strong">Court Speed + Agility Breakdowns</td><td>TOF Cold</td><td>Curiosity / Education</td><td><span class="badge fail">Missing — Build First</span></td></tr>
+        <tr><td class="t-strong">Personal Story — Why I Combine Fitness + Badminton</td><td>TOF / MOF</td><td>Trust / Identity</td><td><span class="badge fail">Missing</span></td></tr>
+        <tr><td class="t-strong">Client Transformation (in-person wins)</td><td>MOF / BOF</td><td>Hope / Proof</td><td><span class="badge warn">Exists offline — needs documenting</span></td></tr>
+        <tr><td class="t-strong">Match IQ / Tactical Fitness</td><td>TOF</td><td>Curiosity</td><td><span class="badge fail">Missing</span></td></tr>
+        <tr><td class="t-strong">DM Automation Lead Capture</td><td>MOF</td><td>Action</td><td><span class="badge warn">Active but wrong CTA</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Meta Ad Library</div>
+  <div class="card blue-left mb-md">
+    <strong style="color:rgba(255,255,255,.85);">Zero ads found</strong>
+    <p style="font-size:13px;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.6;">No active or historical ads found in Meta Ad Library under Rajan Baliaris, Rajan Fitness, or Badminton Fitness. This is expected at pre-launch stage. Ads are a Phase 2 tool — organic content foundations must be built first. Once 2–3 badminton-specific reels demonstrate resonance organically, boost them as paid ads.</p>
+  </div>
+
+  <div class="grid-3 mb-md">
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--red);">0</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Paid Ads</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--red);">0</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Badminton-Specific Organic Posts</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--orange);">6+</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Entity Clusters Needed</div>
+    </div>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Verbatim Hook Bank — Workshop Ready</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>#</th><th>Hook</th><th>Format</th><th>Emotional Driver</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">1</td><td>“Stop just playing more games to get better at badminton. You need specific off-court fitness to dominate on-court. Here’s exactly what that looks like.”</td><td>Talking head reel</td><td>False belief destruction</td></tr>
+        <tr><td class="t-strong">2</td><td>“Most badminton players plateau at the same level for years. It’s not their footwork. It’s not their racket technique. It’s their conditioning.”</td><td>Text-on-screen reel</td><td>Problem awareness</td></tr>
+        <tr><td class="t-strong">3</td><td>“3 reasons competitive badminton players keep losing in the third game — and none of them are what your coach told you.”</td><td>Talking head</td><td>Curiosity + frustration</td></tr>
+        <tr><td class="t-strong">4</td><td>“What opponent type do you struggle against most?” (Poll or question sticker) — Comment SMASH and I’ll send you the exact conditioning drill to beat that player type.</td><td>Static or story</td><td>Engagement + DM trigger</td></tr>
+        <tr><td class="t-strong">5</td><td>“I trained a 2.5-level badminton player for 90 days using sport-specific conditioning. Here’s what happened to their game.”</td><td>Before/after transformation</td><td>Social proof / hope</td></tr>
+        <tr><td class="t-strong">6</td><td>“The fitness routine that competitive badminton players actually need vs. what the gym influencers tell you to do.”</td><td>Comparison reel</td><td>Villain / authority</td></tr>
+        <tr><td class="t-strong">7</td><td>“You’ve been playing badminton for 5 years and you’re still at the same level. This is why.”</td><td>Direct address reel</td><td>Pattern interrupt</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">White Space Angles — Untested, High Opportunity</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Angle</th><th>Why It Works</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">“Court Speed in 30 Days”</td><td>Specific outcome + short timeframe = high click. Speed is the #1 desire of competitive players.</td><td><span class="badge pass">High</span></td></tr>
+        <tr><td class="t-strong">The “Third Game Collapse” angle</td><td>Every competitive player has lost a winnable third game due to fatigue. Hyper-specific pain point that immediately qualifies the avatar.</td><td><span class="badge pass">High</span></td></tr>
+        <tr><td class="t-strong">India diaspora community hook</td><td>Badminton is a cultural sport for Indian communities globally. Content in Hinglish or referencing Indian badminton heroes (Sindhu, Saina) opens a massive warm audience.</td><td><span class="badge warn">Medium</span></td></tr>
+        <tr><td class="t-strong">The “Gym vs. Court” villain frame</td><td>Position generic gym training as the enemy of badminton performance. Creates clear differentiation from every fitness influencer.</td><td><span class="badge pass">High</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Entity Build Queue — Priority Order</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Priority</th><th>Entity</th><th>Format</th><th>CTA</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge fail">#1 Critical</span></td><td>“Why Playing More Games Won’t Make You Better”</td><td>Talking head reel, 60s</td><td>Comment SMASH</td></tr>
+        <tr><td><span class="badge fail">#2 Critical</span></td><td>“3 Things Competitive Badminton Players Get Wrong About Fitness”</td><td>Text-on-screen reel</td><td>Comment SMASH</td></tr>
+        <tr><td><span class="badge warn">#3 High</span></td><td>“My Story — Why I Built a Fitness System Specifically for Badminton”</td><td>Talking head, 90s</td><td>DM for Court Dominance guide</td></tr>
+        <tr><td><span class="badge warn">#4 High</span></td><td>Live on-court speed drill breakdown</td><td>B-roll + voiceover</td><td>Comment SMASH for full protocol</td></tr>
+        <tr><td><span class="badge info">#5</span></td><td>Client transformation story (in-person client)</td><td>Interview or text overlay</td><td>DM for details</td></tr>
+        <tr><td><span class="badge info">#6</span></td><td>“What Opponent Type Destroys You?” engagement post</td><td>Carousel or poll</td><td>Comment your type for the fix</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card orange-left mb-md">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;">Strategic Diagnosis</div>
+    <p style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.7;">Rajan’s situation is unusual: he has an extraordinary niche advantage and is not using it. The fix is not complex— <strong>stop posting generic fitness content and start posting badminton-specific fitness content exclusively</strong>. Every single post from this point forward should be answerable by the question: “Would a competitive badminton player stop scrolling for this?” If not, don’t post it. The named mechanism (“Court Dominance Protocol”) should appear in bio, content, and DM automation within 7 days. The warm network launch to in-person clients and local badminton club contacts should happen before any ad spend.</p>
+  </div>
+
+  <div style="text-align:center;margin-bottom:8px;">
+    <button onclick="copyRajanIntel()" style="background:var(--orange);border:none;border-radius:8px;padding:12px 28px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;">
+      📋 Copy for Workshop
+    </button>
+  </div>
+</section>
+
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div>
+  <div class="sec-heading">Constraint Diagnosis</div>
+  <div class="sec-divider"></div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 — Critical / Growth Blocker</div>
+    <div class="diag-title">Generic Content Strategy is Actively Killing Niche Advantage</div>
+    <div class="diag-desc">382 posts and 820 followers means the content is not working. Every post is a generic motivational quote or fitness tip indistinguishable from millions of other accounts. The badminton angle — which is the entire competitive moat — is absent from content. A competitive badminton player scrolling Instagram would not identify Rajan as someone who solves their specific problem because there is no signal that he does. Until this pivots 100% to sport-specific content, no follower growth, no DM leads, no conversions.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Immediate and total content pivot. Every post from today forward must answer: “Would a competitive badminton player stop scrolling for this?” Delete or archive the generic motivation posts. Post 3–5 sport-specific reels per week minimum. Update bio to “Court Dominance Protocol — fitness coaching specifically for competitive badminton players. Comment SMASH for my free court speed guide.”</div>
+  </div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 — Critical / Revenue Blocker</div>
+    <div class="diag-title">No Offer Structure, No Price, No Named Mechanism</div>
+    <div class="diag-desc">There is no defined online coaching offer. No price is stated anywhere. No mechanism is named. Without these three elements, even if content starts performing and DMs come in, there is no pathway from “interested” to “paying client.” Revenue cannot start until an offer exists.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Define the Court Dominance Protocol as a 6-month program at $500/month. Write the offer page or link-in-bio landing page this week. Script the sales conversation for DM inquiries. Launch to warm network (in-person clients, local club contacts) before building organic audience.</div>
+  </div>
+
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 — Meaningful Gap</div>
+    <div class="diag-title">Zero Video / Face-to-Camera Content — No Personal Brand</div>
+    <div class="diag-desc">100% static carousel and graphic posts means there is no face, voice, or personality associated with the brand. High-ticket coaching ($3,000+) requires trust and personal connection. Nobody pays $3,000 to a logo. Rajan needs to be on camera demonstrating expertise, sharing his story, and showing himself in the badminton context (on court, in gym).</div>
+    <div class="diag-fix"><strong>Fix:</strong> Film 5 talking-head reels this week. They do not need to be polished — specificity beats production quality at this stage. Use the hooks from the hook bank above. Show the court, the drills, the athlete perspective. One video of Rajan on a badminton court explaining a training concept will outperform 100 motivation graphics.</div>
+  </div>
+
+  <div class="diag-card p3">
+    <div class="diag-rank">P3 — Watch Item</div>
+    <div class="diag-title">Avatar Decision Needed Before Scaling Content</div>
+    <div class="diag-desc">Rajan needs to choose: competitive players who want to win matches, or recreational players who want fitness through badminton. Different hooks, different prices, different content. This decision is low-urgency today (both audiences need the same initial content pivot) but will matter significantly when it comes to paid ads and offer positioning at the $5K+ level.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Build content for competitive players first (higher pain, higher price tolerance). If engagement from recreational players is stronger, reassess at Day 30.</div>
+  </div>
+
+  <div class="diag-card ok">
+    <div class="diag-rank">OK — Validated Asset</div>
+    <div class="diag-title">Niche Advantage is Real and Durable</div>
+    <div class="diag-desc">The badminton fitness niche is genuinely uncontested online. This is not a manufactured differentiation— it is a real gap in the market. This advantage holds as long as Rajan executes with specificity. The combination of sport-specific expertise + geographic dual-market (Hawaii + India) creates a defensible position that generic fitness coaches cannot replicate.</div>
+    <div class="diag-fix"><strong>Maintain:</strong> Never dilute back to generic fitness content. Own the badminton niche completely. Once established, this becomes the foundation for a dominant category brand.</div>
+  </div>
+</section>
+
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div>
+  <div class="sec-heading">90-Day Action Plan</div>
+  <div class="sec-divider"></div>
+
+  <div class="plan-item">
+    <div class="plan-num">1</div><div class="plan-body">
+      <div class="plan-title">Week 1: Offer Definition + Bio Overhaul (Days 1–7)</div>
+      <div class="plan-desc">Define the Court Dominance Protocol: 6-month program, $500/month, sport-specific conditioning + movement + match endurance for competitive badminton players. Write a 1-page offer document. Update Instagram bio to: “Fitness coach for competitive badminton players • Court Dominance Protocol • Comment SMASH for my free court speed guide.” Change DM automation keyword from “START” to “SMASH.”</div>
+      <div class="plan-tags"><span class="plan-tag offer">Offer</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">2</div><div class="plan-body">
+      <div class="plan-title">Week 1–2: Warm Network Launch (Days 1–14)</div>
+      <div class="plan-desc">Before building content for strangers, launch to your warm network. Message every in-person client, every badminton club contact, every player you have trained or played with. The message: “I’m launching online coaching specifically for competitive badminton players — Court Dominance Protocol. Would you be interested in a free 20-minute strategy call to see if it’s a fit?” Target: 2–3 paying clients from warm outreach before posting a single new piece of content.</div>
+      <div class="plan-tags"><span class="plan-tag sales">Sales</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">3</div><div class="plan-body">
+      <div class="plan-title">Weeks 2–4: Full Content Pivot — Badminton-Specific Only (Days 8–30)</div>
+      <div class="plan-desc">Archive or delete the generic motivation posts. Post 3–5 badminton-specific reels per week using hooks from the hook bank. Priority order: (1) False belief destruction reels, (2) On-court drill breakdowns, (3) Personal story / why I do this, (4) Engagement posts driving DM automation. Every post ends with: “Comment SMASH for my free court speed guide.” Film on the court when possible — showing the environment immediately signals expertise.</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag offer">Offer</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">4</div><div class="plan-body">
+      <div class="plan-title">Month 2: Document In-Person Client Results (Days 30–60)</div>
+      <div class="plan-desc">Ask current in-person clients for testimonials, before/after performance metrics, or a short video interview about their results. These become the first wave of social proof content. A single video of a client saying “I used to collapse in the third game, now I’m winning them” is worth 50 motivation posts. Post 2–3 client result stories in Month 2.</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag sales">Sales</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">5</div><div class="plan-body">
+      <div class="plan-title">Month 2–3: Build Free Lead Magnet + DM Automation Sequence (Days 30–60)</div>
+      <div class="plan-desc">Create the “Court Speed in 30 Days” free guide (PDF, 5–7 pages). This is the resource delivered when someone comments SMASH. The DM automation sequence: Day 0: Guide delivery. Day 2: “What’s your biggest performance challenge?” Day 4: Application link or booking link for a free strategy call. This sequence converts passive followers into booked calls without manual outreach.</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">6</div><div class="plan-body">
+      <div class="plan-title">Month 3: Boost Top Organic Content as Paid Ads (Days 60–90)</div>
+      <div class="plan-desc">Identify the 2–3 organic reels with the best engagement after the content pivot. Boost those posts as Meta ads targeting: badminton players, sports enthusiasts, Hawaii + India + Southeast Asian diaspora markets. Budget: $20–30/day minimum to test. Kill ads that don’t hit 25%+ hook rate after 1,000 impressions. Scale the one that does. This is paid amplification of proven organic content, not a cold creative launch.</div>
+      <div class="plan-tags"><span class="plan-tag ads">Ads</span><span class="plan-tag content">Content</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> · Prospect Intelligence Audit · Confidential</div>
+  <div class="footer-tag">Jordan Dugger · Impact Fitness Coaching Academy · April 2026</div>
+</footer>
+</div>
+
+<script>
+const sections = document.querySelectorAll('.doc-section');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const active = document.querySelector('.nav-link[href="#' + id + '"]');
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px 0px 0px' });
+sections.forEach(s => observer.observe(s));
+
+function copyRajanIntel() {
+  const text = `RAJAN BALIARIS — CREATIVE INTELLIGENCE REPORT
+@rajan_fitness_badminton | Fitness + Badminton Coaching | Hawaii / India | April 2026
+
+=== BRAND SNAPSHOT ===
+Niche: Fitness coaching for competitive badminton players — UNCONTESTED online
+Avatar: Competitive badminton players (3.0–5.0 level) who plateau and can't figure out why
+Mechanism: "The Court Dominance Protocol" — sport-specific conditioning + movement + match endurance
+Villain: "Just playing more games" — the myth that match reps alone improve performance
+DM CTA: Comment SMASH for free court speed guide
+Current status: 820 followers, 382 posts, $0 online revenue — 100% generic content
+
+=== CONSTRAINT SUMMARY ===
+P1: Generic content strategy actively killing niche advantage — 382 posts, 0 sport-specific
+P1: No offer structure, no price, no named mechanism — no path from DM to paid client
+P2: Zero video / face-to-camera content — no personal brand trust signal
+P3: Avatar decision needed (competitive vs. recreational players) before scaling
+
+=== VERBATIM HOOKS — BUILD THESE FIRST ===
+1. "Stop just playing more games to get better at badminton. You need specific off-court fitness to dominate on-court."
+2. "Most badminton players plateau at the same level for years. It's not footwork. It's conditioning."
+3. "3 reasons competitive badminton players keep losing the third game — none of them are what your coach told you."
+4. "What opponent type do you struggle against most? Comment SMASH and I'll send you the conditioning drill."
+5. "The fitness routine competitive badminton players actually need vs. what gym influencers tell you."
+6. "You've been playing badminton for 5 years and you're still at the same level. This is why."
+7. "I trained a 2.5-level badminton player for 90 days using sport-specific conditioning. Here's what happened."
+
+=== ENTITY BUILD QUEUE ===
+#1 CRITICAL: "Why Playing More Games Won't Make You Better" — talking head reel
+#2 CRITICAL: "3 Things Competitive Players Get Wrong About Fitness" — text-on-screen
+#3 HIGH: "My Story — Why I Built a System Specifically for Badminton Players"
+#4 HIGH: Live on-court speed drill breakdown — B-roll + voiceover
+#5: Client transformation story from in-person clients
+#6: "What opponent type destroys you?" engagement post
+
+=== 90-DAY MATH ===
+Target: $10,000/month
+Offer: Court Dominance Protocol — $500/mo x 6 months = $3,000
+New clients needed: 4/month
+Calls needed at 40% close: 10 calls/month
+Step 1: Warm network launch to in-person clients + badminton contacts FIRST
+Step 2: Full content pivot — badminton-specific only
+Step 3: Boost top organic reels as paid ads at Day 60+`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target.closest('button');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '\u2713 Copied!';
+    setTimeout(() => btn.innerHTML = orig, 2000);
+  });
+}
+</script>
+</body>
+</html>
