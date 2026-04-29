@@ -295,15 +295,15 @@ footer strong{color:var(--orange);}
     <div class="section-header">
       <div class="section-label">Tonight's <span class="orange">Hot Seat</span> Attendees</div>
       <div class="section-divider"></div>
-      <div class="section-count" id="visible-count">24 Coaches</div>
+      <div class="section-count" id="visible-count">25 Coaches</div>
     </div>
     <p style="font-size:12px;color:var(--muted);margin-bottom:16px;font-family:'DM Mono',monospace;letter-spacing:.05em;">
       Coaches with a <span style="color:var(--orange);">&#x1F4CB; Full Audit</span> have a clickable card &mdash; opens your personalized intelligence report. Audits are added as they are completed post-session.
     </p>
 
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
-      <button class="filter-btn active" onclick="filterCards('all',this)">All (24)</button>
-      <button class="filter-btn" onclick="filterCards('audit',this)">&#x1F4CB; Has Audit (11)</button>
+      <button class="filter-btn active" onclick="filterCards('all',this)">All (25)</button>
+      <button class="filter-btn" onclick="filterCards('audit',this)">&#x1F4CB; Has Audit (20)</button>
       <button class="filter-btn" onclick="filterCards('scale',this)">Scale</button>
       <button class="filter-btn" onclick="filterCards('growth',this)">Growth</button>
       <button class="filter-btn" onclick="filterCards('starter',this)">Starter</button>
@@ -393,106 +393,90 @@ footer strong{color:var(--orange);}
       </div>
 
             <!-- IN PROGRESS SECTION -->
-      <div class="grid-section-label gsl-pending">&#x23F3;&nbsp; Audits in Progress &mdash; Check Back as They Go Live</div>
-
-
-
-
-      <div class="attendee-card" data-phase="scale">
+      
+      <div class="attendee-card has-audit" data-phase="scale" data-audit="true" onclick="window.location.href='craig-stevenson/'">
         <div class="ac-name">Craig Stevenson <span class="ac-phase scale">Scale</span></div>
         <div class="ac-offer">The Total Coach &mdash; 100 current clients, 3,000+ career total. Small group training Phoenix AZ. Biggest proof base in this cohort. Transitioning online.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> 30 HT online clients, $15K/mo, &le;25 hrs/wk</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
-
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='kristal-couper/'">
+        <div class="ac-name">Kristal Couper <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Pivoting to perimenopause/menopause coaching. 1:1 at $200 (major pricing gap). Has run ads. 1 active online client, 20 total. Toronto, Canada.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Quit job, $45K CAD/year</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
+      </div>
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='brent-thomas/'">
+        <div class="ac-name">Brent Thomas <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Veterans with physical limitations &mdash; family men and former athletes. 1 current client, 3 total. Strong niche identity, pre-offer stage. IG organic only.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Impact hundreds of clients in 12 months</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
+      </div>
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='crystal-harrington/'">
+        <div class="ac-name">Crystal Harrington <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Monthly virtual programs $100&ndash;150/mo for busy moms. 16 current clients, 237 total. Referral + organic. Classic pricing ceiling blocking scale.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $10K/month</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
+      </div>
+      <div class="attendee-card has-audit" data-phase="growth" data-audit="true" onclick="window.location.href='drew-gatto/'">
+        <div class="ac-name">Drew Gatto <span class="ac-phase growth">Growth</span></div>
+        <div class="ac-offer">Coaching for people with physical limitations. 12 current clients, 20+ total. Organic acquisition only. Networking as primary stated bottleneck.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Live comfortably</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
+      </div>
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='leah-natera/'">
+        <div class="ac-name">Leah Natera <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Gym confidence + macro coaching + accountability. $300/mo. 1 current client, 8 total. FB group leads that don't convert &mdash; positioning problem.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $20K/month</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
+      </div>
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='vonray-johnson/'">
+        <div class="ac-name">VonRay Johnson <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Performance athletics (strength, speed, power). $70&ndash;90/session. 15&ndash;20 current clients. 1,000+ lifetime clients. Zero digital presence currently.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $25K/month online</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
+      </div>
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='stephen-turner/'">
+        <div class="ac-name">Stephen Turner <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Gym-based PT + word of mouth. Philosophy: educate clients enough to fire me. 5 current clients, 20&ndash;30 total. Re-entering coaching career.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Re-establishing coaching career</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
+      </div>
+      <div class="attendee-card has-audit" data-phase="zero" data-audit="true" onclick="window.location.href='anastasia-riley/'">
+        <div class="ac-name">Anastasia Riley <span class="ac-phase zero">Pre-Launch</span></div>
+        <div class="ac-offer">Still defining offer and niche. No clients yet. Interested in paid ads as primary acquisition. Starting from scratch &mdash; offer architecture needed first.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Successful online coaching business</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
+      </div>
+      <div class="grid-section-label gsl-pending">&#x23F3;&nbsp; Audits in Progress &mdash; Check Back as They Go Live</div>
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Nicole Auquilla Maggio <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">The Regulated Leader Reset &mdash; 90-day private mentorship for high-capacity Christian women. Dig Deep Protocol: nervous system + metabolism + identity. $3&ndash;4.5K.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> $5&ndash;10K/mo + quit finance job</div>
         <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Kristal Couper <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Pivoting to perimenopause/menopause coaching. 1:1 at $200 (major pricing gap). Has run ads. 1 active online client, 20 total. Toronto, Canada.</div>
-        <div class="ac-goal"><span class="arrow">&rarr;</span> Quit job, $45K CAD/year</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
-      </div>
-
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Scott Dunn <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">Dunn Physique &mdash; high-performing couples who want to be leaders through health. $70&ndash;100/wk. 8 clients. Brisbane, Australia.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> Consistent $10K/month</div>
         <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Brent Thomas <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Veterans with physical limitations &mdash; family men and former athletes. 1 current client, 3 total. Strong niche identity, pre-offer stage. IG organic only.</div>
-        <div class="ac-goal"><span class="arrow">&rarr;</span> Impact hundreds of clients in 12 months</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Crystal Harrington <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Monthly virtual programs $100&ndash;150/mo for busy moms. 16 current clients, 237 total. Referral + organic. Classic pricing ceiling blocking scale.</div>
-        <div class="ac-goal"><span class="arrow">&rarr;</span> $10K/month</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
-      </div>
-
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Jameel Courtney <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">Body By Jameel &mdash; IFBB/NPC Pro. $25&ndash;55/hr session rates. 17 current clients, hundreds total. Needs to transition from hourly to online program model.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> $150K/year</div>
         <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
-
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Shannon Cushman <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">BYLT Athletics &mdash; men's strength and conditioning. 4 clients. Cold DMs + friends. Long-term vision: own a gym.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> Build toward owning a gym</div>
         <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
-
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Joyce Barton <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">Strength training + Licensed Massage Therapist integration. 2 clients, in-person Boise ID. Unique LMT + coaching combination. Referrals only.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> Enough to bring husband home from out-of-state</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
-      </div>
-
-      <div class="attendee-card" data-phase="growth">
-        <div class="ac-name">Drew Gatto <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Coaching for people with physical limitations. 12 current clients, 20+ total. Organic acquisition only. Networking as primary stated bottleneck.</div>
-        <div class="ac-goal"><span class="arrow">&rarr;</span> Live comfortably</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Leah Natera <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Gym confidence + macro coaching + accountability. $300/mo. 1 current client, 8 total. FB group leads that don't convert &mdash; positioning problem.</div>
-        <div class="ac-goal"><span class="arrow">&rarr;</span> $20K/month</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">VonRay Johnson <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Performance athletics (strength, speed, power). $70&ndash;90/session. 15&ndash;20 current clients. 1,000+ lifetime clients. Zero digital presence currently.</div>
-        <div class="ac-goal"><span class="arrow">&rarr;</span> $25K/month online</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
-      </div>
-
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Stephen Turner <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Gym-based PT + word of mouth. Philosophy: educate clients enough to fire me. 5 current clients, 20&ndash;30 total. Re-entering coaching career.</div>
-        <div class="ac-goal"><span class="arrow">&rarr;</span> Re-establishing coaching career</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
-      </div>
-
-      <div class="attendee-card" data-phase="zero">
-        <div class="ac-name">Anastasia Riley <span class="ac-phase zero">Pre-Launch</span></div>
-        <div class="ac-offer">Still defining offer and niche. No clients yet. Interested in paid ads as primary acquisition. Starting from scratch &mdash; offer architecture needed first.</div>
-        <div class="ac-goal"><span class="arrow">&rarr;</span> Successful online coaching business</div>
         <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
 
