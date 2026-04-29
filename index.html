@@ -303,7 +303,7 @@ footer strong{color:var(--orange);}
 
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
       <button class="filter-btn active" onclick="filterCards('all',this)">All (24)</button>
-      <button class="filter-btn" onclick="filterCards('audit',this)">&#x1F4CB; Has Audit (8)</button>
+      <button class="filter-btn" onclick="filterCards('audit',this)">&#x1F4CB; Has Audit (11)</button>
       <button class="filter-btn" onclick="filterCards('scale',this)">Scale</button>
       <button class="filter-btn" onclick="filterCards('growth',this)">Growth</button>
       <button class="filter-btn" onclick="filterCards('starter',this)">Starter</button>
@@ -371,29 +371,32 @@ footer strong{color:var(--orange);}
         <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- IN PROGRESS SECTION -->
-      <div class="grid-section-label gsl-pending">&#x23F3;&nbsp; Audits in Progress &mdash; Check Back as They Go Live</div>
-
-      <div class="attendee-card" data-phase="zero">
+      <div class="attendee-card has-audit" data-phase="zero" data-audit="true" onclick="window.location.href='rajan-baliaris/'">
         <div class="ac-name">Rajan Baliaris <span class="ac-phase zero">Pre-Launch</span></div>
         <div class="ac-offer">Fitness + badminton hybrid coaching. Hawaii base, India presence. 820 followers, 382 posts, $0 online. Most uncontested niche in this cohort.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> 10+ online clients</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <div class="attendee-card" data-phase="starter">
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='alex-knowles/'">
         <div class="ac-name">Alex Knowles <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">AIR3 Fitness &mdash; 8 years competitive bodybuilding + 12 years PT. 25 clients (Zoom + Crunch floor). 12-session package at $360. Extreme underpricing.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> $6K/mo, minimize in-person</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <div class="attendee-card" data-phase="growth">
+      <div class="attendee-card has-audit" data-phase="growth" data-audit="true" onclick="window.location.href='wendy-goodine/'">
         <div class="ac-name">Wendy Goodine <span class="ac-phase growth">Growth</span></div>
         <div class="ac-offer">Menopause specialist. Personal 95-lb weight loss maintained 25+ years. 10 online clients. Referral-only &mdash; zero digital marketing currently.</div>
         <div class="ac-goal"><span class="arrow">&rarr;</span> Well into 6 figures, work from anywhere</div>
-        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
+
+            <!-- IN PROGRESS SECTION -->
+      <div class="grid-section-label gsl-pending">&#x23F3;&nbsp; Audits in Progress &mdash; Check Back as They Go Live</div>
+
+
+
 
       <div class="attendee-card" data-phase="scale">
         <div class="ac-name">Craig Stevenson <span class="ac-phase scale">Scale</span></div>
