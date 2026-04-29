@@ -181,8 +181,15 @@ footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;
   font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.08em;}
 footer strong{color:var(--orange);}
 
+/* FILTER BUTTONS */
+.filter-btn{background:rgba(255,255,255,.05);border:1px solid var(--border);border-radius:6px;
+  padding:6px 14px;font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--muted);cursor:pointer;transition:all .15s;}
+.filter-btn:hover{border-color:rgba(232,119,34,.3);color:rgba(255,255,255,.7);}
+.filter-btn.active{background:var(--orange-dim);border-color:rgba(232,119,34,.4);color:var(--orange);}
+
 @media(max-width:700px){
-  .bonus-grid,.podcast-row,.attendee-grid{grid-template-columns:1fr;}
+  .bonus-grid,.podcast-row,.attendee-grid{grid-template-columns:1fr!important;}
   .cta-offer-grid{grid-template-columns:1fr;}
   .book-call-block{grid-template-columns:1fr;}
   .bcb-right{align-items:flex-start;}
@@ -218,51 +225,54 @@ footer strong{color:var(--orange);}
     </div>
   </div>
 
-  <!-- START HERE BANNER -->
-  <div class="intro-banner">
-    <div class="intro-banner-icon">&#x25B6;&#xFE0F;</div>
-    <div class="intro-banner-text">
-      <div class="intro-banner-label">Start Here</div>
-      <div class="intro-banner-title">Watch this quick 2-minute walkthrough to get the most out of this page</div>
-      <div class="intro-banner-sub">Jordan walks you through exactly where to find your audit, how to use the free tools, and what to do next. Watch this first &mdash; everything else will make more sense.</div>
-    </div>
-  </div>
+  <!-- START HERE: WALKTHROUGH VIDEO + STEPS -->
+  <div style="margin-bottom:32px;">
+    <!-- Walkthrough label -->
+    <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">&#x25B6;&#xFE0F; Start Here</div>
+    <div style="font-weight:700;font-size:17px;margin-bottom:14px;">Watch this quick 2-minute walkthrough to get the most out of this page</div>
 
-  <!-- SESSION REPLAY -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-label orange">Session Replay</div>
-      <div class="section-divider"></div>
+    <!-- Walkthrough video placeholder (medium size) -->
+    <div style="position:relative;width:100%;max-width:640px;padding-top:min(360px,56.25%);background:rgba(0,0,0,.4);border-radius:12px;overflow:hidden;border:1px solid rgba(232,119,34,.25);margin-bottom:22px;">
+      <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+        <div style="width:64px;height:64px;border-radius:50%;background:rgba(232,119,34,.15);border:2px solid rgba(232,119,34,.35);display:flex;align-items:center;justify-content:center;">
+          <div style="font-size:26px;margin-left:4px;">&#x25B6;</div>
+        </div>
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);">Jordan&rsquo;s 2-Min Walkthrough — Recording Now</div>
+      </div>
     </div>
-    <div class="bonus-card primary">
-      <div class="bc-step">Full Recording</div>
-      <div class="bc-title">Watch the Hot Seat Session Replay</div>
-      <div class="bc-desc" style="margin-bottom:16px;">The complete recording of tonight's live session &mdash; every hot seat, every framework breakdown, the math, and the pitch. Rewatch your own segment, study how Jordan diagnosed the others, and take notes on the constraint frameworks he applied live.</div>
-      <div style="position:relative;width:100%;padding-top:56.25%;background:rgba(0,0,0,.35);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-          <div style="font-size:36px;opacity:.4;">&#x25B6;</div>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);">Replay coming soon &mdash; check back shortly</div>
+
+    <!-- Two-column steps row -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;">
+
+      <!-- Step 1: Session Replay -->
+      <div style="background:rgba(255,255,255,.04);border:1px solid var(--border);border-left:3px solid var(--orange);border-radius:10px;padding:18px 20px;">
+        <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;">Step 1</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:10px;">Watch the Hot Seat Session Replay</div>
+        <!-- Vimeo embed -->
+        <div style="position:relative;padding:56.25% 0 0 0;border-radius:8px;overflow:hidden;background:rgba(0,0,0,.3);">
+          <iframe src="https://player.vimeo.com/video/1187789334?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Closer Q&amp;A April 26 Replay"></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+
+      <!-- Step 2: Book Audit Call -->
+      <div style="background:var(--orange-dim);border:1px solid rgba(232,119,34,.3);border-left:3px solid var(--orange);border-radius:10px;padding:18px 20px;display:flex;flex-direction:column;justify-content:space-between;">
+        <div>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:8px;">Step 2</div>
+          <div style="font-weight:700;font-size:14px;margin-bottom:8px;">Book Your Free Business Audit Call</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.65);line-height:1.55;margin-bottom:16px;">Get a live business diagnostic with an IFCA advisor &mdash; your #1 constraint identified, a custom 90-day plan, and the full Client Engine walkthrough. Zero obligation.</div>
+          <div style="display:flex;flex-direction:column;gap:5px;margin-bottom:20px;">
+            <div style="font-size:12px;color:rgba(255,255,255,.75);display:flex;gap:8px;"><span style="color:var(--green);">&#x2713;</span> #1 constraint identified &amp; mapped</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.75);display:flex;gap:8px;"><span style="color:var(--green);">&#x2713;</span> Custom 90-day growth plan built live</div>
+            <div style="font-size:12px;color:rgba(255,255,255,.75);display:flex;gap:8px;"><span style="color:var(--green);">&#x2713;</span> DM Closing &amp; Call Booking Scripts free</div>
+          </div>
+        </div>
+        <div>
+          <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" style="display:inline-flex;align-items:center;justify-content:center;background:var(--orange);border-radius:8px;padding:13px 20px;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:.04em;color:#fff;text-decoration:none;width:100%;text-align:center;" target="_blank">Complete the 2-Min Application &rarr;</a>
+          <div style="font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);letter-spacing:.06em;text-align:center;margin-top:8px;">Zero obligation &middot; Zero credit card</div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- BOOK YOUR CALL BLOCK -->
-  <div class="book-call-block">
-    <div>
-      <div class="bcb-eyebrow">What Happens Next</div>
-      <div class="bcb-title">Book Your Free<br><span>Business Audit Call</span></div>
-      <div class="bcb-desc">No pressure. No pitch. Just a real conversation about your business &mdash; your #1 constraint identified, a custom 90-day plan built live, and a full walkthrough of how IFCA would accelerate your specific situation.</div>
-      <div class="bcb-perks">
-        <div class="bcb-perk"><span class="chk">&#x2713;</span> Live business diagnostic with an IFCA advisor</div>
-        <div class="bcb-perk"><span class="chk">&#x2713;</span> Your #1 constraint identified and mapped to a fix</div>
-        <div class="bcb-perk"><span class="chk">&#x2713;</span> Custom 90-day growth plan built for your business</div>
-        <div class="bcb-perk"><span class="chk">&#x2713;</span> DM Closing Scripts + Call Booking Scripts just for showing up</div>
-      </div>
-    </div>
-    <div class="bcb-right">
-      <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="bcb-cta" target="_blank">Complete the<br>2-Min Application &rarr;</a>
-      <div class="bcb-note">Zero obligation &middot; Zero credit card<br>Just a conversation</div>
     </div>
   </div>
 
@@ -272,7 +282,7 @@ footer strong{color:var(--orange);}
       <div class="section-label orange">Free Bonus Tools &amp; Resources</div>
       <div class="section-divider"></div>
     </div>
-    <div class="bonus-grid">
+    <div class="bonus-grid" style="grid-template-columns:1fr 1fr 1fr;">
       <div class="bonus-card primary">
         <div class="bc-step">Bonus #1</div>
         <div class="bc-title">JAN the Offer Genie &#x1F9DE;</div>
@@ -287,13 +297,31 @@ footer strong{color:var(--orange);}
         <div class="bc-desc">Set your income goal and reverse-engineer exactly how many clients, leads, and calls you need per week. The macro tracker for your business.</div>
         <a href="tools-and-calculators/" class="bc-btn" target="_blank">Open Calculator &rarr;</a>
       </div>
+      <!-- BONUS 3: BIZ QUIZ -->
+      <div class="bonus-card" style="border-color:rgba(59,130,246,.25);background:rgba(59,130,246,.05);">
+        <div class="bc-step" style="color:var(--blue);">Bonus #3</div>
+        <div class="bc-title">The Biz Quiz</div>
+        <div class="bc-desc">Take this 5-question quiz to pinpoint exactly what you need to do next to break through your current revenue ceiling &mdash; and get a custom action plan in under 3 minutes.</div>
+        <!-- Mini preview card -->
+        <div style="background:rgba(255,255,255,.04);border:1px solid rgba(59,130,246,.2);border-radius:8px;padding:12px 14px;margin-bottom:14px;">
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;">5-Question Quiz</div>
+          <div style="font-size:12px;font-weight:600;margin-bottom:4px;">What&rsquo;s Your #1 Business Constraint?</div>
+          <div style="font-size:11px;color:var(--muted);line-height:1.5;">Offer &bull; Lead Gen &bull; Sales &bull; Delivery &bull; Systems &mdash; find your bottleneck in 3 minutes.</div>
+          <div style="display:flex;gap:6px;margin-top:10px;flex-wrap:wrap;">
+            <span style="background:rgba(59,130,246,.12);border:1px solid rgba(59,130,246,.2);border-radius:4px;padding:2px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--blue);">5 Questions</span>
+            <span style="background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.2);border-radius:4px;padding:2px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--green);">Free</span>
+            <span style="background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.2);border-radius:4px;padding:2px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--gold);">&lt; 3 Min</span>
+          </div>
+        </div>
+        <a href="biz-quiz/" class="bc-btn" style="background:var(--blue);" target="_blank">Take the Biz Quiz &rarr;</a>
+      </div>
     </div>
   </div>
 
   <!-- HOT SEAT ATTENDEES -->
   <div class="section">
     <div class="section-header">
-      <div class="section-label">Tonight's <span class="orange">Hot Seat</span> Attendees</div>
+      <div class="section-label"><span class="orange">Hot Seat</span> Audits</div>
       <div class="section-divider"></div>
       <div class="section-count" id="visible-count">25 Coaches</div>
     </div>
@@ -502,32 +530,57 @@ footer strong{color:var(--orange);}
     </div>
   </div>
 
-  <!-- PODCAST -->
+  <!-- PODCAST & YOUTUBE -->
   <div class="section">
     <div class="section-header">
-      <div class="section-label">Keep Learning</div>
+      <div class="section-label">Keep <span class="orange">Learning</span> Early</div>
       <div class="section-divider"></div>
     </div>
-    <div class="podcast-row">
-      <div class="pod-card">
-        <div class="pod-icon">&#x1F399;&#xFE0F;</div>
+    <p style="font-size:13px;color:rgba(255,255,255,.6);margin-bottom:20px;line-height:1.6;">While you wait for your audit or prep for your call &mdash; dive into the podcast and channel Jordan used to document every system that built IFCA. Free business school, no tuition required.</p>
+
+    <!-- Podcast embed -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:22px 22px 18px;margin-bottom:14px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="font-size:28px;">&#x1F399;&#xFE0F;</div>
         <div>
-          <div class="pod-title">The Fitness Business Podcast</div>
-          <div class="pod-sub">Basically a free health and fitness business MBA. Jordan + Erin break down every system, strategy, and framework that built IFCA.</div>
-          <div class="pod-links">
-            <a href="https://podcasts.apple.com/us/podcast/the-fitness-business-podcast-with-erin-dimond/id1431786884" class="pod-link" target="_blank">&#x1F34E; Apple</a>
-            <a href="https://open.spotify.com/show/78IMkwtdbpHnv7Sal7fGBE?si=73dcbbdfe5e24ce1" class="pod-link" target="_blank">&#x1F7E2; Spotify</a>
-          </div>
+          <div style="font-weight:700;font-size:15px;">The Fitness Business Podcast</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.45;margin-top:2px;">Basically a free fitness business MBA &mdash; Jordan &amp; Erin break down every system, strategy, and framework that built IFCA from zero to multiple 7-figures.</div>
         </div>
       </div>
-      <div class="pod-card">
-        <div class="pod-icon">&#x1F4FA;</div>
+      <iframe title="Embed Player" src="https://play.libsyn.com/embed/destination/id/768435/height/412/theme/modern/size/large/thumbnail/yes/custom-color/196b9b/playlist-height/200/direction/backward/download/yes/font-color/FFFFFF" height="412" width="100%" scrolling="no" allowfullscreen="" webkitallowfullscreen="true" mozallowfullscreen="true" oallowfullscreen="true" msallowfullscreen="true" style="border:none;border-radius:8px;display:block;"></iframe>
+      <div style="display:flex;gap:12px;margin-top:14px;">
+        <a href="https://podcasts.apple.com/us/podcast/the-fitness-business-podcast-with-erin-dimond/id1431786884" class="pod-link" target="_blank" style="font-size:13px;">&#x1F34E; Apple Podcasts</a>
+        <a href="https://open.spotify.com/show/78IMkwtdbpHnv7Sal7fGBE?si=73dcbbdfe5e24ce1" class="pod-link" target="_blank" style="font-size:13px;">&#x1F7E2; Spotify</a>
+      </div>
+    </div>
+
+    <!-- YouTube section -->
+    <div style="background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:22px 22px 18px;">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+        <div style="font-size:28px;">&#x1F4FA;</div>
         <div>
-          <div class="pod-title">Jordan Dugger on YouTube</div>
-          <div class="pod-sub">Deep dives on offer creation, lead gen, and scaling. Two fan-favorites: "First 10 Clients with No Following" and the upgrade your offer episode.</div>
-          <div class="pod-links">
-            <a href="https://youtube.com/@jordandugger?si=hc8gbveVUyEVr1XJ" class="pod-link" target="_blank">&#x25B6; YouTube Channel</a>
-            <a href="https://youtu.be/KNqBbG9YFrI?si=yaBygELWUpkDxy_w" class="pod-link" target="_blank">First 10 Clients &rarr;</a>
+          <div style="font-weight:700;font-size:15px;">Jordan Dugger on YouTube</div>
+          <div style="font-size:12px;color:var(--muted);line-height:1.45;margin-top:2px;">Deep dives on offer creation, lead gen, ads math, and scaling. Nearly 10K subscribers and 650+ videos of free coaching content.</div>
+        </div>
+      </div>
+      <!-- YouTube channel preview card -->
+      <div style="background:rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;display:flex;gap:0;">
+        <div style="background:linear-gradient(135deg,#0f2744,#1a3a5c);padding:20px 24px;flex:1;display:flex;flex-direction:column;justify-content:center;">
+          <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:6px;">YouTube Channel</div>
+          <div style="font-family:'Bebas Neue',sans-serif;font-size:28px;line-height:1;margin-bottom:4px;">Jordan Dugger</div>
+          <div style="font-size:12px;color:rgba(255,255,255,.5);margin-bottom:12px;">@jordandugger &middot; 9.79K subscribers &middot; 658 videos</div>
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px;">
+            <span style="background:rgba(232,119,34,.12);border:1px solid rgba(232,119,34,.2);border-radius:4px;padding:2px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--orange);">Offer Creation</span>
+            <span style="background:rgba(232,119,34,.12);border:1px solid rgba(232,119,34,.2);border-radius:4px;padding:2px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--orange);">Paid Ads</span>
+            <span style="background:rgba(232,119,34,.12);border:1px solid rgba(232,119,34,.2);border-radius:4px;padding:2px 8px;font-family:'DM Mono',monospace;font-size:9px;color:var(--orange);">Scaling Systems</span>
+          </div>
+          <a href="https://youtube.com/@jordandugger?si=h71yorsusgoLZIFh" class="bc-btn" style="width:fit-content;" target="_blank">&#x25B6;&nbsp; Visit Channel &rarr;</a>
+        </div>
+        <div style="width:180px;min-width:180px;background:linear-gradient(180deg,rgba(232,119,34,.08),rgba(0,0,0,.2));display:flex;flex-direction:column;justify-content:center;align-items:center;gap:10px;padding:16px;border-left:1px solid rgba(255,255,255,.06);">
+          <div style="text-align:center;">
+            <div style="font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:6px;">Fan Favorites</div>
+            <a href="https://youtu.be/KNqBbG9YFrI?si=yaBygELWUpkDxy_w" class="pod-link" target="_blank" style="display:block;font-size:11px;margin-bottom:8px;line-height:1.4;">&#x25B6; First 10 Clients with No Following</a>
+            <a href="https://youtube.com/@jordandugger?si=h71yorsusgoLZIFh" class="pod-link" target="_blank" style="display:block;font-size:11px;line-height:1.4;">&#x25B6; Upgrade Your Offer</a>
           </div>
         </div>
       </div>
