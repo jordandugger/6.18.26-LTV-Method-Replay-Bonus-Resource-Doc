@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tasha Hall — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit &middot; April 2026</div>
+  <div class="hero-name">Tasha <span>Hall</span></div>
+  <div class="hero-title">@bodygawd &middot; Body Gawd &middot; Women's Discipline + Lifestyle Coaching &middot; Growth Phase</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">$3-5K</div><div class="hs-label">Est. Monthly Revenue</div></div>
+    <div class="hs"><div class="hs-val blue">148K</div><div class="hs-label">Instagram Followers</div></div>
+    <div class="hs"><div class="hs-val red">$0</div><div class="hs-label">Active Paid Ad Spend</div></div>
+    <div class="hs"><div class="hs-val green">$15-20K</div><div class="hs-label">Revenue Potential</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Tasha Hall has <strong>148,000 Instagram followers</strong>, a memorable brand name (Body Gawd), a compelling positioning around discipline and structure, and a free transformation session CTA that has been running with zero paid amplification. By every metric, she should be doing $20-30K/month. Instead, she is running generic motivational content &#8212; quotes about discipline that sound good but filter for exactly nobody &#8212; with no named mechanism, no paid traffic, and a Calendly link as her only funnel. <strong>The audience exists. The monetization infrastructure does not.</strong>
+  </p>
+</div>
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What's Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div><div class="sec-heading">What's Working</div><div class="sec-divider"></div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">&#128293;</div><div><div class="win-label">148K Followers &#8212; Massive Warm Traffic Asset</div><div class="win-desc">148,000 followers represents a warm retargeting pool that most coaches spend $50-100K in ads to build. Even converting 0.5% to a $3,000 offer = $2.2M in pipeline sitting untouched. The audience is not the problem. The offer and the content that filters for buyers are.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128171;</div><div><div class="win-label">Body Gawd Brand &#8212; Memorable, Confident, Marketable</div><div class="win-desc">"Body Gawd" is a standout brand name in the women's fitness space &#8212; confident, aspirational, and polarizing in the right direction. It immediately signals that this is not a soft, apologetic brand. It attracts the avatar who wants to be serious about transformation, not just motivated on Mondays.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128293;</div><div><div class="win-label">Discipline + Structure Positioning &#8212; Identity-Level Differentiation</div><div class="win-desc">Moving beyond "weight loss" to "discipline and structure" is an identity-level positioning shift that creates deeper buyer commitment. Women who want to build discipline are a different (and better) buyer than women who want to lose weight. They stay longer, refer more, and are less price-sensitive.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128141;</div><div><div class="win-label">Marriage + Lifestyle Bio Angle &#8212; Untapped Differentiation</div><div class="win-desc">The bio mentions "marriage" alongside fitness and lifestyle &#8212; a combination that no major competitor in the women's coaching space is explicitly targeting. Married women navigating health, body image, and relationship dynamics represent a deeply underserved premium buyer who will pay significantly more for a coach who speaks to their full life context.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128247;</div><div><div class="win-label">Reels + Video Infrastructure Active &#8212; Content Engine Exists</div><div class="win-desc">Tasha is already producing Reels and video content consistently. The format infrastructure is in place &#8212; she just needs the hook and message pivot from generic motivational to specific pain-point and identity-filter content. No production rebuild required; just a content strategy overhaul.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#9889;</div><div><div class="win-label">Zero Ad Spend &#8212; Revenue Ceiling Is Entirely Self-Imposed</div><div class="win-desc">She has reached 148K with zero paid traffic. This means her content does resonate organically. The ceiling is self-imposed &#8212; not a market or content problem. Adding even $30/day in Meta retargeting to her existing warm audience would unlock significant call volume before touching cold traffic.</div></div></div>
+  </div>
+</section>
+
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div><div class="sec-heading">Business Phase Diagnosis</div><div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item"><div class="phase-label">Phase 1</div><div class="phase-name">Starter</div><div class="phase-range">$0-5K/mo</div></div>
+    <div class="phase-item active"><div class="phase-label">Current Phase &#9660;</div><div class="phase-name">Growth</div><div class="phase-range">$5K-$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Target Phase</div><div class="phase-name">Scale</div><div class="phase-range">$15K-$100K+/mo</div></div>
+  </div>
+  <div class="card orange-left mb-md"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>The paradox of 148K followers:</strong> Tasha has Scale Phase audience assets but Growth Phase offer architecture. Her Calendly-to-free-session funnel works as a discovery mechanism but has no named mechanism, no outcome framing, and no proof of transformation presented before the call. Premium buyers need to see proof before they book. The funnel is a leaky bucket, and the motivational content is filling it with the wrong people.</p></div>
+  <div class="math-box">
+    <div class="math-box-title">The Math &#8212; What 148K Followers Should Generate</div>
+    <div class="math-row"><span class="lbl">Current offer price (estimated)</span><span class="val orange">Unknown / not displayed publicly</span></div>
+    <div class="math-row"><span class="lbl">Recommended named mechanism price</span><span class="val">$2,500-4,000 / 12-week program</span></div>
+    <div class="math-row"><span class="lbl">148K followers at 0.5% warm conversion = leads available</span><span class="val">740 warm leads &#8212; zero ad spend needed initially</span></div>
+    <div class="math-row"><span class="lbl">New clients needed at $3,000 to reach $15K/mo</span><span class="val green">5 new closes/month</span></div>
+    <div class="math-row"><span class="lbl">Calls needed (35% close rate)</span><span class="val green">14-15 calls/month</span></div>
+    <div class="math-row"><span class="lbl">DM automation "Comment DISCIPLINE" conversion potential</span><span class="val green">High &#8212; proven format with large warm audience</span></div>
+  </div>
+</section>
+
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03 &#8212; Updated April 2026</div><div class="sec-heading">Creative Intelligence Report</div><div class="sec-divider"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;font-size:14px;color:rgba(255,255,255,.55);">Full intelligence synthesis across brand positioning, organic audit, Meta Ad Library, entity gaps, and hook bank.</p>
+    <button onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;"><span>&#11014;</span> Copy for Workshop</button>
+  </div>
+  <div class="card orange-left mb-lg">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:12px;"><strong>Executive Summary.</strong> Tasha Hall is sitting on one of the most underutilized audience assets in this entire cohort. 148K warm followers, a brand name that actually lands, a positioning around discipline that goes deeper than fitness vanity &#8212; and the entire machine is generating a fraction of what it should because the content is generic motivational quotes and the funnel drops straight to a Calendly link with no proof, no mechanism, and no pre-qualification.</p>
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Highest-leverage insight:</strong> The marriage and lifestyle angle in her bio is the most differentiated thing about her brand and it is completely absent from her content. A hook like <strong>"When you lack discipline in your health, it bleeds into your marriage"</strong> targets the intersection of fitness and relationship that no competitor is occupying &#8212; and immediately filters for a premium buyer who has more at stake than vanity.</p>
+  </div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Core Avatar</td><td>Broad &#8212; "women seeking fitness and discipline" (too wide)</td><td>Married women 28-45 who want discipline and structure in their health but recognize how their physical state is affecting their confidence, energy, and marriage</td></tr>
+        <tr><td class="t-strong">Named Mechanism</td><td>None &#8212; generic "1:1 coaching"</td><td>"The Body Gawd Discipline Protocol" &#8212; 12-week structured transformation system that builds discipline as a skill, not a mood</td></tr>
+        <tr><td class="t-strong">Enemy Frame</td><td>Not deployed</td><td>Motivation culture &#8212; "waiting to feel ready," relying on inspiration instead of systems. "Motivation is a feeling. Discipline is a skill. Here's the difference."</td></tr>
+        <tr><td class="t-strong">Content</td><td>Generic motivational quotes &#8212; broad appeal, zero avatar filtering</td><td>3-5x/week: specific pain-point hooks targeting discipline gap + marriage/lifestyle intersection. Deploy "Comment DISCIPLINE" DM automation immediately.</td></tr>
+        <tr><td class="t-strong">Funnel</td><td>Calendly free session &#8212; no pre-qualification, no proof, no mechanism presentation</td><td>Landing page with: named mechanism, outcome statement, 3-5 client testimonials, and program overview before booking. Calendly link goes behind the page, not in bio directly.</td></tr>
+        <tr><td class="t-strong">Paid Ads</td><td>Zero &#8212; all organic</td><td>Start with $30-50/day retargeting to 148K warm audience. Test top organic hooks as paid. Only scale cold traffic after retargeting ROI is established.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Organic Content Audit &#8212; Confirmed Hooks</div>
+  <div class="card yellow-left mb-sm"><p style="font-size:13px;margin-bottom:0;"><strong>Critical issue:</strong> Current hooks are all generic discipline/motivation quotes that resonate broadly but convert nobody specifically. "Discipline is the bridge between goals and accomplishment" sounds good as a poster but does not make anyone book a call. The pivot needed: from aspirational to specific &#8212; name the pain, name the avatar, name the enemy, make the prospect say "that is exactly me."</p></div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook / Content Type</th><th>Current Signal</th><th>Ad Potential</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"The greatest project you'll ever work on is you."</td><td>Generic motivational</td><td><span class="gap-pill missing">Low &#8212; Zero Avatar Filter</span></td><td>Retire or add specific avatar layer</td></tr>
+        <tr><td class="t-strong">"Discipline is the bridge between goals and accomplishment."</td><td>Quote post</td><td><span class="gap-pill missing">Low &#8212; Attracts Wrong Buyer</span></td><td>Replace with specificity</td></tr>
+        <tr><td class="t-strong">"Stop waiting to feel motivated. Motivation is unreliable. Discipline is a skill." (NEW)</td><td>Villain frame &#8212; not yet created</td><td><span class="gap-pill opportunity">Very High &#8212; Build This</span></td><td>Build as primary TOF hook</td></tr>
+        <tr><td class="t-strong">"Your body changed when your marriage started &#8212; here is what nobody tells you." (NEW)</td><td>Marriage angle &#8212; not yet deployed</td><td><span class="gap-pill opportunity">Very High &#8212; Untapped White Space</span></td><td>Build as primary differentiator hook</td></tr>
+        <tr><td class="t-strong">"I help women build structure &#8212; not just in their body, but in their entire life." (NEW)</td><td>Mechanism + identity</td><td><span class="gap-pill opportunity">High &#8212; Premium Buyer Filter</span></td><td>Deploy as bio hook + content series</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Entity Clusters &#8212; Current vs. Needed</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Status</th><th>Emotional Driver</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Motivation Villain / Discipline as Skill</td><td><span class="gap-pill missing">Not Created</span></td><td><span class="gap-pill missing">Frustration + Validation</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Marriage + Body + Discipline Intersection</td><td><span class="gap-pill missing">Bio Only &#8212; Not in Content</span></td><td><span class="gap-pill missing">Identity + Relationship</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Named Mechanism &#8212; Body Gawd Protocol</td><td><span class="gap-pill missing">Does Not Exist</span></td><td><span class="gap-pill info">Aspiration + Structure</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Client Transformation Proof</td><td><span class="gap-pill warn">May Exist &#8212; Not Deployed</span></td><td><span class="gap-pill info">Hope + Social Proof</span></td><td><span class="badge warn">Deploy Immediately</span></td></tr>
+        <tr><td class="t-strong">Avatar Filter Content &#8212; "This Is Not For Everyone"</td><td><span class="gap-pill missing">Not Created</span></td><td><span class="gap-pill missing">Repel + Attract</span></td><td><span class="badge warn">Build Second</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Meta Ad Library Findings</div>
+  <div class="card yellow-left mb-lg"><p style="font-size:14px;margin-bottom:6px;"><strong>Zero active or historical ads confirmed.</strong> No paid advertising under Body Gawd or Tasha Hall. Entirely organic-built 148K audience.</p><p style="font-size:13px;color:rgba(255,255,255,.55);">This is simultaneously an opportunity and a red flag &#8212; opportunity because retargeting 148K warm followers costs almost nothing and will immediately generate call volume; red flag because scaling beyond this audience requires a paid content strategy that does not yet exist. First ad dollar should go toward retargeting, not cold traffic.</p></div>
+  <div class="grid-3 mb-lg">
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:#F87171;line-height:1;">0</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Paid Entities</div><span class="badge fail" style="margin-top:8px;display:inline-block;">Retargeting First</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--yellow);line-height:1;">2</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Organic Angles Worth Keeping</div><span class="badge warn" style="margin-top:8px;display:inline-block;">Discipline + Marriage Bio</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">6-8</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">New Entities to Build</div><span class="badge warn" style="margin-top:8px;display:inline-block;">Full Pivot Required</span></div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Priority Entity Build Queue</div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 01 &middot; TOF &middot; Motivation Villain Hook</span><span class="badge fail">Build First</span></div><div class="entity-hook">"Stop waiting to feel motivated. Motivation is a feeling. Discipline is a skill. Here is how to build it even when you don't feel like it."</div><div class="entity-meta">Talking-head reel. Direct, confident, contrarian. Body Gawd brand voice. CTA: "Comment DISCIPLINE for my free structure guide." 30-45 sec.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 02 &middot; TOF &middot; Marriage Intersection Hook</span><span class="badge fail">Build First</span></div><div class="entity-hook">"When you lack discipline in your health, it bleeds into your marriage. Here is what nobody tells you about the connection."</div><div class="entity-meta">The most differentiated content angle available. No competitor occupies this exact space. Personal, relatable, filters immediately for the right buyer. Talking-head, 60 sec.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 03 &middot; TOF &middot; Identity Challenge</span><span class="badge fail">Build First</span></div><div class="entity-hook">"I don't help women lose weight. I help women build discipline &#8212; and the body transformation follows. Here is why that distinction matters."</div><div class="entity-meta">Positions Body Gawd above generic weight loss coaches. Premium buyer filter. Talking-head or text-overlay reel.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 04 &middot; MOF &middot; Client Transformation Proof</span><span class="badge warn">Deploy Immediately if Available</span></div><div class="entity-hook">"[Client] came to me exhausted, inconsistent, and feeling disconnected from her body and her marriage. Here is what 12 weeks of structure did."</div><div class="entity-meta">Transformation content that includes emotional outcome, not just physical. The marriage/relationship angle in the proof story dramatically increases conversion for the right avatar.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 05 &middot; TOF &middot; Avatar Filter</span><span class="badge warn">Build Second</span></div><div class="entity-hook">"This is not for women who want quick fixes. This is for women who are ready to build actual structure. Here is what that commitment looks like."</div><div class="entity-meta">Polarizing avatar filter. Repels window shoppers, attracts serious buyers. Reduces bad-fit calls and increases close rate on calls that do happen.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 06 &middot; BOF &middot; Mechanism Introduction</span><span class="badge info">Build After Mechanism Is Named</span></div><div class="entity-hook">"The Body Gawd Discipline Protocol is a 12-week system for building structure in your body, your habits, and your life. Here is what the 12 weeks actually look like."</div><div class="entity-meta">Full mechanism reveal for warm retargeting audience. Deploy after offer naming is complete. This is the bottom-of-funnel closer content for people who have seen multiple TOF hooks.</div></div>
+  <div class="card orange-left" style="margin-top:28px;"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Strategic diagnosis:</strong> Tasha has the rarest problem in coaching &#8212; too much audience, not enough offer infrastructure. The fix is not more content or more followers. It is: name the mechanism, build a landing page with proof, pivot content from generic motivation to specific pain-point avatar filtering, and install DM automation. These four changes, executed in 30 days, will generate more revenue than 6 months of posting discipline quotes to 148K people who have nowhere to go when they're ready to buy.</p></div>
+</section>
+
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div><div class="sec-heading">Constraint Diagnosis</div><div class="sec-divider"></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 &middot; Primary Constraint</div><div class="diag-title">No Named Mechanism &#8212; Generic Offer Competing on Price</div><div class="diag-desc">"1:1 coaching" is not an offer &#8212; it is a service. Services compete on hourly rate. Offers compete on outcome transformation. Without a named program, a specific timeline, and defined milestones, Tasha's coaching is identical to every other coach with a Calendly link at $100/hour. The 148K audience has no specific reason to book a call beyond "she seems credible" &#8212; which is not enough to convert at high ticket.</div><div class="diag-fix"><strong>The Fix:</strong> Name the mechanism. "The Body Gawd Discipline Protocol" &#8212; 12 weeks, defined outcomes (habit architecture built, body composition shifted, structure installed across health + lifestyle), milestone check-ins at weeks 4 and 8. Price at $2,500-4,000. Build a landing page that presents this before the Calendly link. This single change will double the quality of calls booked within 30 days.</div></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 &middot; Primary Constraint</div><div class="diag-title">Generic Motivational Content &#8212; No Avatar Filtering at 148K Scale</div><div class="diag-desc">Posting discipline quotes to 148K followers generates likes from people who will never pay $3,000 for coaching. The content is aspirationally appealing to everyone and specifically compelling to no one. The result is high follower count, low conversion, and a DM inbox full of people who want free advice rather than qualified buyers ready to invest in a structured transformation.</div><div class="diag-fix"><strong>The Fix:</strong> Pivot 70% of content immediately to: (1) Motivation villain content &#8212; positions discipline as a skill vs. a feeling; (2) Marriage + lifestyle intersection &#8212; the most differentiated angle available; (3) Avatar filter posts that explicitly describe who the program is and is not for. Within 30 days, DM quality will shift dramatically even before any paid ads are run.</div></div>
+  <div class="diag-card p2"><div class="diag-rank">P2 &middot; Meaningful Gap</div><div class="diag-title">Zero Paid Traffic &#8212; 148K Followers Entirely Unmonetized at Scale</div><div class="diag-desc">148K organic followers with zero retargeting is the equivalent of building a store with a massive foot traffic location and never running any promotions inside. The warm audience is ready &#8212; they just need a specific, compelling offer shown to them repeatedly. The IFCA retargeting model is the perfect unlock: $30-50/day to people who already engage with the content.</div><div class="diag-fix"><strong>The Fix:</strong> Launch retargeting campaign to Instagram engagers and profile visitors immediately after mechanism naming is complete. Budget: $30-50/day. Ad creative: top 2 performing organic hooks with updated avatar-specific messaging. Target: 5-7 qualified calls per week from warm traffic alone. This is the lowest-risk, highest-ROI ad investment available in the current funnel state.</div></div>
+  <div class="diag-card p3"><div class="diag-rank">P3 &middot; Watch Item</div><div class="diag-title">Funnel Drop &#8212; Calendly Link Without Pre-Qualification</div><div class="diag-desc">Sending cold and warm traffic directly to a free transformation session Calendly link means every unqualified lead books a call and wastes close capacity. Without a landing page that pre-sells the mechanism and filters intent, Tasha is burning sales call time on people who had no intention of investing at the right price point.</div><div class="diag-fix"><strong>The Fix:</strong> Build one landing page between the bio link and Calendly. Page content: mechanism name, program overview, 3-5 transformation testimonials, outcome statement, price range disclosed (or at minimum "investment starts at $X"), and booking CTA. This single page will increase close rate on calls booked by 15-25% by ensuring only qualified prospects complete the booking.</div></div>
+  <div class="diag-card ok"><div class="diag-rank">OK &middot; Validated Asset &#8212; Protect This</div><div class="diag-title">Body Gawd Brand + Discipline Positioning + 148K Warm Audience</div><div class="diag-desc">The combination of a memorable brand name, an identity-level positioning around discipline (not just weight loss), and a 148K warm audience built entirely organically is a compounding asset that took years to build and is worth preserving carefully. Do not abandon the discipline angle to chase a broader audience &#8212; it is the primary filter that will attract the right buyer at premium prices.</div><div class="diag-fix"><strong>Maintain:</strong> Keep "discipline and structure" as the core brand identity. Add specificity around WHO it's for (married women, lifestyle transformation, identity-level change) and WHAT makes it different (mechanism, not just motivation). The brand foundation is correct &#8212; it just needs an offer and content strategy that convert what's already been built.</div></div>
+</section>
+
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div><div class="sec-heading">90-Day Action Plan</div><div class="sec-divider"></div>
+  <div class="card blue-left mb-md"><p style="font-size:13px;margin-bottom:0;"><strong>Priority order:</strong> Name the mechanism and build the landing page before changing content strategy. Every content pivot points to an offer &#8212; and right now there is no offer to point to. Steps 1 and 2 unlock everything else.</p></div>
+  <div class="plan-item"><div class="plan-num">1</div><div class="plan-body"><div class="plan-title">Name the Mechanism + Build Landing Page (Days 1-10)</div><div class="plan-desc">Run JAN (IFCA Offer Genie) to build "The Body Gawd Discipline Protocol." Define: 12-week timeline, specific milestones (habit architecture, body composition, lifestyle structure), avatar (married women 28-45 seeking discipline and identity transformation), price ($2,500-4,000), outcome statement. Build one landing page with mechanism overview, 3-5 testimonials, and booking CTA. Swap bio link from Calendly to landing page immediately.</div><div class="plan-tags"><span class="plan-tag offer">Offer Build</span><span class="plan-tag sales">Day 1</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">2</div><div class="plan-body"><div class="plan-title">Install DM Automation &#8212; "Comment DISCIPLINE" (Days 5-14)</div><div class="plan-desc">Set up ManyChat triggered by "DISCIPLINE" comment. Sequence: auto-DM with free "Discipline Assessment" or mini-guide about building structure as a skill. Follow-up sequence to call booking. Add "Comment DISCIPLINE" CTA to all new content posts and retroactively to top 10 existing posts. With 148K followers, this single automation change could generate 50-100 qualified DM leads in the first week of deployment.</div><div class="plan-tags"><span class="plan-tag ops">Automation</span><span class="plan-tag content">Lead Gen</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">3</div><div class="plan-body"><div class="plan-title">Content Pivot &#8212; Motivation Villain + Marriage Intersection (Days 1-90)</div><div class="plan-desc">Shift 70% of content from generic discipline quotes to: (1) Motivation villain &#8212; "Stop waiting to feel motivated, discipline is a skill"; (2) Marriage + lifestyle intersection &#8212; "When your health lacks structure, it affects your marriage"; (3) Avatar filter posts &#8212; "This is not for women who want a quick fix." Maintain 4-5 posts per week. Each post ends with "Comment DISCIPLINE" CTA. Within 60 days, the audience self-selection will begin shifting toward the right buyer profile.</div><div class="plan-tags"><span class="plan-tag content">Content Pivot</span><span class="plan-tag offer">Avatar Filter</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">4</div><div class="plan-body"><div class="plan-title">Launch Retargeting Ads &#8212; 148K Warm Audience (Days 14-45)</div><div class="plan-desc">After landing page is live and DM automation is installed, launch Meta retargeting: 1 ad set targeting Instagram profile engagers, video viewers, and website visitors. Budget: $30-50/day. Creative: top 2 performing organic hooks with updated messaging. Goal: 5-7 warm qualified calls per week. Monitor CPL and close rate. If retargeting shows 30%+ close rate on warm traffic, scale to $75-100/day before touching cold audiences.</div><div class="plan-tags"><span class="plan-tag ads">Retargeting</span><span class="plan-tag sales">Low Risk High ROI</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">5</div><div class="plan-body"><div class="plan-title">Scale Cold Traffic &#8212; Marriage + Discipline Angle as Primary Hook (Days 60-90)</div><div class="plan-desc">After retargeting data confirms hooks and close rate, launch 1 cold broad ad set and 1 interest-stacked (women 28-45, married, health/wellness, personal development). Lead with the marriage intersection hook &#8212; it is the most differentiated angle in the market and will generate lower CPL than generic fitness hooks because it attracts a higher-intent, higher-ticket buyer. Budget: $50-100/day cold. Target CPL under $12. Scale monthly based on Contracted ROAS above 3x.</div><div class="plan-tags"><span class="plan-tag ads">Cold Traffic</span><span class="plan-tag sales">Scale</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">6</div><div class="plan-body"><div class="plan-title">Build Backend Ascension Offer &#8212; 6-Month Mastery Continuation (Days 45-90)</div><div class="plan-desc">Design a 6-month continuation program at $1,500-2,000 for clients who complete the 12-week protocol and want ongoing structure and accountability. Pre-frame this on every sales call: "The 12 weeks builds your foundation. Most clients continue into the mastery phase &#8212; I'll tell you more about that at week 8." This single addition increases LTV from $2,500-4,000 to $4,000-6,000 per client and dramatically improves Contracted ROAS.</div><div class="plan-tags"><span class="plan-tag offer">Backend</span><span class="plan-tag sales">LTV</span></div></div></div>
+</section>
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> &middot; Prospect Intelligence Audit &middot; Confidential</div>
+  <div class="footer-tag">Jordan Dugger &middot; Impact Fitness Coaching Academy &middot; April 2026</div>
+</footer>
+</div><script>
+const sections=document.querySelectorAll('.doc-section');
+const navLinks=document.querySelectorAll('.nav-link');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(l=>l.classList.remove('active'));const id=entry.target.getAttribute('id');const active=document.querySelector('.nav-link[href="#'+id+'"]');if(active)active.classList.add('active');}});},{threshold:0.2,rootMargin:'-60px 0px 0px 0px'});
+sections.forEach(s=>observer.observe(s));
+function copyIntelReport(){navigator.clipboard.writeText("TASHA HALL - CREATIVE INTELLIGENCE REPORT\\n@bodygawd | Body Gawd | Women's Discipline + Lifestyle Coaching | April 2026\\n\\n=== BRAND SNAPSHOT ===\\nAvatar: Women 28-45 seeking discipline, structure, and holistic lifestyle transformation - not just weight loss\\nCurrent pricing: Unknown - free transformation session CTA. Target: $2,500-4,000 for named mechanism program\\nMechanism: The Body Gawd Discipline Protocol - needs naming and structuring\\nEnemy: Motivation culture - relying on feeling inspired rather than building systems\\n148K followers, no active ads, Calendly funnel only\\n\\n=== HOOKS - CONFIRMED ORGANIC ===\\n1. The greatest project you will ever work on is you (motivational - generic)\\n2. Discipline is the bridge between goals and accomplishment (generic)\\n=== HOOKS TO BUILD ===\\n1. Stop waiting to feel motivated. Motivation is unreliable. Discipline is a skill. Here is how to build it.\\n2. Your body changed when your marriage started. Here is what nobody tells you about fitness after commitment.\\n3. I help women build structure - not just in their body, but in their entire life. Here is what that actually looks like.\\n4. 148K people follow this account. Here is the one thing I wish I said sooner about why discipline outlasts motivation.\\n\\n=== PRIMARY CONSTRAINTS ===\\nP1: No named mechanism - generic 1:1 coaching competing on price\\nP1: Generic motivational content not filtering for premium buyers\\nP2: No paid ads - 148K followers entirely unmonetized at scale\\nP2: Marriage/lifestyle angle mentioned in bio but not deployed in content").then(()=>{const btn=event.target.closest('button');const orig=btn.innerHTML;btn.innerHTML='&#10003; Copied!';setTimeout(()=>btn.innerHTML=orig,2000);});}
+</script>
+</body>
+</html>
