@@ -270,7 +270,7 @@ footer strong{color:var(--orange);}
     <div class="section-header">
       <div class="section-label">Tonight's <span class="orange">Hot Seat</span> Attendees</div>
       <div class="section-divider"></div>
-      <div class="section-count" id="visible-count">23 Coaches</div>
+      <div class="section-count" id="visible-count">24 Coaches</div>
     </div>
     <p style="font-size:12px;color:var(--muted);margin-bottom:16px;font-family:'DM Mono',monospace;letter-spacing:.05em;">
       Coaches with a <span style="color:var(--orange);">📋 Full Audit</span> have a clickable card — opens your personalized intelligence report. Audits added as they're completed post-session.
@@ -278,8 +278,8 @@ footer strong{color:var(--orange);}
 
     <!-- FILTER BAR -->
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
-      <button class="filter-btn active" onclick="filterCards('all',this)">All (23)</button>
-      <button class="filter-btn" onclick="filterCards('audit',this)">📋 Has Audit (3)</button>
+      <button class="filter-btn active" onclick="filterCards('all',this)">All (24)</button>
+      <button class="filter-btn" onclick="filterCards('audit',this)">📋 Has Audit (8)</button>
       <button class="filter-btn" onclick="filterCards('scale',this)">Scale</button>
       <button class="filter-btn" onclick="filterCards('growth',this)">Growth</button>
       <button class="filter-btn" onclick="filterCards('starter',this)">Starter</button>
@@ -313,17 +313,26 @@ footer strong{color:var(--orange);}
         <div class="ac-audit-badge">📋 Full Audit Ready →</div>
       </div>
 
+      <!-- KATIE DICKSON — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='katie-dickson/'">
+        <div class="ac-name">Katie Dickson <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">KFit Personal Training &amp; Nutrition — 7-year coach. Food Freedom Formula + MRT Training. 6-month program. $2–5K/mo with 0–10 clients due to private IG and inactive ads.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $15–20K/mo online coaching</div>
+        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+      </div>
+
       <!-- AUDITS IN PROCESS DIVIDER -->
       <div style="grid-column:1/-1;padding:20px 0 8px;border-top:1px solid rgba(255,255,255,.06);margin-top:8px;">
         <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);">📋 Audits in Process — Check Back as They Go Live</div>
       </div>
 
       <!-- LEEANN POTOCHNEY -->
-      <div class="attendee-card" data-phase="starter">
+      <!-- LEEANN POTOCHNEY — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='leeann-potochney/'">
         <div class="ac-name">LeeAnn Potochney <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">Amplify PTP — licensed physical therapist. Active adults + athletes, get out of pain + stay competitive. In-person $700+/mo, 2 remote clients. Already running ads.</div>
         <div class="ac-goal"><span class="arrow">→</span> $15K/mo total net revenue</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
       </div>
 
       <!-- CRAIG STEVENSON -->
@@ -351,19 +360,21 @@ footer strong{color:var(--orange);}
       </div>
 
       <!-- HENRY MATTHEWS -->
-      <div class="attendee-card" data-phase="starter">
+      <!-- HENRY MATTHEWS — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='henry-matthews/'">
         <div class="ac-name">Henry Matthews <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">Rehab Meets Performance Method — athletes + active adults with knee/shoulder/back injuries. Works in rehab clinic. In-person $720/mo. 6 clients, 50+ total.</div>
         <div class="ac-goal"><span class="arrow">→</span> $8–15K/mo online performance brand</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
       </div>
 
       <!-- TASHA HALL -->
-      <div class="attendee-card" data-phase="starter">
+      <!-- TASHA HALL — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='tasha-hall/'">
         <div class="ac-name">Tasha Hall <span class="ac-phase starter">Starter</span></div>
         <div class="ac-offer">Body Gawd — relaunching after hiatus. Women 27–45 who want permanent healthy lifestyle (faith + fitness + lifestyle + marriage pillars). 400–500 lifetime clients. IG organic, restarting consistently.</div>
         <div class="ac-goal"><span class="arrow">→</span> $15–20K/mo recurring</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
       </div>
 
       <!-- ALEX KNOWLES -->
@@ -409,11 +420,12 @@ footer strong{color:var(--orange);}
       </div>
 
       <!-- JAMES PORTER -->
-      <div class="attendee-card" data-phase="zero">
+      <!-- JAMES PORTER — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="zero" data-audit="true" onclick="window.location.href='james-porter/'">
         <div class="ac-name">James Porter <span class="ac-phase zero">Pre-Revenue</span></div>
         <div class="ac-offer">NW Tactical Methods — military + LE fitness. 3-tier: beginner → intermediate → operator-level prep for special unit assessments. Running free dept. program. 5–10 unpaid clients. No pricing yet.</div>
         <div class="ac-goal"><span class="arrow">→</span> 20–30 paying clients in 8–12 week program</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
       </div>
 
       <!-- JAMEEL COURTNEY -->
