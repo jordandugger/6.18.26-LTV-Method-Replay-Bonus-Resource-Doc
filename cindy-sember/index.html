@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cindy Sember (Ofili) — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.olympian-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(232,119,34,.12));border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.olympian-badge .ob-icon{font-size:24px;}
+.olympian-badge .ob-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit · April 2026</div>
+  <div class="hero-name">Cindy <span>Sember</span></div>
+  <div class="hero-title">@cindyofili · 3× Olympian · Christian Women's Coaching · Starter→Growth Phase</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">$1,200</div><div class="hs-label">Current Offer Price (4mo)</div></div>
+    <div class="hs"><div class="hs-val blue">66K</div><div class="hs-label">Instagram Followers</div></div>
+    <div class="hs"><div class="hs-val red">$300</div><div class="hs-label">Effective Monthly Rate</div></div>
+    <div class="hs"><div class="hs-val green">$6,000</div><div class="hs-label">Restructured Offer Target</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Cindy Sember (Ofili) is a <strong>3× Olympian</strong> with 66,000 Instagram followers, 1,600+ posts, and a content library that spans faith, fitness, and elite athletic identity. By any normal coaching benchmark, she should be clearing $20–30K/month. Instead, she is charging <strong>$1,200 for 4 months — $300/month</strong> — attracting budget-conscious young athletes who ghost or can't close, and experiencing "crickets" in engagement from her would-be premium buyers. This is not an audience problem. This is a <strong>pricing and avatar filter catastrophe</strong>. The Olympian credential is being given away at PT rates.
+  </p>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What's Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+
+<!-- ── S01: WHAT'S WORKING ── -->
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div>
+  <div class="sec-heading">What's Working</div>
+  <div class="sec-divider"></div>
+
+  <div class="olympian-badge">
+    <div class="ob-icon">🥇</div>
+    <div class="ob-text">3× Olympic Athlete — Undeniable Authority Asset. Most coaches cannot buy this credibility at any price.</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">🏅</div><div>
+      <div class="win-label">Olympian Credibility — Irreplaceable Moat</div>
+      <div class="win-desc">Three Olympic appearances is not a resume line — it is a premium filter that justifies $4,000–8,000 pricing without needing to argue for it. Zero competitors in the faith-based women's coaching niche have this. It is an attention-stopping authority signal that should be in every hook, ad headline, and bio.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">👥</div><div>
+      <div class="win-label">66K Established Audience — Warm Traffic Asset</div>
+      <div class="win-desc">66,000 followers represent a warm retargeting pool that most coaches spend years and tens of thousands in ads to build. With the right offer repositioning, converting even 0.5% of existing followers = 330 leads. The audience exists. The offer does not match it.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">✝️</div><div>
+      <div class="win-label">Faith Integration — Underutilized Niche Moat</div>
+      <div class="win-desc">Faith-based fitness coaching is a distinct, defensible niche with strong community loyalty. Hooks like "Incorporating God into your fitness journey" and DM CTA "ELITE" signal this angle exists. When repositioned as a premium filter (not an add-on), it dramatically increases buyer commitment and close rates.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">📸</div><div>
+      <div class="win-label">1,600+ Post Content Library — Entity Extraction Asset</div>
+      <div class="win-desc">1,600 posts is a deep content archive that almost certainly contains multiple viral-quality hooks, client transformations, and mechanism education pieces that have already proven resonance with her audience. This library can be mined for 20–30 ad-ready entities without recording a single new piece of content.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">📢</div><div>
+      <div class="win-label">DM Automation Infrastructure Active ("ELITE")</div>
+      <div class="win-desc">The DM keyword "ELITE" in bio indicates active ManyChat or similar automation — the technical infrastructure for lead capture exists. The problem is not the tool; it is the offer on the other side of the DM that filters for $1,200 clients instead of $6,000 clients.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🎯</div><div>
+      <div class="win-label">Jordan's Live Hot Seat — Precise Roadmap Already Exists</div>
+      <div class="win-desc">Jordan diagnosed Cindy live in the April 2026 hot seat with a complete rebuild plan: raise to $3,500–6,000, build a quiz funnel, create polarizing avatar-filtering content, leverage Olympian identity, and rebuild offer as "The Olympian Protocol." The path is already mapped — execution is the only variable.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ── S02: BUSINESS PHASE ── -->
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div>
+  <div class="sec-heading">Business Phase Diagnosis</div>
+  <div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item active"><div class="phase-label">Current Phase ▼</div><div class="phase-name">Starter</div><div class="phase-range">$0–$5K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K–$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Potential</div><div class="phase-name">Scale</div><div class="phase-range">$15K–$100K+/mo</div></div>
+  </div>
+  <div class="card orange-left mb-md">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;">
+      <strong>Dangerous mismatch:</strong> Cindy has Scale Phase audience assets (66K followers, Olympian authority, 1,600+ posts) but is operating with Starter Phase offer architecture ($300/month effective rate, generic positioning). This is the most expensive version of the P1 Constraint — a premium audience is being converted at a fraction of their willingness to pay because the offer does not signal premium. The audience is not the problem. The offer and its positioning are filtering for wrong buyers and repelling right ones.
+    </p>
+  </div>
+  <div class="math-box">
+    <div class="math-box-title">The Math — Current vs. Restructured</div>
+    <div class="math-row"><span class="lbl">Current price per 4-month program</span><span class="val orange">$1,200</span></div>
+    <div class="math-row"><span class="lbl">Effective monthly rate</span><span class="val orange">$300/mo</span></div>
+    <div class="math-row"><span class="lbl">Clients needed at $1,200 to reach $20K/mo</span><span class="val" style="color:#F87171;">67 new clients/month — impossible</span></div>
+    <div class="math-row"><span class="lbl">Jordan's recommended restructured price</span><span class="val">$3,500 (4mo) or $6,000 (12mo)</span></div>
+    <div class="math-row"><span class="lbl">New clients needed per month at $6,000</span><span class="val">3–4 new closes/month</span></div>
+    <div class="math-row"><span class="lbl">Calls needed (35% close rate)</span><span class="val">9–11 calls/month</span></div>
+    <div class="math-row"><span class="lbl">Leads needed (7% book rate)</span><span class="val">130–160 qualified leads/month</span></div>
+    <div class="math-row"><span class="lbl">66K followers at 0.5% conversion = warm leads available</span><span class="val green">330 warm leads — no ads needed initially</span></div>
+  </div>
+</section>
+
+<!-- ── S03: CREATIVE INTELLIGENCE ── -->
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03 — Updated April 2026</div>
+  <div class="sec-heading">Creative Intelligence Report</div>
+  <div class="sec-divider"></div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;font-size:14px;color:rgba(255,255,255,.55);">Full intelligence synthesis across brand positioning, organic ecosystem, Meta Ad Library findings, competitive benchmarks, entity gap analysis, verbatim hooks, and avatar filter strategy.</p>
+    <button onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;">
+      <span>⬆</span> Copy for Workshop
+    </button>
+  </div>
+
+  <div class="card orange-left mb-lg">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:12px;">
+      <strong>Executive Summary.</strong> Cindy Sember is operating one of the most extreme cases of under-monetized authority in the online fitness coaching space. A 3× Olympian with 66,000 followers and a faith-integrated brand is charging $300/month. The audience she has built — largely from her Olympic competition career and athletic content — skews young and athlete-focused, while her target buyer (high-achieving Christian women 28–45 who want body recomposition and elite mindset coaching) is an entirely different person. The result: "crickets" from premium buyers and an inbox full of broke 20-year-olds who heard her speak at a college track event.
+    </p>
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;">
+      <strong>Highest-leverage insight:</strong> The current audience is not the target buyer — and that is OK. The prescription is not to try to convert the existing audience at a higher price. It is to <strong>build a new parallel content strategy that actively repels non-buyers and attracts premium ones</strong>, while running targeted paid ads to reach the right avatar directly. The Olympian credential, the faith angle, and the ex-athlete-recomposition niche are all untapped. One repositioned piece of content — "Stop training to be smaller. Train to be an athlete again." — would outperform everything currently in market in this niche.
+    </p>
+  </div>
+
+  <!-- BRAND TABLE -->
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Core Avatar</td><td>Broad — "women seeking fitness," skewing young athletes (wrong)</td><td>High-achieving Christian women 28–45, ex-athlete identity, want body recomposition + elite mindset without restrictive dieting</td></tr>
+        <tr><td class="t-strong">Named Mechanism</td><td>None — generic "coaching program"</td><td>"The Olympian Protocol" or "Athlete Recomposition Method" — ties directly to undeniable Olympic authority</td></tr>
+        <tr><td class="t-strong">Enemy Frame</td><td>Implicit only — not actively deployed</td><td>Explicit: "Shrink culture," calorie restriction for women, programs that make women train less and shrink more. "Stop training to be smaller."</td></tr>
+        <tr><td class="t-strong">Pricing Signal</td><td>$1,200 / 4 months = commodity pricing</td><td>$3,500 / 4 months or $6,000 / 12 months = premium filter that repels wrong buyers</td></tr>
+        <tr><td class="t-strong">DM Automation</td><td>"ELITE" keyword active — but offer on the other side is too cheap</td><td>Maintain "ELITE" keyword → new landing page or quiz → high-ticket application → call. The keyword is right. The funnel needs the offer to match.</td></tr>
+        <tr><td class="t-strong">Identity Layer</td><td>Olympian credential underdeployed — appears occasionally, not as primary hook</td><td>Lead every ad, every bio, every hook with Olympian identity. "3× Olympian Cindy Sember teaches you to train like an athlete." This is the #1 credibility differentiator.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ORGANIC CONTENT AUDIT -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Organic Content Audit — Confirmed Hooks</div>
+  <div class="card yellow-left mb-sm">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Critical insight from Jordan's live hot seat:</strong> Cindy's current ad hooks focus on "metabolism reset" and general faith-fitness integration — broad enough to attract budget-conscious audiences but not specific enough to filter for premium buyers. The Olympian credential appears in content but is not the lead hook in ads. This is the single biggest missed opportunity — a 3× Olympian leading with "quick metabolism reset" is like a neurosurgeon advertising as a general practitioner.</p>
+  </div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook / Caption Fragment</th><th>Format</th><th>Content Bucket</th><th>Ad Potential</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"What competing at 3 Olympics has taught me" [about training, body, mindset]</td><td>Talking-head Reel</td><td>Authority / Olympian Credential</td><td><span class="gap-pill opportunity">Very High — Lead This</span></td></tr>
+        <tr><td class="t-strong">"5 weird signs you're ACTUALLY losing fat while building muscle"</td><td>Carousel or Reel</td><td>Education / Mechanism</td><td><span class="gap-pill opportunity">High</span></td></tr>
+        <tr><td class="t-strong">"Some hot takes I have as a faith-based fitness coach/athlete"</td><td>Talking-head Reel</td><td>Faith + Contrarian</td><td><span class="gap-pill opportunity">High — add specificity</span></td></tr>
+        <tr><td class="t-strong">"Incorporating God into your fitness journey has been SUCH a game changer"</td><td>Reel / Story</td><td>Faith Integration</td><td><span class="gap-pill warn">Med — needs outcome hook</span></td></tr>
+        <tr><td class="t-strong">"3 Simple Strategies for Fat Loss"</td><td>Carousel</td><td>Education (generic)</td><td><span class="gap-pill warn">Low-Med — too broad</span></td></tr>
+        <tr><td class="t-strong">"Every time I try to do better I feel like I fail at it"</td><td>Reel / personal share</td><td>Vulnerability / Trust</td><td><span class="gap-pill warn">Med — builds warmth but attracts wrong avatar</span></td></tr>
+        <tr><td class="t-strong">Ad hook: "A quick metabolism reset that helps you burn fat and start your day off feeling healthy!"</td><td>Ad (inactive)</td><td>TOF generic</td><td><span class="gap-pill missing">Dead — too broad, wrong avatar signal</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ENTITY CLUSTERS -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Entity Clusters — Current vs. Needed</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Current Status</th><th>Emotional Driver</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Olympian Authority</td><td><span class="gap-pill missing">Underdeployed</span></td><td><span class="gap-pill info">Aspiration + Awe</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Ex-Athlete Identity Reactivation</td><td><span class="gap-pill missing">Gap — Does Not Exist</span></td><td><span class="gap-pill missing">Identity + Nostalgia</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Faith + Body Discipline</td><td><span class="gap-pill warn">Partial — Not Monetized</span></td><td><span class="gap-pill info">Conviction + Belonging</span></td><td><span class="badge warn">Build Second</span></td></tr>
+        <tr><td class="t-strong">Anti-Shrink / Performance Frame</td><td><span class="gap-pill missing">Gap — Not in Market</span></td><td><span class="gap-pill missing">Anger + Empowerment</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Pricing Filter Content</td><td><span class="gap-pill missing">Does Not Exist</span></td><td><span class="gap-pill missing">Repel + Attract</span></td><td><span class="badge fail">Critical — Build Now</span></td></tr>
+        <tr><td class="t-strong">Client Proof (Ex-Athlete Transformation)</td><td><span class="gap-pill warn">May Exist — Not Deployed</span></td><td><span class="gap-pill info">Hope + Social Proof</span></td><td><span class="badge warn">Build Second</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- META AD LIBRARY -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Meta Ad Library Findings</div>
+  <div class="card yellow-left mb-lg">
+    <p style="font-size:14px;margin-bottom:8px;"><strong>Ads confirmed — all inactive.</strong> Jordan pulled Cindy's ad library live during the hot seat. Three confirmed ad hooks (all inactive):</p>
+    <p style="font-size:13px;color:rgba(255,255,255,.7);margin-bottom:6px;">1. "A quick metabolism reset that helps you burn fat and start your day off feeling healthy!"<br>2. "Some hot takes I have as a faith-based fitness coach/athlete"<br>3. "Incorporating God into your fitness journey has been SUCH a game changer..."</p>
+    <p style="font-size:13px;color:rgba(255,255,255,.55);">All three hooks are too broad and do not filter for the premium buyer. None mentions the Olympian credential. None uses a pain-first, avatar-specific opening. These ads will attract general fitness seekers — not the high-achieving Christian woman who will pay $6,000. The creative library needs a complete rebuild before relaunch.</p>
+  </div>
+
+  <!-- ENTITY GAP SCORECARD -->
+  <div class="grid-3 mb-lg">
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:#F87171;line-height:1;">0</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Paid Entities</div>
+      <span class="badge fail" style="margin-top:8px;display:inline-block;">All Inactive</span>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:var(--yellow);line-height:1;">2</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Organic Angles Worth Keeping</div>
+      <span class="badge warn" style="margin-top:8px;display:inline-block;">Olympian + Faith Hot Takes</span>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">8–10</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">New Entities to Build</div>
+      <span class="badge warn" style="margin-top:8px;display:inline-block;">Complete Rebuild</span>
+    </div>
+  </div>
+
+  <!-- VERBATIM HOOK BANK -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">New Hook Bank — Jordan-Recommended Framework</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook Line</th><th>Type</th><th>Format Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"If you're looking for a quick fix, keep scrolling. If you want to train like an Olympian and actually change your body, stay."</td><td><span class="badge fail">Avatar Filter</span></td><td>Talking-head, direct to camera, authoritative tone</td></tr>
+        <tr><td class="t-strong">"Stop training to be smaller. Train to be an athlete. Here's the difference."</td><td><span class="badge fail">Anti-Shrink Villain</span></td><td>Talking-head or text-on-screen Reel</td></tr>
+        <tr><td class="t-strong">"I competed at 3 Olympics. Here's what I wish someone told me about training your body after 30."</td><td><span class="badge info">Olympian Authority</span></td><td>Talking-head, personal, story-led. 60–90 sec.</td></tr>
+        <tr><td class="t-strong">"Why do you look like an athlete when you're competing but struggle to maintain it after? Here's the metabolic truth."</td><td><span class="badge info">Ex-Athlete Hook</span></td><td>Talking-head or B-roll of training footage</td></tr>
+        <tr><td class="t-strong">"My faith and my fitness aren't separate things. Here's how God changed the way I train — and the results that followed."</td><td><span class="badge info">Faith + Result</span></td><td>Personal story Reel. Authentic, no production needed.</td></tr>
+        <tr><td class="t-strong">"The women who train in my program don't count calories. They train for performance. Here's why that leads to better fat loss."</td><td><span class="badge info">Mechanism + Result</span></td><td>Carousel or talking-head. Education-driven.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- COMPETITIVE & WHITE SPACE -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">White Space & Competitive Advantage</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>White Space Angle</th><th>Hook Concept</th><th>Why It's Uncontested</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"Ex-Athlete Recomposition"</td><td>"You used to be an athlete. Your body remembers. Here's how to get it back."</td><td>No one in faith-based coaching is targeting women who had elite athletic pasts. This is Cindy's exclusive territory.</td></tr>
+        <tr><td class="t-strong">"Training Principles from Olympic Camp for Everyday Women"</td><td>"What I learned at the Olympic training center — and how it applies to your 30-minute home workout."</td><td>Bridges elite credibility with accessible application. Combination no generic coach can replicate.</td></tr>
+        <tr><td class="t-strong">"Faith + Performance (Not Faith + Weight Loss)"</td><td>"God didn't call you to shrink. He called you to be strong, capable, and fully alive."</td><td>Repositions faith-fitness from guilt/shame (lose weight) to empowerment (become capable). Massive avatar resonance for Christian women who are tired of being told to just "be healthy."</td></tr>
+        <tr><td class="t-strong">Quiz Funnel: "Why Don't You Look Like An Athlete Anymore?"</td><td>Jordan's specific recommendation from hot seat. Drives to personalized result + call booking.</td><td>Hyper-specific to ex-athlete avatar. Self-qualifying — only people who identify as former athletes will click. Filters for dream clients automatically.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ENTITY BUILD QUEUE -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Priority Entity Build Queue</div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 01 · TOF · Avatar Filter · Authority</span><span class="badge fail">Build First</span></div>
+    <div class="entity-hook">"If you're looking for a quick fix, keep scrolling. If you want to train like an Olympian and actually transform your body — this is for you."</div>
+    <div class="entity-meta">Talking-head, direct to camera, high confidence. Leads with Olympian identity. Repels wrong buyers immediately. 30–45 sec. CTA: "Comment ELITE for my free athlete assessment."</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 02 · TOF · Anti-Shrink Villain · Empowerment</span><span class="badge fail">Build First</span></div>
+    <div class="entity-hook">"Stop training to be smaller. Train to be an athlete. Here is exactly what that change does to your body composition."</div>
+    <div class="entity-meta">Talking-head or text-on-screen Reel. Contrarian angle that filters for performance-minded women and repels calorie-obsessed audience that can't afford premium coaching.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 03 · TOF · Olympian Story · Aspiration</span><span class="badge fail">Build First</span></div>
+    <div class="entity-hook">"I competed at 3 Olympics. Here is the single biggest training lesson I wish I had known at 25."</div>
+    <div class="entity-meta">60–90 sec story-led Reel. Personal, authentic, no heavy production. End with CTA for assessment. This entity alone will likely outperform all current ads combined.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 04 · TOF · Faith + Performance · Conviction</span><span class="badge warn">Build Second</span></div>
+    <div class="entity-hook">"God didn't call you to shrink. He called you to be strong, capable, and fully alive. Here's what that looks like in your training."</div>
+    <div class="entity-meta">Talking-head, faith-forward. Targets Christian women specifically — will repel non-faith audiences and attract highly committed buyers. Strong niche filter.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 05 · MOF · Ex-Athlete Reactivation · Nostalgia</span><span class="badge warn">Build Second</span></div>
+    <div class="entity-hook">"You used to be an athlete. Your body hasn't forgotten. Here's how to reactivate that identity at 35, 40, or 45."</div>
+    <div class="entity-meta">Retargeting warm audiences. Carousel or talking-head. Uses ex-athlete identity as primary qualification hook. This is the quiz funnel entry point for the "Why Don't You Look Like An Athlete Anymore?" quiz.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 06 · BOF · Client Proof · Social Proof</span><span class="badge info">Build Third</span></div>
+    <div class="entity-hook">"How [Client Name], a former college athlete, went from exhausted and embarrassed to the strongest she's been since her playing days — at 41."</div>
+    <div class="entity-meta">Client testimonial video or before/after stack. Specific outcome, specific avatar, specific age. Best for retargeting quiz completers and video viewers. Must lead with avatar identifier, not just weight loss number.</div>
+  </div>
+
+  <div class="card orange-left" style="margin-top:24px;">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;">
+      <strong>Strategic Diagnosis.</strong> Cindy's creative problem is almost entirely upstream — the message is wrong before it gets to format or platform. The current creative library (generic metabolism content, broad faith integration, no Olympian lead) is built for a $300/month audience and will keep producing $300/month buyers. The rebuild is not complicated: lead with the Olympian credential in every hook, target ex-athletes and high-achieving Christian women explicitly, price to filter (not to welcome everyone), and build a quiz funnel as the cold traffic entry point. Jordan's recommendation to run the Offer Genie (JAN) tool is the correct first step — the entire offer architecture needs a rebuild before any creative investment makes sense.
+    </p>
+  </div>
+</section>
+
+<!-- ── S04: CONSTRAINT DIAGNOSIS ── -->
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div>
+  <div class="sec-heading">Constraint Diagnosis</div>
+  <div class="sec-divider"></div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 · Critical Constraint — Jordan Confirmed Live</div>
+    <div class="diag-title">Catastrophic Under-Pricing Destroys All Downstream Economics</div>
+    <div class="diag-desc">$1,200 for 4 months = $300/month. At this price, Cindy cannot run profitable ads (CAC would consume 100% of the offer value), cannot afford to hire support, cannot demonstrate enough commitment from clients to ensure they get results, and actively signals to premium buyers that she is a budget option. The pricing alone is doing more damage than any marketing problem. Jordan explicitly called this out in the live hot seat: "raise the price immediately."</div>
+    <div class="diag-fix"><strong>The Fix (Jordan's exact recommendation):</strong> Immediately raise to $3,500 for 4 months, or $6,000 for a 12-month program. Present both in the sales call — 4 months with an upgrade path, or 12 months for committed clients. Do NOT grandfather existing clients. New price applies to all new calls starting now. This single action will simultaneously improve call quality, close rate (premium pricing = more committed buyers), and margin for ad spend.</div>
+  </div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 · Critical Constraint</div>
+    <div class="diag-title">Audience-Offer Mismatch — Wrong Buyers Attracted by Current Creative</div>
+    <div class="diag-desc">Cindy's 66K audience was built primarily through her athletic competition content and general faith-fitness posts. This has attracted a following that skews toward young athletes and fitness enthusiasts who admire her Olympic achievement but are not the $6,000 coaching buyer. Her calls are full of people who "can't afford it" — but that is a symptom of attracting the wrong person, not of pricing too high. The offer needs to repel non-buyers actively.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Build a parallel content track of "pricing filter" content — explicitly target successful Christian women with careers and disposable income, explicitly mention the investment level in content, and use ex-athlete identity as the avatar qualifier. "If you were a competitive athlete who wants to feel and look like one again, I work with you." Most of the current 66K will self-select out — that is the goal. The 500 who self-select in are worth more than the 66,000 who admire from a distance.</div>
+  </div>
+
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 · Meaningful Gap</div>
+    <div class="diag-title">Olympian Credential Leading as Background — Not as Hook</div>
+    <div class="diag-desc">Three Olympic appearances is the single most powerful credibility signal available in the fitness coaching space. Most coaches would pay six figures for this authority if they could. Cindy has it and is leading with "metabolism reset tips." This is the equivalent of having a PhD from MIT and opening your business card with "I like to read." The credential needs to be in the first sentence of every ad, every bio, every DM opener, every sales call intro.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Rebuild every hook to lead with the Olympian identity. Every talking-head ad starts with: "I competed at 3 Olympics, and what I learned about how women's bodies actually respond to training..." Every bio says "3× Olympian coaching faith-driven women to train like athletes." Every DM automation message mentions it. This is the moat — use it as the primary attack surface.</div>
+  </div>
+
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 · Meaningful Gap</div>
+    <div class="diag-title">No Named Mechanism — Commoditized Offer Architecture</div>
+    <div class="diag-desc">Current offer: "coaching program at $1,200." No named protocol, no specific timeline with milestones, no unique mechanism that a competitor cannot copy. The result is that prospects are comparing Cindy to every other coach at similar or lower price points. A 3× Olympian with no named mechanism is competing against a 24-year-old Instagram influencer on price. This is structurally wrong.</div>
+    <div class="diag-fix"><strong>The Fix (Jordan + JAN recommendation):</strong> Run the Offer Genie (JAN) to rebuild. Working mechanism name: "The Olympian Protocol" or "The Athlete Recomposition Method." Structure: 12-week minimum with defined milestones (Week 4: performance baseline established; Week 8: composition shift measurable; Week 12: athlete identity reactivated). Premium positioning: "The same principles I used at the Olympics, rebuilt for your life at 35." Named mechanism = higher price = better clients = fewer calls needed.</div>
+  </div>
+
+  <div class="diag-card ok">
+    <div class="diag-rank">OK · Validated Asset — Protect This</div>
+    <div class="diag-title">Faith Integration + Athletic Authority Combination</div>
+    <div class="diag-desc">The specific combination of elite athletic credibility AND faith-based coaching is virtually uncontested in the online fitness space. Most faith coaches don't have Olympic medals. Most Olympian coaches don't lead with faith. This is an extremely defensible market position that creates deep loyalty, strong referral culture, and insulation from commodity competition. Do not abandon or dilute either pillar to chase a broader audience.</div>
+    <div class="diag-fix"><strong>Maintain:</strong> Keep both pillars prominent in all brand positioning. The faith angle is not a weakness for the right buyer — it is a pre-qualifying filter that increases commitment, retention, and lifetime value. Clients who share Cindy's faith values stay longer, refer more, and are more invested in the program outcomes.</div>
+  </div>
+</section>
+
+<!-- ── S05: ACTION PLAN ── -->
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div>
+  <div class="sec-heading">90-Day Action Plan</div>
+  <div class="sec-divider"></div>
+  <div class="card blue-left mb-md">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Priority override:</strong> Jordan's specific instruction from the live hot seat was to run the Offer Genie (JAN) tool FIRST before making any other changes. This is because every downstream decision — ad creative, content strategy, DM scripting — depends on the offer being correctly positioned. Do not skip Step 1.</p>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">1</div><div class="plan-body">
+      <div class="plan-title">Run JAN (Offer Genie) — Rebuild Offer Architecture (Days 1–7)</div>
+      <div class="plan-desc">Complete the IFCA Offer Scorecard Worksheet. Run through JAN. Output: new mechanism name ("The Olympian Protocol"), hyper-specific avatar statement (ex-athlete Christian women 28–45), revised pricing ($3,500 / 4mo or $6,000 / 12mo), specific outcome milestones by week, "from/to" transformation statement. This is the foundation — all creative, all DM scripts, all sales call language rebuilds from this document. Access JAN via the link on your audit hub page.</div>
+      <div class="plan-tags"><span class="plan-tag offer">Offer</span><span class="plan-tag sales">Priority</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">2</div><div class="plan-body">
+      <div class="plan-title">Raise Price on All New Calls Immediately (Days 1–3)</div>
+      <div class="plan-desc">Before JAN is even complete — raise the call booking page price to $3,500 minimum. Any calls already booked at the old price can be honored if desired, but no new bookings at $1,200. This is not a gradual transition. Every day at $1,200 is an expensive test proving the old model doesn't work. The price raise will immediately improve call quality even before any content or creative changes are made.</div>
+      <div class="plan-tags"><span class="plan-tag sales">Sales</span><span class="plan-tag offer">Immediate</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">3</div><div class="plan-body">
+      <div class="plan-title">Build Athlete Quiz Funnel (Days 8–21)</div>
+      <div class="plan-desc">Build a 5-question quiz: "Why Don't You Look Like An Athlete Anymore?" (Jordan's specific recommendation). Questions focus on former athletic identity, current training type, body composition goals, and faith/mindset. Result pages deliver a personalized "Athlete Type" (e.g., "You're a Recovering Competitor — here's what your body needs to reactivate"). CTA drives to free "Athlete Recomposition Strategy Session" booking. This is the cold traffic funnel entry point for all paid ads.</div>
+      <div class="plan-tags"><span class="plan-tag content">Funnel</span><span class="plan-tag ops">Build</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">4</div><div class="plan-body">
+      <div class="plan-title">Build 3 Core Entities & Test Warm Audience (Days 14–30)</div>
+      <div class="plan-desc">Record Entity 01 (Avatar Filter), Entity 02 (Anti-Shrink Villain), and Entity 03 (Olympian Story) using the new hook bank. Deploy initially as an organic content test: post all 3 hooks as Reels and measure which gets the most saves and DM inquiries. This tests the new messaging with the existing warm audience before spending ad dollars. Goal: identify the top-performing hook cluster before scaling to paid.</div>
+      <div class="plan-tags"><span class="plan-tag content">Creative</span><span class="plan-tag ads">Test</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">5</div><div class="plan-body">
+      <div class="plan-title">Launch Paid Ads Campaign — Warm List First (Days 30–60)</div>
+      <div class="plan-desc">Launch a retargeting campaign to the existing 66K warm audience first — this is free money before touching cold traffic. 1 ad set targeting page engagers, video viewers, and website visitors. Run the top 3 organic-tested entities as paid. Budget: $30–50/day. Target: book 3–5 high-ticket calls per week from warm audience. Once warm CAC is established, expand to cold broad + interest-stacked (Christian women, athletics, body recomposition) with the quiz landing page as the entry point.</div>
+      <div class="plan-tags"><span class="plan-tag ads">Ads</span><span class="plan-tag sales">Sales</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">6</div><div class="plan-body">
+      <div class="plan-title">Rebuild Content Strategy — Avatar Filtering at Scale (Days 1–90, Ongoing)</div>
+      <div class="plan-desc">Shift 50% of content to polarizing, avatar-filtering posts: "I don't work with everyone," "my clients have a specific profile," "this coaching is not for you if..." These posts will reduce vanity metrics (likes from the wrong audience) and increase DM quality dramatically. Maintain 3–5 Reels per week. New content buckets: 40% Olympian/Authority, 30% Anti-Shrink/Villain Frame, 20% Faith + Performance, 10% Client Proof. Stop generic fitness education content — it attracts broke audience.</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag offer">Avatar Filter</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> · Prospect Intelligence Audit · Confidential</div>
+  <div class="footer-tag">Jordan Dugger · Impact Fitness Coaching Academy · April 2026</div>
+</footer>
+
+</div>
+
+<script>
+const sections = document.querySelectorAll('.doc-section');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const active = document.querySelector(`.nav-link[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px 0px 0px' });
+sections.forEach(s => observer.observe(s));
+
+function copyIntelReport() {
+  const text = `CINDY SEMBER (OFILI) — CREATIVE INTELLIGENCE REPORT
+@cindyofili | 3× Olympian | Christian Women's Coaching | April 2026
+
+=== BRAND SNAPSHOT ===
+Avatar: High-achieving Christian women, ex-athlete identity, 28–45, want body recomposition + elite mindset
+Current pricing: $1,200 / 4 months (CRITICAL — needs immediate raise to $3,500–6,000)
+Mechanism: None currently — needs "The Olympian Protocol" or "Athlete Recomposition Method"
+Enemy: Shrink culture, calorie restriction, programs that make women smaller not stronger
+Funnel: DM keyword "ELITE" active — needs offer rebuild to match
+Followers: 66,000 | Posts: 1,600+ | Olympic credential: 3× Games
+
+=== VERBATIM HOOKS — CONFIRMED FROM ORGANIC ===
+1. "What competing at 3 Olympics has taught me" — Very High ad potential
+2. "5 weird signs you're ACTUALLY losing fat while building muscle" — High
+3. "Some hot takes I have as a faith-based fitness coach/athlete" — High (add specificity)
+(All current paid ad hooks: INACTIVE and too broad — full creative rebuild required)
+
+=== NEW HOOKS TO BUILD ===
+1. "If you're looking for a quick fix, keep scrolling. If you want to train like an Olympian..."
+2. "Stop training to be smaller. Train to be an athlete. Here is exactly what that change does."
+3. "I competed at 3 Olympics. Here is the single biggest training lesson I wish I had known at 25."
+4. "God didn't call you to shrink. He called you to be strong, capable, and fully alive."
+5. "You used to be an athlete. Your body hasn't forgotten. Here's how to reactivate that at 40."
+6. "Why don't you look like an athlete anymore? Answer 5 questions." (Quiz funnel entry)
+
+=== ENTITY CLUSTERS — ALL NEED BUILDING ===
+1. Olympian Authority — Aspiration/Awe — TOF cold — PRIORITY
+2. Anti-Shrink / Villain Frame — Anger/Empowerment — TOF — PRIORITY
+3. Ex-Athlete Reactivation — Identity/Nostalgia — TOF/MOF — PRIORITY
+4. Faith + Performance — Conviction/Belonging — TOF — Second priority
+5. Pricing Filter Content — Repel/Attract — Organic — CRITICAL BUILD NOW
+6. Client Proof (ex-athlete transformation) — Hope — BOF retargeting
+
+=== META AD LIBRARY ===
+All 3 confirmed ads INACTIVE. All hooks too broad — no Olympian credential lead. Full rebuild required.
+
+=== PRIMARY CONSTRAINTS ===
+P1: $1,200 / 4 months = catastrophic under-pricing (should be $3,500–6,000)
+P1: Wrong audience attracted by current creative — repels premium buyers
+P2: Olympian credential not leading hooks — used as background, not primary authority signal
+P2: No named mechanism — commoditized offer competing on price against generic coaches
+
+=== JORDAN'S LIVE HOT SEAT RECOMMENDATIONS ===
+- Run JAN (Offer Genie) FIRST before any creative changes
+- Raise price immediately — $3,500 (4mo) or $6,000 (12mo)
+- Build quiz funnel: "Why Don't You Look Like An Athlete Anymore?"
+- Lead every hook with the Olympian credential
+- Create avatar-filtering / polarizing content to repel wrong buyers
+- Develop "The Olympian Protocol" as named mechanism`;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target.closest('button');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Copied!';
+    setTimeout(() => btn.innerHTML = orig, 2000);
+  });
+}
+</script>
+</body>
+</html>
