@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LeeAnn Potochney — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.olympian-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(232,119,34,.12));border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.olympian-badge .ob-icon{font-size:24px;}
+.olympian-badge .ob-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit &middot; April 2026</div>
+  <div class="hero-name">LeeAnn <span>Potochney</span></div>
+  <div class="hero-title">@amplifyptp &middot; Amplify Physical Therapy &amp; Performance &middot; PT + Strength Coach &middot; Starter&rarr;Growth</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">~$8K</div><div class="hs-label">Est. Monthly (In-Person)</div></div>
+    <div class="hs"><div class="hs-val blue">$700+</div><div class="hs-label">In-Person Rate / Month</div></div>
+    <div class="hs"><div class="hs-val orange">12</div><div class="hs-label">Hybrid + Remote Clients</div></div>
+    <div class="hs"><div class="hs-val green">$15K</div><div class="hs-label">Monthly Revenue Goal</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    LeeAnn Potochney is a licensed Physical Therapist (4 years) and Strength Coach (15+ years), currently charging <strong>$700+/month for in-person services</strong> with 12 hybrid and remote clients. She has a new baby (5 months), wants to transition to a remote model to be home more, and has a goal of $15K/month. She is already running paid ads &#8212; they are just underperforming. The dual PT + strength coaching credential is a genuine competitive moat. The problem: her entire brand is positioned as a <strong>local PT clinic</strong> while her growth potential is entirely in <strong>online performance coaching</strong>. The website, the ads, and the messaging all need to speak to who she actually is.
+  </p>
+</div><nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What's Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav><section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div><div class="sec-heading">What's Working</div><div class="sec-divider"></div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">&#127891;</div><div><div class="win-label">Dual Credential: PT + 15-Year Strength Coach &#8212; Rare and Defensible</div><div class="win-desc">LeeAnn's 4-year PT license combined with 15+ years of strength coaching experience is an extremely rare combination. Most PTs don't train people for performance. Most strength coaches aren't licensed in clinical rehab. This dual credential builds trust with athletes who need both &#8212; and who are willing to pay premium prices for a coach who doesn't make them choose.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128293;</div><div><div class="win-label">$700+/Month In-Person Rate &#8212; Price Confidence Is Already There</div><div class="win-desc">LeeAnn is already charging $700+/month in-person &#8212; which is above average for local coaching and proves she can hold a premium price point. Translating this to a $2,500-3,000 online 12-week program does not require a mindset shift about her value. The price confidence already exists &#8212; it just needs to be positioned correctly in an online offer architecture.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#9889;</div><div><div class="win-label">3-Step Framework Already Articulated &#8212; Mechanism Exists</div><div class="win-desc">The Ease the Ache &#8594; Address the Root Cause &#8594; Amplify Your Movement framework is a clear, logical, differentiated 3-step mechanism. It communicates both the clinical process (diagnosis, root cause) and the performance outcome (amplify movement). This just needs to be named, packaged as "The Amplify Resilience Protocol," and presented as a proprietary system on a landing page and in content.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128293;</div><div><div class="win-icon">&#128293;</div><div><div class="win-label">Running Ads &#8212; Infrastructure and Budget Mindset Already Present</div><div class="win-desc">LeeAnn is already allocating budget to paid advertising &#8212; she just knows the performance "can be better." This is a significant advantage over coaches who have never run an ad. The mindset and infrastructure are already there; the fix is in the targeting, creative, and destination &#8212; not in convincing her to invest in paid traffic for the first time.</div></div></div></div>
+    <div class="win-card"><div class="win-icon">&#128101;</div><div><div class="win-label">25+ Career Clients &#8212; Case Studies and Proof Already Exist</div><div class="win-desc">25+ career clients means LeeAnn has transformation stories. Even if she hasn't collected formal testimonials, she has outcomes she can speak to. These case studies &#8212; especially any involving athletes returning to sport after injury &#8212; are the most powerful social proof for her avatar and should be deployed immediately in content, ads, and the landing page.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128176;</div><div><div class="win-label">Goal + Timeline + Motivation Are Clearly Defined</div><div class="win-desc">$15K/month goal, remote model to be home with a new baby, clear motivation for making the transition quickly. LeeAnn has both the professional foundation and personal urgency to execute rapidly. This combination &#8212; credential + price confidence + defined goal + urgent personal driver &#8212; makes her one of the highest-probability execution candidates in this cohort.</div></div></div>
+  </div>
+</section>
+
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div><div class="sec-heading">Business Phase Diagnosis</div><div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item active"><div class="phase-label">Current Phase &#9660;</div><div class="phase-name">Starter</div><div class="phase-range">Online: Pre-Defined</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K-$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Potential</div><div class="phase-name">Scale</div><div class="phase-range">$15K-$100K+/mo</div></div>
+  </div>
+  <div class="card orange-left mb-md"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>The positioning gap:</strong> LeeAnn's website and ads position her as "Amplify Physical Therapy" &#8212; a local, in-person PT practice. Her growth goal and the most compelling reason someone would pay $700+/month (or $2,500+ for an online program) is her performance coaching identity. Online clients are not searching for a local PT. They are searching for a performance coach who also understands injury at a clinical level. The positioning shift is the entire unlock.</p></div>
+  <div class="math-box">
+    <div class="math-box-title">The Math &#8212; Path to $15K/Month Remote</div>
+    <div class="math-row"><span class="lbl">Current est. revenue (12 clients at $700+/mo avg)</span><span class="val orange">~$8,400/month (in-person heavy)</span></div>
+    <div class="math-row"><span class="lbl">Online program target price</span><span class="val">$2,500-3,000 / 12-week Amplify Resilience Protocol</span></div>
+    <div class="math-row"><span class="lbl">Clients needed online at $2,500 to reach $15K goal</span><span class="val green">6 online clients/month (ongoing)</span></div>
+    <div class="math-row"><span class="lbl">Backend continuation after 12 weeks</span><span class="val">$700-1,000/month maintenance coaching</span></div>
+    <div class="math-row"><span class="lbl">Ads currently running (underperforming)</span><span class="val green">Already invested &#8212; needs optimization, not replacement</span></div>
+    <div class="math-row"><span class="lbl">25+ career clients available for testimonials</span><span class="val green">Social proof exists &#8212; just needs collection and deployment</span></div>
+  </div>
+</section>
+
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03 &#8212; Updated April 2026</div><div class="sec-heading">Creative Intelligence Report</div><div class="sec-divider"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;font-size:14px;color:rgba(255,255,255,.55);">Full intelligence synthesis across brand positioning, website content, Meta Ad Library, entity gaps, and hook bank.</p>
+    <button onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;"><span>&#11014;</span> Copy for Workshop</button>
+  </div>
+  <div class="card orange-left mb-lg">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:12px;"><strong>Executive Summary.</strong> LeeAnn has the credentials, the price confidence, the mechanism framework, and the personal urgency to build a $15K/month remote coaching business. The primary bottleneck is that her entire digital presence &#8212; website, ads, likely Instagram &#8212; is positioned as a local PT clinic rather than an online performance coaching brand. A prospect searching for remote coaching who lands on the Amplify PTP website sees "local PT services" and leaves. The repositioning is the entire fix.</p>
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Highest-leverage insight:</strong> LeeAnn's most powerful white space is attacking the "just stop training" advice that traditional PTs give athletes. As a licensed PT herself, she can say what no generic fitness coach can say: <em>"I'm a licensed physical therapist and I am telling you to keep training &#8212; just train smarter."</em> This statement simultaneously validates her clinical credibility AND positions her against the incumbent PT advice that has frustrated every athletic client she has ever had.</p>
+  </div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Brand Positioning</td><td>"Performance Physical Therapy for Active Adults" &#8212; local clinic framing</td><td>"Online Performance Coaching for Athletes Who Refuse to Stop Training" &#8212; niche down to specific activity (runners, CrossFitters, etc.)</td></tr>
+        <tr><td class="t-strong">Named Mechanism</td><td">3-step framework exists but unnamed in content/ads</td><td>"The Amplify Resilience Protocol" &#8212; package and name the existing framework formally on landing page, in content, and in all ad creative</td></tr>
+        <tr><td class="t-strong">Enemy Frame</td><td>Not deployed</td><td>"Your PT told you to stop training. I'm a licensed PT and I'm telling you the opposite. Here is why." &#8212; the most powerful credibility move available</td></tr>
+        <tr><td class="t-strong">Avatar Specificity</td><td>"Active adults" &#8212; too broad for online targeting</td><td>Choose one: runners dealing with knee/hip issues, CrossFitters with shoulder problems, or recreational athletes with chronic recurring injuries. Narrow the avatar to one for initial ad campaigns.</td></tr>
+        <tr><td class="t-strong">Paid Ads</td><td>Running but underperforming &#8212; likely wrong page, wrong hook, wrong destination</td><td>Audit existing campaigns: check which page they run under, what the hooks are, and where they land. Rebuild with: (1) correct page; (2) specific pain-point hook; (3) landing page destination (not website homepage).</td></tr>
+        <tr><td class="t-strong">Instagram</td><td>@amplifyptp &#8212; likely private or inactive</td><td>Make public immediately. Bio: "Licensed PT + Strength Coach &#8594; Helping athletes stay strong without stopping training &#8594; Comment RESILIENCE for free assessment." All content drives to mechanism and DM automation.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Blog Content &#8212; Signal Hooks (Website)</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Blog Title / Signal</th><th>Hook Potential</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"Still Training With Knee Pain? Good. Now Let's Make It Better"</td><td><span class="gap-pill opportunity">Very High &#8212; Contrarian Permission</span></td><td>Convert to Reel hook immediately. "Your PT told you to stop. I say keep going. Here is how."</td></tr>
+        <tr><td class="t-strong">"Why You Shouldn't Have to Choose Between Strength and Pain-Free Training"</td><td><span class="gap-pill opportunity">High &#8212; Core Mechanism Hook</span></td><td>Core positioning statement for ads and bio. "You don't have to choose. Here is the system."</td></tr>
+        <tr><td class="t-strong">"Unlock Your Running Potential with a 3D Running Assessment"</td><td><span class="gap-pill warn">Medium &#8212; Niche Service Hook</span></td><td>Signals runner avatar &#8212; may be the right niche to lead with in ads. Test as avatar-specific hook.</td></tr>
+        <tr><td class="t-strong">"Your PT said stop training. I said train smarter." (BUILD)</td><td><span class="gap-pill opportunity">Very High &#8212; Licensed PT Authority</span></td><td>Lead hook for all paid ads and organic content. Most differentiated statement available.</td></tr>
+        <tr><td class="t-strong">"I became a PT and strength coach because I refused to give athletes the wrong answer." (BUILD)</td><td><span class="gap-pill opportunity">High &#8212; Origin Story + Villain Frame</span></td><td>Personal brand authority content. Origin story format resonates strongly with this avatar.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Meta Ad Library Findings</div>
+  <div class="card yellow-left mb-lg"><p style="font-size:14px;margin-bottom:6px;"><strong>No visible ads under "Amplify PTP" or "Amplify Physical Therapy."</strong> Ads may be running under a different page name. This is consistent with LeeAnn's statement that ads are underperforming &#8212; if they are running under a page with limited social proof or a name mismatch, Facebook's algorithm has reduced their distribution.</p><p style="font-size:13px;color:rgba(255,255,255,.55);">Priority action: Audit existing ad account. Check: (1) which page the ads are running under; (2) what the hook is; (3) where the ad destination lands. The most common cause of underperforming ads for a professional with this profile is a strong credential but weak hook leading to a homepage destination instead of a specific offer page.</p></div>
+  <div class="grid-3 mb-lg">
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--yellow);line-height:1;">?</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Ads Running (Unverified)</div><span class="badge warn" style="margin-top:8px;display:inline-block;">Audit First</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">3</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Blog Hooks to Convert</div><span class="badge warn" style="margin-top:8px;display:inline-block;">Reel Format</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">5-7</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">New Entities to Build</div><span class="badge warn" style="margin-top:8px;display:inline-block;">Villain + Protocol</span></div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Priority Entity Build Queue</div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 01 &middot; TOF &middot; Licensed PT Authority Villain Hook</span><span class="badge fail">Build First</span></div><div class="entity-hook">"Your PT said stop training. I'm a licensed PT and a strength coach and I am telling you the opposite. Here is why."</div><div class="entity-meta">The most credible version of the anti-rest villain hook available. Only works if the coach IS a licensed PT. This is LeeAnn's unfair advantage. Talking-head, on-camera, confident, 45-60 sec. CTA: "Comment RESILIENCE for my free athletic pain assessment."</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 02 &middot; TOF &middot; Knee Pain Training Permission</span><span class="badge fail">Build First</span></div><div class="entity-hook">"Still training with knee pain? Good. Now let's make it better." (From her blog title &#8212; turn this into a reel.)</div><div class="entity-meta">This blog title is a perfect reel hook. It gives the athlete permission to keep training &#8212; which is exactly what they want to hear &#8212; while positioning LeeAnn as the guide to doing it correctly. Low production, high relevance, high conversion potential.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 03 &middot; TOF &middot; "You Don't Have to Choose" Mechanism Intro</span><span class="badge fail">Build First</span></div><div class="entity-hook">"You don't have to choose between being pain-free and being strong. Most PTs haven't been trained in performance. I was trained in both. Here is what that changes."</div><div class="entity-meta">Core mechanism differentiation. Positions dual credential as the unique advantage. Drives directly to "The Amplify Resilience Protocol" program. Talking-head or text-overlay reel. Works for both organic and paid.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 04 &middot; MOF &middot; Case Study &#8212; Athlete Return to Sport</span><span class="badge warn">Build Second</span></div><div class="entity-hook">"[Runner/athlete] came to me with [specific injury] after being told to take 6 months off. Here is what happened over 12 weeks when we trained through it correctly."</div><div class="entity-meta">Case study with specific injury, specific client type (runner/lifter), specific outcome (returned to sport, hit PR, pain-free). The specificity is the social proof. Deploy from existing 25+ career clients.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 05 &middot; TOF &middot; Origin Story &#8212; Why Dual Credential</span><span class="badge warn">Build Second</span></div><div class="entity-hook">"I became a physical therapist AND a strength coach because I kept giving athletes an answer I didn't believe in. Here is the moment that changed everything."</div><div class="entity-meta">Personal brand authority content. Origin story format builds the deepest trust with a skeptical medical-adjacent audience. 60-90 sec. High save and share rate from this avatar.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 06 &middot; TOF &middot; New Mom Context (Optional &#8212; Audience Expansion)</span><span class="badge info">Consider Month 2</span></div><div class="entity-hook">"I'm a PT, a strength coach, and a new mom. Here is how I'm approaching my own comeback &#8212; and what I'm doing differently from what I'd tell most people."</div><div class="entity-meta">Optional persona expansion that adds personal relatability. Attracts postpartum athlete avatar which is a separate but large underserved market. Only introduce after core PT/performance content is established &#8212; don't dilute the avatar too early.</div></div>
+  <div class="card orange-left" style="margin-top:28px;"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Strategic diagnosis:</strong> LeeAnn has everything needed for a $15K/month remote coaching business &#8212; except the right positioning. The fix is a 3-step repositioning: (1) narrow the avatar from "active adults" to a specific sport/activity niche; (2) rename the mechanism ("The Amplify Resilience Protocol") and build a landing page around it; (3) pivot all content and ad creative from "local PT clinic" to "online performance coach for athletes who refuse to stop." The dual PT credential is the most powerful differentiator in the market. It just needs to be pointed at the right audience with the right enemy frame.</p></div>
+</section>
+
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div><div class="sec-heading">Constraint Diagnosis</div><div class="sec-divider"></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 &middot; Primary Constraint</div><div class="diag-title">No Defined Online Offer &#8212; Remote Coaching Has No Price or Structure</div><div class="diag-desc">Despite having 2 remote clients and a goal of $15K/month remotely, LeeAnn does not have a defined online coaching program with a name, price, duration, structure, or funnel. Her website markets in-person PT sessions. Without a defined online offer, every ad click and every organic impression that reaches a prospect who doesn't live in Westfield, NJ, is immediately wasted.</div><div class="diag-fix"><strong>The Fix:</strong> Build "The Amplify Resilience Protocol" &#8212; 12-week online coaching program at $2,500-3,000. Program structure maps to her existing framework: Phase 1 (Ease the Ache &#8212; pain assessment and initial movement correction), Phase 2 (Address Root Cause &#8212; biomechanical programming), Phase 3 (Amplify Your Movement &#8212; performance progression). Build one landing page, one booking link, one price. Update website to feature this as the primary online offer.</div></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 &middot; Primary Constraint</div><div class="diag-title">Website Positions as Local PT Clinic &#8212; Not Online Coaching Brand</div><div class="diag-desc">The amplifyptp.com website is beautifully designed but positioned entirely as a local in-person physical therapy practice. Headlines, services, and CTAs all point toward in-person sessions in Westfield, NJ. A prospect in California, Texas, or anywhere outside New Jersey who finds this site via a paid ad immediately understands this is not for them and leaves. The website is actively working against the remote revenue goal.</div><div class="diag-fix"><strong>The Fix:</strong> Update homepage headline to: "Online Performance Coaching for Athletes Who Refuse to Stop Training." Add a primary CTA for the online program above the fold. Keep local PT services as a secondary section for local clients. Add "Now Accepting Online Coaching Clients Nationwide" banner. This single homepage change will immediately improve ad-to-conversion rate for online traffic.</div></div>
+  <div class="diag-card p2"><div class="diag-rank">P2 &middot; Meaningful Gap</div><div class="diag-title">Paid Ads Underperforming &#8212; Root Cause Not Yet Diagnosed</div><div class="diag-desc">LeeAnn is already investing in paid advertising and recognizes the performance is suboptimal. Without seeing the actual campaigns, the most common causes at this profile level are: (1) ads running under a different page name with lower social proof; (2) hooks are service-description rather than pain-first; (3) ad destination is the website homepage rather than a specific offer landing page; (4) audience targeting is too broad geographically or demographically.</div><div class="diag-fix"><strong>The Fix:</strong> Audit checklist: (1) Confirm all ads are running under the correct page with active followers; (2) Rewrite all hooks to lead with specific pain callout or villain frame; (3) Build a dedicated landing page for the online offer and redirect all ad traffic there; (4) Narrow targeting to specific sport/activity interests + 25-50 age range + nationwide for online program. Run existing + new hooks in parallel for 30 days with $30-50/day budget.</div></div>
+  <div class="diag-card p3"><div class="diag-rank">P3 &middot; Watch Item</div><div class="diag-title">Instagram Private/Inaccessible &#8212; Organic Funnel May Be Invisible</div><div class="diag-desc">@amplifyptp was inaccessible during the audit &#8212; either private, login-gated, or very low activity. For a coach running paid ads, an inaccessible Instagram profile means prospects who click the ad and check the profile for social proof find either nothing or a barrier. This directly reduces ad-to-call conversion rate regardless of how good the ad creative is.</div><div class="diag-fix"><strong>The Fix:</strong> Make @amplifyptp public immediately. Update bio: "Licensed PT + 15yr Strength Coach &#8594; Helping athletes stay strong without stopping &#8594; Comment RESILIENCE for free athletic pain assessment." Minimum 3 posts live before running ads (so prospects who check the profile see active content). Add DM automation for "Comment RESILIENCE" trigger.</div></div>
+  <div class="diag-card ok"><div class="diag-rank">OK &middot; Validated Asset &#8212; Protect This</div><div class="diag-title">Dual Credential + In-Person Proof + $700+/Month Pricing Confidence</div><div class="diag-desc">LeeAnn's combination of a PT license, 15+ years of strength coaching, and 25+ career clients is a genuine moat. Her current in-person pricing of $700+/month demonstrates she can hold premium pricing without flinching. These three assets &#8212; credential, experience, price confidence &#8212; are the foundation of a $15K/month online coaching business. They do not need to be changed. They need to be deployed in the right channel with the right positioning.</div><div class="diag-fix"><strong>Maintain:</strong> Keep the dual credential as the centerpiece of all messaging. Keep the premium pricing &#8212; do not discount for online clients. The online offer should be priced at $2,500-3,000 based on outcome value, not on the assumption that online coaching is worth less than in-person. Her credential justifies premium online pricing and it is the most important asset to protect as the business repositions.</div></div>
+</section>
+
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div><div class="sec-heading">90-Day Action Plan</div><div class="sec-divider"></div>
+  <div class="card blue-left mb-md"><p style="font-size:13px;margin-bottom:0;"><strong>Priority order:</strong> Fix the ads destination before creating new content. Audit existing campaigns and redirect traffic to a landing page instead of the PT clinic homepage. This will generate more calls from existing ad spend before any new creative is built.</p></div>
+  <div class="plan-item"><div class="plan-num">1</div><div class="plan-body"><div class="plan-title">Define Online Offer + Build Landing Page (Days 1-10)</div><div class="plan-desc">Create "The Amplify Resilience Protocol" &#8212; 12-week online coaching program at $2,500-3,000. Map to 3-phase framework: Ease the Ache (pain audit + initial programming), Address Root Cause (biomechanical correction + strength integration), Amplify Your Movement (performance phase + prevention). Build landing page: mechanism description, 3 client transformation outcomes, outcome statement, and "Book Free Athletic Assessment" CTA. Choose one avatar to target for initial campaign: runners, CrossFitters, or general recreational athletes with recurring injuries.</div><div class="plan-tags"><span class="plan-tag offer">Offer Build</span><span class="plan-tag sales">Day 1</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">2</div><div class="plan-body"><div class="plan-title">Audit + Rebuild Existing Paid Ads (Days 7-14)</div><div class="plan-desc">Audit existing ad campaigns: verify page name, hook copy, and landing destination. Pause all ads pointing to the PT clinic homepage. Redirect all traffic to the new online offer landing page. Rewrite ad hooks using the villain frame: "Your PT said stop training. I'm a licensed PT. Here is what I actually prescribe." Test 2-3 pain-specific hooks in parallel. Targeting: nationwide, specific sport interests, 25-50 age range. Budget: current spend redirected to new creative. Goal: 3-5 qualified calls per week within 14 days of relaunch.</div><div class="plan-tags"><span class="plan-tag ads">Ad Audit</span><span class="plan-tag ops">Redirect Traffic</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">3</div><div class="plan-body"><div class="plan-title">Make Instagram Public + Install DM Automation (Days 1-7)</div><div class="plan-desc">Make @amplifyptp public immediately and update bio: "Licensed PT + Strength Coach &#8594; Helping athletes stay strong without stopping &#8594; Comment RESILIENCE for free assessment." Post 3 content pieces before running any ads. Set up ManyChat with "Comment RESILIENCE" trigger: auto-DM with free "Pain-Free Athlete Assessment" PDF + booking link follow-up. Every piece of ad creative and organic content drives to "Comment RESILIENCE" CTA from this point forward.</div><div class="plan-tags"><span class="plan-tag ops">Instagram Fix</span><span class="plan-tag content">DM Automation</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">4</div><div class="plan-body"><div class="plan-title">Build Licensed PT Villain Content &#8212; Core Hook Series (Days 7-45)</div><div class="plan-desc">Record and post 3 core villain/authority hooks: (1) "Your PT said stop training. I'm a licensed PT and I say the opposite." (2) "Still training with knee pain? Good. Now let's make it better." (3) "You don't have to choose between pain-free and performance." These are the 3 highest-converting organic hooks available based on her unique credential. 3-5 posts/week, face-on-camera, confident delivery. Also convert the 3 blog titles to short-form reels in their exact language &#8212; these titles already work as hooks.</div><div class="plan-tags"><span class="plan-tag content">Villain Hooks</span><span class="plan-tag ads">Organic to Paid</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">5</div><div class="plan-body"><div class="plan-title">Collect + Deploy Case Studies From 25+ Career Clients (Days 14-45)</div><div class="plan-desc">Reach out to the 10 most transformation-significant clients from LeeAnn's career and request a 2-minute video or written testimonial answering: "What was your situation before, what happened during the program, and what has changed?" Prioritize clients with specific injuries (knee, shoulder, back) who returned to sport or hit performance milestones. Deploy these immediately in the landing page and as organic content. Even 3 strong case studies will meaningfully increase ad conversion rate and call-to-close rate.</div><div class="plan-tags"><span class="plan-tag ops">Proof Collection</span><span class="plan-tag sales">Close Rate Boost</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">6</div><div class="plan-body"><div class="plan-title">Scale Ad Budget + Cold Traffic Expansion (Days 45-90)</div><div class="plan-desc">After landing page is live, ads are rebuilt with villain hooks, and first 3-5 online clients are signed: scale budget to $75-100/day. Expand from warm retargeting to cold interest-stacked: sport-specific (running, powerlifting, CrossFit, recreational sports) + PT/sports medicine interests + nationwide. Monitor CPL target under $15 for this niche. If close rate holds above 35% on calls, increase budget monthly at 20-30% increments through Day 90.</div><div class="plan-tags"><span class="plan-tag ads">Scale</span><span class="plan-tag sales">Cold Traffic</span></div></div></div>
+</section><footer>
+  <div class="footer-brand"><strong>IFCA</strong> &middot; Prospect Intelligence Audit &middot; Confidential</div>
+  <div class="footer-tag">Jordan Dugger &middot; Impact Fitness Coaching Academy &middot; April 2026</div>
+</footer>
+</div><script>
+const sections=document.querySelectorAll('.doc-section');
+const navLinks=document.querySelectorAll('.nav-link');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(l=>l.classList.remove('active'));const id=entry.target.getAttribute('id');const active=document.querySelector('.nav-link[href="#'+id+'"]');if(active)active.classList.add('active');}});},{threshold:0.2,rootMargin:'-60px 0px 0px 0px'});
+sections.forEach(s=>observer.observe(s));
+function copyIntelReport(){navigator.clipboard.writeText("LEEANN POTOCHNEY - CREATIVE INTELLIGENCE REPORT\n@amplifyptp | Amplify Physical Therapy and Performance | PT + Strength Coach | April 2026\n\nBRAND SNAPSHOT\nAvatar: Active adults who want to stay athletic without recurring pain - needs narrowing to specific sport/activity niche\nCurrent pricing: $700+/month in-person. Online offer not yet defined or priced.\nMechanism: Amplify Resilience Protocol (needs formal naming) - 3-step: Ease the Ache / Address Root Cause / Amplify Your Movement\nEnemy: Traditional PT that says stop training and rest\nAd status: Running ads but underperforming - page name mismatch in library search\nGoal: $15K/month, remote model, 5-month-old baby\n\nCONFIRMED BLOG HOOKS (content signal)\n1. Still Training With Knee Pain? Good. Now Let's Make It Better\n2. Why You Shouldn't Have to Choose Between Strength and Pain-Free Training\n3. Unlock Your Running Potential with a 3D Running Assessment\n\nNEW HOOKS TO BUILD\n1. Your PT said stop training. I said train smarter. Here is the difference.\n2. Most PTs treat the symptom. I fix the root cause so you never have to stop.\n3. You don't have to choose between being pain-free and being strong. Here is proof.\n4. I became a PT and a strength coach because I refused to give my clients the wrong answer.\n\nPRIMARY CONSTRAINTS\nP1: Online offer undefined - no remote coaching program with price, structure, or funnel\nP1: Website positioned as local PT clinic, not online coaching brand\nP2: Ads underperforming - wrong page, wrong messaging, wrong audience targeting\nP3: Instagram private/inaccessible - organic funnel likely invisible to prospects").then(()=>{const btn=event.target.closest('button');const orig=btn.innerHTML;btn.innerHTML='&#10003; Copied!';setTimeout(()=>btn.innerHTML=orig,2000);});}
+</script>
+</body>
+</html>
