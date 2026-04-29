@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>James Porter — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.credential-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(220,38,38,.12),rgba(74,127,165,.10));border:1px solid rgba(220,38,38,.3);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.credential-badge .cb-icon{font-size:24px;}
+.credential-badge .cb-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#F87171;}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit · April 2026</div>
+  <div class="hero-name">James <span>Porter</span></div>
+  <div class="hero-title">@jmpporter · NW Tactical Methods · Law Enforcement Fitness · Pre-Revenue Starter</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">$0</div><div class="hs-label">Online Revenue</div></div>
+    <div class="hs"><div class="hs-val blue">21K</div><div class="hs-label">Followers (Wrong Brand)</div></div>
+    <div class="hs"><div class="hs-val red">0</div><div class="hs-label">Paid Online Clients</div></div>
+    <div class="hs"><div class="hs-val green">$10-20K</div><div class="hs-label">Extra Monthly Goal</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    James Porter is an active law enforcement officer working ~65 hours/week and currently running a <strong>free 8-week program for his unit</strong> as a live proof-of-concept. The tactical fitness niche is underserved and deeply skeptical of outsiders. James's unfair advantage is that <strong>he IS the avatar</strong> — an active LE officer who trains under real-world duty demands. Zero online revenue, zero paid clients, and a generic social presence on the wrong brand account are the only things standing between him and a business. Jordan's math: <strong>one new client per month phases him down to part-time within 6 months.</strong>
+  </p>
+</div>
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What's Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div><div class="sec-heading">What's Working</div><div class="sec-divider"></div>
+  <div class="credential-badge"><div class="cb-icon">🚔</div><div class="cb-text">Active LE Officer — He IS the Avatar. Unmatched Credibility With a Skeptical Demographic.</div></div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">🎯</div><div><div class="win-label">He IS the Avatar — Credibility No Competitor Can Manufacture</div><div class="win-desc">Active LE officers are among the most skeptical fitness demographics alive. They've been sold generic "get jacked" programs by people who've never worn a duty belt or wrestled a suspect at 3 AM. James's active status isn't just a credential — it's the only thing that makes this audience stop scrolling. No competitor can fake it. It's 100% authentic and 100% defensible.</div></div></div>
+    <div class="win-card"><div class="win-icon">🧪</div><div><div class="win-label">Live Beta Test In Progress — Unit Program Generating Real Proof</div><div class="win-desc">Running a structured 8-week program for his actual LE unit is a live beta generating real testimonial data from peers in the exact avatar demographic. These are not invented case studies — they're fellow officers. When the program ends, these testimonials become the most credible social proof possible in this market.</div></div></div>
+    <div class="win-card"><div class="win-icon">💼</div><div><div class="win-label">$12K/Month LE Income — Zero Pressure, Full Runway</div><div class="win-desc">James doesn't need to replace income immediately. His salary lets him build correctly — launch the right offer, create real content, and hold firm on $500/month pricing without desperation discounting. Most coaches price low because they need cash fast. James can wait for the right buyers because his foundation is already set.</div></div></div>
+    <div class="win-card"><div class="win-icon">📱</div><div><div class="win-label">21K Follower Warm Audience Exists — Needs Content Pivot</div><div class="win-desc">21K followers isn't zero. The audience is generic fitness, not tactical — but it's warm. A content pivot to LE-specific villain hooks will cause the right subset to self-select. The followers represent months of content flywheel credit that most pre-revenue coaches don't have access to on day one.</div></div></div>
+    <div class="win-card"><div class="win-icon">🧠</div><div><div class="win-label">Jordan-Validated Niche — Market Confirmed, White Space Confirmed</div><div class="win-desc">Jordan explicitly endorsed this niche in the live hot seat. Tactical fitness is a growing market (MTNTOUGH, Fit Responder confirm demand), but 1-on-1 high-ticket personalized coaching is wide open. All existing competitors are low-ticket app subscriptions — zero accountability, zero customization, zero active-officer credibility.</div></div></div>
+    <div class="win-card"><div class="win-icon">🔢</div><div><div class="win-label">Best Unit Economics in This Cohort — 1 Client/Month to Phase Down</div><div class="win-desc">Jordan's math: 1 new client/month phases James down to part-time LE in 6 months. 24 total clients replaces his full salary. At $500/month × 12-month commitment, each client generates $6,000 ACV. LE officers frame this as career protection — not a fitness purchase — which dramatically reduces price resistance at the right positioning.</div></div></div>
+  </div>
+</section>
+
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div><div class="sec-heading">Business Phase Diagnosis</div><div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item active"><div class="phase-label">Current Phase ▼</div><div class="phase-name">Starter</div><div class="phase-range">Pre-Revenue Online</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K–$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Potential</div><div class="phase-name">Scale</div><div class="phase-range">$15K–$100K+/mo</div></div>
+  </div>
+  <div class="card orange-left mb-md"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Jordan's math:</strong> James needs only 1 new client per month to begin phasing down LE hours. The LE demographic is a career-protection buyer — $500/month is an investment in job performance and longevity, not a vanity purchase. When positioned correctly, the price has almost zero resistance from the right prospect. The path to $10K/month is shorter for James than almost any other prospect in this cohort.</p></div>
+  <div class="math-box">
+    <div class="math-box-title">The Math — Part-Time to Full Income Replacement</div>
+    <div class="math-row"><span class="lbl">Current online revenue</span><span class="val orange">$0 — pre-launch</span></div>
+    <div class="math-row"><span class="lbl">Jordan's FE price recommendation</span><span class="val">$500/month · 12-month commitment ($6,000 ACV)</span></div>
+    <div class="math-row"><span class="lbl">Backend continuation after 12 months</span><span class="val">$350/month · 6-month program</span></div>
+    <div class="math-row"><span class="lbl">New clients/month to phase down to part-time in 6mo</span><span class="val green">1 new client/month</span></div>
+    <div class="math-row"><span class="lbl">Total clients to match $12K/mo LE salary</span><span class="val green">24 concurrent clients</span></div>
+    <div class="math-row"><span class="lbl">Full LTV per client (FE + BE)</span><span class="val green">$6,000 + $2,100 = $8,100</span></div>
+    <div class="math-row"><span class="lbl">Social proof available by Day 30</span><span class="val green">Unit program testimonials — zero cost</span></div>
+  </div>
+</section>
+
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03 — Updated April 2026</div><div class="sec-heading">Creative Intelligence Report</div><div class="sec-divider"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;font-size:14px;color:rgba(255,255,255,.55);">Full intelligence synthesis across brand positioning, content audit, Meta Ad Library, entity gaps, and hook bank.</p>
+    <button onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;"><span>&#11014;</span> Copy for Workshop</button>
+  </div>
+  <div class="card orange-left mb-lg">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:12px;"><strong>Executive Summary.</strong> James Porter has an exceptional niche, a credibility advantage no competitor can replicate, and unit economics that make $10K/month achievable within 6 months. The only thing standing between him and revenue is execution. He has never recorded himself on camera, NW Tactical Methods has zero digital presence, and his 21K followers are attached to a generic account that doesn't speak to LE at all.</p>
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Highest-leverage insight:</strong> The moment James appears on camera in uniform talking about why the average cop's fitness routine will get them hurt — that video circulates through LE Facebook groups and department group chats without a dollar of ad spend. <strong>The audience will come to him. He just has to show up on camera.</strong></p>
+  </div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Core Avatar</td><td>Generic fitness — no LE specificity</td><td>Active patrol officers, 30–45, 5–20 years on the job, who know their current fitness is a liability and want tactical conditioning that matches real duty demands</td></tr>
+        <tr><td class="t-strong">Named Mechanism</td><td>None — "NW Tactical Methods" is a brand, not a program</td><td>"The Duty Ready Protocol" — 12-month career protection coaching covering tactical conditioning, shift nutrition, injury prevention, mental resilience</td></tr>
+        <tr><td class="t-strong">Enemy Frame</td><td>Not deployed</td><td>The "bro split" trap — generic gym programming that ignores duty belt weight, shift fatigue, and explosive-demand scenarios. "Your gym routine will not save you when it counts."</td></tr>
+        <tr><td class="t-strong">Brand Presence</td><td>@jmpporter / @justmusclepower_fitness — 21K generic fitness</td><td>Pivot account bio: "Active LE Officer · Tactical Performance Coach · Training Cops to Outlast the Shift · Comment DUTY"</td></tr>
+        <tr><td class="t-strong">Content Format</td><td>Gym selfies, motivational quotes — zero LE-specific content</td><td>Daily selfie rant on camera. Villain content. Green screen reaction reels reacting to viral clips of officers in fitness situations. Jordan's exact prescription.</td></tr>
+        <tr><td class="t-strong">Price Signal</td><td>Free (unit beta)</td><td>$500/month · 12-month commitment. Career protection framing: "Your department paid $50K to train you. Invest $6K to stay on the job."</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Content Pillars — Jordan's Prescribed Framework for LE Niche</div>
+  <div class="card yellow-left mb-sm"><p style="font-size:13px;margin-bottom:0;"><strong>Zero LE-specific content exists yet.</strong> Jordan's three prescribed pillars for this demographic: (1) Opinions and villain content — call out generic gym culture as dangerous for LE; (2) Personal story — active officer perspective on what tactical training actually demands; (3) False beliefs of LE officers — "I just need to pass the yearly fitness test" is the deadliest misconception in this niche.</p></div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook / Concept</th><th>Format</th><th>Pillar</th><th>Potential</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"Your 5-day bro split isn't going to help you when you're wrestling a suspect at 3 AM wearing 30 lbs of gear."</td><td>Selfie Rant Reel</td><td>Villain / Pain-First</td><td><span class="gap-pill opportunity">Very High — Lead With This</span></td></tr>
+        <tr><td class="t-strong">Green screen reaction to viral clip of officer in fitness challenge or pursuit</td><td>Green Screen Reel</td><td>Villain / Social Commentary</td><td><span class="gap-pill opportunity">Very High — Jordan's Viral Lever</span></td></tr>
+        <tr><td class="t-strong">"The yearly fitness test is the lowest bar in your career. Passing it doesn't mean you're ready when it counts."</td><td>Talking-head Reel</td><td>False Belief Destruction</td><td><span class="gap-pill opportunity">High — Identity Challenge</span></td></tr>
+        <tr><td class="t-strong">"What happens to your body after 10 years of shift work and no tactical programming"</td><td>Carousel or Reel</td><td>Fear / Long-Term Pain</td><td><span class="gap-pill opportunity">High — Career Threat Frame</span></td></tr>
+        <tr><td class="t-strong">"How I eat for performance on a 12-hour night shift — no meal prep, just what works"</td><td>Carousel / Talking-head</td><td>Practical Education</td><td><span class="gap-pill warn">Med-High — MOF Value Hook</span></td></tr>
+        <tr><td class="t-strong">"Week 5 update: my unit's 8-week tactical program — here's what surprised me"</td><td>Raw selfie video</td><td>Social Proof / Journey</td><td><span class="gap-pill warn">Med — Trust builder for 21K warm audience</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Entity Clusters — Current vs. Needed</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Status</th><th>Emotional Driver</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Active LE Identity — "I Am This Avatar"</td><td><span class="gap-pill missing">Does Not Exist Online</span></td><td><span class="gap-pill missing">Trust + Credibility</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Bro Split Villain / Generic Fitness Trap</td><td><span class="gap-pill missing">Not Deployed</span></td><td><span class="gap-pill missing">Anger + Validation</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Shift Work Performance Education</td><td><span class="gap-pill missing">Gap — Not Created</span></td><td><span class="gap-pill info">Practical + Aspirational</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Green Screen Reaction Content</td><td><span class="gap-pill missing">Not Created</span></td><td><span class="gap-pill missing">Outrage + Urgency</span></td><td><span class="badge warn">Viral Lever — Build Week 2</span></td></tr>
+        <tr><td class="t-strong">Unit Program Social Proof</td><td><span class="gap-pill warn">In Progress (Week 5)</span></td><td><span class="gap-pill info">Hope + Trust</span></td><td><span class="badge warn">Document Now</span></td></tr>
+        <tr><td class="t-strong">Injury Prevention / Career Longevity</td><td><span class="gap-pill missing">Gap</span></td><td><span class="gap-pill missing">Fear + Long-Term Pain</span></td><td><span class="badge info">Build Month 2</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Meta Ad Library Findings</div>
+  <div class="card yellow-left mb-lg"><p style="font-size:14px;margin-bottom:6px;"><strong>Zero ads — expected at this stage.</strong> No digital ad history for NW Tactical Methods. Consistent with pre-revenue, pre-brand status.</p><p style="font-size:13px;color:rgba(255,255,255,.55);">Jordan's prescription: organic first, warm LE network second, paid ads at Day 60+. LE communities share content rapidly through internal Facebook groups — one viral organic hook is worth more than a cold traffic budget in the first 90 days. Don't spend on ads before the unit program testimonials are collected and the content library has 20+ face-to-camera posts.</p></div>
+  <div class="grid-3 mb-lg">
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:#F87171;line-height:1;">0</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Paid Entities</div><span class="badge fail" style="margin-top:8px;display:inline-block;">Organic First</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--yellow);line-height:1;">0</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">LE-Specific Content Posts</div><span class="badge warn" style="margin-top:8px;display:inline-block;">Start Day 1</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">6–8</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Entities to Build</div><span class="badge warn" style="margin-top:8px;display:inline-block;">Face-First Format</span></div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Priority Entity Build Queue</div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 01 · TOF · Core Villain Hook</span><span class="badge fail">Build First</span></div><div class="entity-hook">"Your 5-day bro split isn't going to help you when you're wrestling a suspect at 3 AM wearing 30 lbs of gear. You need tactical conditioning, not just muscle."</div><div class="entity-meta">Selfie rant, raw, on camera. No production. Pure conviction. Jordan's exact prescribed hook. CTA: "Comment DUTY for my free tactical assessment."</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 02 · TOF · Active LE Identity Open</span><span class="badge fail">Build First</span></div><div class="entity-hook">"I'm an active law enforcement officer. Here's what the fitness industry gets completely wrong about training for my job."</div><div class="entity-meta">First-person authority statement. Leads with active LE credential — the one thing that makes this audience listen. 45–60 sec direct camera.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 03 · TOF · Green Screen Reaction · Viral Lever</span><span class="badge fail">Build First</span></div><div class="entity-hook">React to a viral clip of officer in a fitness challenge or pursuit situation. Commentary: "Here's what I'd change about this officer's training — and why it matters on duty."</div><div class="entity-meta">Jordan's specific recommendation. Takes 10 min to produce. High virality in LE Facebook groups and department group chats.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 04 · MOF · False Belief · Fitness Test Frame</span><span class="badge warn">Build Second</span></div><div class="entity-hook">"Passing the yearly fitness test is the lowest bar in your career. It means nothing about your readiness when it actually counts."</div><div class="entity-meta">Identity challenge. Spoken directly to officers who think they're in shape because they passed the annual test. High conviction, direct camera.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 05 · MOF · Shift Work Nutrition Education</span><span class="badge warn">Build Second</span></div><div class="entity-hook">"How I eat for peak performance on a 12-hour night shift — no meal prep, no complicated macros, just what actually works on duty."</div><div class="entity-meta">High practical value. One of the most searched topics in LE health communities. Establishes expertise beyond just workouts. Carousel or talking-head format.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 06 · BOF · Unit Program Results / Proof</span><span class="badge info">Capture at Day 45</span></div><div class="entity-hook">"8 weeks with my unit: here's what changed, what surprised me, and what the data showed about tactical readiness."</div><div class="entity-meta">First paid-offer-ready social proof. Collect video + written testimonials from every willing unit participant at program end. These are the BOF anchor for first paid ad campaign.</div></div>
+  <div class="card orange-left" style="margin-top:28px;"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Strategic diagnosis:</strong> James's highest-leverage move is to show up on camera as an active LE officer and say the thing every cop already believes but no online coach has ever said to them: "Your gym routine will not save you when your life depends on it." That statement — delivered in uniform or in a squad car or at a range — will travel through every LE community group on Facebook and every department break room without a single ad dollar. The audience is already there. The content is not.</p></div>
+</section>
+
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div><div class="sec-heading">Constraint Diagnosis</div><div class="sec-divider"></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 · Primary Constraint</div><div class="diag-title">Zero Online Offer — No Revenue Architecture Exists</div><div class="diag-desc">No paid offer, no landing page, no booking mechanism, no call funnel. James is in the conceptual phase. An idea with no offer is a hobby. Until there's a specific high-ticket program with a price, commitment structure, and a way to book a call, every hour of content is building an audience with nowhere to go.</div><div class="diag-fix"><strong>The Fix:</strong> Build "The Duty Ready Protocol" — 12-month commitment, $500/month, covering tactical conditioning, shift-work nutrition, LE-specific injury prevention, and mental resilience. One landing page, one booking link, one price. Done before any other step. Can use GHL or a simple page builder.</div></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 · Primary Constraint</div><div class="diag-title">Never On Camera — Invisible to His Entire Target Market</div><div class="diag-desc">James has never recorded himself for social content. In high-ticket coaching targeting a skeptical demographic, this is the single most critical bottleneck. LE officers don't buy from anonymous Instagram pages. They buy from coaches they trust. Trust requires face, voice, and conviction. Generic gym selfies do not communicate "active LE tactical coach."</div><div class="diag-fix"><strong>The Fix (Jordan's prescription):</strong> Start daily selfie rant content immediately. Day 1 video: "I'm a working law enforcement officer and I'm building a tactical coaching program for cops." No studio, no production, no script. Raw authenticity is the hook. Post daily for 30 days minimum. The first 10 videos will be uncomfortable. The 11th will feel normal.</div></div>
+  <div class="diag-card p2"><div class="diag-rank">P2 · Meaningful Gap</div><div class="diag-title">Brand Fragmentation — NW Tactical Methods Has Zero Digital Footprint</div><div class="diag-desc">NW Tactical Methods doesn't exist anywhere online. His 21K followers are on a generic brand that actively contradicts his specialized positioning. When a LE officer searches "NW Tactical Methods" after hearing about James, they find nothing. The brand disconnect is killing conversions before a prospect even gets to a pitch.</div><div class="diag-fix"><strong>The Fix:</strong> Pivot @jmpporter bio immediately: "Active LE · Tactical Performance Coach · Training Cops to Outlast the Shift · Comment DUTY." Begin posting LE-specific content without waiting to build a new account. Some generic followers will leave — that's the avatar filter working correctly.</div></div>
+  <div class="diag-card p3"><div class="diag-rank">P3 · Watch Item</div><div class="diag-title">Time Constraint — 65-Hour LE Week Creates Content Friction</div><div class="diag-desc">Working 65 hours/week leaves limited time for content and coaching. Manageable at 1–5 clients but becomes a real bottleneck as the business scales. The goal is to use coaching income to reduce LE hours — which means the first 6 months of content must happen alongside full LE workload.</div><div class="diag-fix"><strong>The Fix:</strong> Jordan's prescribed selfie rant format is the lowest-production format available — 5–10 min/day, phone camera, no editing. Batch 5 videos on a day off. The minimum viable content volume to build initial momentum is achievable within the LE schedule if format stays simple.</div></div>
+  <div class="diag-card ok"><div class="diag-rank">OK · Validated Asset — Protect This</div><div class="diag-title">Active LE Status + Live Unit Beta = Proof No Competitor Has</div><div class="diag-desc">The combination of active officer status and a live peer coaching program is an asset that cannot be manufactured. When the 8-week unit program ends, James will have real before/after data from real law enforcement officers — the most powerful social proof in this niche.</div><div class="diag-fix"><strong>Maintain and document:</strong> Record every week of the unit program on camera. Collect formal video and written testimonials at program completion. These become the core BOF proof assets for the first paid ad campaign and the warm LE network outreach pitch.</div></div>
+</section>
+
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div><div class="sec-heading">90-Day Action Plan</div><div class="sec-divider"></div>
+  <div class="card blue-left mb-md"><p style="font-size:13px;margin-bottom:0;"><strong>Priority override:</strong> Jordan was explicit — start content immediately, even before the offer is fully built. The selfie rant starts Day 1. Offer build happens in parallel. Do not wait to have everything perfect before appearing on camera.</p></div>
+  <div class="plan-item"><div class="plan-num">1</div><div class="plan-body"><div class="plan-title">Start Daily Selfie Rant Content — Day 1, No Excuses (Days 1–90)</div><div class="plan-desc">Record and post the first video today. Subject: "I'm a working law enforcement officer building a tactical fitness coaching program for cops. Here's why the fitness industry is failing LE officers." No script, no production. 60–90 seconds. Pivot @jmpporter bio immediately. Jordan's three content pillars: (1) Villain content against generic gym culture; (2) Personal story from active duty perspective; (3) False beliefs LE officers hold about fitness. Minimum 5 face-to-camera posts per week.</div><div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag sales">Day 1</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">2</div><div class="plan-body"><div class="plan-title">Build "The Duty Ready Protocol" Offer + Landing Page (Days 1–14)</div><div class="plan-desc">Define the program: 12-month commitment, $500/month, covering tactical conditioning, shift-work nutrition, LE injury prevention, and mental resilience under operational stress. Build one landing page with program description, unit beta social proof, and booking link for a 20-minute "Duty Assessment" call. Add "Comment DUTY" as CTA on all content from Day 1. Offer must be live before warm network outreach begins at Day 30.</div><div class="plan-tags"><span class="plan-tag offer">Offer Build</span><span class="plan-tag ops">Priority</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">3</div><div class="plan-body"><div class="plan-title">Collect Unit Program Testimonials Before Day 45</div><div class="plan-desc">The 8-week unit program ends around Day 30. Before the final session, ask every participant for: (1) a 2–3 minute video testimonial answering "What was your fitness level before, what changed, and what would you tell another officer considering this?"; (2) a written testimonial with any measurable outcomes. Even 3 strong testimonials from real fellow officers is enough to launch paid outreach. These are the highest-credibility proof assets available in this niche.</div><div class="plan-tags"><span class="plan-tag ops">Proof Capture</span><span class="plan-tag sales">Critical</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">4</div><div class="plan-body"><div class="plan-title">Green Screen Reaction Content — LE Viral Lever (Days 14–45)</div><div class="plan-desc">Find 3–5 viral video clips of officers in fitness-related situations. Record green screen reactions: "Here's what I see as a working officer and fitness coach — and what this person needs to change." These travel through LE Facebook groups, union pages, and department chats without ad spend. Jordan specifically prescribed this format for LE audiences. One viral reaction reel can generate more qualified LE leads than a month of paid budget.</div><div class="plan-tags"><span class="plan-tag content">Viral Content</span><span class="plan-tag ads">Organic Distribution</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">5</div><div class="plan-body"><div class="plan-title">Warm LE Network Launch — Colleagues, Academy Contacts, Department Network (Days 30–60)</div><div class="plan-desc">Direct outreach to every LE professional James knows: unit colleagues, academy classmates, department contacts, LE Facebook group members. Message: "I'm launching a 12-month tactical performance coaching program for officers — founding member pricing for the first 10. I just finished running this with my unit. 20-minute call to see if it's a fit?" Goal: 3–5 paid founding clients from warm LE network before Day 60. These clients fund the ad budget for Phase 3.</div><div class="plan-tags"><span class="plan-tag sales">Warm Launch</span><span class="plan-tag ops">Zero Ad Spend</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">6</div><div class="plan-body"><div class="plan-title">Launch Meta Ads — Warm Retargeting First, Then Cold LE Targeting (Days 60–90)</div><div class="plan-desc">After 3+ organic clients are signed and 20+ face-to-camera posts are live, launch paid retargeting to account engagers and website visitors. Budget: $20–30/day. Test top 2 performing organic hooks as paid ads. Interest targeting: law enforcement, first responders, military fitness. LE audience is smaller — expect CPL $12–20. If close rate holds above 40%, scale budget monthly through Day 90.</div><div class="plan-tags"><span class="plan-tag ads">Paid Traffic</span><span class="plan-tag sales">Scale</span></div></div></div>
+</section>
+
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> · Prospect Intelligence Audit · Confidential</div>
+  <div class="footer-tag">Jordan Dugger · Impact Fitness Coaching Academy · April 2026</div>
+</footer>
+</div>
+<script>
+const sections=document.querySelectorAll('.doc-section');
+const navLinks=document.querySelectorAll('.nav-link');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(l=>l.classList.remove('active'));const id=entry.target.getAttribute('id');const active=document.querySelector('.nav-link[href="#'+id+'"]');if(active)active.classList.add('active');}});},{threshold:0.2,rootMargin:'-60px 0px 0px 0px'});
+sections.forEach(s=>observer.observe(s));
+function copyIntelReport(){const text="JAMES PORTER — CREATIVE INTELLIGENCE REPORT\n@jmpporter | NW Tactical Methods | LE Tactical Fitness | April 2026\n\n=== BRAND SNAPSHOT ===\nAvatar: Active patrol officers 30–45, 5–20 years on job, who know their fitness is a liability\nPricing: $0 now → Jordan target $500/mo 12-month commitment ($6,000 ACV)\nMechanism: The Duty Ready Protocol — tactical conditioning, shift nutrition, injury prevention, mental resilience\nEnemy: The bro split trap — generic gym programming that ignores duty demands\nCredential: ACTIVE LE OFFICER — unmatched trust with skeptical demographic\n\n=== HOOKS — JORDAN PRESCRIBED ===\n1. Your 5-day bro split will not help you wrestling a suspect at 3 AM in 30 lbs of gear\n2. I am an active LE officer. Here is what the fitness industry gets wrong about training for my job.\n3. The yearly fitness test is the lowest bar in your career\n4. Shift-work nutrition: how I eat on a 12-hour night shift\n5. Green screen reactions to viral LE fitness clips — Jordan's virality lever\n\n=== JORDAN'S HOT SEAT PRESCRIPTIONS ===\n- Start daily selfie rant content immediately — before offer is even built\n- Pillars: (1) villain/opinions (2) personal story (3) false beliefs of LE officers\n- Green screen reaction reels to viral LE content\n- Offer: $500/mo 12-month commitment\n- Backend: $350/mo 6-month continuation\n- Math: 1 new client/month = phase down to part-time in 6 months\n- Warm LE network launch before Meta ads";
+navigator.clipboard.writeText(text).then(()=>{const btn=event.target.closest('button');const orig=btn.innerHTML;btn.innerHTML='&#10003; Copied!';setTimeout(()=>btn.innerHTML=orig,2000);});}
+</script>
+</body>
+</html>
