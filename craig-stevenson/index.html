@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Craig Stevenson — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.olympian-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(232,119,34,.12));border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.olympian-badge .ob-icon{font-size:24px;}
+.olympian-badge .ob-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit · April 2026</div>
+  <div class="hero-name">Craig <span>Stevenson</span></div>
+  <div class="hero-title">The Total Coach · Phoenix AZ · 3,000+ Lifetime Clients · Scale-Ready (Offline) / Starter (Online)</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">3,000+</div><div class="hs-label">Lifetime Clients Coached</div></div>
+    <div class="hs"><div class="hs-val blue">100</div><div class="hs-label">Current Active Clients</div></div>
+    <div class="hs"><div class="hs-val red">0</div><div class="hs-label">Online Clients / Active Ads</div></div>
+    <div class="hs"><div class="hs-val green">$15K</div><div class="hs-label">Monthly Online Goal</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Craig Stevenson has coached <strong>over 3,000 people</strong> in his lifetime. No other prospect in this cohort comes close. He has 100 active clients right now in Phoenix. He is working toward 30 high-ticket online clients at $500+/month with a cap of 25 hours per week. His problem is not credentials, not results, and not work ethic. His problem is that <strong>3,000 transformations are essentially invisible online</strong> — and sitting inside his phone is the most powerful reactivation asset in this entire group.
+  </p>
+</div>
+
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What’s Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div>
+  <div class="sec-heading">What’s Working</div>
+  <div class="sec-divider"></div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">🏆</div><div>
+      <div class="win-label">3,000+ Lifetime Clients — Unmatched Proof Volume</div>
+      <div class="win-desc">3,000 transformed bodies is not a stat — it is a content library, a reactivation list, a testimonial bank, and an authority signal that no competitor can match. Every one of those clients is a potential case study, a potential referral source, and a potential testimonial. Most coaches spend years trying to build the credibility Craig already has. The asset exists. It just needs to be activated.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">💪</div><div>
+      <div class="win-label">100 Active Clients — Operating Business + Cash Flow</div>
+      <div class="win-desc">100 active clients in small group training means Craig has a profitable, operating business today. This is a strong foundation to transition from — not a desperation play. He can take time to build the online model correctly without needing it to work in week one. The offline business funds the online launch.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">📍</div><div>
+      <div class="win-label">Strong Offline Brand in Phoenix</div>
+      <div class="win-desc">3,000+ lifetime clients in one market means Craig has earned a strong local reputation and word-of-mouth engine. This is the validation proof that the system works at scale — not just for one or two people, but for thousands with varying backgrounds, schedules, and starting points. This offline credibility is the entire story of the online brand.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">📱</div><div>
+      <div class="win-label">Clear Goal and Timeline — Specific Target Already Set</div>
+      <div class="win-desc">30 online high-ticket clients at $500+/month, capped at 25 hours per week. This is an unusually clear and specific goal for a prospect at this stage. Clear goals mean the math is easy to run and the path is straightforward. The constraint is not strategy — it is execution of a known playbook applied to a new channel.</div>
+    </div></div>
+  </div>
+</section>
+
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div>
+  <div class="sec-heading">Business Phase Diagnosis</div>
+  <div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item active"><div class="phase-label">Online Phase ▼</div><div class="phase-name">Starter</div><div class="phase-range">$0 Online / Pre-Launch</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K–$15K/mo Online</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Potential</div><div class="phase-name">Scale</div><div class="phase-range">$15K–$100K+/mo</div></div>
+  </div>
+  <div class="math-box">
+    <div class="math-box-title">The 9-Word Email Math — Before Any Ad Is Spent</div>
+    <div class="math-row"><span class="lbl">Past clients with contact info (conservative estimate)</span><span class="val orange">500–1,000 reachable contacts</span></div>
+    <div class="math-row"><span class="lbl">9-word email open rate (avg for warm lists)</span><span class="val">60–80%</span></div>
+    <div class="math-row"><span class="lbl">Response rate to personalized reactivation</span><span class="val">5–15%</span></div>
+    <div class="math-row"><span class="lbl">Projected responses from 500 contacts at 10%</span><span class="val orange">50 warm leads</span></div>
+    <div class="math-row"><span class="lbl">Calls booked at 40% of responses</span><span class="val">20 booked calls</span></div>
+    <div class="math-row"><span class="lbl">Close rate at 35%</span><span class="val green">7 clients from first email</span></div>
+    <div class="math-row"><span class="lbl">Revenue at $500/mo x 6-month contract per client</span><span class="val green">$21,000 contracted</span></div>
+    <div class="math-row"><span class="lbl">Ad spend required</span><span class="val green">$0</span></div>
+  </div>
+  <div class="card orange-left mb-md">
+    <strong style="color:rgba(255,255,255,.9);">The Strategic Sequence:</strong>
+    <p style="font-size:13px;color:rgba(255,255,255,.6);margin-top:8px;line-height:1.6;">Most coaches try to run ads before exhausting their warm market. Craig’s warm market is one of the largest in this cohort. The correct sequence is: (1) 9-word reactivation to past client list. (2) Build case-study content from the responses. (3) Run ads only after proving the online model works with warm traffic. The risk is zero. The upside is 7–15 clients contracted before spending a dollar on paid traffic.</p>
+  </div>
+</section>
+
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03</div>
+  <div class="sec-heading">Creative Intelligence Report</div>
+  <div class="sec-divider"></div>
+
+  <div class="card orange-left mb-md">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;">Executive Summary</div>
+    <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;">Craig’s creative situation is paradoxical: he has <strong>3,000 stories to tell and is telling none of them online</strong>. The digital presence is fragmented and difficult to find. Zero active ads. The confirmed handle @thetotalcoach has approximately 21K followers — the only meaningful existing digital asset. Every one of those 3,000 clients is a case study waiting to be written. The entire content strategy should be built on this: real people, real results, real specificity. “How I helped [Name] lose 30 lbs while working 60 hours a week.” This format scales infinitely because the source material never runs out.</p>
+  </div>
+
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Brand</td><td>The Total Coach — fragmented online presence</td><td>Consolidate everything under The Total Coach. Unify social + website + offers under one brand.</td></tr>
+        <tr><td class="t-strong">Avatar</td><td">Busy adults” (too broad)</td><td>Busy adults 35–55 who have tried coaching before and it didn’t stick — the “I’ve tried everything” buyer</td></tr>
+        <tr><td class="t-strong">Authority Hook</td><td>Not visible online</td><td>“I’ve transformed 3,000 bodies. Here is the system that works.” — leads every hook</td></tr>
+        <tr><td class="t-strong">Mechanism</td><td>None named</td><td>“The Total Transformation System” or “The 3,000 Protocol” — named after the proof volume</td></tr>
+        <tr><td class="t-strong">Content type</td><td>Fragmented / unclear</td><td>100% case-study-driven: “How I helped [real person] do [specific thing] in [specific time]”</td></tr>
+        <tr><td class="t-strong">First move</td><td>Ads / content</td><td>9-word email to past client list FIRST. Ads come after warm market is tapped.</td></tr>
+        <tr><td class="t-strong">DM CTA</td><td>None visible</td><td>“Comment RESULTS for the protocol I’ve used with 3,000 clients”</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">The 9-Word Email Script</div>
+  <div class="card green-left mb-md">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--green);text-transform:uppercase;margin-bottom:10px;">Send This to Every Past Client This Week</div>
+    <div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:12px;font-style:italic;">“Are you still interested in getting back in shape?”</div>
+    <p style="font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;">That’s it. 9 words. No pitch. No link. No offer. Just a direct, personal question to someone who already knows Craig and trusted him before. The replies come back as “yes,” “actually yes I’ve been meaning to reach back out,” and “what are you offering?” From there, the sales conversation is warm, fast, and high-converting because the trust is already banked. Personalize the subject line with their first name. Send from Craig’s personal email, not a marketing platform.</p>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Entity Clusters</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Stage</th><th>Hook Driver</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Case Study Content: “How I helped [real person]...”</td><td>TOF Cold</td><td>Trust / Social Proof</td><td><span class="badge fail">Missing — Build First</span></td></tr>
+        <tr><td class="t-strong">Authority Statement: “3,000 bodies transformed”</td><td>TOF Cold</td><td>Awe / Authority</td><td><span class="badge fail">Missing — Lead Every Hook</span></td></tr>
+        <tr><td class="t-strong">Anti-“I’ve tried everything” Villain Frame</td><td>TOF</td><td>Validation / Anger</td><td><span class="badge fail">Missing</span></td></tr>
+        <tr><td class="t-strong">Phoenix success stories (local proof)</td><td>MOF</td><td>Relatability</td><td><span class="badge warn">Stories exist — undocumented</span></td></tr>
+        <tr><td class="t-strong">Busy adult / time-constraint content</td><td>TOF / MOF</td><td>Relatability</td><td><span class="badge fail">Missing</span></td></tr>
+        <tr><td class="t-strong">The Total Transformation System reveal</td><td>MOF / BOF</td><td>Curiosity</td><td><span class="badge fail">Not named yet</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Meta Ad Library</div>
+  <div class="card blue-left mb-md">
+    <strong style="color:rgba(255,255,255,.85);">Zero active ads</strong>
+    <p style="font-size:13px;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.6;">No active or historical ads found. This is expected — Craig has operated on reputation and word-of-mouth for his entire career. The first ad to run is not a cold creative from scratch. It is a boosted version of the best-performing case study reel from the organic content sprint. Build the organic case studies first, identify the one with the highest engagement, then amplify with $20–30/day in paid spend.</p>
+  </div>
+
+  <div class="grid-3 mb-md">
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--orange);">3,000+</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Stories Available to Tell</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--red);">0</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Stories Currently Online</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--green);">$0</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Ad Spend to First 7 Clients</div>
+    </div>
+  </div>
+
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Verbatim Hook Bank</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>#</th><th>Hook</th><th>Format</th><th>Driver</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">1</td><td>“Stop hiring fitness coaches who have only ever trained themselves. I’ve transformed over 3,000 bodies. Here is the exact system that actually works for busy adults.”</td><td>Talking head reel</td><td>Authority + villain frame</td></tr>
+        <tr><td class="t-strong">2</td><td>“How I helped [Name] lose 30 lbs while working 60 hours a week” [use real client with permission]</td><td>Case study reel or carousel</td><td>Social proof + specificity</td></tr>
+        <tr><td class="t-strong">3</td><td>“3,000 clients. Every single one of them said the same thing before we started: ‘I’ve tried everything.’ Here’s what they hadn’t tried.”</td><td>Talking head, 60s</td><td>Pattern interrupt + authority</td></tr>
+        <tr><td class="t-strong">4</td><td>“If you’ve worked with a personal trainer before and it didn’t stick, it wasn’t your fault. Here’s what actually needed to change.”</td><td>Direct address reel</td><td>Validation + re-engagement</td></tr>
+        <tr><td class="t-strong">5</td><td>“Comment RESULTS for the exact protocol I’ve used with 3,000 clients in Phoenix — including what most trainers skip entirely.”</td><td>CTA reel</td><td>Lead capture</td></tr>
+        <tr><td class="t-strong">6</td><td>“I’ve been coaching in Phoenix for [X] years. Here are the 3 things I see busy adults get wrong about fitness every single time.”</td><td>List-format reel</td><td>Education + authority</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card orange-left mb-md">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;">Strategic Diagnosis</div>
+    <p style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.7;">Craig is sitting on the most underleveraged proof base in this cohort. <strong>The 9-word email comes first</strong> — it costs nothing, converts warm, and will likely generate more clients in 72 hours than most coaches generate in a month of posting. After that, the content machine is simple: one case study reel per week, each opening with the 3,000-client authority statement. By Month 2, Craig will have enough warm social proof content to run as ads. The path to 30 online clients is clearer here than almost anyone else in this cohort.</p>
+  </div>
+
+  <div style="text-align:center;margin-bottom:8px;">
+    <button onclick="copyCraigIntel()" style="background:var(--orange);border:none;border-radius:8px;padding:12px 28px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;">
+      📋 Copy for Workshop
+    </button>
+  </div>
+</section>
+
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div>
+  <div class="sec-heading">Constraint Diagnosis</div>
+  <div class="sec-divider"></div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 — Critical / Growth Blocker</div>
+    <div class="diag-title">3,000 Client Stories Are Completely Invisible Online</div>
+    <div class="diag-desc">The most credible coaching credential in this cohort — 3,000 lifetime transformed clients — does not appear anywhere in the discoverable digital presence. No case studies. No transformation stories. No “3,000 clients” stat in the bio, the content, or the ads. A prospective online coaching client searching for a coach has no way to discover this proof. Craig’s offline reputation is earned. His online reputation does not yet exist — and it should be built entirely on the volume and specificity of this proof.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Every piece of content for the next 90 days opens with a 3,000-client reference or leads with a specific client case study. The bio must state the number. The first line of every hook must establish scale: “I’ve coached 3,000 people.” Start by contacting 10 past clients this week and asking for a 2-minute testimonial video or a written transformation story.</div>
+  </div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 — Critical / Immediate Opportunity</div>
+    <div class="diag-title">Past Client List Has Never Been Reactivated</div>
+    <div class="diag-desc">Thousands of past clients who already know Craig, already trust him, and have already experienced his results have never received a direct outreach asking them to re-engage or refer others. This is the highest-ROI action Craig can take — a 9-word email to a warm list converts at dramatically higher rates than cold ads, costs nothing, and can be executed in 48 hours.</div>
+    <div class="diag-fix"><strong>Fix:</strong> This week. Compile every email and phone number from past clients you can access. Send: “Hey [Name] — are you still interested in getting back in shape?” That’s it. Reply to the yes answers with: “I’m launching an online coaching program — would you want to hop on a quick call to see if it’s a fit?” Target: 7–10 clients contracted before any ad dollars are spent.</div>
+  </div>
+
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 — Meaningful Gap</div>
+    <div class="diag-title">Fragmented Digital Brand — Hard to Find Online</div>
+    <div class="diag-desc">The digital presence is described as fragmented and difficult to find. For a coach with 3,000 clients and 21K potential followers on @thetotalcoach, this is a significant gap. Anyone who hears about Craig through word of mouth and tries to find him online hits friction — which means referrals that should convert don’t. The brand needs a unified home: one handle, one URL, one offer landing page.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Consolidate to @thetotalcoach as primary handle. Build one landing page: The Total Transformation System, 3,000-client proof stat front and center, 3 case study clips, one CTA (book a free strategy call). Link this page from every profile and every piece of content within 2 weeks.</div>
+  </div>
+
+  <div class="diag-card p3">
+    <div class="diag-rank">P3 — Watch Item</div>
+    <div class="diag-title">Offer Price Point Needs Anchoring Before Online Launch</div>
+    <div class="diag-desc">The goal is “$500+/month” for online clients. This is reasonable but needs a defined program structure: what does the client get, for how long, at what price? Without a specific number and specific deliverable, the sales conversation becomes vague and close rates drop. Anchor this before outreach begins.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Define The Total Transformation System as a 6-month program at $500/month ($3,000 contracted). Deliverables: custom training program, weekly check-in calls, nutrition framework, accountability messaging. Write it down before the first outreach call. Simple and specific beats elaborate and vague.</div>
+  </div>
+
+  <div class="diag-card ok">
+    <div class="diag-rank">OK — Validated Asset</div>
+    <div class="diag-title">Offline Business Funds the Online Build — No Desperation</div>
+    <div class="diag-desc">Craig’s 100 active in-person clients provide consistent cash flow during the online launch phase. This means he is not running ads from a position of desperation, not cutting prices to get clients, and not making panic decisions based on short-term revenue needs. This is a significant strategic advantage over pre-revenue prospects who need their online business to work immediately.</div>
+    <div class="diag-fix"><strong>Maintain:</strong> Use the offline business to fund 60–90 days of patient online building. Do not cut in-person clients too quickly. Build the online model to 15+ clients before reducing the in-person load significantly.</div>
+  </div>
+</section>
+
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div>
+  <div class="sec-heading">90-Day Action Plan</div>
+  <div class="sec-divider"></div>
+
+  <div class="plan-item">
+    <div class="plan-num">1</div><div class="plan-body">
+      <div class="plan-title">This Week: Send the 9-Word Email to Every Past Client (Days 1–7)</div>
+      <div class="plan-desc">Pull every email and phone number from past clients accessible through CRM, email history, or phone contacts. Send this exact message: “Hey [Name] — are you still interested in getting back in shape?” Send via email for long-term contacts, via text for recent ones. No pitch, no link, no offer in the first message. Reply to every “yes” with: “I’m launching an online coaching program. Want to hop on a quick 20-minute call to see if it’s a fit?” Target: 7–10 clients contracted by end of Week 2 from this outreach alone.</div>
+      <div class="plan-tags"><span class="plan-tag sales">Sales</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">2</div><div class="plan-body">
+      <div class="plan-title">Week 1–2: Define the Total Transformation System + Landing Page (Days 1–14)</div>
+      <div class="plan-desc">Write the offer document: The Total Transformation System, 6 months, $500/month. Deliverables, structure, what happens each week. Build one simple landing page: “I’ve coached 3,000 people in Phoenix. Here is the exact system.” Stat, 3 case study clips or testimonials, booking CTA. This page receives all the traffic from the 9-word email responses, future content, and eventually paid ads. Complete this before the first outreach call goes out.</div>
+      <div class="plan-tags"><span class="plan-tag offer">Offer</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">3</div><div class="plan-body">
+      <div class="plan-title">Weeks 2–4: One Case Study Reel Per Week (Days 8–30)</div>
+      <div class="plan-desc">Contact 4 past clients and ask for permission to share their story. Format: “How I helped [Name] [specific result] in [timeframe] while [specific life context].” Film a 60-second talking-head reel for each story, opening with: “I’ve coached 3,000 people. This is one of their stories.” Post one case study per week. These four reels become the social proof foundation and the future ad creative library. Caption CTA: “Comment RESULTS for the protocol I’ve used with 3,000 clients.”</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag sales">Sales</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">4</div><div class="plan-body">
+      <div class="plan-title">Month 2: Consolidate Digital Brand + DM Automation (Days 30–60)</div>
+      <div class="plan-desc">Unify all social to @thetotalcoach. Update bio to: “3,000+ clients transformed · The Total Transformation System · Comment RESULTS for the protocol.” Set up ManyChat: “Comment RESULTS” → free guide PDF (“3 Things Busy Adults Get Wrong About Fitness”) → Day 2 question → Day 4 strategy call booking link. Post 3–5 content pieces per week. Two types: (1) Case study stories, (2) Authority content opening with the 3,000-client credential.</div>
+      <div class="plan-tags"><span class="plan-tag ops">Ops</span><span class="plan-tag content">Content</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">5</div><div class="plan-body">
+      <div class="plan-title">Month 2–3: Boost Best-Performing Organic Content as Meta Ad (Days 45–90)</div>
+      <div class="plan-desc">After 30 days of case study content, identify the reel with the highest engagement and most qualified DM conversations. Boost as a Meta ad: $25/day, broad targeting 35–60 age range, Phoenix AZ + national. KPIs: hook rate >25%, CPL <$12. If the ad performs, scale to $50/day. The goal is not to run a complex ad system yet — it is to amplify a proven organic piece and test whether cold traffic converts as well as warm. If yes, the full ad system gets built in Month 4+.</div>
+      <div class="plan-tags"><span class="plan-tag ads">Ads</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">6</div><div class="plan-body">
+      <div class="plan-title">Month 3: Ramp to 30 Online Clients — Begin Reducing In-Person Load (Days 60–90)</div>
+      <div class="plan-desc">By Month 3, the target is 15–20 online clients contracted from the reactivation + content + early ads pipeline. At this point, begin a gradual transition of in-person small group clients: offer current in-person clients an online upgrade at $300–$400/month (discounted for loyalty). This reduces the 25-hour-per-week in-person ceiling while maintaining revenue and relationships. The 30-client online goal should be achievable by Month 4–5 if the reactivation and content machine are executing correctly.</div>
+      <div class="plan-tags"><span class="plan-tag sales">Sales</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> · Prospect Intelligence Audit · Confidential</div>
+  <div class="footer-tag">Jordan Dugger · Impact Fitness Coaching Academy · April 2026</div>
+</footer>
+</div>
+
+<script>
+const sections = document.querySelectorAll('.doc-section');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const active = document.querySelector('.nav-link[href="#' + id + '"]');
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px 0px 0px' });
+sections.forEach(s => observer.observe(s));
+
+function copyCraigIntel() {
+  const text = `CRAIG STEVENSON — CREATIVE INTELLIGENCE REPORT
+The Total Coach | @thetotalcoach | Phoenix AZ | 3,000+ Lifetime Clients | April 2026
+
+=== BRAND SNAPSHOT ===
+Authority: 3,000+ lifetime clients — most credible proof volume in this cohort
+Current: 100 active in-person small group training clients, $0 online
+Mechanism: "The Total Transformation System" — 6-month online coaching program
+Avatar: Busy adults 35-55 who have tried coaching before and it didn't stick
+Villain: Coaches who have only ever trained themselves
+DM CTA: Comment RESULTS for the protocol I've used with 3,000 clients
+
+=== 9-WORD EMAIL — SEND THIS WEEK ===
+Subject: [First Name]
+Body: "Are you still interested in getting back in shape?"
+
+THAT'S IT. No pitch. No link. Reply to every "yes" with:
+"I'm launching an online coaching program. Want to hop on a quick 20-min call to see if it's a fit?"
+
+Math: 500 warm contacts → 50 responses at 10% → 20 booked calls → 7 clients contracted = $21,000 before any ads.
+
+=== VERBATIM HOOKS ===
+1. "Stop hiring fitness coaches who have only ever trained themselves. I've transformed over 3,000 bodies."
+2. "How I helped [Name] lose 30 lbs while working 60 hours a week" [real case study]
+3. "3,000 clients. Every single one said: 'I've tried everything.' Here's what they hadn't tried."
+4. "If you worked with a personal trainer before and it didn't stick — it wasn't your fault."
+5. "Comment RESULTS for the protocol I've used with 3,000 clients"
+
+=== ENTITY BUILD QUEUE ===
+#1 CRITICAL: Case study reel — "How I helped [real person] do [specific thing]"
+#2 CRITICAL: Authority statement — "3,000 bodies transformed" reel
+#3 HIGH: Anti-"I've tried everything" villain frame
+#4 HIGH: Phoenix success stories (local + national proof)
+#5: Total Transformation System mechanism reveal
+#6: Busy adult time-constraint content
+
+=== PRIMARY CONSTRAINTS ===
+P1: 3,000 client stories completely invisible online — biggest asset not deployed
+P1: Past client list never reactivated — highest-ROI action available, costs $0
+P2: Fragmented digital brand — hard to find, unified presence needed
+P3: Offer price needs anchoring ($500/mo x 6 months = $3,000 contracted)
+
+=== 90-DAY MATH ===
+Goal: 30 online clients at $500+/month = $15,000/month
+Step 1: 9-word email → 7-10 clients contracted (Week 1-2, $0 ad spend)
+Step 2: 1 case study reel/week for 4 weeks (Weeks 2-4)
+Step 3: Consolidate brand + DM automation (Month 2)
+Step 4: Boost best organic reel as first ad at $25/day (Month 2-3)`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target.closest('button');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '\u2713 Copied!';
+    setTimeout(() => btn.innerHTML = orig, 2000);
+  });
+}
+</script>
+</body>
+</html>
