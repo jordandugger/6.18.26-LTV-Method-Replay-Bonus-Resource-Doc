@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loren Chapman — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#1E3A5F; --navy-dark:#0B1A2B; --navy-mid:#142845;
+  --navy-card:rgba(20,40,69,0.6);
+  --orange:#E87722; --orange-dim:rgba(232,119,34,0.12); --orange-glow:rgba(232,119,34,0.22);
+  --blue-mid:#4A7FA5; --blue-dim:rgba(74,127,165,0.12); --blue-light:#D6E4F0;
+  --gray-400:#94A3B8; --gray-500:#64748B; --gray-600:#475569;
+  --green:#22C55E; --green-bg:rgba(34,197,94,0.10);
+  --red:#DC2626; --red-bg:rgba(220,38,38,0.09);
+  --yellow:#F59E0B; --yellow-bg:rgba(245,158,11,0.10);
+  --purple:#8B5CF6; --purple-bg:rgba(139,92,246,0.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);
+  background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),
+  radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+
+/* ── HERO ── */
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);} .hs-val.green{color:var(--green);} .hs-val.blue{color:#7ABFDD;} .hs-val.white{color:#fff;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+
+/* ── NAV ── */
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}
+.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+
+/* ── SECTIONS ── */
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+
+/* ── CARDS ── */
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;} .mb-md{margin-bottom:20px;} .mb-lg{margin-bottom:32px;}
+
+/* ── GRIDS ── */
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+
+/* ── WIN CARDS ── */
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+
+/* ── TABLES ── */
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+
+/* ── BADGES & PILLS ── */
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.purple{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+
+/* ── PHASE INDICATOR ── */
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+
+/* ── CONSTRAINT DIAGNOSIS ── */
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}
+.diag-card.p2 .diag-rank{color:var(--yellow);}
+.diag-card.p3 .diag-rank{color:#7ABFDD;}
+.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+
+/* ── ACTION PLAN ── */
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-body{}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+
+/* ── CREATIVE ENTITY QUEUE ── */
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+
+/* ── PHASE MATH BOX ── */
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+
+/* ── FOOTER ── */
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit · April 2026</div>
+  <div class="hero-name">Loren <span>Chapman</span></div>
+  <div class="hero-title">Make Moms Healthy Again · @makemomshealthyagain · Growth Phase</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">$10K</div><div class="hs-label">Est. Monthly Revenue</div></div>
+    <div class="hs"><div class="hs-val blue">$2,500</div><div class="hs-label">Front-End Offer Price</div></div>
+    <div class="hs"><div class="hs-val orange">15</div><div class="hs-label">Active Clients</div></div>
+    <div class="hs"><div class="hs-val green">$30K</div><div class="hs-label">12-Month Target</div></div>
+    <div class="hs"><div class="hs-val white">P2+P3</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Loren Chapman has built a <strong>genuinely differentiated positioning</strong> in the functional hormone + motherhood space under the brand "Make Moms Healthy Again." At ~$10K/month with 15 active clients, she is firmly in the <strong>Growth Phase</strong> — her offer architecture is strong, her organic hooks have real edge, and she is one structural shift away from predictable $20–30K months. The constraint is not the message. It is the machine: no paid traffic, no mid-funnel conversion asset, no formalized ascension path, and a pricing model that compresses margin too thin to afford the ads that would unlock scale.
+  </p>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What's Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+
+<!-- ── S01: WHAT'S WORKING ── -->
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div>
+  <div class="sec-heading">What's Working</div>
+  <div class="sec-divider"></div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">🏷️</div><div>
+      <div class="win-label">Brand Name</div>
+      <div class="win-desc">"Make Moms Healthy Again" is one of the highest-retention brand names in this niche — it instantly communicates avatar (moms), villain (generic health advice that doesn't account for motherhood demands), and stakes. Cold audiences self-identify within seconds.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🧪</div><div>
+      <div class="win-label">Mechanism Differentiation</div>
+      <div class="win-desc">Functional lab testing (DUTCH, bloodwork) as part of the core offer separates her from every macro tracker and generic women's coach. The mechanism is real, premium-positioned, and scientifically defensible — the foundation of a $4,500+ offer.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🎯</div><div>
+      <div class="win-label">Hook Quality</div>
+      <div class="win-desc">Hooks like "Women are running on EMPTY" and "You're not broken — you've just been taught the wrong framework" execute the IFCA Entity ID principle correctly: pain-first, identity-shifting, and contrarian. Multiple hooks are ad-ready without modification.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🔁</div><div>
+      <div class="win-label">Two-Phase Ascension Architecture</div>
+      <div class="win-desc">Hormone Reset Club (front-end stabilization) → Precision Rebuild (back-end performance) is a natural client journey that, once formalized with pricing and structure, creates a backend retention offer without needing new clients to grow revenue.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">📲</div><div>
+      <div class="win-label">DM Automation Already Active</div>
+      <div class="win-desc">Keyword CTA "BALANCE" driving to a free hormone assessment is a functioning TOF → MOF conversion asset. This infrastructure is in place — the gap is in feeding it with paid traffic and tightening the assessment-to-call conversion.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">💬</div><div>
+      <div class="win-label">Voice & Empathy</div>
+      <div class="win-desc">Her content voice is deeply resonant with the moms-who-do-everything-right-but-feel-terrible avatar. This is difficult to manufacture and expensive to train. The emotional connection with her audience is a genuine, defensible moat.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ── S02: BUSINESS PHASE ── -->
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div>
+  <div class="sec-heading">Business Phase Diagnosis</div>
+  <div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item"><div class="phase-label">Phase 1</div><div class="phase-name">Starter</div><div class="phase-range">$0–$5K/mo</div></div>
+    <div class="phase-item active"><div class="phase-label">Current Phase ▼</div><div class="phase-name">Growth</div><div class="phase-range">$5K–$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3</div><div class="phase-name">Scale</div><div class="phase-range">$15K–$100K+/mo</div></div>
+  </div>
+  <div class="card orange-left mb-md">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;">
+      <strong>Growth Phase archetype: The Plateaued Pro.</strong> Loren has a proven offer, a warm audience, and real results — but revenue has likely stabilized around $10K because everything runs on manual effort. She's the doctor who also runs the front desk. The Growth Phase constraint is always lead generation volume + mid-funnel nurture. Getting her to $25K+ requires installing predictability: a paid traffic machine that feeds leads into the DM funnel she already has, plus a pricing restructure that makes those ads profitable.
+    </p>
+  </div>
+  <div class="math-box">
+    <div class="math-box-title">The Math to $25K/Month</div>
+    <div class="math-row"><span class="lbl">Target Monthly Revenue</span><span class="val orange">$25,000</span></div>
+    <div class="math-row"><span class="lbl">New Front-End Price (restructured)</span><span class="val orange">$3,500</span></div>
+    <div class="math-row"><span class="lbl">New Clients Needed Per Month</span><span class="val">5–6 new clients</span></div>
+    <div class="math-row"><span class="lbl">Assumed Close Rate (30%)</span><span class="val">~17–20 calls/month</span></div>
+    <div class="math-row"><span class="lbl">Assumed Show Rate (65%)</span><span class="val">~26–30 scheduled calls</span></div>
+    <div class="math-row"><span class="lbl">Lead-to-Book Rate (7%)</span><span class="val">~370–430 leads/month needed</span></div>
+    <div class="math-row"><span class="lbl">CPL at $8 target</span><span class="val">~$3,000–3,500/mo ad spend</span></div>
+    <div class="math-row"><span class="lbl">Backend (Precision Rebuild at $400/mo × 12 retained clients)</span><span class="val orange">+$4,800 recurring</span></div>
+  </div>
+</section>
+
+<!-- ── S03: CREATIVE INTELLIGENCE ── -->
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03 — Updated April 2026</div>
+  <div class="sec-heading">Creative Intelligence Report</div>
+  <div class="sec-divider"></div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;font-size:14px;color:rgba(255,255,255,.55);">Full intelligence synthesis across brand positioning, organic ecosystem, Meta Ad Library findings, competitive benchmarks, entity gap analysis, verbatim hooks, and funnel architecture — ready for offer optimization and ad creative build.</p>
+    <button onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;transition:opacity .18s;white-space:nowrap;flex-shrink:0;">
+      <span>⬆</span> Copy for Workshop
+    </button>
+  </div>
+
+  <!-- EXEC SUMMARY -->
+  <div class="card orange-left mb-lg">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:12px;">
+      <strong>Executive Summary.</strong> Make Moms Healthy Again operates as a functional hormone + metabolism brand targeting exhausted high-capacity mothers who have "done everything right" but feel broken. The brand name, organic voice, and mechanism are all above-average for this niche — this is not a positioning problem. The gap is entirely structural: zero paid traffic, no formalized mid-funnel conversion asset beyond a DM automation keyword, a pricing model that includes lab costs at a price point that makes paid ads unprofitable, and no formal back-end offer. The organic funnel has enough social proof and hook diversity to launch ads today with 8–10 entities across 3 distinct emotional clusters.
+    </p>
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;">
+      <strong>Highest-leverage insight:</strong> Loren is currently pricing labs into the offer at $2,500. A Dutch test alone costs $300–500. That's 12–20% of her AOV going to fulfillment before she touches a dollar of coaching revenue. Unbundling labs — having clients pay their own lab costs directly — would immediately increase effective margin by 15–20%, making a $3,500–4,500 restructured offer profitable to run paid traffic against. This single change unlocks the entire scaling path.
+    </p>
+  </div>
+
+  <!-- BRAND TABLE -->
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Evidence</th><th>Strategic Meaning</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Core Avatar</td><td>High-capacity mothers with hormone dysregulation — doing everything right, still exhausted. Often in their 30s–40s, professionally successful, health-conscious but stuck.</td><td>Premium buyer. High pain intensity. Motivated by identity restoration, not just weight loss. Will pay $4K+.</td></tr>
+        <tr><td class="t-strong">Named Mechanism</td><td>Hormone Reset Club (front-end stabilization) + Precision Rebuild (back-end performance restoration). Two-phase approach using functional labs.</td><td>Premium mechanism with scientific defensibility. Labs + coaching = irresistible proof of root-cause vs. symptom focus.</td></tr>
+        <tr><td class="t-strong">Enemy Framing</td><td>"Women are running on EMPTY." Diet culture that ignores metabolic capacity. Doctors who say labs are "normal." Mainstream advice that treats symptoms.</td><td>Strong villain that justifies premium positioning. Positions Loren as the informed authority who sees what others miss.</td></tr>
+        <tr><td class="t-strong">Funnel Entry</td><td>DM keyword "BALANCE" → free hormone assessment. Organic content drives → comment CTA → DM automation → assessment → call.</td><td>Functional funnel. Needs paid traffic to feed it. Assessment-to-call conversion should be tracked and optimized.</td></tr>
+        <tr><td class="t-strong">Identity Layer</td><td>"Anti-diet-culture, pro-metabolism." Content voice = trusted friend + functional health authority. No excessive medical jargon — approachable expertise.</td><td>Allows her to sell to moms who distrust traditional doctors AND generic fitness influencers simultaneously.</td></tr>
+        <tr><td class="t-strong">Lead Magnet</td><td>Free hormone assessment (offered via DM automation). No standalone landing page confirmed.</td><td>Needs a standalone page + quiz format (e.g., "Why Are You Always Tired?") for paid traffic cold audiences to enter without prior organic exposure.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ORGANIC CONTENT AUDIT -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Organic Content Audit</div>
+  <div class="card blue-left mb-sm">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Content gap flagged:</strong> Loren reports getting viral posts that do NOT convert to followers. This is a classic TOF-without-MOF problem — the content resonates but there is no bridge asset (quiz, lead magnet landing page, direct call-to-action) to capture momentum. Viral traction is being lost to the algorithm, not compounded into followers or leads.</p>
+  </div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook / Caption Fragment</th><th>Format</th><th>Content Bucket</th><th>Ad Potential</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"Women are running on EMPTY"</td><td>Talking-head Reel</td><td>Pain + Capacity</td><td><span class="gap-pill opportunity">Very High</span></td></tr>
+        <tr><td class="t-strong">"You're not broken — you've just been taught the wrong framework"</td><td>Text-on-screen Reel</td><td>Identity Reframe</td><td><span class="gap-pill opportunity">Very High</span></td></tr>
+        <tr><td class="t-strong">"Most women follow 'health' pages that glorify restriction… and then wonder why they're exhausted"</td><td>Carousel</td><td>Villain / Enemy Frame</td><td><span class="gap-pill opportunity">High</span></td></tr>
+        <tr><td class="t-strong">"I need to say this because I feel like no one is factoring this into the conversation"</td><td>Talking-head Reel</td><td>Authority / Conviction</td><td><span class="gap-pill opportunity">High</span></td></tr>
+        <tr><td class="t-strong">"If this resonates babe — comment 'BALANCE' to take my free hormone assessment"</td><td>Reel CTA</td><td>DM Magnet</td><td><span class="gap-pill warn">Med — needs stronger hook</span></td></tr>
+        <tr><td class="t-strong">[Client result / transformation post]</td><td>Before/After or testimony</td><td>Social Proof</td><td><span class="gap-pill warn">Med-High — needs verbatim hook attached</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ENTITY CLUSTERS -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Entity Clusters Identified</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Representative Hook</th><th>Format</th><th>Emotional Driver</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Capacity / Exhaustion</td><td>"Women are running on EMPTY"</td><td>Talking-head</td><td><span class="gap-pill missing">Frustration</span></td><td>Strongest cold-traffic angle. Stops scroll immediately.</td></tr>
+        <tr><td class="t-strong">Misdiagnosis / Labs</td><td>"Your labs say normal but your body says otherwise"</td><td>Screen share or B-roll</td><td><span class="gap-pill missing">Frustration + Validation</span></td><td>Differentiates from generic wellness — calls out medical blind spot.</td></tr>
+        <tr><td class="t-strong">Enemy / Villain Frame</td><td>"Restriction and cardio are making you more exhausted, not less"</td><td>Carousel or talking head</td><td><span class="gap-pill missing">Anger</span></td><td>Attack diet culture directly. High identity resonance.</td></tr>
+        <tr><td class="t-strong">Identity Reframe</td><td>"You're not lazy. Your metabolism is dysregulated."</td><td>Text-on-screen Reel</td><td><span class="gap-pill info">Relief</span></td><td>Shifts blame from self to system. Converts guilt to hope.</td></tr>
+        <tr><td class="t-strong">Client Proof</td><td>"How [Mom's Name] went from exhausted to energized in 90 days"</td><td>Testimonial or mini-doc</td><td><span class="gap-pill info">Hope + Aspiration</span></td><td>Needs specific numbers and story arc — not just "I feel great."</td></tr>
+        <tr><td class="t-strong">Mechanism Education</td><td>"Here's what a DUTCH test reveals that regular bloodwork misses"</td><td>Carousel / edu-reel</td><td><span class="gap-pill info">Curiosity</span></td><td>Strong MOF/BOF nurture content. Cold traffic needs warmup first.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- META AD LIBRARY -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Meta Ad Library Status</div>
+  <div class="card red-left mb-lg">
+    <p style="font-size:14px;margin-bottom:0;"><strong>Zero active or historical ads found</strong> for "Make Moms Healthy Again," "Loren Chapman," and related search terms. She is 100% organic — no paid traffic infrastructure exists. This is the #1 growth lever available. The organic content and hook library is ready to be repurposed as ad entities today. No ads competitor analysis possible — but this also means she enters paid with zero negative brand association to overcome.</p>
+  </div>
+
+  <!-- ENTITY GAP SCORECARD -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Entity Gap Scorecard</div>
+  <div class="grid-3 mb-lg">
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:#F87171;line-height:1;">0</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Paid Entities</div>
+      <span class="badge fail" style="margin-top:8px;display:inline-block;">Critical Gap</span>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:var(--green);line-height:1;">6+</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Organic Entity Clusters</div>
+      <span class="badge pass" style="margin-top:8px;display:inline-block;">Strong Asset</span>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">8–10</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Entities Needed at Launch</div>
+      <span class="badge warn" style="margin-top:8px;display:inline-block;">Ready to Build</span>
+    </div>
+  </div>
+
+  <!-- VERBATIM HOOK BANK -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Verbatim Hook Bank — Workshop-Ready</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook Line</th><th>Type</th><th>Format Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"Women are running on EMPTY — and the fitness industry is making it worse."</td><td><span class="badge info">Pain Lead</span></td><td>Talking-head, face-on-camera, no B-roll</td></tr>
+        <tr><td class="t-strong">"You're not broken. You've just been taught the wrong framework."</td><td><span class="badge info">Identity Reframe</span></td><td>Text-on-screen Reel, simple background</td></tr>
+        <tr><td class="t-strong">"Most women restrict more, exercise more, and feel worse. Here's why."</td><td><span class="badge info">Villain Frame</span></td><td>Talking-head or carousel hook slide</td></tr>
+        <tr><td class="t-strong">"Your labs say you're fine. Your body says otherwise. There's a reason for that."</td><td><span class="badge info">Mechanism Hook</span></td><td>Screen share (lab results) + voice-over</td></tr>
+        <tr><td class="t-strong">"The exhaustion you're feeling isn't a discipline problem. It's a capacity problem."</td><td><span class="badge info">Diagnosis Reframe</span></td><td>Talking-head or text overlay on B-roll</td></tr>
+        <tr><td class="t-strong">"What if the reason you can't lose weight has nothing to do with calories?"</td><td><span class="badge info">Curiosity Lead</span></td><td>Reel hook or carousel slide 1</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- COMPETITIVE BENCHMARK -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Competitive Benchmark & White Space</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Competitor Type</th><th>What They're Doing</th><th>Loren's Advantage</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Generic Women's Hormone Coaches</td><td>Broad avatar ("women 35+"), emphasize weight loss outcomes, minimal mechanism differentiation</td><td>Specific avatar (moms), named mechanism (labs + HRC), anti-diet-culture enemy frame</td></tr>
+        <tr><td class="t-strong">Functional Health MDs on Instagram</td><td>Credentialed but impersonal, clinical language, high authority, low warmth</td><td>Approachable expertise voice — "trusted friend who also knows the science"</td></tr>
+        <tr><td class="t-strong">Large Women's Fitness Programs (e.g., Tone It Up)</td><td>Mass-market, lifestyle-focused, low price point, influencer-driven</td><td>Root-cause positioning vs. symptom masking — serves a buyer who has already failed at those programs</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- WHITE SPACE ANGLES -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">White Space Creative Angles — Not Yet In Market</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Angle</th><th>Hook Concept</th><th>Why It Works</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">The "Good Mom Trap"</td><td>"You put everyone else first. Here's what that's doing to your hormones."</td><td>Combines identity (good mom) with root-cause (hormonal consequence of chronic depletion). Pattern interrupt for moms who are proud of sacrifice.</td></tr>
+        <tr><td class="t-strong">Pattern Interrupt — Visual</td><td>Chaotic morning routine B-roll + text overlay: "This isn't a motivation problem. This is cortisol dysregulation."</td><td>Visual = relatable mom life. Text = reframes self-blame. Does not look like a fitness ad.</td></tr>
+        <tr><td class="t-strong">The Doctor Fail Hook</td><td>"My doctor told me everything looked fine. I ran a DUTCH test and found 4 things that were clearly wrong."</td><td>High validation for avatar who has been dismissed. Builds instant mechanism credibility.</td></tr>
+        <tr><td class="t-strong">TOF Quiz Funnel</td><td>"Answer 5 questions to find out why you're always tired — even when you sleep 8 hours."</td><td>High click-through for moms with chronic fatigue. Generates qualified lead + diagnostic data for sales call.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ENTITY BUILD QUEUE -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Priority Entity Build Queue (Launch-Ready)</div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 01 · TOF · Talking Head · Frustration</span><span class="badge fail">Build First</span></div>
+    <div class="entity-hook">"Women are running on EMPTY — and the fitness industry is making it worse."</div>
+    <div class="entity-meta">Format: Face-to-camera, no jump cuts. 30–60 sec. No B-roll. Direct address. CTA: "Comment BALANCE for my free hormone assessment."</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 02 · TOF · Text Reel · Identity Reframe</span><span class="badge fail">Build First</span></div>
+    <div class="entity-hook">"You're not lazy. Your metabolism is dysregulated. Here's the difference."</div>
+    <div class="entity-meta">Format: Kinetic text on dark background. 15–20 sec. Music-driven. High rewatch value. CTA: DM automation keyword.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 03 · TOF · Villain Frame · Anger</span><span class="badge warn">Build Second</span></div>
+    <div class="entity-hook">"Restricting calories is making your hormones worse. Here's what the research actually says."</div>
+    <div class="entity-meta">Format: Talking head + on-screen text bullets. B-roll of food/labels optional. 45–60 sec. CTA: Free assessment DM.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 04 · MOF · Mechanism Education · Curiosity</span><span class="badge warn">Build Second</span></div>
+    <div class="entity-hook">"Here's what a DUTCH test reveals that your regular doctor never checks."</div>
+    <div class="entity-meta">Format: Screen share of (anonymized) lab results + voice-over. Builds massive mechanism credibility. Best for retargeting warm audiences.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 05 · TOF · Quiz Hook · Curiosity</span><span class="badge warn">Build Second</span></div>
+    <div class="entity-hook">"Why are you always tired even when you get enough sleep? Answer 5 questions."</div>
+    <div class="entity-meta">Format: Static image or simple talking head. Links to quiz landing page. Generates qualified leads + sells the assessment before a call.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 06 · BOF · Client Proof · Hope</span><span class="badge info">Build Third</span></div>
+    <div class="entity-hook">"How [Client Name] went from 'running on empty' to her best energy in years — at 42."</div>
+    <div class="entity-meta">Format: Client testimonial video or screenshot stack + VO. Specific numbers required (lbs, energy, months). Best for retargeting warm and video viewers.</div>
+  </div>
+
+  <!-- STRATEGIC DIAGNOSIS -->
+  <div class="card orange-left" style="margin-top:24px;">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;">
+      <strong>Strategic Diagnosis.</strong> Loren's creative ecosystem is actually ahead of where most Growth Phase coaches are — she has real hooks, a real mechanism, and a DM automation baseline. The single biggest creative risk is staying 100% organic as the growth lever. Viral posts without a mid-funnel conversion asset mean she is dependent on algorithm luck for growth. The IFCA prescription is: (1) unbundle labs from pricing to create margin for ads; (2) build a hormone quiz landing page as the cold traffic conversion asset; (3) launch 8–10 entities across the Capacity, Villain, and Misdiagnosis clusters; (4) retarget video viewers and assessment completers with client proof. This is a 60–90 day build, not a 12-month project.
+    </p>
+  </div>
+</section>
+
+<!-- ── S04: CONSTRAINT DIAGNOSIS ── -->
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div>
+  <div class="sec-heading">Constraint Diagnosis</div>
+  <div class="sec-divider"></div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 · Critical Constraint</div>
+    <div class="diag-title">Pricing Architecture Compresses Margin to Zero</div>
+    <div class="diag-desc">At $2,500 for 16 weeks including DUTCH labs ($300–500 hard cost), effective coaching revenue per client is $2,000–2,200 before any other overhead. At a standard 20% marketing margin target, that allows $400–440 in CAC — barely enough for organic referrals, nowhere near enough to run profitable paid ads at scale. This single pricing decision is the structural ceiling blocking the entire scaling path.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Restructure to $3,500 core offer (clients pay labs directly out-of-pocket at their own lab provider). Add a VIP tier at $4,500+ that includes a co-pay for labs as a concierge upgrade. This immediately increases effective margin by 35–40% and makes $8–10 CPL ads instantly profitable. The offer value perception actually increases when labs are positioned as a premium diagnostic investment the client is making in themselves.</div>
+  </div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 · Critical Constraint</div>
+    <div class="diag-title">Zero Paid Traffic — 100% Organic Dependence</div>
+    <div class="diag-desc">Every lead Loren generates today comes from organic content performance. One algorithm shift, one viral miss, or one bad month of content output means zero leads. Scaling from $10K to $25K on organic alone requires either a massive audience build (years) or unsustainable posting volume. The "Post &amp; Pray" model is the P2 IFCA archetype — and the fix is a predictable paid lead engine feeding her existing DM automation funnel.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Launch a single Meta campaign: 1 broad ad set + 1 interest-stacked ad set (hormone health, functional medicine, moms). Deploy 8–10 entities from the build queue above. Target $8 CPL or below. After pricing restructure, break-even CAC is ~$700–800 with a 30% close rate. $3K/month in ad spend should generate $25–30K in contracted revenue. Install the IFCA kill rules: new ads killed at 2x KPI, proven winners at 3x.</div>
+  </div>
+
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 · Meaningful Gap</div>
+    <div class="diag-title">No Standalone Mid-Funnel Conversion Asset for Cold Traffic</div>
+    <div class="diag-desc">The DM automation keyword "BALANCE" is a functional conversion tool for warm organic audiences who have already seen Loren's content. For cold paid traffic, there is no standalone landing page, quiz, or lead magnet that can convert a stranger who has never heard of her. Cold traffic needs a low-friction first step — a quiz that diagnoses their hormone type, a free guide, or a specific opt-in with a compelling headline. Without this, paid ads will drive traffic with no place to land.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Build a hormone quiz funnel — "Find out why you're always tired, even when you do everything right." 5-question quiz → result page → free guide download → DM automation CTA → assessment booking. Jordan's recommendation: model April Rodriguez's quiz structure. Estimated build time: 1–2 weeks on GoHighLevel or Typeform. This asset will also double the organic DM conversion rate by giving a cleaner handoff from viral content viewers.</div>
+  </div>
+
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 · Meaningful Gap</div>
+    <div class="diag-title">Back-End Offer Not Formalized — LTV Capped at Front-End Price</div>
+    <div class="diag-desc">The Precision Rebuild back-end has conceptual existence but no formal structure, pricing, or client ascension path. When clients complete the 16-week Hormone Reset Club, they either churn out or continue informally. Without a formal $300–500/month Precision Rebuild continuity offer, Loren's LTV is capped at $2,500 (or $3,500 post-restructure). The IFCA model requires LTV of $6K–12K+ to make paid ads economically viable at scale.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Formalize Precision Rebuild as a $400/month 6-month minimum commitment. Present it in the sales call as "Phase 1 gets you stable — Phase 2 gets you strong." Target 60%+ FE→BE conversion. 10 retained clients at $400/mo = $4K/month in passive recurring revenue added to front-end acquisition. This doubles effective LTV from $3,500 to $5,900 without acquiring a single new client.</div>
+  </div>
+
+  <div class="diag-card ok">
+    <div class="diag-rank">OK · Validated Asset — Leave Alone</div>
+    <div class="diag-title">Organic Voice, Hook Quality, and Enemy Framing</div>
+    <div class="diag-desc">Loren's content voice, emotional resonance with her avatar, and hook construction are genuinely above-average for this niche. The enemy framing ("diet culture makes exhaustion worse"), the identity reframes, and the empathy-driven educational content are all functioning correctly. This is not a message-market mismatch problem — it is a distribution and infrastructure problem. Do not change the messaging. Build the machine around it.</div>
+    <div class="diag-fix"><strong>Maintain:</strong> Continue organic cadence at 3–5 Reels/week. Repurpose winning organic content directly as paid entities without significant modification. The hooks that already connect with warm audiences are the same hooks that will connect with cold paid audiences in the same demographic.</div>
+  </div>
+</section>
+
+<!-- ── S05: ACTION PLAN ── -->
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div>
+  <div class="sec-heading">90-Day Action Plan</div>
+  <div class="sec-divider"></div>
+  <div class="card blue-left mb-md">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Phase Target:</strong> $10K/month → $25K/month. Every action below is sequenced to remove the most expensive constraint first. Do not start Step 3 before Step 1 is complete — running ads into a broken pricing model accelerates losses, not growth.</p>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">1</div><div class="plan-body">
+      <div class="plan-title">Restructure Offer Pricing — Unbundle Labs (Days 1–7)</div>
+      <div class="plan-desc">Immediately update the Hormone Reset Club offer to $3,500 for 16 weeks. Labs are presented as a separate client investment at their own lab provider (~$300–500). Build a VIP tier at $4,500 for clients who want a hands-on lab order experience. Update all sales call language, DM scripts, and any funnel pages to reflect new pricing. This is the prerequisite for everything below — do not run ads until this is done.</div>
+      <div class="plan-tags"><span class="plan-tag offer">Offer</span><span class="plan-tag sales">Sales</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">2</div><div class="plan-body">
+      <div class="plan-title">Formalize Precision Rebuild Back-End (Days 8–21)</div>
+      <div class="plan-desc">Build the Precision Rebuild continuity offer: $400/month, 6-month minimum, positioned as Phase 2 of the complete transformation. Create a one-page program overview (what's included, outcome milestones, how Phase 2 differs from Phase 1). Insert the ascension pitch into the sales call — present both phases together. FE + BE combined = $6,100 LTV. Goal: 60%+ of new front-end clients convert to Phase 2.</div>
+      <div class="plan-tags"><span class="plan-tag offer">Offer</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">3</div><div class="plan-body">
+      <div class="plan-title">Build Hormone Quiz Funnel Landing Page (Days 8–21)</div>
+      <div class="plan-desc">Build a 5-question quiz on GoHighLevel (or Typeform + redirect): "Why Are You Always Tired — Even When You Sleep 8 Hours?" Results page delivers a personalized hormone type summary + free guide. CTA drives to "Comment BALANCE" or a direct call-booking link. This is the cold traffic entry point for all paid ads — without this, ads have no efficient landing destination for cold audiences who don't know Loren yet.</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">4</div><div class="plan-body">
+      <div class="plan-title">Build 8 Ad Entities & Launch First Campaign (Days 22–45)</div>
+      <div class="plan-desc">Record 3 talking-head entities (Capacity cluster, Villain cluster, Misdiagnosis cluster) + 2 text-reel entities + repurpose 3 best organic posts as paid creative. Launch 1 campaign: 1 broad ad set + 1 interest-stacked (hormone health, functional medicine, postpartum recovery). Budget: $100/day to start ($3K/month). KPI targets: hook rate 25%+, CPL &lt;$10. Kill rule: new entities at 2x KPI spend. Scale winning entities at 3x budget every 72 hours while passing KPI.</div>
+      <div class="plan-tags"><span class="plan-tag ads">Ads</span><span class="plan-tag content">Creative</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">5</div><div class="plan-body">
+      <div class="plan-title">Build MOF/BOF Retargeting Structure (Days 46–90)</div>
+      <div class="plan-desc">Add a MOF ad set retargeting video viewers (3-second view+) and quiz page visitors. Creative: mechanism education (DUTCH test explainer), client social proof with specific results (name, outcome, timeframe), and direct CTA to assessment booking. Separately, build a BOF ad set retargeting assessment completers who haven't booked. These three-layer campaigns create a self-compounding machine that gets more efficient over time as the pixel trains on buyers.</div>
+      <div class="plan-tags"><span class="plan-tag ads">Ads</span><span class="plan-tag sales">Sales</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">6</div><div class="plan-body">
+      <div class="plan-title">Deliver Organic Flywheel 3–5 Reels/Week Throughout</div>
+      <div class="plan-desc">Continue organic posting throughout all phases — do not stop or reduce frequency while building paid infrastructure. Organic feeds the DM automation funnel with warm audiences that are cheaper to convert than cold paid leads. Boost the top 1–2 organic reels from each month as paid TOF entities (best-performing organic content already carries real social proof from engagement). The organic + paid flywheel compounds — each feeds the other's efficiency.</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag ads">Organic</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> · Prospect Intelligence Audit · Confidential</div>
+  <div class="footer-tag">Jordan Dugger · Impact Fitness Coaching Academy · April 2026</div>
+</footer>
+
+</div><!-- /page -->
+
+<script>
+// Active nav on scroll
+const sections = document.querySelectorAll('.doc-section');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const active = document.querySelector(`.nav-link[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px 0px 0px' });
+sections.forEach(s => observer.observe(s));
+
+// Copy intel report
+function copyIntelReport() {
+  const text = `LOREN CHAPMAN — CREATIVE INTELLIGENCE REPORT
+Make Moms Healthy Again | @makemomshealthyagain | April 2026
+
+=== BRAND SNAPSHOT ===
+Avatar: High-capacity moms, 30s–40s, hormone dysregulation, exhausted despite doing everything right
+Mechanism: Hormone Reset Club (front-end) + Precision Rebuild (back-end). Functional labs (DUTCH).
+Enemy: Diet culture, restriction, doctors who say "labs are normal", exhaustion-as-identity
+Funnel Entry: DM automation keyword "BALANCE" → free hormone assessment → sales call
+Revenue: ~$10K/month | 15 active clients | Goal: $30K/month
+
+=== VERBATIM HOOKS (Ad-Ready) ===
+1. "Women are running on EMPTY — and the fitness industry is making it worse."
+2. "You're not broken. You've just been taught the wrong framework."
+3. "Most women restrict more, exercise more, and feel worse. Here's why."
+4. "Your labs say you're fine. Your body says otherwise. There's a reason for that."
+5. "The exhaustion you're feeling isn't a discipline problem. It's a capacity problem."
+6. "What if the reason you can't lose weight has nothing to do with calories?"
+
+=== ENTITY CLUSTERS ===
+1. Capacity/Exhaustion — Frustration driver — Talking-head format — TOF cold traffic
+2. Misdiagnosis/Labs — Frustration + Validation — Screen share or B-roll — TOF/MOF
+3. Villain Frame — Anger — Carousel or talking head — TOF cold traffic
+4. Identity Reframe — Relief — Text-on-screen Reel — TOF cold traffic
+5. Client Proof — Hope — Testimonial/mini-doc — MOF/BOF retargeting
+6. Mechanism Education — Curiosity — Carousel — MOF/BOF nurture
+
+=== META AD LIBRARY STATUS ===
+Zero active or historical ads. 100% organic reliance. All entity clusters are open and uncontested.
+
+=== PRIMARY CONSTRAINTS ===
+P1: Pricing includes labs at $2,500 — zero margin for paid ads
+P1: No paid traffic infrastructure
+P2: No standalone mid-funnel conversion asset (quiz/landing page) for cold traffic
+P2: No formalized back-end offer — LTV capped at front-end price
+
+=== 30-DAY PRIORITY BUILD ===
+Week 1: Reprice to $3,500 (unbundle labs)
+Week 2: Build hormone quiz funnel landing page
+Week 3: Record 3 talking-head entities (Capacity, Villain, Misdiagnosis clusters)
+Week 4: Launch 1 campaign, 2 ad sets, 8 entities. $100/day. CPL target <$10.`;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target.closest('button');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Copied!';
+    setTimeout(() => btn.innerHTML = orig, 2000);
+  });
+}
+</script>
+</body>
+</html>
