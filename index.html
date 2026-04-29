@@ -291,7 +291,7 @@ footer strong{color:var(--orange);}
     <!-- FILTER BAR -->
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
       <button class="filter-btn active" onclick="filterCards('all',this)">All (23)</button>
-      <button class="filter-btn" onclick="filterCards('audit',this)">📋 Has Audit (2)</button>
+      <button class="filter-btn" onclick="filterCards('audit',this)">📋 Has Audit (3)</button>
       <button class="filter-btn" onclick="filterCards('scale',this)">Scale</button>
       <button class="filter-btn" onclick="filterCards('growth',this)">Growth</button>
       <button class="filter-btn" onclick="filterCards('starter',this)">Starter</button>
@@ -300,25 +300,34 @@ footer strong{color:var(--orange);}
 
     <div class="attendee-grid" id="attendee-grid">
 
-      <!-- ── LOREN CHAPMAN — FULL AUDIT LIVE ── -->
-      <div class="attendee-card has-audit" data-phase="growth" data-audit="true" onclick="window.open('hot-seat-loren-chapman.html','_blank')">
+      <!
+      <!-- LOREN CHAPMAN — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="growth" data-audit="true" onclick="window.location.href='loren-chapman/'">
         <div class="ac-name">Loren Chapman <span class="ac-phase growth">Growth</span></div>
         <div class="ac-offer">Hormone Reset Club ($147/mo) + 1:1 Precision Rebuild ($2,500/3mo). Functional labs + training + nutrition for high-performing women 35–45 whose bodies stopped responding.</div>
         <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo with predictable acquisition system</div>
         <div class="ac-audit-badge">📋 Full Audit Ready →</div>
       </div>
 
-      <!-- COMING SOON DIVIDER -->
-      <div style="grid-column:1/-1;padding:20px 0 8px;border-top:1px solid rgba(255,255,255,.06);margin-top:8px;">
-        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);">📋 Audits below are being completed — check back as they go live</div>
-      </div>
-
-      <!-- CARLOS NOLASCO -->
-      <div class="attendee-card" data-phase="growth">
+      <!-- CARLOS NOLASCO — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="growth" data-audit="true" onclick="window.location.href='carlos-nolasco/'">
         <div class="ac-name">Carlos Nolasco <span class="ac-phase growth">Growth</span></div>
         <div class="ac-offer">Wolf Pro Community — tennis coaching for competitive juniors + USTA 3.5–4.0 players. 3 tiers: $450 / $700 / $1,100/mo. Running Meta ads + GHL funnels. High LTV once in.</div>
         <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo with team of coaches</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+      </div>
+
+      <!-- CINDY SEMBER — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='cindy-sember/'">
+        <div class="ac-name">Cindy Sember <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">3× Olympian coaching high-achieving Christian women — fat loss + muscle + elite mindset. 66K followers. Running ads but attracting wrong avatar at $1,200 / 4-month offer.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $5K/mo consistent → rebuild to $6K+ offer</div>
+        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+      </div>
+
+      <!-- AUDITS IN PROCESS DIVIDER -->
+      <div style="grid-column:1/-1;padding:20px 0 8px;border-top:1px solid rgba(255,255,255,.06);margin-top:8px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);">📋 Audits in Process — Check Back as They Go Live</div>
       </div>
 
       <!-- LEEANN POTOCHNEY -->
@@ -377,13 +386,7 @@ footer strong{color:var(--orange);}
         <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
       </div>
 
-      <!-- CINDY SEMBER — FULL AUDIT LIVE -->
-      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.open('hot-seat-cindy-sember.html','_blank')">
-        <div class="ac-name">Cindy Sember <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">3× Olympian coaching high-achieving Christian women — fat loss + muscle + elite mindset. 66K followers. Running ads but attracting wrong avatar at $1,200 / 4-month offer.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $5K/mo consistent → rebuild to $6K+ offer</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
-      </div>
+     
 
       <!-- KRISTAL COUPER -->
       <div class="attendee-card" data-phase="starter">
