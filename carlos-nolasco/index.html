@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carlos Nolasco — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.credential-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(74,127,165,.15),rgba(232,119,34,.12));border:1px solid rgba(74,127,165,.35);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.credential-badge .cb-icon{font-size:24px;}
+.credential-badge .cb-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#7ABFDD;}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+
+<!-- ── HERO ── -->
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit · April 2026</div>
+  <div class="hero-name">Carlos <span>Nolasco</span></div>
+  <div class="hero-title">@tennis.matchiq · TPA Academy | Match IQ · Tactical Tennis Coach · Starter Phase</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">$5K</div><div class="hs-label">Est. Monthly Revenue</div></div>
+    <div class="hs"><div class="hs-val blue">$700/mo</div><div class="hs-label">Restructured FE Price</div></div>
+    <div class="hs"><div class="hs-val orange">1,000+</div><div class="hs-label">Past Players Coached</div></div>
+    <div class="hs"><div class="hs-val green">$20K/mo</div><div class="hs-label">6-Month Goal</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Carlos Nolasco just quit his job two weeks ago to go all-in on <strong>TPA Academy | Match IQ</strong> — a tactical tennis intelligence coaching brand built around 15 years of professional experience and the elite Spanish methodology behind Verdasco and Ferrer. His bio hook is one of the sharpest in any niche: <strong>"Your forehand looks good. Your results say otherwise."</strong> The positioning is differentiated, the credentials are real, and the in-person close rate is 70%+. The problem is structural — a three-tier monthly subscription model that requires 40–100 clients to hit his goal, a brand-new social account with zero audience, and a complete absence of personal brand content. <strong>The mechanism is gold. The model and distribution are holding him back.</strong>
+  </p>
+</div>
+
+<!-- ── NAV ── -->
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What's Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+
+<!-- ── S01: WHAT'S WORKING ── -->
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div>
+  <div class="sec-heading">What's Working</div>
+  <div class="sec-divider"></div>
+
+  <div class="credential-badge">
+    <div class="cb-icon">🎾</div>
+    <div class="cb-text">15 Years + Spanish Methodology (Verdasco / Ferrer System) — Differentiated Credibility Most Coaches Cannot Buy</div>
+  </div>
+
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">🧠</div><div>
+      <div class="win-label">Match IQ Mechanism — Rare Differentiation in a Crowded Market</div>
+      <div class="win-desc">"Tactical tennis intelligence" vs. "fix your forehand" is a fundamentally different category. The online tennis coaching space is saturated with stroke mechanics instruction. Carlos is the only coach positioning around pattern recognition, match IQ, and decision-making under pressure. This is an immediately defensible moat that competitors cannot replicate without 15 years of the same experience.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🏆</div><div>
+      <div class="win-label">Spanish Methodology Training — Elite System Credibility</div>
+      <div class="win-desc">Being trained in the same system that produced Verdasco and Ferrer is a name-drop that lands immediately with serious tennis players. It signals that this is not internet coaching — it is a proven professional methodology. This credential belongs in every ad headline, every bio, every sales call opener. Most coaches teaching tennis online have zero professional system training.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">📈</div><div>
+      <div class="win-label">70%+ In-Person Close Rate — Proven Sales Ability</div>
+      <div class="win-desc">A 70%+ close rate in any sales environment is exceptional. Industry benchmark is 30–45%. Carlos already knows how to convert — the problem is not his ability to close, it is the volume of qualified conversations he is having. When he transitions to online and builds the call funnel, his close rate should significantly outperform the IFCA benchmark from day one.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🔁</div><div>
+      <div class="win-label">12–18 Month In-Person Retention — Proof of Client Transformation</div>
+      <div class="win-desc">Clients staying 12–18 months is a retention rate that validates the program delivers real results. In a market where most online fitness programs see 3–6 month dropout, Carlos's clients stay for over a year. This is proof of a strong product. It also means LTV is already high in person — the online model simply needs to be structured to capture and extend that same retention pattern.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🎨</div><div>
+      <div class="win-label">Professional Branded Content — High Production Value for Day-1 Account</div>
+      <div class="win-desc">17 posts in and the carousel design quality is already professional — dark/white color scheme, branded layout, tactical diagrams. For a brand-new account that has never run ads, this is a strong foundation. The content strategy is clear and differentiated. The only missing element is Carlos himself — his face, voice, and personality are not visible yet, and that is the single highest-leverage addition he can make.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">💡</div><div>
+      <div class="win-label">Bio Hook — One of the Best Pain-First Openers in Any Niche</div>
+      <div class="win-desc">"Your forehand looks good. Your results say otherwise." This is an exceptional bio hook. It leads with validated pain (you've been told your strokes are fine but you're still losing), challenges a false belief (better strokes = better results), and positions Match IQ as the missing variable — all in 9 words. This exact line should be the opening hook for his first Meta ad and his first face-to-camera reel.</div>
+    </div></div>
+  </div>
+</section>
+
+<!-- ── S02: BUSINESS PHASE ── -->
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div>
+  <div class="sec-heading">Business Phase Diagnosis</div>
+  <div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item active"><div class="phase-label">Current Phase ▼</div><div class="phase-name">Starter</div><div class="phase-range">$0–$5K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K–$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Potential</div><div class="phase-name">Scale</div><div class="phase-range">$15K–$100K+/mo</div></div>
+  </div>
+  <div class="card orange-left mb-md">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;">
+      <strong>The math problem:</strong> Carlos's current subscription model is structurally incompatible with his $20K/month goal. At an average $600/month (blended between tiers), he needs 34 concurrent online clients — with no audience, no ads, and no funnel. Jordan's restructure changes the math entirely. At $700/month on a 6-month commitment, recurring revenue compounds and he only needs 5 new closes per month to hit target. The offer architecture is the constraint — not the market, not the niche, not the content.
+    </p>
+  </div>
+  <div class="math-box">
+    <div class="math-box-title">The Math — Current Model vs. Jordan's Restructure</div>
+    <div class="math-row"><span class="lbl">Current blended monthly subscription (avg tier)</span><span class="val orange">~$600/mo · no commitment</span></div>
+    <div class="math-row"><span class="lbl">Clients needed at $600/mo to reach $20K/mo</span><span class="val" style="color:#F87171;">34 concurrent clients — impossible from zero</span></div>
+    <div class="math-row"><span class="lbl">Jordan's restructured FE price</span><span class="val">$700/month · 6-month commitment ($4,200 ACV)</span></div>
+    <div class="math-row"><span class="lbl">Backend continuity after 6 months</span><span class="val">$400/month · 12-month program</span></div>
+    <div class="math-row"><span class="lbl">New clients needed per month at $700/mo (with compounding)</span><span class="val green">5 new closes/month</span></div>
+    <div class="math-row"><span class="lbl">Calls needed (at his 70%+ close rate, online ~50%)</span><span class="val">8–10 calls/month</span></div>
+    <div class="math-row"><span class="lbl">Leads needed to book 10 calls (20% book rate)</span><span class="val">50–60 qualified leads/month</span></div>
+    <div class="math-row"><span class="lbl">Warm network: 1,000+ past players (before ads)</span><span class="val green">First 5–10 clients — no ad spend required</span></div>
+    <div class="math-row"><span class="lbl">18-month LTV per client (FE + BE combined)</span><span class="val green">$4,200 FE + $4,800 BE = $9,000 LTV</span></div>
+  </div>
+</section>
+
+<!-- ── S03: CREATIVE INTELLIGENCE ── -->
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03 — Updated April 2026</div>
+  <div class="sec-heading">Creative Intelligence Report</div>
+  <div class="sec-divider"></div>
+
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;font-size:14px;color:rgba(255,255,255,.55);">Full intelligence synthesis across brand positioning, organic ecosystem, Meta Ad Library findings, entity gap analysis, verbatim hooks, and white space angles.</p>
+    <button onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;">
+      <span>⬆</span> Copy for Workshop
+    </button>
+  </div>
+
+  <div class="card orange-left mb-lg">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:12px;">
+      <strong>Executive Summary.</strong> Carlos Nolasco has the rarest combination in the tennis coaching space: a genuinely differentiated mechanism (Match IQ), an elite professional pedigree (Spanish methodology, 1,000+ players), and a bio hook that is already doing what most coaches spend years trying to write. The gap is not positioning — it is distribution and personal brand. He is currently invisible (16 Instagram followers, zero ads) with no face on his content and no way for prospects to find him. The mechanism is ready. The offer model needs one restructure. And the growth channel is a warm list of 1,000+ past players who already know, like, and trust him.
+    </p>
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;">
+      <strong>Highest-leverage insight:</strong> The white space is attacking the identity-level frustration of the 3.5–4.0 player who has taken years of lessons, has solid strokes, but keeps losing to inferior players. The hook <strong>"Stop taking lessons to fix your forehand. Your forehand is fine. You're losing because your Match IQ is a 2.0"</strong> will land harder with this avatar than any technical instruction ad. Carlos owns this angle completely — and no competitor is in it.
+    </p>
+  </div>
+
+  <!-- BRAND TABLE -->
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Core Avatar</td><td>Broad — "tennis players who want to improve" (no specificity)</td><td>Competitive 3.5–4.0 club/league players, 25–50, who have had lessons for years but can't stop losing to "pushers" and lower-ranked opponents despite solid technique</td></tr>
+        <tr><td class="t-strong">Named Mechanism</td><td>"Match IQ" — exists in branding but not yet systematized as a program</td><td>"The Match IQ System" or "Match IQ Academy" — 6-month outcome-based framework with defined milestones (Pattern Recognition, Pressure Decision-Making, Point Construction, Match Management)</td></tr>
+        <tr><td class="t-strong">Enemy Frame</td><td>Implicit (strokes vs. tactics) — not yet weaponized</td><td>Explicit villain: "The stroke mechanics trap" — the lie that more lessons fix match results. Call it out by name. "Tennis lesson culture taught you the wrong thing. Here's what actually wins matches."</td></tr>
+        <tr><td class="t-strong">Pricing Signal</td><td>$197/$600/$1,100 monthly — low-ticket tier dilutes value and attracts wrong buyer</td><td>$700/month · 6-month commitment only. No $197 tier. Premium positioning signals serious transformation vs. hobby-level tinkering.</td></tr>
+        <tr><td class="t-strong">Personal Brand</td><td>Zero face-to-camera content — Carlos is invisible in his own brand</td><td>Carlos must become the face. His story (quit job, all-in, trained by Spanish pros, 1,000+ players) IS the content. Daily selfie-rant video format — raw, direct, no production needed.</td></tr>
+        <tr><td class="t-strong">Distribution Channel</td><td>16 Instagram followers — effectively zero organic reach</td><td>Step 1: Warm network of 1,000+ past players via direct outreach. Step 2: Organic content (face-to-camera). Step 3: Meta ads using proven bio hook as opening line.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ORGANIC CONTENT AUDIT -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Organic Content Audit — Confirmed Hooks (All From Profile Grid)</div>
+  <div class="card yellow-left mb-sm">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Critical gap:</strong> 100% of current content is static carousels — no video, no face, no voice. The content strategy is tactical and high-quality, but without Carlos appearing personally, it reads as an anonymous brand page rather than a coach who can transform your game. The single highest-ROI content change he can make costs $0 and takes 5 minutes: point a phone at his face and talk about why 3.5 players keep losing. That one video will outperform all 17 current posts combined within 30 days.</p>
+  </div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook / Caption Fragment</th><th>Format</th><th>Content Bucket</th><th>Ad Potential</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"Most 3.5 players do not lose because they need better strokes. They lose because they: attack too early, donate short balls, ignore patterns, panic under pressure, confuse pace with control"</td><td>Carousel</td><td>Core Mechanism / Pain Diagnosis</td><td><span class="gap-pill opportunity">Very High — This IS the Ad</span></td></tr>
+        <tr><td class="t-strong">"What opponent type do you hate most? If you are any of these... please stop disrespecting this beautiful sport 😂"</td><td>Carousel (engagement)</td><td>Identity / Community / Pattern Awareness</td><td><span class="gap-pill opportunity">High — Add video format</span></td></tr>
+        <tr><td class="t-strong">"Most players ask the wrong question. Not 'what's the best shot?' The better question is: what's the best decision in this situation?"</td><td>Carousel</td><td>Mindset / Match IQ Philosophy</td><td><span class="gap-pill opportunity">High — Strong TOF hook</span></td></tr>
+        <tr><td class="t-strong">"Your level is not just about strokes. It's about the kind of mistakes you make under pressure."</td><td>Carousel</td><td>Mechanism Education / Pressure IQ</td><td><span class="gap-pill warn">Med-High — Needs CTA</span></td></tr>
+        <tr><td class="t-strong">"30-40 on your second serve tells the truth."</td><td>Carousel</td><td>Pressure Scenario / Pain</td><td><span class="gap-pill warn">Med — Short form reel potential</span></td></tr>
+        <tr><td class="t-strong">"Better players don't try to finish first — they build first."</td><td>Carousel</td><td>Tactical Philosophy / Mechanism</td><td><span class="gap-pill warn">Med — abstract, needs specificity</span></td></tr>
+        <tr><td class="t-strong">"Your forehand looks good. Your results say otherwise...." (bio hook)</td><td>Bio (not yet deployed as content)</td><td>Pain-First / Mechanism Entry</td><td><span class="gap-pill opportunity">Critical — Make this Ad #1</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ENTITY CLUSTERS -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Entity Clusters — Current vs. Needed</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Current Status</th><th>Emotional Driver</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Pain-First Identity Hook ("Your forehand is fine")</td><td><span class="gap-pill missing">In Bio Only — Not Deployed as Content</span></td><td><span class="gap-pill missing">Frustration + Recognition</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Personal Brand / Carlos as Coach</td><td><span class="gap-pill missing">Gap — Does Not Exist</span></td><td><span class="gap-pill info">Trust + Relatability</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Stroke Mechanics Villain ("Lessons Don't Win Matches")</td><td><span class="gap-pill missing">Gap — Implied but Not Explicit</span></td><td><span class="gap-pill missing">Anger + Validation</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Tactical Education Carousels (Match IQ)</td><td><span class="gap-pill warn">Active — Good Foundation</span></td><td><span class="gap-pill info">Aspiration + Learning</span></td><td><span class="badge warn">Maintain + Add CTA</span></td></tr>
+        <tr><td class="t-strong">Pressure/Match Scenario Content</td><td><span class="gap-pill warn">Partial — Some Posts</span></td><td><span class="gap-pill info">Recognition + Pain</span></td><td><span class="badge warn">Expand + Reel Format</span></td></tr>
+        <tr><td class="t-strong">Client Proof / Transformation (3.5→4.0)</td><td><span class="gap-pill missing">Does Not Exist Online</span></td><td><span class="gap-pill missing">Hope + Social Proof</span></td><td><span class="badge warn">Build Second</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- META AD LIBRARY -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Meta Ad Library Findings</div>
+  <div class="card yellow-left mb-lg">
+    <p style="font-size:14px;margin-bottom:8px;"><strong>Zero ads confirmed — clean slate.</strong> No active or historical ads found under TPA Academy, Match IQ, or Carlos Nolasco. This is expected given the brand-new account status.</p>
+    <p style="font-size:13px;color:rgba(255,255,255,.55);">The clean slate is actually an advantage at this stage. Jordan's prescription was to run the warm network launch FIRST before any paid ads. This allows Carlos to get his first 5–10 online clients, collect testimonials, and build case studies before spending ad budget. The warm launch also tests the new $700/month price point with an audience that already knows his credibility — the strongest possible proving ground before cold traffic.</p>
+  </div>
+
+  <!-- ENTITY GAP SCORECARD -->
+  <div class="grid-3 mb-lg">
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:#F87171;line-height:1;">0</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Paid Entities</div>
+      <span class="badge fail" style="margin-top:8px;display:inline-block;">Warm Launch First</span>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:var(--yellow);line-height:1;">3</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Organic Angles Worth Keeping</div>
+      <span class="badge warn" style="margin-top:8px;display:inline-block;">Match IQ + Pressure + Opponent Types</span>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">6–8</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">New Entities to Build</div>
+      <span class="badge warn" style="margin-top:8px;display:inline-block;">Face-First Rebuild</span>
+    </div>
+  </div>
+
+  <!-- VERBATIM HOOK BANK -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">New Hook Bank — Jordan-Recommended + Organic-Validated</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook Line</th><th>Type</th><th>Format Recommendation</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"Stop taking lessons to fix your forehand. Your forehand is fine. You're losing because your Match IQ is a 2.0."</td><td><span class="badge fail">Pain-First Villain</span></td><td>Talking-head, direct camera, confident delivery. 30–45 sec. Lead with this line cold.</td></tr>
+        <tr><td class="t-strong">"Your forehand looks good. Your results say otherwise. Here's what's actually holding your game back."</td><td><span class="badge fail">Bio Hook → Video</span></td><td>Turn the bio hook into the opening line of Ad #1. Proven concept — just needs video format.</td></tr>
+        <tr><td class="t-strong">"Most 3.5 players don't lose because of their strokes. They lose because they panic under pressure, attack too early, and can't read their opponent. Here is the fix."</td><td><span class="badge info">Pain Diagnosis + CTA</span></td><td">Carousel or talking-head reel. Mirrors best-performing organic post. High confirmation bias pull.</td></tr>
+        <tr><td class="t-strong">"I trained with the same system that produced Verdasco and Ferrer. Here is the one tactical concept that changed how every player I coach sees the game."</td><td><span class="badge info">Credibility + Mechanism</span></td><td>Talking-head, 60–90 sec. Leads with Spanish methodology, delivers Match IQ concept. Serious player avatar responds strongly.</td></tr>
+        <tr><td class="t-strong">"What opponent type do you hate playing most? The pusher? The moonballer? Here's the pattern they're exploiting — and how to flip it."</td><td><span class="badge pass">Engagement + Pain</span></td><td>Already proven as organic engagement post. Convert to short reel with Carlos on camera.</td></tr>
+        <tr><td class="t-strong">"I just quit my job to prove that Match IQ is the missing piece in recreational tennis. Week 1 update."</td><td><span class="badge info">Personal Brand / Journey</span></td><td>Raw selfie video. Authenticity play. Documents the journey — day-1 energy is a hook in itself. No production needed.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- WHITE SPACE -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">White Space & Competitive Advantage</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>White Space Angle</th><th>Hook Concept</th><th>Why It's Uncontested</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"The Stroke Mechanics Trap"</td><td>"You've been sold the wrong solution for 10 years. Lessons fix your forehand. They do nothing for your Match IQ. Here's the difference."</td><td>Every major tennis coaching brand sells stroke instruction. No one is explicitly attacking the lesson model as the wrong solution. Carlos can own this villain angle completely.</td></tr>
+        <tr><td class="t-strong">"The 3.5 Plateau"</td><td>"Stuck at 3.5 for years? Your strokes are fine. Your problem has a different name."</td><td>This is the most specific, validated pain point in the recreational tennis market — the player who has done everything "right" and still can't advance. Hyper-targeted, zero competition in the online coaching space.</td></tr>
+        <tr><td class="t-strong">Spanish Methodology Credibility</td><td>"The same tactical system used by ATP pros Verdasco and Ferrer — rebuilt for the club player who is tired of losing."</td><td>Name-dropping the Verdasco/Ferrer system creates instant credibility with serious players who know tour tennis. No online tennis coach is making this claim because almost none have this training.</td></tr>
+        <tr><td class="t-strong">"Comment IQ" DM Automation</td><td>CTA on every tactical post: "Comment IQ for my free Match IQ Assessment." Jordan's warm launch angle — leverages his exact mechanism name as the DM trigger.</td><td>The CTA keyword matches his mechanism name exactly — every engagement with his content reinforces the Match IQ brand. Self-reinforcing authority loop.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ENTITY BUILD QUEUE -->
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Priority Entity Build Queue</div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 01 · TOF · Pain-First Villain · High Conviction</span><span class="badge fail">Build First</span></div>
+    <div class="entity-hook">"Stop taking lessons to fix your forehand. Your forehand is fine. You're losing because your Match IQ is a 2.0."</div>
+    <div class="entity-meta">Talking-head, direct camera, no production. Carlos on court or at home. Authoritative, not aggressive. 30–45 sec. CTA: "Comment IQ for my free Match IQ Assessment."</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 02 · TOF · Bio Hook Activation · Proven Concept</span><span class="badge fail">Build First</span></div>
+    <div class="entity-hook">"Your forehand looks good. Your results say otherwise. Here's what three things are actually holding your game back."</div>
+    <div class="entity-meta">Take the bio hook to video. 3-point framework reveal. This concept is already validated by the bio — it just needs to be said on camera. 45–60 sec format.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 03 · TOF · Spanish Methodology Credibility</span><span class="badge fail">Build First</span></div>
+    <div class="entity-hook">"I trained with the same tactical system that produced Ferrer and Verdasco. Here is the one concept that changes everything for club players."</div>
+    <div class="entity-meta">Lead with methodology credibility. Deliver 1 core Match IQ concept (e.g., pattern recognition under pressure). 60–90 sec. Serious player avatar converts strongly on this.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 04 · MOF · Pain Diagnosis Carousel → Reel</span><span class="badge warn">Build Second</span></div>
+    <div class="entity-hook">"Most 3.5 players lose because of these 5 things — and none of them are your forehand."</div>
+    <div class="entity-meta">Convert top-performing carousel post to talking-head reel with Carlos narrating each point. Proven hook from organic. Format upgrade only — same content, massive reach difference.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 05 · TOF · Personal Journey / Brand Build</span><span class="badge warn">Build Second</span></div>
+    <div class="entity-hook">"I just quit my job to prove that Match IQ matters more than stroke mechanics. Here's why — and what I'm building."</div>
+    <div class="entity-meta">Raw, authentic. No production. Documents the moment. Day-1 energy is a hook. Builds personal connection with audience. Warm leads who know Carlos will re-engage with this immediately.</div>
+  </div>
+  <div class="entity-item">
+    <div class="entity-header"><span class="entity-id">Entity 06 · BOF · Social Proof / Transformation Reel</span><span class="badge info">Build After Warm Launch</span></div>
+    <div class="entity-hook">"[Client name] was stuck at 3.5 for 6 years. Here's what changed in 90 days with Match IQ coaching."</div>
+    <div class="entity-meta">Collect first transformation story from warm network launch clients. Even a short video testimonial from a past in-person player counts. This is the BOF retargeting anchor once paid ads begin.</div>
+  </div>
+
+  <!-- STRATEGIC DIAGNOSIS -->
+  <div class="card orange-left" style="margin-top:28px;">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Strategic diagnosis:</strong> Carlos has the rarest thing in online coaching — a mechanism that is genuinely differentiated and already named. "Match IQ" is not just a brand — it is a new category that explains why smart, dedicated tennis players keep losing. The strategic move is to fully commit to owning that category: be the only coach talking about tactical tennis intelligence as a trainable skill, make the Stroke Mechanics Trap his explicit villain, and deploy his personal story (quit job, trained in Spain, 15 years, 1,000+ players) as the authority bridge. Distribution comes from his existing network first, organic second, paid third — in that order. The first client he signs online will do more for his confidence and content strategy than any amount of pre-launch funnel work.</p>
+  </div>
+</section>
+
+<!-- ── S04: CONSTRAINT DIAGNOSIS ── -->
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div>
+  <div class="sec-heading">Constraint Diagnosis</div>
+  <div class="sec-divider"></div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 · Primary Constraint — Killing Growth</div>
+    <div class="diag-title">Monthly Subscription Model with Low-Ticket Tier — Broken Economics</div>
+    <div class="diag-desc">The $197/month tier is not just a pricing error — it is a business model error. At $197/month, Carlos needs 101 clients to hit $20K. Even the blended average at $600/month requires 34 concurrent clients from zero audience and zero marketing. Monthly subscriptions without commitment have near-zero retention leverage; the client can cancel after one month with no consequence. This creates perpetual churn, constant re-selling, and impossible math for hitting any meaningful revenue target.</div>
+    <div class="diag-fix"><strong>The Fix (Jordan's exact prescription):</strong> Eliminate the $197 tier entirely. Move to outcome-based 6-month contract at $700/month ($4,200 total). Position as "Match IQ Transformation Program" — 6 months because measurable tactical improvement requires sustained practice and pattern repetition. Frame on sales calls as: "My program is a 6-month commitment because Match IQ is not a skill you develop in 30 days — it is a complete rewiring of how you see the court. Players who commit for the full arc see 80%+ match performance improvement." Add a 12-month backend at $400/month for players who reach 4.0+ and want to continue optimizing.</div>
+  </div>
+
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 · Primary Constraint — Trust and Distribution Gap</div>
+    <div class="diag-title">Zero Personal Brand — Carlos Is Invisible in His Own Business</div>
+    <div class="diag-desc">16 Instagram followers, zero face-to-camera content, and a brand page that reads as a content publisher rather than a coach. In high-ticket online coaching, people buy the coach — not the brand. Carlos's in-person close rate is 70%+ because prospects are seeing his expertise, energy, and conviction firsthand. Online, that trust has to be built through video presence before any sale can happen. The content quality is there. The person behind it is not.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Carlos must appear on camera immediately. Start with the "selfie rant" format Jordan recommended — no studio, no production, just Carlos talking directly to the camera about why 3.5 players keep losing. One raw 60-second video of Carlos on a court saying "Your forehand is fine. Stop taking lessons. Here's what's actually happening in your matches" will generate more qualified leads than all 17 current carousel posts combined. Commit to 5 face-to-camera posts per week minimum until 90 days in.</div>
+  </div>
+
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 · Meaningful Gap</div>
+    <div class="diag-title">Brand-New Social Account — Zero Trust Infrastructure Online</div>
+    <div class="diag-desc">16 followers and 17 posts represents near-zero social proof. A prospect who finds Carlos's profile after seeing a paid ad will see a page that looks new and unestablished — which immediately creates friction in the purchase decision, especially for a high-ticket online program. The warm network launch mitigates this because past players already know Carlos offline, but any cold traffic funnel faces an immediate trust deficit before there is enough organic content to signal credibility.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Run warm network outreach before launching any paid ads. The first 5–10 clients from his 1,000+ player network serve two purposes: revenue (hitting his initial $5–10K online goal) and social proof content. Every warm launch client becomes a testimonial, a transformation screenshot, and a content asset. By day 45, the profile should have 30+ posts with Carlos on camera, some engagement, and early client proof — enough to run paid ads without the cold-start friction.</div>
+  </div>
+
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 · Meaningful Gap</div>
+    <div class="diag-title">No Backend Offer — Missing $4,800 Per Client in LTV</div>
+    <div class="diag-desc">The 6-month front-end contract at $700/month is correct. But Carlos's existing in-person data tells a critical story: his clients stay 12–18 months. That retention behavior does not disappear online — it just needs to be captured in a structured backend. Without a 12-month continuity program, clients who complete the 6-month program either stop (lost revenue and lost transformation) or renew at the same rate ad-hoc (leaving money and commitment on the table). The LTV ceiling is artificially low.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Build the 12-month backend offer (Jordan's recommendation: $400/month) as a "Match IQ Mastery Continuation" program. Position during the initial sales call: "The 6-month program gets you to 4.0 level tactical IQ. The continuation program is where 4.0 players start becoming 4.5+." Pre-frame the 18-month journey from day one of the sales call so it never feels like an upsell — it is the complete transformation arc. Full LTV at $700 × 6 + $400 × 12 = $9,000 per client.</div>
+  </div>
+
+  <div class="diag-card p3">
+    <div class="diag-rank">P3 · Watch Item</div>
+    <div class="diag-title">No DM Automation — Manual Lead Capture Is a Growth Ceiling</div>
+    <div class="diag-desc">No active DM automation, no "Comment IQ" CTA deployed on posts yet. As content volume increases and reach grows, manually responding to DMs becomes a bottleneck that caps lead flow at whatever Carlos can personally manage. This is a P3 now because the account is too new to have DM volume — but it needs to be installed before content scales.</div>
+    <div class="diag-fix"><strong>The Fix:</strong> Add "Comment IQ" CTA to all tactical education posts. Set up ManyChat or GHL automation to respond with: "Hey [Name] — thanks for engaging. Here's a quick 3-question Match IQ Assessment to see where your tactical game stands: [link to assessment/landing page]." This turns every post engagement into an automated lead capture without additional manual effort.</div>
+  </div>
+
+  <div class="diag-card ok">
+    <div class="diag-rank">OK · Validated Asset — Protect This</div>
+    <div class="diag-title">Match IQ Positioning + Bio Hook + Tactical Content Quality</div>
+    <div class="diag-desc">The combination of a differentiated mechanism (Match IQ), a world-class bio hook ("Your forehand looks good. Your results say otherwise."), and professional branded tactical content is already stronger than 90% of coaches at this stage. Most people take years to find their positioning. Carlos launched with it on day one. This is an exceptional foundation — the only missing variable is distribution and personal brand presence, both of which are fixable in 30–60 days.</div>
+    <div class="diag-fix"><strong>Maintain:</strong> Do not change the Match IQ positioning. Do not dilute into generic tennis instruction content to chase short-term reach. The niche is correct and it is uncontested. Stay fully committed to the tactical IQ angle — every post, every hook, every ad. The audience that resonates with this is exactly the avatar who will pay $700/month for 6 months.</div>
+  </div>
+</section>
+
+<!-- ── S05: ACTION PLAN ── -->
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div>
+  <div class="sec-heading">90-Day Action Plan</div>
+  <div class="sec-divider"></div>
+  <div class="card blue-left mb-md">
+    <p style="font-size:13px;margin-bottom:0;"><strong>Priority override:</strong> Jordan's specific instruction from the live hot seat was to execute the warm network launch to 1,000+ past players BEFORE running any paid ads or spending budget on content production. The first 5 clients should come from people who already know Carlos. Do not skip this step — it funds the next phase and builds the social proof needed for cold traffic.</p>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">1</div><div class="plan-body">
+      <div class="plan-title">Eliminate $197 Tier — Restructure to 6-Month Outcome Contract at $700/mo (Days 1–5)</div>
+      <div class="plan-desc">Remove the $197 monthly subscription option from all platforms immediately. Update GHL landing page pricing to reflect one offer only: "The Match IQ System — 6-month outcome-based coaching at $700/month." Update sales script to open with the 18-month transformation arc: "My program is designed as a 6-month foundation followed by a 12-month mastery path — players who complete both go from 3.5 to 4.5 level tactical IQ." This one change makes the math possible. Every day with the $197 tier is another day the model cannot work.</div>
+      <div class="plan-tags"><span class="plan-tag offer">Offer Restructure</span><span class="plan-tag sales">Day 1</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">2</div><div class="plan-body">
+      <div class="plan-title">Warm Network Launch — 1,000+ Past Players (Days 1–45)</div>
+      <div class="plan-desc">Execute structured outreach to every past client, tournament contact, league player, and training partner Carlos has coached or played with in 15 years. Segment by: (1) former in-person clients — highest intent, personal relationship; (2) tournament contacts and league players — know his reputation; (3) social contacts from tennis circles. Message framework: "Hey [Name] — I just went all-in on my online Match IQ coaching program. I'm running a founding member launch at $700/mo for my first 10 online students with direct access to me. Based on what I know about your game, I think this is the missing piece. Would you be open to a 20-minute call to see if it's a fit?" Goal: secure first 5–10 online clients before week 6. Zero ad spend required.</div>
+      <div class="plan-tags"><span class="plan-tag sales">Sales</span><span class="plan-tag ops">Zero Ad Spend</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">3</div><div class="plan-body">
+      <div class="plan-title">Launch Face-to-Camera Content — Daily Selfie Rant Format (Days 1–90, Ongoing)</div>
+      <div class="plan-desc">Start Day 1 with a raw personal video: "I just quit my job to go all-in on this. Here's why I believe Match IQ is the single most underrated skill in recreational tennis." No production, no studio — just Carlos, a phone, and conviction. Post minimum 5 face-to-camera videos per week alongside existing carousel content. Content pillars Jordan recommended: (1) tactical opinions and villain content against the "lessons fix everything" myth; (2) personal story and journey (quit job, Spanish methodology, 15 years); (3) false beliefs of club players (that more practice without tactical rewiring works). Every video ends with: "Comment IQ to get my free Match IQ Assessment."</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag ads">Organic Growth</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">4</div><div class="plan-body">
+      <div class="plan-title">Install DM Automation — "Comment IQ" Funnel (Days 15–30)</div>
+      <div class="plan-desc">Set up ManyChat or GHL automated DM sequence triggered by "IQ" comment on any post. Sequence: (1) Auto-DM with 3-question Match IQ Assessment link; (2) Follow-up 24 hours later if no response: "Hey — just checking if you had a chance to take the assessment. Takes about 3 minutes."; (3) Assessment completion triggers calendar booking link for 20-minute Match IQ strategy session. This converts passive content engagement into an active lead pipeline without any manual effort beyond the initial setup. Add "Comment IQ" CTA to all future tactical posts retroactively.</div>
+      <div class="plan-tags"><span class="plan-tag ops">Automation</span><span class="plan-tag content">Lead Gen</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">5</div><div class="plan-body">
+      <div class="plan-title">Build 12-Month Backend Continuity Program (Days 30–60)</div>
+      <div class="plan-desc">Develop "Match IQ Mastery Continuation" — the 12-month program at $400/month positioned as the advanced phase for clients who complete the 6-month foundation and want to reach 4.5+ level. Define the curriculum: Month 7–12 focuses on advanced pattern libraries, opponent-specific game planning, and tournament preparation. Milestone-based structure (12-month clients get quarterly video analysis + live Q&A calls). Start pre-framing this on all sales calls from Day 1 — "When you finish the 6-month foundation, most students continue into the 12-month mastery program. I'll tell you more about that during our check-in at month 4."</div>
+      <div class="plan-tags"><span class="plan-tag offer">Backend Build</span><span class="plan-tag sales">LTV</span></div>
+    </div>
+  </div>
+
+  <div class="plan-item">
+    <div class="plan-num">6</div><div class="plan-body">
+      <div class="plan-title">Launch Meta Ads — Warm Retargeting First, Then Cold (Days 60–90)</div>
+      <div class="plan-desc">After warm network launch completes and first 5 organic-tested entities are live, begin paid ads. Phase 1 (Days 60–75): Retargeting campaign to Instagram engagers and website visitors only. Budget: $20–30/day. Run the top 2 performing organic videos as ads. Measure CPL, show rate, close rate at new pricing. Phase 2 (Days 75–90): Expand to cold broad audience (men and women 25–55 interested in tennis, recreational sports) with the "Your forehand is fine" hook as Ad #1. Target CPL under $10. If close rate holds above 40%, begin scaling cold traffic budget. Do NOT run paid ads before the organic content library has at least 20 posts with Carlos on camera.</div>
+      <div class="plan-tags"><span class="plan-tag ads">Paid Traffic</span><span class="plan-tag sales">Scale</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> · Prospect Intelligence Audit · Confidential</div>
+  <div class="footer-tag">Jordan Dugger · Impact Fitness Coaching Academy · April 2026</div>
+</footer>
+
+</div>
+
+<script>
+const sections = document.querySelectorAll('.doc-section');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const active = document.querySelector(`.nav-link[href="#${id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px 0px 0px' });
+sections.forEach(s => observer.observe(s));
+
+function copyIntelReport() {
+  const text = `CARLOS NOLASCO — CREATIVE INTELLIGENCE REPORT
+@tennis.matchiq | TPA Academy | Match IQ | Tactical Tennis Coaching | April 2026
+
+=== BRAND SNAPSHOT ===
+Avatar: Competitive 3.5–4.0 club/league players, 25–50, who have had lessons for years but keep losing to inferior opponents despite solid technique
+Current pricing: $197/$600/$1,100 monthly subscriptions — CRITICAL: eliminate $197 tier, restructure to $700/mo 6-month commitment
+Mechanism: "Match IQ" — EXISTS in branding but needs systematization as "The Match IQ System" with defined milestones
+Enemy: The Stroke Mechanics Trap — "more lessons" culture that teaches technical skill but ignores tactical decision-making
+Distribution: Zero (16 followers, no ads) — warm launch of 1,000+ past players FIRST before any paid spend
+Credentials: 15 years, Spanish methodology (Verdasco/Ferrer system), 1,000+ players, 70%+ in-person close rate, 12–18mo retention
+
+=== VERBATIM HOOKS — CONFIRMED FROM ORGANIC + RECOMMENDED ===
+1. "Stop taking lessons to fix your forehand. Your forehand is fine. You're losing because your Match IQ is a 2.0." — Pain-First Villain (TOF #1)
+2. "Your forehand looks good. Your results say otherwise." — Bio hook, turn into video Ad #1
+3. "Most 3.5 players do not lose because they need better strokes. They lose because they attack too early, donate short balls, ignore patterns, panic under pressure" — Proven organic hook
+4. "I trained with the same tactical system that produced Ferrer and Verdasco. Here is what club players are missing." — Credibility + Mechanism
+5. "Most players ask the wrong question. Not 'what's the best shot?' The better question is: what's the best decision in this situation?" — Proven organic hook
+6. "I just quit my job to prove that Match IQ matters more than stroke mechanics. Week 1 update." — Personal brand / journey hook
+
+=== ENTITY CLUSTERS — PRIORITY BUILD ORDER ===
+1. Pain-First Villain ("Your forehand is fine") — Frustration/Recognition — TOF — Build First
+2. Personal Brand / Carlos on camera — Trust/Relatability — TOF — Build First
+3. Stroke Mechanics Villain ("Lessons Don't Win") — Anger/Validation — TOF — Build First
+4. Tactical Education Carousels — Aspiration/Learning — MOF — Maintain + Add CTA
+5. Pressure/Match Scenario Content — Recognition/Pain — MOF — Expand to Reel Format
+6. Client Proof / 3.5→4.0 Transformation — Hope/Social Proof — BOF — After Warm Launch
+
+=== META AD LIBRARY ===
+Zero ads confirmed. Clean slate. Warm network launch first — then organic content build — then paid ads at Day 60.
+
+=== PRIMARY CONSTRAINTS ===
+P1: Monthly subscription model with $197 low-ticket tier — broken economics, impossible math
+P1: Zero personal brand — Carlos invisible on camera, trust deficit for cold traffic
+P2: Brand-new account (16 followers) — no social proof infrastructure online
+P2: No backend offer — missing $4,800 per client in LTV ($400/mo × 12mo)
+
+=== JORDAN'S LIVE HOT SEAT RECOMMENDATIONS ===
+- Drop the $197 tier entirely — immediately
+- Restructure to 6-month outcome contract at $700/month
+- Build 12-month backend at $400/month
+- Pre-frame 18-month transformation journey on every sales call
+- Run affinity/warm network launch to 1,000+ past players BEFORE ads
+- Math: only needs 5 new clients/month to hit $20K goal
+- LTV per client: $9,000 (FE $4,200 + BE $4,800)`;
+
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target.closest('button');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Copied!';
+    setTimeout(() => btn.innerHTML = orig, 2000);
+  });
+}
+</script>
+</body>
+</html>
