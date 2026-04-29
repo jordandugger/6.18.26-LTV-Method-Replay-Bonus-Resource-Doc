@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Henry Matthews — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.olympian-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(232,119,34,.12));border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.olympian-badge .ob-icon{font-size:24px;}
+.olympian-badge .ob-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit &middot; April 2026</div>
+  <div class="hero-name">Henry <span>Matthews</span></div>
+  <div class="hero-title">@henrylmatthews &middot; Rehab Meets Performance &middot; PT + Strength Coach &middot; Starter Phase</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">$2-4K</div><div class="hs-label">Est. Monthly Revenue</div></div>
+    <div class="hs"><div class="hs-val blue">12.2K</div><div class="hs-label">Instagram Followers</div></div>
+    <div class="hs"><div class="hs-val red">$199</div><div class="hs-label">Primary Offer (Too Low)</div></div>
+    <div class="hs"><div class="hs-val green">$10-15K</div><div class="hs-label">Revenue Target</div></div>
+    <div class="hs"><div class="hs-val white">P1+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Henry Matthews is a physical therapist and strength coach with <strong>12.2K Instagram followers</strong>, a named mechanism that already works ("Rehab Meets Performance"), and a content library of pain-point hooks that are already among the best ad-ready hooks in this cohort. His $199 Playbook program proves the market wants what he's selling. The problem: <strong>the $199 product is doing all the work while the $2,000+ coaching program is invisible.</strong> His high-ticket offer lacks a funnel, lacks a landing page, and lacks any path from his 12.2K engaged followers to a sales call. The mechanism is gold. The monetization architecture is broken.
+  </p>
+</div>
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What's Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div><div class="sec-heading">What's Working</div><div class="sec-divider"></div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">&#129504;</div><div><div class="win-label">Rehab Meets Performance &#8212; Named, Differentiated Mechanism</div><div class="win-desc">"Rehab Meets Performance" is a genuine mechanism that bridges a real gap &#8212; the space between pain relief (PT) and athletic capability (strength coaching). Most coaches are one or the other. Henry is both, and he has the credentials to prove it. This is not a branding exercise &#8212; it is a defensible positioning that competitors cannot replicate without the same dual credential.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128293;</div><div><div class="win-label">Ad-Ready Hooks Already Proven Organically</div><div class="win-desc">"Stop stretching your hamstrings! Do this instead." "Are you struggling with knee pain when you squat?" These are textbook high-performing ad hooks &#8212; pain callout, contrarian reveal, specific body part targeting. They are already generating organic engagement, which means they are already pre-tested for the paid environment. The creative library is essentially built. It just needs to be paid to distribute.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128200;</div><div><div class="win-label">$199 Playbook Proves Market Demand</div><div class="win-desc">People are paying $199 for a lower kinetic chain pain program from Henry. This is proof of concept &#8212; the avatar exists, the problem is real, the credibility is established. The $199 buyers are also the most qualified leads for a $2,000+ high-ticket program. They have already self-identified as someone who has the problem and is willing to pay for the solution.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#127891;</div><div><div class="win-label">Dual Credential &#8212; PT + Strength Coach Is a Moat</div><div class="win-desc">The combination of physical therapy licensure and 12+ years of strength coaching is an extremely rare credential combination. Most PTs don't lift heavy. Most strength coaches aren't licensed in clinical rehab. Henry occupies the intersection and can speak credibly to both the injured athlete who has been told to stop training AND the performance athlete who wants to stay healthy while pushing limits.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128293;</div><div><div class="win-label">Consistent Educational Content &#8212; Strong Trust Infrastructure</div><div class="win-desc">Henry's consistent production of pain-point-driven educational content has built a warm, engaged audience of 12.2K followers who associate his name with credible solutions to injury. This trust infrastructure is the foundation that makes high-ticket coaching sales possible. He doesn't need to build credibility &#8212; he needs to monetize it.</div></div></div>
+    <div class="win-card"><div class="win-icon">&#128176;</div><div><div class="win-label">Clear Avatar &#8212; Lifters With Nagging Injuries</div><div class="win-desc">"Athletes and everyday lifters" who have nagging injuries and refuse to stop training is a highly specific, reachable, and monetizable avatar. This person feels underserved by traditional PT (too conservative) and overexposed by generic fitness content (doesn't address their pain). Henry's dual-credential positioning is the exact solution they've been searching for.</div></div></div>
+  </div>
+</section><section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div><div class="sec-heading">Business Phase Diagnosis</div><div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item active"><div class="phase-label">Current Phase &#9660;</div><div class="phase-name">Starter</div><div class="phase-range">$0-$5K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K-$15K/mo</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Potential</div><div class="phase-name">Scale</div><div class="phase-range">$15K-$100K+/mo</div></div>
+  </div>
+  <div class="card orange-left mb-md"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>The inversion problem:</strong> Henry's $199 low-ticket product is getting all the visibility and all the marketing effort. His high-ticket 1:1 coaching &#8212; which is likely $1,500-3,000 &#8212; is buried, has no dedicated landing page, and has no explicit call-to-action driving his 12.2K followers toward it. This is backwards. The low-ticket product should exist as a proof-of-concept and ascension ramp INTO the high-ticket program, not as the primary revenue vehicle.</p></div>
+  <div class="math-box">
+    <div class="math-box-title">The Math &#8212; Current vs. High-Ticket Architecture</div>
+    <div class="math-row"><span class="lbl">Current primary offer revenue ($199 Playbook)</span><span class="val orange">Low-ticket, high-volume required</span></div>
+    <div class="math-row"><span class="lbl">Recommended high-ticket program price</span><span class="val">$2,500-3,500 / 12-16 week "Rehab Meets Performance Protocol"</span></div>
+    <div class="math-row"><span class="lbl">New clients needed/month at $3,000 to reach $15K/mo</span><span class="val green">5 new closes/month</span></div>
+    <div class="math-row"><span class="lbl">Calls needed (35% close rate)</span><span class="val green">14-15 calls/month</span></div>
+    <div class="math-row"><span class="lbl">Playbook buyers as warm ascension leads (ongoing)</span><span class="val green">Every $199 buyer = warm high-ticket prospect</span></div>
+    <div class="math-row"><span class="lbl">DM automation "Comment REHAB" conversion potential</span><span class="val green">12.2K engaged followers = significant call volume</span></div>
+  </div>
+</section><section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03 &#8212; Updated April 2026</div><div class="sec-heading">Creative Intelligence Report</div><div class="sec-divider"></div>
+  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:28px;flex-wrap:wrap;gap:12px;">
+    <p style="margin:0;max-width:680px;font-size:14px;color:rgba(255,255,255,.55);">Full intelligence synthesis across brand positioning, organic hook audit, Meta Ad Library, entity gaps, and hook bank.</p>
+    <button onclick="copyIntelReport()" style="background:var(--orange);border:none;border-radius:10px;padding:12px 22px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;display:flex;align-items:center;gap:8px;white-space:nowrap;flex-shrink:0;"><span>&#11014;</span> Copy for Workshop</button>
+  </div>
+  <div class="card orange-left mb-lg">
+    <p style="font-size:14px;line-height:1.7;margin-bottom:12px;"><strong>Executive Summary.</strong> Henry Matthews may have the most ad-ready content library of any prospect in this cohort. His confirmed organic hooks &#8212; pain callouts, contrarian reveals, and outcome-led education &#8212; are textbook high-performing paid ad creatives. The mechanism is named and differentiated. The avatar is specific and reachable. The $199 Playbook product proves market demand. The only missing piece is the high-ticket funnel that converts all of this into $2,500+ coaching clients.</p>
+    <p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Highest-leverage insight:</strong> Every person who buys Henry's $199 Playbook is a self-identified warm lead for his 1:1 coaching. These buyers have already proven: (1) they have the problem; (2) they trust Henry enough to pay; (3) they want the solution. A simple email sequence to Playbook buyers offering a free consultation to "accelerate your results with 1:1 coaching" is the easiest revenue unlock available without a single new lead.</p>
+  </div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Core Avatar</td><td>Athletes and lifters with injuries &#8212; broad but functional</td><td>Competitive lifters and recreational athletes 25-45 who have been told to "stop training" by traditional PT and refuse to accept that as the answer</td></tr>
+        <tr><td class="t-strong">Named Mechanism</td><td>"Rehab Meets Performance" &#8212; exists as brand, not yet as a program name</td><td>"The Rehab Meets Performance Protocol" &#8212; 12-16 week defined program with clinical rehab + strength programming phases, specific outcome milestones</td></tr>
+        <tr><td class="t-strong">Enemy Frame</td><td>Implicit (traditional PT vs. performance) &#8212; not weaponized</td><td>Explicit: "Traditional PT tells you to rest and stop training. That advice is costing you years of progress. Here is the protocol that actually works."</td></tr>
+        <tr><td class="t-strong">Funnel Architecture</td><td>Instagram bio &#8594; Linktree &#8594; Playbook $199 (primary) + 1:1 coaching (buried)</td><td>Instagram bio &#8594; Landing page for "Rehab Meets Performance Protocol" &#8594; Booking CTA. Playbook becomes secondary / ascension proof. DM automation "Comment REHAB" routes to consultation booking.</td></tr>
+        <tr><td class="t-strong">Content Strategy</td><td>Educational pain-point hooks &#8212; excellent quality, needs CTA upgrade</td><td>Same quality content + "Comment REHAB" CTA on every post + explicit monthly "1:1 coaching spots open" posts. Content is already working &#8212; it just has nowhere to go.</td></tr>
+        <tr><td class="t-strong">Paid Ads</td><td>Zero &#8212; entirely organic</td><td>Take the 3 best-performing organic hooks and run them as paid ads immediately. These are pre-tested. $30-50/day retargeting first, then cold interest-stacked (powerlifting, CrossFit, physical therapy) at Day 45.</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Organic Hook Audit &#8212; Confirmed High-Performers</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Hook Line</th><th>Type</th><th>Ad Potential</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">"Stop stretching your hamstrings! Do this instead."</td><td>Contrarian education</td><td><span class="gap-pill opportunity">Very High &#8212; Run as Ad Now</span></td></tr>
+        <tr><td class="t-strong">"Are you struggling with knee pain when you squat?"</td><td>Pain callout &#8212; specific body part</td><td><span class="gap-pill opportunity">Very High &#8212; Run as Ad Now</span></td></tr>
+        <tr><td class="t-strong">"Do you have a nagging shoulder injury that just won't go away?"</td><td>Pain callout &#8212; chronic injury</td><td><span class="gap-pill opportunity">High &#8212; Strong TOF Hook</span></td></tr>
+        <tr><td class="t-strong">"The secret to a stronger deadlift isn't what you think."</td><td>Curiosity &#8212; performance outcome</td><td><span class="gap-pill opportunity">High &#8212; Bridges rehab to performance</span></td></tr>
+        <tr><td class="t-strong">"Stop resting your knee pain. Rest makes it weaker." (BUILD)</td><td>Contrarian villain hook</td><td><span class="gap-pill opportunity">Very High &#8212; Attacks Traditional PT</span></td></tr>
+        <tr><td class="t-strong">"Traditional PT told you to stop lifting. Here's why that's wrong." (BUILD)</td><td>Authority challenge</td><td><span class="gap-pill opportunity">Very High &#8212; Enemy Frame Activated</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Entity Clusters &#8212; Current vs. Needed</div>
+  <div class="tbl-wrap mb-lg">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Status</th><th>Emotional Driver</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Traditional PT Villain &#8212; "Stop Resting"</td><td><span class="gap-pill warn">Implied &#8212; Not Explicitly Deployed</span></td><td><span class="gap-pill missing">Anger + Validation</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">High-Ticket Protocol Introduction</td><td><span class="gap-pill missing">Does Not Exist in Content</span></td><td><span class="gap-pill info">Aspiration + Solution</span></td><td><span class="badge fail">Build First</span></td></tr>
+        <tr><td class="t-strong">Pain-Point Education &#8212; Knee / Shoulder / Back</td><td><span class="gap-pill warn">Active &#8212; Good Volume</span></td><td><span class="gap-pill info">Relief + Trust</span></td><td><span class="badge pass">Maintain + Add CTA</span></td></tr>
+        <tr><td class="t-strong">Client Transformation &#8212; Injury to PR</td><td><span class="gap-pill warn">Unknown &#8212; Not Visible in Feed</span></td><td><span class="gap-pill info">Hope + Proof</span></td><td><span class="badge warn">Deploy if Available</span></td></tr>
+        <tr><td class="t-strong">Playbook &#8594; 1:1 Ascension Path</td><td><span class="gap-pill missing">Gap &#8212; No Bridge Exists</span></td><td><span class="gap-pill info">Logical Next Step</span></td><td><span class="badge warn">Build Second</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Meta Ad Library Findings</div>
+  <div class="card yellow-left mb-lg"><p style="font-size:14px;margin-bottom:6px;"><strong>Zero active or historical ads.</strong> Entirely organic-built 12.2K audience with no paid amplification.</p><p style="font-size:13px;color:rgba(255,255,255,.55);">This is the highest-leverage unlock available. Henry already has 5+ ad-ready hooks proven through organic engagement. Taking "Stop stretching your hamstrings" or "Are you struggling with knee pain when you squat?" and running them as $30/day paid ads would generate a significant increase in warm lead volume within 14 days &#8212; before any new content is created or any funnel is rebuilt.</p></div>
+  <div class="grid-3 mb-lg">
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:#F87171;line-height:1;">0</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Paid Entities</div><span class="badge fail" style="margin-top:8px;display:inline-block;">Run Existing Hooks Now</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--green);line-height:1;">5+</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Ad-Ready Organic Hooks</div><span class="badge pass" style="margin-top:8px;display:inline-block;">Best in Cohort</span></div>
+    <div class="card" style="text-align:center;"><div style="font-family:'Bebas Neue';font-size:52px;color:var(--orange);line-height:1;">4-6</div><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">New Entities to Build</div><span class="badge warn" style="margin-top:8px;display:inline-block;">Villain + Protocol</span></div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:10px;">Priority Entity Build Queue</div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 01 &middot; TOF &middot; Traditional PT Villain</span><span class="badge fail">Build First</span></div><div class="entity-hook">"Stop resting your knee pain. Rest makes it weaker. Here is the protocol I use with every lifter who gets this wrong."</div><div class="entity-meta">Contrarian opens strong with the exact opposite of what traditional PT says. Talking-head, 30-45 sec. CTA: "Comment REHAB for my free pain-free lifting guide." Run as paid ad immediately.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 02 &middot; TOF &middot; Authority Challenge Hook</span><span class="badge fail">Build First</span></div><div class="entity-hook">"Traditional PT told you to stop lifting. Here is why that advice is costing you years of progress &#8212; and what to do instead."</div><div class="entity-meta">Attacks the credentialed incumbent (generic PTs). Henry is a PT himself, so this lands with authority, not arrogance. Talking-head, 45-60 sec. High conversion potential for the avatar who has already been through traditional PT and is frustrated.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 03 &middot; TOF &middot; Playbook Hook &#8594; Protocol Ascension</span><span class="badge fail">Build First</span></div><div class="entity-hook">"I built a 12-week program for lifters dealing with lower kinetic chain pain. Here is what we actually address &#8212; and why it is different from everything else."</div><div class="entity-meta">Protocol introduction for the Rehab Meets Performance high-ticket program. Positions it above the $199 Playbook. Leads warm audience from low-ticket awareness toward high-ticket inquiry.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 04 &middot; MOF &middot; Existing Hook Upgrade &#8212; Add CTA</span><span class="badge warn">Upgrade Existing</span></div><div class="entity-hook">"Stop stretching your hamstrings! Do this instead." + "Comment REHAB for my free pain-free squat guide"</div><div class="entity-meta">Take the 3-5 best-performing organic hooks and add "Comment REHAB" CTA. This single change converts passive content engagement into an active DM lead pipeline without creating any new content.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 05 &middot; BOF &middot; Client Transformation &#8212; Injury to PR</span><span class="badge warn">Build if Proof Available</span></div><div class="entity-hook">"[Client name] came to me with knee pain that had kept them out of the squat rack for 8 months. Here is what 12 weeks of Rehab Meets Performance actually did."</div><div class="entity-meta">Transformation story with specific injury, specific timeline, specific outcome. Most powerful BOF asset for retargeting warm audience who have seen TOF hooks but haven't booked yet.</div></div>
+  <div class="entity-item"><div class="entity-header"><span class="entity-id">Entity 06 &middot; BOF &middot; Playbook Buyer Ascension Email</span><span class="badge info">Build Immediately &#8212; Zero New Leads Required</span></div><div class="entity-hook">Email to all existing Playbook buyers: "You've been through the 12-week program. Here is how 1:1 coaching accelerates what you've started &#8212; and why most of our best clients start exactly where you are."</div><div class="entity-meta">The highest-ROI unlock available. No new leads needed. Every $199 buyer is a warm high-ticket prospect. Simple email offer to book a free consultation has no ad budget requirement.</div></div>
+  <div class="card orange-left" style="margin-top:28px;"><p style="font-size:14px;line-height:1.7;margin-bottom:0;"><strong>Strategic diagnosis:</strong> Henry has accidentally built a perfect lead generation engine &#8212; the $199 Playbook self-selects the exact buyer profile for his 1:1 coaching &#8212; but has no system to capture the ascension. The highest-leverage move is: (1) email every Playbook buyer with a consultation offer this week; (2) add "Comment REHAB" CTA to every existing post; (3) run the top 3 organic hooks as paid ads at $30/day. These three actions require zero new content, zero new followers, and zero new audience &#8212; and will generate more revenue than 6 more months of organic posting without a funnel.</p></div>
+</section><section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div><div class="sec-heading">Constraint Diagnosis</div><div class="sec-divider"></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 &middot; Primary Constraint</div><div class="diag-title">Low-Ticket Product Is Primary Revenue Driver &#8212; High-Ticket Is Invisible</div><div class="diag-desc">Henry's Instagram bio and content strategy funnels followers toward a $199 Playbook app product as the primary conversion action. His 1:1 coaching &#8212; which is almost certainly worth $2,000-3,500 and is the highest-margin, highest-impact product he has &#8212; is buried behind a Linktree link with no dedicated landing page, no testimonials, and no content driving toward it. The $199 product requires 75 monthly buyers to generate $15K. The coaching program requires 5.</div><div class="diag-fix"><strong>The Fix:</strong> Build a dedicated landing page for "The Rehab Meets Performance Protocol" &#8212; 12-16 week program, priced $2,500-3,500, with clinical rehab + strength programming phases and specific outcome milestones. Update Instagram bio to point to this landing page as the primary CTA. Keep Playbook as a secondary/proof link. The Playbook buyers become the warm ascension audience for the coaching program.</div></div>
+  <div class="diag-card p1"><div class="diag-rank">P1 &middot; Primary Constraint</div><div class="diag-title">No DM Funnel &#8212; No Path From 12.2K Followers to Coaching</div><div class="diag-desc">Henry's organic content generates engagement, saves, and follows &#8212; but there is no mechanism to convert that passive engagement into qualified sales conversations. No "Comment REHAB" CTA, no DM automation, no free guide opt-in, no direct path from "I found this content helpful" to "I want to book a coaching call." Every follower who resonates with his content but doesn't get an active CTA is a permanently missed lead.</div><div class="diag-fix"><strong>The Fix:</strong> Add "Comment REHAB for my free pain-free lifting guide" to every content post immediately &#8212; new and retroactive. Set up ManyChat: auto-DM with free guide PDF + follow-up sequence with consultation booking link. This single change turns Henry's already-excellent content into an active lead generation machine. Estimated timeline to first result: 7-14 days from implementation.</div></div>
+  <div class="diag-card p2"><div class="diag-rank">P2 &middot; Meaningful Gap</div><div class="diag-title">Zero Paid Ads &#8212; Ad-Ready Hooks Not Being Deployed at Scale</div><div class="diag-desc">Henry has at least 5 organically-proven hooks that meet IFCA ad creative standards &#8212; specific pain callouts, contrarian reveals, outcome-led education. These hooks are not being amplified with any paid budget. The result is that his reach is capped at organic distribution and his conversion volume is limited to whoever happens to find his content. Paid amplification of existing creative is the fastest revenue unlock at this stage.</div><div class="diag-fix"><strong>The Fix:</strong> Take the top 3 performing organic hooks (Stop stretching hamstrings; Knee pain squat; Traditional PT villain) and run them as paid ads at $30/day targeting: powerlifters, CrossFitters, recreational athletes with injury interests. Start with retargeting (engagers, website visitors). Expect CPL under $10 with these specific hooks. Scale cold traffic after retargeting baseline is established.</div></div>
+  <div class="diag-card p3"><div class="diag-rank">P3 &middot; Watch Item</div><div class="diag-title">No Ascension Architecture &#8212; Playbook Buyers Are Stranded</div><div class="diag-desc">Every person who buys the $199 Playbook and gets results is a qualified warm lead for 1:1 coaching. Without an automated email sequence that positions coaching as the natural next step, these buyers either stop after the program (lost LTV) or ascend randomly without any system capturing them. This is $2,000-3,000 per buyer sitting on the table.</div><div class="diag-fix"><strong>The Fix:</strong> Build a 3-email post-Playbook sequence: (1) Day 7 &#8212; "How's the program going? Here's a tip for week 2"; (2) Day 21 &#8212; "Most people at this stage hit [specific plateau] &#8212; here's what 1:1 coaching addresses that the program can't"; (3) Day 42 &#8212; "You've finished the program. Here is how 1:1 coaching takes you from where you are now to your next performance goal &#8212; free consultation this week."</div></div>
+  <div class="diag-card ok"><div class="diag-rank">OK &middot; Validated Asset &#8212; Protect This</div><div class="diag-title">Organic Hook Quality + Named Mechanism + Dual Credential</div><div class="diag-desc">Henry's content hook quality is genuinely among the best in this cohort. His hooks are specific, pain-first, and immediately relatable to his avatar. Combined with the named "Rehab Meets Performance" mechanism and his dual PT + strength coaching credential, he has a complete trust-authority package that most coaches spend years trying to build. Do not change the content strategy &#8212; add a CTA and a funnel.</div><div class="diag-fix"><strong>Maintain:</strong> Keep producing the same style of pain-point educational content. Keep "Rehab Meets Performance" as the central mechanism &#8212; it is differentiated and it resonates. The only change needed is adding a CTA to every post and building the funnel infrastructure to capture the engagement that already exists.</div></div>
+</section><section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div><div class="sec-heading">90-Day Action Plan</div><div class="sec-divider"></div>
+  <div class="card blue-left mb-md"><p style="font-size:13px;margin-bottom:0;"><strong>Priority override:</strong> Email existing Playbook buyers with a consultation offer this week &#8212; before building anything else. This is the fastest path to a paid coaching client and requires zero new leads, zero ads, and zero new content.</p></div>
+  <div class="plan-item"><div class="plan-num">1</div><div class="plan-body"><div class="plan-title">Email All Playbook Buyers &#8212; Consultation Offer This Week (Days 1-3)</div><div class="plan-desc">Send to every existing Playbook customer: "You've been through the 12-week program. I'm opening a few 1:1 coaching spots for people exactly where you are &#8212; who want to take what you've started and push to the next performance level. I'm offering a free 20-minute Rehab Meets Performance Assessment this week to see if we're a fit. Here's the link." This is the highest-ROI activity available and requires zero new content, zero ad spend, and zero new leads. If even 2 of 10 buyers book a call and 1 closes at $3,000, it pays for 100 days of ad budget.</div><div class="plan-tags"><span class="plan-tag sales">Immediate Revenue</span><span class="plan-tag ops">Zero Cost</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">2</div><div class="plan-body"><div class="plan-title">Build High-Ticket Landing Page + Install DM Automation (Days 1-14)</div><div class="plan-desc">Build one landing page for "The Rehab Meets Performance Protocol": program overview (12-16 weeks, clinical rehab + strength phases), 3-5 transformation testimonials if available, outcome statement, price range, and "Book Your Free Assessment" CTA. Update Instagram bio to point here instead of Linktree. Set up ManyChat with "Comment REHAB" trigger: auto-DM with free pain-free lifting guide + 2-step follow-up to booking link. Retroactively add "Comment REHAB" CTA to the 10 best-performing existing posts.</div><div class="plan-tags"><span class="plan-tag offer">Funnel Build</span><span class="plan-tag ops">Automation</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">3</div><div class="plan-body"><div class="plan-title">Launch Paid Ads &#8212; Existing Hooks, Retargeting First (Days 14-45)</div><div class="plan-desc">Take the top 3 performing organic hooks ("Stop stretching your hamstrings," "Knee pain when squatting," and the new Traditional PT villain hook) and run them as paid ads at $30/day. Start with retargeting: Instagram engagers, video viewers, website visitors. Target CPL under $10. These hooks are already proven &#8212; no creative testing required at this stage. After 30 days of retargeting data, expand to cold interest-stacked: powerlifters, CrossFitters, recreational athletes, sports medicine interests.</div><div class="plan-tags"><span class="plan-tag ads">Paid Traffic</span><span class="plan-tag content">Proven Hooks</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">4</div><div class="plan-body"><div class="plan-title">Add "Comment REHAB" CTA to All New Content (Days 1-90, Ongoing)</div><div class="plan-desc">Every single post from this point forward ends with "Comment REHAB for my free pain-free lifting guide." No exceptions. This converts the passive engagement Henry is already generating into an active DM pipeline. Combined with ManyChat automation, each post becomes a lead generation asset rather than just a brand building exercise. Estimated initial lead flow from 12.2K warm audience: 20-40 qualified DMs in the first 30 days of consistent CTA deployment.</div><div class="plan-tags"><span class="plan-tag content">CTA Upgrade</span><span class="plan-tag ops">Lead Gen</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">5</div><div class="plan-body"><div class="plan-title">Build 3 New Villain Hooks &#8212; Traditional PT Attack Angle (Days 15-45)</div><div class="plan-desc">Create 3 new content pieces explicitly attacking the "rest and stop training" advice that traditional PT gives. These are Henry's highest-differentiation content pieces &#8212; only a licensed PT who also strength coaches can credibly say "your PT is wrong." Hook 1: "Stop resting your knee pain &#8212; rest makes it weaker"; Hook 2: "Traditional PT told you to stop lifting &#8212; here is why that advice is wrong"; Hook 3: "You don't have to choose between rehabbing your injury and training. Here's proof." Run the best-performing one as a paid ad at Day 45.</div><div class="plan-tags"><span class="plan-tag content">Villain Content</span><span class="plan-tag ads">Ad-Ready</span></div></div></div>
+  <div class="plan-item"><div class="plan-num">6</div><div class="plan-body"><div class="plan-title">Build Playbook Ascension Email Sequence (Days 30-60)</div><div class="plan-desc">Create 3-email post-program sequence for every Playbook buyer: Day 7 check-in with performance tip; Day 21 bridge email positioning 1:1 coaching as the natural next step for their specific result; Day 42 direct consultation offer. This automates the ascension path and captures LTV from every buyer without any manual outreach. At 12-month scale with consistent Playbook sales, this ascension sequence will generate 20-30% of 1:1 coaching revenue with zero incremental ad spend.</div><div class="plan-tags"><span class="plan-tag ops">Automation</span><span class="plan-tag sales">LTV Capture</span></div></div></div>
+</section>
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> &middot; Prospect Intelligence Audit &middot; Confidential</div>
+  <div class="footer-tag">Jordan Dugger &middot; Impact Fitness Coaching Academy &middot; April 2026</div>
+</footer>
+</div>
+<script>
+const sections=document.querySelectorAll('.doc-section');
+const navLinks=document.querySelectorAll('.nav-link');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(l=>l.classList.remove('active'));const id=entry.target.getAttribute('id');const active=document.querySelector('.nav-link[href="#'+id+'"]');if(active)active.classList.add('active');}});},{threshold:0.2,rootMargin:'-60px 0px 0px 0px'});
+sections.forEach(s=>observer.observe(s));
+function copyIntelReport(){navigator.clipboard.writeText("HENRY MATTHEWS - CREATIVE INTELLIGENCE REPORT\n@henrylmatthews | Rehab Meets Performance | PT + Strength Coach | April 2026\n\n=== BRAND SNAPSHOT ===\nAvatar: Athletes and lifters 25-45 dealing with nagging injuries who refuse to stop training\nCurrent pricing: $199.99 low-ticket Playbook app; 1:1 coaching price unknown/not visible\nMechanism: Rehab Meets Performance - EXISTS and is named, needs high-ticket structure\nEnemy: Traditional PT advice to rest and stop training - the wrong solution\nFollowers: 12.2K | Zero active ads | All organic\n\n=== CONFIRMED ORGANIC HOOKS ===\n1. Are you struggling with knee pain when you squat? - Pain callout, High\n2. Stop stretching your hamstrings! Do this instead. - Contrarian, Very High\n3. The secret to a stronger deadlift isn't what you think. - Curiosity, High\n4. Do you have a nagging shoulder injury that just won't go away? - Pain callout, High\n\n=== NEW HOOKS TO BUILD ===\n1. Stop resting your knee pain. Rest makes it weaker. Here is what to do instead.\n2. Traditional PT told you to stop lifting. Here is why that advice is costing you years of progress.\n3. You don't have to choose between rehabbing your injury and training for performance. Here is proof.\n\n=== PRIMARY CONSTRAINTS ===\nP1: Low-ticket $199 product is the primary offer - high-ticket coaching is invisible\nP1: No funnel from 12.2K followers to high-ticket coaching program\nP2: Zero paid ads - all organic with no retargeting infrastructure\nP3: Playbook low-ticket has no ascension path to 1:1 coaching").then(()=>{const btn=event.target.closest('button');const orig=btn.innerHTML;btn.innerHTML='&#10003; Copied!';setTimeout(()=>btn.innerHTML=orig,2000);});}
+</script>
+</body>
+</html>
