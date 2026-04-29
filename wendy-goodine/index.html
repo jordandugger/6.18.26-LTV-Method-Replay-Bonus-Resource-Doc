@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wendy Goodine — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style>
+</head>
+<body>
+<div class="page">
+<div class="hero">
+  <div class="hero-eyebrow">IFCA Prospect Intelligence Audit · April 2026</div>
+  <div class="hero-name">Wendy <span>Goodine</span></div>
+  <div class="hero-title">@wendyswaytohealth · Post-Menopause Nutrition Specialist · Growth Phase</div>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-val orange">95 lbs</div><div class="hs-label">Personal Weight Loss (25+ Yrs Maintained)</div></div>
+    <div class="hs"><div class="hs-val blue">10</div><div class="hs-label">Current Online Clients</div></div>
+    <div class="hs"><div class="hs-val orange">0</div><div class="hs-label">Active Paid Ads</div></div>
+    <div class="hs"><div class="hs-val green">6-Fig</div><div class="hs-label">Annual Revenue Goal</div></div>
+    <div class="hs"><div class="hs-val white">P2+P2</div><div class="hs-label">Primary Constraints</div></div>
+  </div>
+  <p class="hero-summary">
+    Wendy Goodine lost 95 pounds and has kept it off for <strong>over 25 years</strong>. In the post-menopause niche, where most coaches offer temporary “diet fixes” that fail within months, a <strong>25-year maintenance track record is an extraordinary proof asset</strong>. She has 10 online clients, a compelling website hook, two named offers, and a free lead magnet. The entire problem is that nobody outside her existing network can find her. Zero digital reach. Zero paid ads. The story that should be stopping scroll and driving $5,000+ clients to her calendar is sitting invisible.
+  </p>
+</div>
+<nav class="doc-nav"><div class="doc-nav-inner">
+  <a class="nav-link active" href="#working">What’s Working</a>
+  <a class="nav-link" href="#phase">Business Phase</a>
+  <a class="nav-link" href="#creative">Creative Intelligence</a>
+  <a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+  <a class="nav-link" href="#plan">90-Day Plan</a>
+</div></nav>
+<section class="doc-section" id="working">
+  <div class="sec-eyebrow">Section 01</div>
+  <div class="sec-heading">What’s Working</div>
+  <div class="sec-divider"></div>
+  <div class="card orange-left mb-md" style="margin-bottom:20px;">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:6px;">Standout Asset</div>
+    <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;">“Post-menopause isn’t another phase to get through — this is the body you’re living in now, and you deserve an approach to food and health that works in tune with it.” — This is already on her website. This is ad copy. This is the hook that stops a post-menopausal woman mid-scroll. Most coaches don’t write this well. It needs to be extracted from the website and deployed at scale.</p>
+  </div>
+  <div class="grid-2">
+    <div class="win-card"><div class="win-icon">💪</div><div>
+      <div class="win-label">95-lb Personal Story — 25 Years Maintained</div>
+      <div class="win-desc">In a market full of coaches who lost weight and gained it back, 25-year maintenance is an exceptional, verifiable credibility signal. It is the answer to every skeptic who thinks “this won’t last.” This story belongs in every hook, every ad, every bio, and every sales conversation. It is the single most powerful asset in Wendy’s business and it is currently underdeployed.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">📝</div><div>
+      <div class="win-label">Named Offers Already Exist</div>
+      <div class="win-desc">Two named offers — “3-Week Nutrition Makeover” and “The Better Than Ever Collective” — show that Wendy has already done the naming work that many coaches skip. “Better Than Ever” is particularly strong as a post-menopause aspiration hook (“better than your 30s” is a compelling claim). These offer names can be evolved into a full premium mechanism.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">🧲</div><div>
+      <div class="win-label">Free Lead Magnet Exists — “The Breakfast Reframe Guide”</div>
+      <div class="win-desc">A free lead magnet is in place. The Breakfast Reframe Guide signals an educational, non-diet-culture approach that resonates strongly with post-menopausal women who have been failed by restriction-based programs. This is a functional lead capture asset that just needs traffic directed to it via content and ads.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">💬</div><div>
+      <div class="win-label">Website Copy Already Works — Rare for This Stage</div>
+      <div class="win-desc">The confirmed website hook is exceptional quality. Most coaches at this stage have vague, generic copy. Wendy’s copy demonstrates a clear point of view, strong avatar specificity, and anti-restriction positioning. This copy can be extracted and repurposed directly into ad headlines, reel hooks, and email subject lines without rewriting.</div>
+    </div></div>
+    <div class="win-card"><div class="win-icon">👥</div><div>
+      <div class="win-label">10 Active Online Clients — Proof and Momentum Exist</div>
+      <div class="win-desc">10 clients from a zero-marketing base means the offer converts when people actually see it. These 10 clients are the source of testimonials, result stories, and the social proof needed to generate the next 10. Every existing client should be asked for a short video or written testimonial this week.</div>
+    </div></div>
+  </div>
+</section>
+<section class="doc-section" id="phase">
+  <div class="sec-eyebrow">Section 02</div>
+  <div class="sec-heading">Business Phase Diagnosis</div>
+  <div class="sec-divider"></div>
+  <div class="phase-row">
+    <div class="phase-item"><div class="phase-label">Phase 1</div><div class="phase-name">Starter</div><div class="phase-range">$0–$5K/mo</div></div>
+    <div class="phase-item active"><div class="phase-label">Current Phase ▼</div><div class="phase-name">Growth</div><div class="phase-range">$5K–$15K/mo (Target)</div></div>
+    <div class="phase-item"><div class="phase-label">Phase 3 Goal</div><div class="phase-name">Scale</div><div class="phase-range">6 Figures+</div></div>
+  </div>
+  <div class="math-box">
+    <div class="math-box-title">Path to Six Figures — The Math</div>
+    <div class="math-row"><span class="lbl">Annual revenue goal</span><span class="val orange">$100,000+</span></div>
+    <div class="math-row"><span class="lbl">Recommended offer: Better Than Ever Protocol (4–6 months)</span><span class="val orange">$2,500–$3,500</span></div>
+    <div class="math-row"><span class="lbl">Clients needed per year at $3,000 avg</span><span class="val">34 clients/year (~3/month)</span></div>
+    <div class="math-row"><span class="lbl">Calls needed (40% close rate)</span><span class="val">~8 calls/month</span></div>
+    <div class="math-row"><span class="lbl">Backend: Better Than Ever Collective (ongoing community)</span><span class="val">$97–$147/mo per client</span></div>
+    <div class="math-row"><span class="lbl">10 existing clients repriced to $97/mo backend = recurring</span><span class="val green">$970/mo passive floor</span></div>
+    <div class="math-row"><span class="lbl">Step 1: Organic content deploying the 95-lb story</span><span class="val">Days 1–30</span></div>
+    <div class="math-row"><span class="lbl">Step 2: Paid ads boosting top organic hooks</span><span class="val">Days 30–60</span></div>
+  </div>
+</section>
+<section class="doc-section" id="creative">
+  <div class="sec-eyebrow">Section 03</div>
+  <div class="sec-heading">Creative Intelligence Report</div>
+  <div class="sec-divider"></div>
+  <div class="card orange-left mb-md">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;">Executive Summary</div>
+    <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;">Wendy’s creative situation is unusual: the content quality is <em>already high</em> based on confirmed website copy. The bottleneck is not writing ability — it is distribution. The 95-lb story has never been deployed as video content. The website hook has never been turned into a reel. The Instagram handle (<strong>@wendyswaytohealth</strong>) doesn’t match her name, reducing discoverability for direct searches. The funnel infrastructure (lead magnet, offers) exists but has zero traffic feeding it. This is a distribution problem, not a content quality problem.</p>
+  </div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Dimension</th><th>Current State</th><th>Recommended Shift</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Avatar</td><td>Post-menopausal women generally</td><td>Post-menopausal women 50–65 who have “tried everything” and believe their metabolism is broken permanently</td></tr>
+        <tr><td class="t-strong">Mechanism</td><td>“3-Week Nutrition Makeover” / “Better Than Ever Collective”</td><td>“The Better Than Ever Protocol” — permanent lifestyle transformation anchored to Wendy’s 25-year maintenance story</td></tr>
+        <tr><td class="t-strong">Primary Hook Asset</td><td>Buried in website copy</td><td>Deploy as first reel immediately: “Post-menopause isn’t another phase to get through...”</td></tr>
+        <tr><td class="t-strong">Personal Story</td><td>Mentioned but not deployed as content</td><td>Full talking-head origin story reel + shortened version for ad hook</td></tr>
+        <tr><td class="t-strong">IG Handle</td><td>@wendyswaytohealth (name mismatch)</td><td>Add full name to bio prominently for search discoverability</td></tr>
+        <tr><td class="t-strong">Lead CTA</td><td>Breakfast Reframe Guide (exists, needs traffic)</td><td>Add “Comment REFRAME for my free post-menopause nutrition guide” to every reel</td></tr>
+        <tr><td class="t-strong">High-ticket offer price</td><td>Not visible online</td><td>$2,500–$3,500 for Better Than Ever Protocol (4–6 months)</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Organic Content Audit</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Hook / Content Type</th><th>Assessment</th><th>Ad Potential</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Website hook: “Post-menopause isn’t another phase to get through...”</td><td>CONFIRMED excellent copy. Empathetic, specific, anti-restriction positioning. This is ad headline quality.</td><td><span class="badge pass">Highest priority — build reel now</span></td></tr>
+        <tr><td class="t-strong">Breakfast Reframe Guide lead magnet</td><td>Solid lead magnet concept. Framing breakfast as a hormone/metabolism lever is specific enough to attract the right avatar.</td><td><span class="badge warn">Good — needs traffic via content</span></td></tr>
+        <tr><td>@wendyswaytohealth IG handle</td><td>Handle doesn’t match name. Anyone searching “Wendy Goodine” won’t find it easily.</td><td><span class="badge warn">Fix bio discoverability</span></td></tr>
+        <tr><td class="t-strong">MISSING: 95-lb story reel</td><td>This is the single most powerful content piece Wendy could make. It does not exist yet. A 60-second talking-head story of a 95-lb loss maintained 25+ years, told vulnerably, would outperform anything else she could produce.</td><td><span class="badge pass">Critical — build first</span></td></tr>
+        <tr><td class="t-strong">MISSING: Villain frame / anti-diet content</td><td>No content currently challenging the “just eat less and move more” narrative that fails post-menopausal women. This is the strongest emotional hook category for this avatar.</td><td><span class="badge pass">High priority</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Entity Clusters</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Entity Cluster</th><th>Stage</th><th>Hook Driver</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">Personal Origin Story — 95-lb Loss, 25 Yrs Maintained</td><td>TOF Cold</td><td>Trust / Hope</td><td><span class="badge fail">Missing — Build First</span></td></tr>
+        <tr><td class="t-strong">Anti-“Eat Less Move More” Villain Frame</td><td>TOF Cold</td><td>Anger / Validation</td><td><span class="badge fail">Missing — Build First</span></td></tr>
+        <tr><td class="t-strong">Post-Menopause Metabolism Education</td><td>TOF</td><td>Education / Curiosity</td><td><span class="badge fail">Missing</span></td></tr>
+        <tr><td class="t-strong">The “Better Than Ever” Identity Aspiration</td><td>TOF / MOF</td><td>Identity / Inspiration</td><td><span class="badge warn">Named but not deployed</span></td></tr>
+        <tr><td class="t-strong">Client Transformations (10 existing clients)</td><td>MOF / BOF</td><td>Social Proof / Hope</td><td><span class="badge warn">Exists — undocumented</span></td></tr>
+        <tr><td class="t-strong">Breakfast Reframe Lead Magnet CTA Content</td><td>MOF</td><td>Curiosity / Action</td><td><span class="badge warn">Asset exists — needs promo content</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Meta Ad Library</div>
+  <div class="card blue-left mb-md">
+    <strong style="color:rgba(255,255,255,.85);">Zero active ads confirmed</strong>
+    <p style="font-size:13px;color:rgba(255,255,255,.55);margin-top:6px;line-height:1.6;">No active or historical ads found. Confirmed pure referral acquisition. The first ad to build is a talking-head version of the website hook: “Post-menopause isn’t another phase to get through…” followed by Wendy’s personal 95-lb story. This combination of empathy hook + dramatic personal proof is a proven high-converting formula for the health coaching niche. Build this reel organically first, then boost as paid once engagement is confirmed.</p>
+  </div>
+  <div class="grid-3 mb-md">
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--red);">0</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Active Paid Ads</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--yellow);">2</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Named Offers (Need Pricing Visibility)</div>
+    </div>
+    <div class="card" style="text-align:center;">
+      <div style="font-family:'Bebas Neue';font-size:44px;color:var(--orange);">6+</div>
+      <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);margin-top:4px;">Content Entities Needed</div>
+    </div>
+  </div>  <div class="sec-eyebrow" style="margin-bottom:10px;">Verbatim Hook Bank</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>#</th><th>Hook</th><th>Format</th><th>Driver</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">1</td><td>“Post-menopause isn’t another phase to get through — this is the body you’re living in now, and you deserve an approach that actually works with it.” [CONFIRMED WEBSITE COPY]</td><td>Talking head reel</td><td>Empathy + paradigm shift</td></tr>
+        <tr><td class="t-strong">2</td><td>“I lost 95 pounds. I’ve kept it off for 25 years. Not with a diet. Not with willpower. Here’s what actually worked.”</td><td>Personal story reel, 60–90s</td><td>Credibility + curiosity</td></tr>
+        <tr><td class="t-strong">3</td><td>“The ‘eat less, move more’ advice you’ve been given your whole life was designed for a 25-year-old’s hormones. Not yours.”</td><td>Talking head, direct address</td><td>Villain + validation</td></tr>
+        <tr><td class="t-strong">4</td><td>“Every woman I work with says the same thing: I was doing everything right and nothing was working. Here’s what they were missing.”</td><td>Story-driven reel</td><td>Social proof + problem awareness</td></tr>
+        <tr><td class="t-strong">5</td><td>“You are not broken. Your metabolism is not broken. You have been given the wrong instructions for the body you have right now.”</td><td>Empowerment reel</td><td>Identity + hope</td></tr>
+        <tr><td class="t-strong">6</td><td>“Comment REFRAME and I’ll send you my free post-menopause nutrition guide — the Breakfast Reframe that changes how your metabolism responds all day.”</td><td>CTA reel</td><td>Lead capture</td></tr>
+        <tr><td class="t-strong">7</td><td>“My client is 58. She’s in the best shape of her life. Here’s what ‘better than ever’ actually looks like after menopause.”</td><td>Client result story</td><td>Social proof + aspiration</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sec-eyebrow" style="margin-bottom:10px;">White Space Angles</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Angle</th><th>Why It Works</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td class="t-strong">“25-year maintenance” as primary differentiator</td><td>The weight loss market is saturated. The “I kept it off for 25 years” story is genuinely rare and immediately answers the #1 objection: “yeah but will it last?” This angle should dominate Wendy’s entire content strategy.</td><td><span class="badge pass">Highest priority</span></td></tr>
+        <tr><td class="t-strong">The “Better Than Your 30s” aspiration angle</td><td>“Better Than Ever” as a brand name unlocks the claim: “my clients feel better at 58 than they did at 38.” This is an emotionally resonant aspiration that is not being used in visible content.</td><td><span class="badge pass">High</span></td></tr>
+        <tr><td class="t-strong">Anti-restriction villain frame</td><td>Post-menopausal women have been failed by calorie restriction for decades. Content that names and blames the restriction model validates their experience and positions Wendy’s approach as the alternative they’ve been looking for.</td><td><span class="badge pass">High</span></td></tr>
+        <tr><td class="t-strong">Work-from-anywhere lifestyle as proof</td><td>Wendy’s goal of “work from anywhere” is also the avatar’s aspiration — freedom, not restriction. This lifestyle alignment can be worked into content to attract women who want the same freedom in their health journey.</td><td><span class="badge warn">Medium</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="sec-eyebrow" style="margin-bottom:10px;">Entity Build Queue</div>
+  <div class="tbl-wrap mb-md">
+    <table class="mtbl">
+      <thead><tr><th>Priority</th><th>Entity</th><th>Format</th><th>CTA</th></tr></thead>
+      <tbody>
+        <tr><td><span class="badge fail">#1 Critical</span></td><td>Personal origin story — 95-lb loss, 25 years maintained</td><td>Talking head, 90s, personal + vulnerable</td><td>Comment REFRAME</td></tr>
+        <tr><td><span class="badge fail">#2 Critical</span></td><td>“Post-menopause isn’t another phase to get through” website hook deployed as reel</td><td>Talking head with text overlay</td><td>Comment REFRAME</td></tr>
+        <tr><td><span class="badge warn">#3 High</span></td><td>“Eat Less Move More Was Designed for a 25-Year-Old” villain frame</td><td>Direct address reel, 45–60s</td><td>Comment REFRAME</td></tr>
+        <tr><td><span class="badge warn">#4 High</span></td><td>Client transformation story (existing client, over 50)</td><td>Interview or text-overlay story</td><td>DM for details</td></tr>
+        <tr><td><span class="badge info">#5</span></td><td>“Better Than Ever” identity aspiration content (“better at 58 than 38”)</td><td>Motivational reel with personal proof</td><td>DM for protocol details</td></tr>
+        <tr><td><span class="badge info">#6</span></td><td>Breakfast Reframe mechanism reveal</td><td>Education reel, 60s</td><td>Comment REFRAME for guide</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card orange-left mb-md">
+    <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;">Strategic Diagnosis</div>
+    <p style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.7;">Wendy’s situation is the most straightforward in this cohort: <strong>she already has everything she needs, it just isn’t visible yet.</strong> The copy works. The offers exist. The proof is extraordinary. The only missing ingredient is distribution. One honest talking-head reel about losing 95 pounds and keeping it off for 25 years — filmed on a phone, no production value required — has the potential to generate more qualified leads than anything else she could do in the next 90 days. Start there.</p>
+  </div>
+  <div style="text-align:center;margin-bottom:8px;">
+    <button onclick="copyWendyIntel()" style="background:var(--orange);border:none;border-radius:8px;padding:12px 28px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;">
+      📋 Copy for Workshop
+    </button>
+  </div>
+</section>
+<section class="doc-section" id="constraints">
+  <div class="sec-eyebrow">Section 04</div>
+  <div class="sec-heading">Constraint Diagnosis</div>
+  <div class="sec-divider"></div>
+  <div class="diag-card p1">
+    <div class="diag-rank">P1 — Critical / Growth Blocker</div>
+    <div class="diag-title">Zero Digital Reach — Referral-Only Growth Has a Hard Ceiling</div>
+    <div class="diag-desc">10 clients from pure referrals is impressive proof that the offer works — but referral-only acquisition caps at the size of the existing network, and that ceiling is close. Without organic content building a broader audience and without paid ads scaling it, growth will plateau and stall. The extraordinary personal story, the confirmed website copy, and the existing lead magnet are all sitting idle without traffic to amplify them.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Start publishing 3–5 reels per week immediately. Priority: the 95-lb personal story reel first, then the website hook deployed as talking-head content, then villain frame content. Every post ends with: “Comment REFRAME for my free post-menopause nutrition guide.” Set a 30-day content sprint before evaluating paid ads.</div>
+  </div>
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 — Meaningful Gap</div>
+    <div class="diag-title">No Visible High-Ticket Pricing — Invisible Offer Value</div>
+    <div class="diag-desc">Neither named offer (“3-Week Nutrition Makeover” or “The Better Than Ever Collective”) has visible pricing online. When a potential client cannot quickly understand what the investment is, they disengage before inquiring. More importantly, without a defined high-ticket offer at $2,500–$3,500, Wendy is likely undercharging for the transformation she delivers, which limits revenue per client and makes the math to six figures much harder.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Define the Better Than Ever Protocol as the primary high-ticket offer at $2,500–$3,500 for a 4–6 month engagement. Build a simple landing page with the offer, the 25-year proof story, and one CTA (book a free call). The Collective becomes the lower-ticket backend ($97–$147/mo) for clients who complete the protocol.</div>
+  </div>
+  <div class="diag-card p2">
+    <div class="diag-rank">P2 — Meaningful Gap</div>
+    <div class="diag-title">95-lb Story Not Deployed as Content — Most Valuable Asset Sitting Idle</div>
+    <div class="diag-desc">The 95-lb personal story maintained for 25 years is the single most powerful credibility asset Wendy has. It directly answers the target avatar’s #1 fear (“I’ll just gain it back”) and is completely unique in the post-menopause coaching space. It has never been filmed. It has never been used as a reel, an ad, or even a consistent bio claim. Until it is, the most compelling piece of social proof in Wendy’s entire business is invisible.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Film the origin story reel this week. It does not need to be polished. Phone camera, natural light, authentic delivery. Script: “I’m Wendy. I lost 95 pounds. Here’s what most people don’t know — I’ve kept it off for 25 years. Not with a diet. Here’s exactly what changed.” This one video, boosted as a paid ad, could generate months of qualified leads.</div>
+  </div>
+  <div class="diag-card p3">
+    <div class="diag-rank">P3 — Watch Item</div>
+    <div class="diag-title">Instagram Handle Mismatch Reduces Discoverability</div>
+    <div class="diag-desc">@wendyswaytohealth doesn’t match the name Wendy Goodine. Anyone who hears about Wendy from a referral and searches her name on Instagram will struggle to find her. This is a minor friction point today but becomes more material as paid traffic and content reach grow.</div>
+    <div class="diag-fix"><strong>Fix:</strong> Add “Wendy Goodine” prominently to the Instagram bio — either in the name field or the first line of bio. Alternatively, if creating a new account, consider @wendygoodine as the primary handle. Low urgency — fix it but don’t let it block the content sprint.</div>
+  </div>
+  <div class="diag-card ok">
+    <div class="diag-rank">OK — Validated Asset</div>
+    <div class="diag-title">Content Voice and Copy Quality Are Already Strong</div>
+    <div class="diag-desc">The confirmed website copy demonstrates a clear, empathetic, high-quality content voice that most coaches take years to develop. Wendy can write — she just needs to write more, and in public. The foundation of a strong content brand is already in place. The transition from “website copy” to “consistent reel content” is the only gap.</div>
+    <div class="diag-fix"><strong>Maintain:</strong> Keep the empathetic, anti-restriction, pro-permanence voice in all content. It is genuinely differentiated from the restriction-heavy language most nutrition coaches use.</div>
+  </div>
+</section>
+<section class="doc-section" id="plan">
+  <div class="sec-eyebrow">Section 05</div>
+  <div class="sec-heading">90-Day Action Plan</div>
+  <div class="sec-divider"></div>
+  <div class="plan-item">
+    <div class="plan-num">1</div><div class="plan-body">
+      <div class="plan-title">Week 1: Film the Origin Story Reel (Days 1–7)</div>
+      <div class="plan-desc">The single most important action in this entire plan. Film a 60–90 second talking-head reel: “I lost 95 pounds. I’ve kept it off for 25 years. Not with a diet. Not with willpower. Here’s what actually worked.” Phone camera. Natural light. No editing required. Post it. Put “Comment REFRAME for my free post-menopause nutrition guide” in the caption and the first comment. This is the top of your entire funnel and it does not exist yet.</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span><span class="plan-tag offer">Story</span></div>
+    </div>
+  </div>
+  <div class="plan-item">
+    <div class="plan-num">2</div><div class="plan-body">
+      <div class="plan-title">Week 1–2: Define the Better Than Ever Protocol + Pricing (Days 1–14)</div>
+      <div class="plan-desc">Define the flagship offer: Better Than Ever Protocol, 4–6 months, $2,500–$3,500. Build a simple landing page (one page, no website required — a Linktree-style page works): the 25-year story, 3 client result snippets, one CTA (Book Your Free 20-Minute Consultation). Set up DM automation: “Comment REFRAME” → Breakfast Reframe Guide PDF → follow-up sequence → consultation booking link. Define the Better Than Ever Collective as the $97/mo backend for protocol graduates.</div>
+      <div class="plan-tags"><span class="plan-tag offer">Offer</span><span class="plan-tag ops">Ops</span></div>
+    </div>
+  </div>
+  <div class="plan-item">
+    <div class="plan-num">3</div><div class="plan-body">
+      <div class="plan-title">Weeks 2–4: 30-Day Content Sprint — 3–5 Reels Per Week (Days 8–30)</div>
+      <div class="plan-desc">After the origin story reel, build out the content queue using the hook bank. Week 2: “Post-menopause isn’t another phase” website hook deployed as reel. Week 3: Villain frame — “Eat Less Move More was designed for a 25-year-old’s hormones.” Week 4: Client transformation story. Every single reel ends with “Comment REFRAME.” Track which posts drive the most DM conversations — those become ad candidates in Month 2.</div>
+      <div class="plan-tags"><span class="plan-tag content">Content</span></div>
+    </div>
+  </div>
+  <div class="plan-item">
+    <div class="plan-num">4</div><div class="plan-body">
+      <div class="plan-title">Month 2: Document 10 Current Clients — Build Social Proof Library (Days 30–60)</div>
+      <div class="plan-desc">Ask all 10 existing clients for a short video testimonial or a written result statement. Even 3–5 strong testimonials create the social proof layer needed for paid traffic conversion. The best testimonial format: “Before I worked with Wendy, I [specific problem]. After [timeframe], I [specific result].” These testimonials go on the landing page, in reels, and become the core of the ad creative library.</div>
+      <div class="plan-tags"><span class="plan-tag sales">Sales</span><span class="plan-tag content">Content</span></div>
+    </div>
+  </div>
+  <div class="plan-item">
+    <div class="plan-num">5</div><div class="plan-body">
+      <div class="plan-title">Month 2: Boost Top Organic Reel as First Paid Ad (Days 45–60)</div>
+      <div class="plan-desc">After 30 days of organic content, boost the best-performing reel (likely the 95-lb origin story or the website hook reel) as a Meta ad. Targeting: Women 50–68, health and wellness interest, weight loss, menopause-related keywords. Budget: $15–25/day. KPIs: Hook rate >25%, CPL &lt;$15. If CPL stays under $10 with quality leads (booking strategy calls), scale to $40–50/day. This is the moment the referral-only ceiling breaks permanently.</div>
+      <div class="plan-tags"><span class="plan-tag ads">Ads</span></div>
+    </div>
+  </div>
+  <div class="plan-item">
+    <div class="plan-num">6</div><div class="plan-body">
+      <div class="plan-title">Month 3: Activate the Better Than Ever Collective as Backend (Days 60–90)</div>
+      <div class="plan-desc">Once the front-end protocol is generating clients consistently, offer protocol graduates the option to continue in the Better Than Ever Collective at $97–$147/month. This is the recurring revenue floor that builds toward the six-figure annual goal without requiring constant new client acquisition. Target: 10 collective members by end of Month 3 = $970–$1,470/mo in passive recurring revenue as a base.</div>
+      <div class="plan-tags"><span class="plan-tag offer">Offer</span><span class="plan-tag ops">Backend</span></div>
+    </div>
+  </div>
+</section>
+<footer>
+  <div class="footer-brand"><strong>IFCA</strong> · Prospect Intelligence Audit · Confidential</div>
+  <div class="footer-tag">Jordan Dugger · Impact Fitness Coaching Academy · April 2026</div>
+</footer>
+</div>
+<script>
+const sections = document.querySelectorAll('.doc-section');
+const navLinks = document.querySelectorAll('.nav-link');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const id = entry.target.getAttribute('id');
+      const active = document.querySelector('.nav-link[href="#' + id + '"]');
+      if (active) active.classList.add('active');
+    }
+  });
+}, { threshold: 0.2, rootMargin: '-60px 0px 0px 0px' });
+sections.forEach(s => observer.observe(s));
+function copyWendyIntel() {
+  const text = `WENDY GOODINE — CREATIVE INTELLIGENCE REPORT\n@wendyswaytohealth | Post-Menopause Nutrition Specialist | April 2026\n\nAvatar: Post-menopausal women 50-65 who have tried everything and believe their metabolism is broken\nMechanism: The Better Than Ever Protocol — permanent transformation anchored to 25-year maintenance proof\nVillain: Eat less, move more — restriction-based advice that fails post-menopausal women\nProof: 95-lb loss maintained for 25+ YEARS\nDM CTA: Comment REFRAME for free Breakfast Reframe Guide\n\n#1 CRITICAL: 95-lb origin story reel — film this first\n#2 CRITICAL: Post-menopause isn’t another phase — website hook as reel\n#3 HIGH: Eat Less Move More villain frame\n#4 HIGH: Client transformation story`;
+  navigator.clipboard.writeText(text).then(() => {
+    const btn = event.target.closest('button');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✓ Copied!';
+    setTimeout(() => btn.innerHTML = orig, 2000);
+  });
+}
+</script>
+</body>
+</html>
