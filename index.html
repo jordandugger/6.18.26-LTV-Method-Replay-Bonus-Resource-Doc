@@ -212,40 +212,39 @@ footer strong{color:var(--orange);}
     <div class="section-header">
       <div class="section-label orange">Your Bonus Resources</div>
       <div class="section-divider"></div>
-      <div class="section-count">5 Steps</div>
+      <div class="section-count">3 Steps</div>
     </div>
 
     <div class="bonus-grid">
 
-      <div class="bonus-card primary">
-        <div class="bc-step">Step 1</div>
-        <div class="bc-title">Access the Session Replay</div>
-        <div class="bc-desc">The full replay of tonight's live hot seat session. Watch back any part you want to revisit — frameworks, hot seats, the pitch, the math.</div>
-        <div class="bc-placeholder">⚠️ Grain replay link — add after session</div>
+    <!-- Step 1: Replay embed (full width) -->
+    <div class="bonus-card primary" style="grid-column:1/-1;">
+      <div class="bc-step">Step 1</div>
+      <div class="bc-title">Watch the Session Replay</div>
+      <div class="bc-desc" style="margin-bottom:16px;">The full replay of tonight's live hot seat session. Watch back the frameworks, hot seats, the pitch, and the math.</div>
+      <div style="position:relative;width:100%;padding-top:56.25%;background:rgba(0,0,0,.35);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.08);" id="replay-wrap">
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <div style="font-size:36px;opacity:.4;">▶</div>
+          <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);">Replay coming soon — check back shortly</div>
+        </div>
       </div>
+    </div>
 
-      <div class="bonus-card">
-        <div class="bc-step">Step 2</div>
-        <div class="bc-title">Get a Copy of the Slide Deck</div>
-        <div class="bc-desc">Make your own copy of tonight's presentation. Reference the frameworks, case studies, and math levers anytime you need them.</div>
-        <div class="bc-placeholder">⚠️ Google Slides copy link — add after session</div>
-      </div>
+    <div class="bonus-card">
+      <div class="bc-step">Step 2 — Do This First</div>
+      <div class="bc-title">JAN the Offer Genie 🧞</div>
+      <div class="bc-desc">Complete your Offer Scorecard Worksheet first, then run it through JAN. Lacey went from $350/mo → $800/mo and actually <em>increased</em> her close rate using JAN in minutes.</div>
+      <a href="https://azure-rule-3b2.notion.site/Optimize-Your-Offer-With-Jan-1b16132dd910809c8d6cebd78deb2e40?pvs=73" class="bc-btn" target="_blank">Access JAN →</a>
+      <br><br>
+      <a href="https://docs.google.com/document/d/1il88gL76RsAJ3t-grDy0Km-C7EKojoeqrKBNdC59Iig/copy" class="bc-btn outline" target="_blank">Get Offer Worksheet First →</a>
+    </div>
 
-      <div class="bonus-card">
-        <div class="bc-step">Step 3 — Do This First</div>
-        <div class="bc-title">JAN the Offer Genie 🧞</div>
-        <div class="bc-desc">Complete your Offer Scorecard Worksheet first, then run it through JAN. Lacey went from $350/mo → $800/mo and actually <em>increased</em> her close rate using JAN in minutes.</div>
-        <a href="https://azure-rule-3b2.notion.site/Optimize-Your-Offer-With-Jan-1b16132dd910809c8d6cebd78deb2e40?pvs=73" class="bc-btn" target="_blank">Access JAN →</a>
-        <br><br>
-        <a href="https://docs.google.com/document/d/1il88gL76RsAJ3t-grDy0Km-C7EKojoeqrKBNdC59Iig/copy" class="bc-btn outline" target="_blank">Get Offer Worksheet First →</a>
-      </div>
-
-      <div class="bonus-card">
-        <div class="bc-step">Step 4</div>
-        <div class="bc-title">Book Your Free Business Audit Call</div>
-        <div class="bc-desc">2-minute application. Zero obligation. Zero pitch. We'll map out your exact 90-day plan live on the call — and you get the DM closing scripts + call booking scripts just for showing up.</div>
-        <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="bc-btn" target="_blank">Complete the 2-Min Application →</a>
-      </div>
+    <div class="bonus-card">
+      <div class="bc-step">Step 3</div>
+      <div class="bc-title">Book Your Free Business Audit Call</div>
+      <div class="bc-desc">2-minute application. Zero obligation. Zero pitch. We'll map out your exact 90-day plan live on the call — and you get the DM closing scripts + call booking scripts just for showing up.</div>
+      <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="bc-btn" target="_blank">Complete the 2-Min Application →</a>
+    </div>
 
     </div>
   </div>
@@ -292,7 +291,7 @@ footer strong{color:var(--orange);}
     <!-- FILTER BAR -->
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
       <button class="filter-btn active" onclick="filterCards('all',this)">All (23)</button>
-      <button class="filter-btn" onclick="filterCards('audit',this)">📋 Has Audit</button>
+      <button class="filter-btn" onclick="filterCards('audit',this)">📋 Has Audit (2)</button>
       <button class="filter-btn" onclick="filterCards('scale',this)">Scale</button>
       <button class="filter-btn" onclick="filterCards('growth',this)">Growth</button>
       <button class="filter-btn" onclick="filterCards('starter',this)">Starter</button>
@@ -307,6 +306,11 @@ footer strong{color:var(--orange);}
         <div class="ac-offer">Hormone Reset Club ($147/mo) + 1:1 Precision Rebuild ($2,500/3mo). Functional labs + training + nutrition for high-performing women 35–45 whose bodies stopped responding.</div>
         <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo with predictable acquisition system</div>
         <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+      </div>
+
+      <!-- COMING SOON DIVIDER -->
+      <div style="grid-column:1/-1;padding:20px 0 8px;border-top:1px solid rgba(255,255,255,.06);margin-top:8px;">
+        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);">📋 Audits below are being completed — check back as they go live</div>
       </div>
 
       <!-- CARLOS NOLASCO -->
@@ -373,12 +377,12 @@ footer strong{color:var(--orange);}
         <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
       </div>
 
-      <!-- CINDY SEMBER -->
-      <div class="attendee-card" data-phase="starter">
+      <!-- CINDY SEMBER — FULL AUDIT LIVE -->
+      <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.open('hot-seat-cindy-sember.html','_blank')">
         <div class="ac-name">Cindy Sember <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">High-achieving Christian women — fat loss + muscle + elite mindset. 3 clients. Running ads + organic. Attracting younger, broke audience instead of premium ICA.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Consistent $5K months</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-offer">3× Olympian coaching high-achieving Christian women — fat loss + muscle + elite mindset. 66K followers. Running ads but attracting wrong avatar at $1,200 / 4-month offer.</div>
+        <div class="ac-goal"><span class="arrow">→</span> $5K/mo consistent → rebuild to $6K+ offer</div>
+        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
       </div>
 
       <!-- KRISTAL COUPER -->
