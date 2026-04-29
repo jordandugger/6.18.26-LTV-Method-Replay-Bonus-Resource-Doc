@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>IFCA Live Hot Seat Q&A — Jordan Dugger | April 29, 2026</title>
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Instrument+Serif:ital@1&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --navy:#102236;--navy-dark:#0a1825;--navy-mid:#142a40;
@@ -18,7 +18,6 @@
 *{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:var(--white);overflow-x:hidden;-webkit-font-smoothing:antialiased;}
-
 body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background-image:linear-gradient(rgba(255,255,255,.016)1px,transparent 1px),
   linear-gradient(90deg,rgba(255,255,255,.016)1px,transparent 1px);
@@ -26,10 +25,9 @@ body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
   background:radial-gradient(ellipse 70% 50% at 8% 8%,rgba(59,130,246,.06)0%,transparent 60%),
   radial-gradient(ellipse 50% 60% at 90% 85%,rgba(232,119,34,.05)0%,transparent 55%);}
-
 .page{position:relative;z-index:1;max-width:1040px;margin:0 auto;padding:0 24px 100px;}
 
-/* ── HEADER ── */
+/* HEADER */
 header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
   background:rgba(10,24,37,.95);backdrop-filter:blur(14px);
   border-bottom:1px solid var(--border);
@@ -46,7 +44,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
   color:#fff;cursor:pointer;text-decoration:none;transition:opacity .15s;}
 .hdr-cta:hover{opacity:.85;}
 
-/* ── HERO ── */
+/* HERO */
 .hero{padding:110px 0 48px;text-align:center;}
 .hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;
   text-transform:uppercase;color:var(--orange);margin-bottom:16px;}
@@ -58,16 +56,18 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
   font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;color:var(--muted);}
 .hero-meta .sep{color:rgba(255,255,255,.2);}
 
-/* ── TESTIMONIAL ── */
-.testimonial-bar{background:var(--navy-mid);border:1px solid var(--border);
-  border-left:4px solid var(--green);border-radius:10px;padding:18px 22px;
-  margin:32px 0;display:flex;align-items:flex-start;gap:16px;}
-.tb-icon{font-size:24px;flex-shrink:0;margin-top:2px;}
-.tb-quote{font-size:14px;color:rgba(255,255,255,.82);line-height:1.65;font-style:italic;}
-.tb-quote strong{color:var(--green);font-style:normal;}
-.tb-source{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;color:var(--muted);margin-top:6px;}
+/* INTRO BANNER */
+.intro-banner{background:linear-gradient(135deg,rgba(232,119,34,.12),rgba(232,119,34,.04));
+  border:1px solid rgba(232,119,34,.3);border-radius:12px;padding:20px 24px;
+  margin-bottom:32px;display:flex;align-items:center;gap:18px;}
+.intro-banner-icon{font-size:32px;flex-shrink:0;}
+.intro-banner-text{flex:1;}
+.intro-banner-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:4px;}
+.intro-banner-title{font-weight:700;font-size:15px;margin-bottom:4px;}
+.intro-banner-sub{font-size:12px;color:var(--muted);line-height:1.5;}
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 .section{margin-bottom:52px;}
 .section-header{display:flex;align-items:center;gap:12px;margin-bottom:20px;}
 .section-label{font-family:'Bebas Neue',sans-serif;font-size:28px;}
@@ -75,7 +75,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
 .section-divider{flex:1;height:1px;background:var(--border);}
 .section-count{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;color:var(--muted);text-transform:uppercase;}
 
-/* ── BONUS CARDS ── */
+/* BONUS CARDS */
 .bonus-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .bonus-card{background:rgba(255,255,255,.04);border:1px solid var(--border);
   border-radius:12px;padding:22px 22px 20px;position:relative;overflow:hidden;transition:border-color .2s;}
@@ -90,34 +90,35 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
 .bc-btn:hover{opacity:.85;}
 .bc-btn.outline{background:transparent;border:1px solid rgba(232,119,34,.4);color:var(--orange);}
 .bc-btn.outline:hover{background:var(--orange-dim);}
-.bc-placeholder{background:rgba(255,255,255,.04);border:1.5px dashed rgba(255,255,255,.15);
-  border-radius:7px;padding:12px 14px;font-family:'DM Mono',monospace;font-size:10px;
-  color:rgba(255,255,255,.3);letter-spacing:.06em;margin-top:8px;}
 
-/* ── RESOURCE ROW ── */
-.resource-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;}
-.rc{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:10px;
-  padding:16px 18px;display:flex;flex-direction:column;gap:8px;}
-.rc-icon{font-size:24px;}
-.rc-title{font-weight:600;font-size:13px;}
-.rc-desc{font-size:11px;color:var(--muted);line-height:1.5;flex:1;}
-.rc-link{display:inline-flex;align-items:center;gap:5px;color:var(--orange);
-  font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.06em;text-decoration:none;margin-top:4px;}
-.rc-link:hover{text-decoration:underline;}
+/* BOOK CALL BLOCK */
+.book-call-block{background:linear-gradient(135deg,var(--navy-mid),rgba(20,42,64,.8));
+  border:1px solid var(--border);border-top:3px solid var(--orange);
+  border-radius:12px;padding:32px 36px;margin-bottom:52px;
+  display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;}
+.bcb-eyebrow{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--orange);margin-bottom:8px;}
+.bcb-title{font-family:'Bebas Neue',sans-serif;font-size:38px;line-height:.95;margin-bottom:10px;}
+.bcb-title span{color:var(--orange);}
+.bcb-desc{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;max-width:480px;}
+.bcb-perks{display:flex;flex-direction:column;gap:5px;margin-top:14px;}
+.bcb-perk{font-size:12px;color:rgba(255,255,255,.75);display:flex;gap:8px;align-items:flex-start;}
+.bcb-perk .chk{color:var(--green);flex-shrink:0;margin-top:1px;}
+.bcb-right{display:flex;flex-direction:column;align-items:center;gap:10px;}
+.bcb-cta{display:inline-flex;align-items:center;justify-content:center;background:var(--orange);
+  border-radius:10px;padding:16px 28px;font-family:'Bebas Neue',sans-serif;
+  font-size:22px;letter-spacing:.04em;color:#fff;text-decoration:none;
+  transition:opacity .15s;white-space:nowrap;text-align:center;line-height:1.2;}
+.bcb-cta:hover{opacity:.88;}
+.bcb-note{font-family:'DM Mono',monospace;font-size:9px;color:var(--muted);
+  letter-spacing:.06em;text-align:center;line-height:1.5;}
 
-/* ── FILTER BAR ── */
-.filter-btn{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
-  padding:6px 14px;border-radius:20px;border:1px solid var(--border);background:transparent;
-  color:var(--muted);cursor:pointer;transition:all .15s;}
-.filter-btn:hover{border-color:rgba(232,119,34,.4);color:rgba(255,255,255,.8);}
-.filter-btn.active{background:var(--orange-dim);border-color:rgba(232,119,34,.4);color:var(--orange);}
-
-/* ── ATTENDEE CARDS ── */
+/* ATTENDEE CARDS */
 .attendee-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 .attendee-card{background:rgba(255,255,255,.04);border:1px solid var(--border);
   border-radius:10px;padding:16px 18px;transition:all .2s;cursor:default;}
 .attendee-card:hover{border-color:rgba(232,119,34,.3);background:rgba(232,119,34,.05);}
-.attendee-card.has-audit{cursor:pointer;}
+.attendee-card.has-audit{cursor:pointer;border-color:rgba(232,119,34,.2);background:rgba(232,119,34,.04);}
 .attendee-card.has-audit:hover{border-color:var(--orange);background:var(--orange-dim);}
 .attendee-card.hidden{display:none;}
 .ac-name{font-weight:700;font-size:14px;margin-bottom:4px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
@@ -137,7 +138,15 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
   border:1px solid rgba(59,130,246,.25);border-radius:4px;padding:2px 7px;
   font-family:'DM Mono',monospace;font-size:9px;color:var(--blue);margin-top:6px;}
 
-/* ── CTA ── */
+/* GRID SECTION DIVIDERS */
+.grid-section-label{grid-column:1/-1;padding:16px 0 10px;}
+.gsl-complete{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--orange);border-bottom:1px solid rgba(232,119,34,.2);padding-bottom:12px;}
+.gsl-pending{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;
+  text-transform:uppercase;color:rgba(255,255,255,.25);border-bottom:1px solid var(--border);
+  padding-bottom:12px;margin-top:8px;}
+
+/* CTA SECTION */
 .cta-section{background:var(--navy-mid);border:1px solid var(--border);
   border-radius:14px;padding:40px 48px;text-align:center;position:relative;overflow:hidden;}
 .cta-section::before{content:'';position:absolute;inset:0;
@@ -155,7 +164,7 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
 .big-cta:hover{opacity:.88;}
 .cta-note{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);margin-top:12px;letter-spacing:.06em;}
 
-/* ── PODCAST ── */
+/* PODCAST */
 .podcast-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
 .pod-card{background:rgba(255,255,255,.03);border:1px solid var(--border);
   border-radius:10px;padding:16px 18px;display:flex;align-items:center;gap:14px;}
@@ -167,14 +176,16 @@ header{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;
   font-family:'DM Mono',monospace;font-size:10px;text-decoration:none;}
 .pod-link:hover{text-decoration:underline;}
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer{border-top:1px solid var(--border);padding:28px 0;text-align:center;
   font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);letter-spacing:.08em;}
 footer strong{color:var(--orange);}
 
 @media(max-width:700px){
-  .bonus-grid,.resource-row,.podcast-row,.attendee-grid{grid-template-columns:1fr;}
+  .bonus-grid,.podcast-row,.attendee-grid{grid-template-columns:1fr;}
   .cta-offer-grid{grid-template-columns:1fr;}
+  .book-call-block{grid-template-columns:1fr;}
+  .bcb-right{align-items:flex-start;}
   header{padding:0 20px;}
 }
 </style>
@@ -185,87 +196,101 @@ footer strong{color:var(--orange);}
   <div class="hdr-logo">IFCA</div>
   <div class="hdr-right">
     <div class="hdr-badge"><div class="dot"></div>April 29, 2026 Session</div>
-    <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="hdr-cta" target="_blank">Book Free Audit Call →</a>
+    <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="hdr-cta" target="_blank">Book Free Audit Call &rarr;</a>
   </div>
 </header>
 
 <div class="page">
 
-  <!-- ── HERO ── -->
+  <!-- HERO -->
   <div class="hero">
-    <div class="hero-eyebrow">🔒 Private Invite Only · Impact Fitness Coaching Academy</div>
-    <h1 class="hero-title">Live Hot Seat Q&A<br><span>with Jordan Dugger</span></h1>
-    <p class="hero-sub">Your exclusive access page — everything you need from tonight's session, plus the bonus resources Jordan promised.</p>
+    <div class="hero-eyebrow">&#x1F512; Private Invite Only &middot; Impact Fitness Coaching Academy</div>
+    <h1 class="hero-title">Live Hot Seat Q&amp;A<br><span>with Jordan Dugger</span></h1>
+    <p class="hero-sub">Your exclusive access page &mdash; the session replay, your personalized audit, and every bonus resource Jordan promised.</p>
     <div class="hero-meta">
-      <span>Jordan Dugger · IFCA Co-Founder</span>
-      <span class="sep">·</span>
+      <span>Jordan Dugger &middot; IFCA Co-Founder</span>
+      <span class="sep">&middot;</span>
       <span>April 29, 2026</span>
-      <span class="sep">·</span>
+      <span class="sep">&middot;</span>
       <span>Private Session</span>
-      <span class="sep">·</span>
+      <span class="sep">&middot;</span>
       <span>No Public Replay</span>
     </div>
   </div>
 
-  <!-- ── BONUS STEPS ── -->
-  <div class="section">
-    <div class="section-header">
-      <div class="section-label orange">Your Bonus Resources</div>
-      <div class="section-divider"></div>
-      <div class="section-count">2 Steps</div>
-    </div>
-
-    <div class="bonus-grid">
-
-    <!-- Step 1: Replay embed (full width) -->
-    <div class="bonus-card primary" style="grid-column:1/-1;">
-      <div class="bc-step">Step 1</div>
-      <div class="bc-title">Watch the Session Replay</div>
-      <div class="bc-desc" style="margin-bottom:16px;">The full replay of tonight's live hot seat session. Watch back the frameworks, hot seats, the pitch, and the math.</div>
-      <div style="position:relative;width:100%;padding-top:56.25%;background:rgba(0,0,0,.35);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.08);" id="replay-wrap">
-        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
-          <div style="font-size:36px;opacity:.4;">▶</div>
-          <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);">Replay coming soon — check back shortly</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="bonus-card">
-      <div class="bc-step">Step 2</div>
-      <div class="bc-title">Book Your Free Business Audit Call</div>
-      <div class="bc-desc">2-minute application. Zero obligation. Zero pitch. We'll map out your exact 90-day plan live on the call — and you get the DM closing scripts + call booking scripts just for showing up.</div>
-      <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="bc-btn" target="_blank">Complete the 2-Min Application →</a>
-    </div>
-
+  <!-- START HERE BANNER -->
+  <div class="intro-banner">
+    <div class="intro-banner-icon">&#x25B6;&#xFE0F;</div>
+    <div class="intro-banner-text">
+      <div class="intro-banner-label">Start Here</div>
+      <div class="intro-banner-title">Watch this quick 2-minute walkthrough to get the most out of this page</div>
+      <div class="intro-banner-sub">Jordan walks you through exactly where to find your audit, how to use the free tools, and what to do next. Watch this first &mdash; everything else will make more sense.</div>
     </div>
   </div>
 
-  <!-- ── FREE BONUS TOOLS ── -->
+  <!-- SESSION REPLAY -->
   <div class="section">
     <div class="section-header">
-      <div class="section-label orange">Free Bonus Tools and Resources</div>
+      <div class="section-label orange">Session Replay</div>
+      <div class="section-divider"></div>
+    </div>
+    <div class="bonus-card primary">
+      <div class="bc-step">Full Recording</div>
+      <div class="bc-title">Watch the Hot Seat Session Replay</div>
+      <div class="bc-desc" style="margin-bottom:16px;">The complete recording of tonight's live session &mdash; every hot seat, every framework breakdown, the math, and the pitch. Rewatch your own segment, study how Jordan diagnosed the others, and take notes on the constraint frameworks he applied live.</div>
+      <div style="position:relative;width:100%;padding-top:56.25%;background:rgba(0,0,0,.35);border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.08);">
+        <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+          <div style="font-size:36px;opacity:.4;">&#x25B6;</div>
+          <div style="font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.3);">Replay coming soon &mdash; check back shortly</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOK YOUR CALL BLOCK -->
+  <div class="book-call-block">
+    <div>
+      <div class="bcb-eyebrow">What Happens Next</div>
+      <div class="bcb-title">Book Your Free<br><span>Business Audit Call</span></div>
+      <div class="bcb-desc">No pressure. No pitch. Just a real conversation about your business &mdash; your #1 constraint identified, a custom 90-day plan built live, and a full walkthrough of how IFCA would accelerate your specific situation.</div>
+      <div class="bcb-perks">
+        <div class="bcb-perk"><span class="chk">&#x2713;</span> Live business diagnostic with an IFCA advisor</div>
+        <div class="bcb-perk"><span class="chk">&#x2713;</span> Your #1 constraint identified and mapped to a fix</div>
+        <div class="bcb-perk"><span class="chk">&#x2713;</span> Custom 90-day growth plan built for your business</div>
+        <div class="bcb-perk"><span class="chk">&#x2713;</span> DM Closing Scripts + Call Booking Scripts just for showing up</div>
+      </div>
+    </div>
+    <div class="bcb-right">
+      <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="bcb-cta" target="_blank">Complete the<br>2-Min Application &rarr;</a>
+      <div class="bcb-note">Zero obligation &middot; Zero credit card<br>Just a conversation</div>
+    </div>
+  </div>
+
+  <!-- FREE BONUS TOOLS -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-label orange">Free Bonus Tools &amp; Resources</div>
       <div class="section-divider"></div>
     </div>
     <div class="bonus-grid">
       <div class="bonus-card primary">
         <div class="bc-step">Bonus #1</div>
-        <div class="bc-title">JAN the Offer Genie 🧞</div>
-        <div class="bc-desc">Complete your Offer Scorecard Worksheet first, then run it through JAN. Lacey went from $350/mo → $800/mo and actually <em>increased</em> her close rate using JAN in minutes.</div>
-        <a href="https://azure-rule-3b2.notion.site/Optimize-Your-Offer-With-Jan-1b16132dd910809c8d6cebd78deb2e40?pvs=73" class="bc-btn" target="_blank">Access JAN →</a>
+        <div class="bc-title">JAN the Offer Genie &#x1F9DE;</div>
+        <div class="bc-desc">Complete your Offer Scorecard Worksheet first, then run it through JAN. Lacey went from $350/mo to $800/mo and actually <em>increased</em> her close rate using JAN in minutes.</div>
+        <a href="https://azure-rule-3b2.notion.site/Optimize-Your-Offer-With-Jan-1b16132dd910809c8d6cebd78deb2e40?pvs=73" class="bc-btn" target="_blank">Access JAN &rarr;</a>
         <br><br>
-        <a href="https://docs.google.com/document/d/1il88gL76RsAJ3t-grDy0Km-C7EKojoeqrKBNdC59Iig/copy" class="bc-btn outline" target="_blank">Get Offer Worksheet First →</a>
+        <a href="https://docs.google.com/document/d/1il88gL76RsAJ3t-grDy0Km-C7EKojoeqrKBNdC59Iig/copy" class="bc-btn outline" target="_blank">Get Offer Worksheet First &rarr;</a>
       </div>
       <div class="bonus-card">
         <div class="bc-step">Bonus #2</div>
         <div class="bc-title">Business Revenue Calculator</div>
         <div class="bc-desc">Set your income goal and reverse-engineer exactly how many clients, leads, and calls you need per week. The macro tracker for your business.</div>
-        <a href="tools-and-calculators/" class="bc-btn" target="_blank">Open Calculator →</a>
+        <a href="tools-and-calculators/" class="bc-btn" target="_blank">Open Calculator &rarr;</a>
       </div>
     </div>
   </div>
 
-
-  <!-- ── ATTENDEE HOT SEATS ── -->
+  <!-- HOT SEAT ATTENDEES -->
   <div class="section">
     <div class="section-header">
       <div class="section-label">Tonight's <span class="orange">Hot Seat</span> Attendees</div>
@@ -273,13 +298,12 @@ footer strong{color:var(--orange);}
       <div class="section-count" id="visible-count">24 Coaches</div>
     </div>
     <p style="font-size:12px;color:var(--muted);margin-bottom:16px;font-family:'DM Mono',monospace;letter-spacing:.05em;">
-      Coaches with a <span style="color:var(--orange);">📋 Full Audit</span> have a clickable card — opens your personalized intelligence report. Audits added as they're completed post-session.
+      Coaches with a <span style="color:var(--orange);">&#x1F4CB; Full Audit</span> have a clickable card &mdash; opens your personalized intelligence report. Audits are added as they are completed post-session.
     </p>
 
-    <!-- FILTER BAR -->
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;">
       <button class="filter-btn active" onclick="filterCards('all',this)">All (24)</button>
-      <button class="filter-btn" onclick="filterCards('audit',this)">📋 Has Audit (8)</button>
+      <button class="filter-btn" onclick="filterCards('audit',this)">&#x1F4CB; Has Audit (8)</button>
       <button class="filter-btn" onclick="filterCards('scale',this)">Scale</button>
       <button class="filter-btn" onclick="filterCards('growth',this)">Growth</button>
       <button class="filter-btn" onclick="filterCards('starter',this)">Starter</button>
@@ -288,232 +312,210 @@ footer strong{color:var(--orange);}
 
     <div class="attendee-grid" id="attendee-grid">
 
-      <!
-      <!-- LOREN CHAPMAN — FULL AUDIT LIVE -->
+      <!-- COMPLETED SECTION -->
+      <div class="grid-section-label gsl-complete">&#x2713;&nbsp; Completed Audits &mdash; Click Any Card to Open Your Report</div>
+
       <div class="attendee-card has-audit" data-phase="growth" data-audit="true" onclick="window.location.href='loren-chapman/'">
         <div class="ac-name">Loren Chapman <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Hormone Reset Club ($147/mo) + 1:1 Precision Rebuild ($2,500/3mo). Functional labs + training + nutrition for high-performing women 35–45 whose bodies stopped responding.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo with predictable acquisition system</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+        <div class="ac-offer">Hormone Reset Club + Precision Rebuild. Functional labs + training for high-performing women 35&ndash;45 whose bodies stopped responding.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $20&ndash;30K/mo with predictable acquisition</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- CARLOS NOLASCO — FULL AUDIT LIVE -->
       <div class="attendee-card has-audit" data-phase="growth" data-audit="true" onclick="window.location.href='carlos-nolasco/'">
         <div class="ac-name">Carlos Nolasco <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Wolf Pro Community — tennis coaching for competitive juniors + USTA 3.5–4.0 players. 3 tiers: $450 / $700 / $1,100/mo. Running Meta ads + GHL funnels. High LTV once in.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $20–30K/mo with team of coaches</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+        <div class="ac-offer">TPA Academy | Match IQ &mdash; tennis performance coaching. 15 years pro experience, 1,000+ players. Just quit job to go full-time online.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $20K/mo in 6 months</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- CINDY SEMBER — FULL AUDIT LIVE -->
       <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='cindy-sember/'">
         <div class="ac-name">Cindy Sember <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">3× Olympian coaching high-achieving Christian women — fat loss + muscle + elite mindset. 66K followers. Running ads but attracting wrong avatar at $1,200 / 4-month offer.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $5K/mo consistent → rebuild to $6K+ offer</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+        <div class="ac-offer">3&times; Olympian coaching high-achieving women &mdash; fat loss + muscle + elite mindset. 66K followers. Wrong avatar problem at $1,200/4-month offer.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $5K/mo consistent &rarr; rebuild to $6K+ offer</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- KATIE DICKSON — FULL AUDIT LIVE -->
       <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='katie-dickson/'">
         <div class="ac-name">Katie Dickson <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">KFit Personal Training &amp; Nutrition — 7-year coach. Food Freedom Formula + MRT Training. 6-month program. $2–5K/mo with 0–10 clients due to private IG and inactive ads.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $15–20K/mo online coaching</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+        <div class="ac-offer">KFit &mdash; 7-year coach. Food Freedom Formula + MRT Training. 6-month program. Private IG + inactive ads keeping growth stuck.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $15&ndash;20K/mo online</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- AUDITS IN PROCESS DIVIDER -->
-      <div style="grid-column:1/-1;padding:20px 0 8px;border-top:1px solid rgba(255,255,255,.06);margin-top:8px;">
-        <div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3);">📋 Audits in Process — Check Back as They Go Live</div>
-      </div>
-
-      <!-- LEEANN POTOCHNEY -->
-      <!-- LEEANN POTOCHNEY — FULL AUDIT LIVE -->
       <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='leeann-potochney/'">
         <div class="ac-name">LeeAnn Potochney <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Amplify PTP — licensed physical therapist. Active adults + athletes, get out of pain + stay competitive. In-person $700+/mo, 2 remote clients. Already running ads.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $15K/mo total net revenue</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+        <div class="ac-offer">Amplify PTP &mdash; licensed physical therapist. Active adults + athletes: get out of pain + stay competitive. In-person $700+/mo, already running ads.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $15K/mo net revenue</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- CRAIG STEVENSON -->
-      <div class="attendee-card" data-phase="scale">
-        <div class="ac-name">Craig Stevenson <span class="ac-phase scale">Scale</span></div>
-        <div class="ac-offer">In-person small group training, Phoenix AZ. 100 current clients, 3,000+ career total. Running ads + organic. Transitioning to high-ticket online coaching.</div>
-        <div class="ac-goal"><span class="arrow">→</span> 30 HT online clients, $15K/mo, ≤25 hrs/wk</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- WENDY GOODINE -->
-      <div class="attendee-card" data-phase="growth">
-        <div class="ac-name">Wendy Goodine <span class="ac-phase growth">Growth</span></div>
-        <div class="ac-offer">Menopause specialist coach. Specialty: permanent lifestyle change. Personal 95-lb weight loss 25+ years maintained. 10 online clients. Referral-only — zero digital marketing currently.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Well into 6 figures, work from anywhere</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- NICOLE AUQUILLA MAGGIO -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Nicole Auquilla Maggio <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">The Regulated Leader Reset — 90-day private mentorship for high-capacity Christian women. Dig Deep Protocol: nervous system + metabolism + identity coaching. $3,000–$4,500.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $5–10K/mo + quit full-time finance job</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- HENRY MATTHEWS -->
-      <!-- HENRY MATTHEWS — FULL AUDIT LIVE -->
       <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='henry-matthews/'">
         <div class="ac-name">Henry Matthews <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Rehab Meets Performance Method — athletes + active adults with knee/shoulder/back injuries. Works in rehab clinic. In-person $720/mo. 6 clients, 50+ total.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $8–15K/mo online performance brand</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+        <div class="ac-offer">Rehab Meets Performance Method &mdash; athletes with knee/shoulder/back injuries. Works in rehab clinic. Named mechanism, strong credibility story.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $8&ndash;15K/mo online performance brand</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- TASHA HALL -->
-      <!-- TASHA HALL — FULL AUDIT LIVE -->
       <div class="attendee-card has-audit" data-phase="starter" data-audit="true" onclick="window.location.href='tasha-hall/'">
         <div class="ac-name">Tasha Hall <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Body Gawd — relaunching after hiatus. Women 27–45 who want permanent healthy lifestyle (faith + fitness + lifestyle + marriage pillars). 400–500 lifetime clients. IG organic, restarting consistently.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $15–20K/mo recurring</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+        <div class="ac-offer">Body Gawd &mdash; women 27&ndash;45, faith + fitness + lifestyle + marriage pillars. 148K followers, 400&ndash;500 lifetime clients. Relaunching after hiatus.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $15&ndash;20K/mo recurring</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- ALEX KNOWLES -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Alex Knowles <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Air3 — 12 virtual Zoom sessions ($360). 8 years competitive bodybuilding + 12 years personal training. 25 current clients (mix Zoom + Crunch Fitness floor). Pure referral acquisition.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $6K/mo, minimize in-person, reclaim time</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-     
-
-      <!-- KRISTAL COUPER -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Kristal Couper <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Pivoting to perimenopause/menopause coaching. 1:1 program at $200 (major pricing gap). Has run ads + lead magnets. 1 active online client, 20 total. Toronto, Canada.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Quit job, $45K CAD/year</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- SCOTT DUNN -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Scott Dunn <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Dunn Physique Coach — high-performing couples + individuals who want to be leaders in their relationships through health. $70–100/wk. 8 clients. Organic + cold DMs. Brisbane, Australia.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Consistent $10K/month</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- BRENT THOMAS -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Brent Thomas <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Veterans with physical limitations (back pain, etc.) who are family men and former athletes. 1 current client, 3 total. IG organic only. Strong niche identity, pre-offer stage.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Impact hundreds of clients in 12 months</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- CRYSTAL HARRINGTON -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Crystal Harrington <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Monthly virtual programs $100–150/mo for busy moms. 16 current clients, 237 total. Referral + organic only. Classic pricing ceiling problem blocking growth.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $10K/month revenue</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- JAMES PORTER -->
-      <!-- JAMES PORTER — FULL AUDIT LIVE -->
       <div class="attendee-card has-audit" data-phase="zero" data-audit="true" onclick="window.location.href='james-porter/'">
         <div class="ac-name">James Porter <span class="ac-phase zero">Pre-Revenue</span></div>
-        <div class="ac-offer">NW Tactical Methods — military + LE fitness. 3-tier: beginner → intermediate → operator-level prep for special unit assessments. Running free dept. program. 5–10 unpaid clients. No pricing yet.</div>
-        <div class="ac-goal"><span class="arrow">→</span> 20–30 paying clients in 8–12 week program</div>
-        <div class="ac-audit-badge">📋 Full Audit Ready →</div>
+        <div class="ac-offer">NW Tactical Methods &mdash; military + law enforcement fitness. Active LE officer, running free dept. program building testimonials. Building from zero.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> 20&ndash;30 paying clients, $10&ndash;20K/mo</div>
+        <div class="ac-audit-badge">&#x1F4CB; Full Audit Ready &rarr;</div>
       </div>
 
-      <!-- JAMEEL COURTNEY -->
+      <!-- IN PROGRESS SECTION -->
+      <div class="grid-section-label gsl-pending">&#x23F3;&nbsp; Audits in Progress &mdash; Check Back as They Go Live</div>
+
+      <div class="attendee-card" data-phase="zero">
+        <div class="ac-name">Rajan Baliaris <span class="ac-phase zero">Pre-Launch</span></div>
+        <div class="ac-offer">Fitness + badminton hybrid coaching. Hawaii base, India presence. 820 followers, 382 posts, $0 online. Most uncontested niche in this cohort.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> 10+ online clients</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Alex Knowles <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">AIR3 Fitness &mdash; 8 years competitive bodybuilding + 12 years PT. 25 clients (Zoom + Crunch floor). 12-session package at $360. Extreme underpricing.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $6K/mo, minimize in-person</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="growth">
+        <div class="ac-name">Wendy Goodine <span class="ac-phase growth">Growth</span></div>
+        <div class="ac-offer">Menopause specialist. Personal 95-lb weight loss maintained 25+ years. 10 online clients. Referral-only &mdash; zero digital marketing currently.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Well into 6 figures, work from anywhere</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="scale">
+        <div class="ac-name">Craig Stevenson <span class="ac-phase scale">Scale</span></div>
+        <div class="ac-offer">The Total Coach &mdash; 100 current clients, 3,000+ career total. Small group training Phoenix AZ. Biggest proof base in this cohort. Transitioning online.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> 30 HT online clients, $15K/mo, &le;25 hrs/wk</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Nicole Auquilla Maggio <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">The Regulated Leader Reset &mdash; 90-day private mentorship for high-capacity Christian women. Dig Deep Protocol: nervous system + metabolism + identity. $3&ndash;4.5K.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $5&ndash;10K/mo + quit finance job</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Kristal Couper <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Pivoting to perimenopause/menopause coaching. 1:1 at $200 (major pricing gap). Has run ads. 1 active online client, 20 total. Toronto, Canada.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Quit job, $45K CAD/year</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Scott Dunn <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Dunn Physique &mdash; high-performing couples who want to be leaders through health. $70&ndash;100/wk. 8 clients. Brisbane, Australia.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Consistent $10K/month</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Brent Thomas <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Veterans with physical limitations &mdash; family men and former athletes. 1 current client, 3 total. Strong niche identity, pre-offer stage. IG organic only.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Impact hundreds of clients in 12 months</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Crystal Harrington <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Monthly virtual programs $100&ndash;150/mo for busy moms. 16 current clients, 237 total. Referral + organic. Classic pricing ceiling blocking scale.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $10K/month</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Jameel Courtney <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Body By Jameel — body transformations. $25 (30-min) / $55/hr session rates. 17 current clients, hundreds total. Bottleneck: explaining/proving the system works online.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $150K/year</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-offer">Body By Jameel &mdash; IFBB/NPC Pro. $25&ndash;55/hr session rates. 17 current clients, hundreds total. Needs to transition from hourly to online program model.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $150K/year</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
 
-      <!-- SHANNON CUSHMAN -->
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Shannon Cushman <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">BYLT Athletics — men's strength and conditioning. 4 clients. Cold DMs + friends. Marketing is the stated bottleneck. Long-term goal: own a gym.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Build toward owning a gym</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-offer">BYLT Athletics &mdash; men's strength and conditioning. 4 clients. Cold DMs + friends. Long-term vision: own a gym.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Build toward owning a gym</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
 
-      <!-- STEPHEN TURNEE -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Stephen Turner <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Gym-based PT + word of mouth. Philosophy: "I want my client to be educated enough to fire me." 5 current clients, 20–30 total. Re-entering coaching career. Capacity bottleneck (too many clients, not enough time).</div>
-        <div class="ac-goal"><span class="arrow">→</span> Re-establishing coaching career</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- LEAH NATERA -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">Leah Natera <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Gym confidence + macro coaching + accountability. $300/mo. 1 current client, 8 total. FB group leads that don't convert — classic conversion + positioning problem.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $20K/month</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- VONRAY JOHNSON -->
-      <div class="attendee-card" data-phase="starter">
-        <div class="ac-name">VonRay Johnson <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Performance athletics (strength, speed, power) + weight loss. $70–90/session. 15–20 current clients. 1,000+ lifetime clients. Word of mouth + brochures only — zero digital.</div>
-        <div class="ac-goal"><span class="arrow">→</span> $25K/month online</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
-      </div>
-
-      <!-- JOYCE BARTON -->
       <div class="attendee-card" data-phase="starter">
         <div class="ac-name">Joyce Barton <span class="ac-phase starter">Starter</span></div>
-        <div class="ac-offer">Strength training with muscle awareness + Licensed Massage Therapist integration. 2 clients, in-person Boise ID. Referrals from gym owner only. Unique LMT + coaching combination.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Enough to bring husband home from out-of-state</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-offer">Strength training + Licensed Massage Therapist integration. 2 clients, in-person Boise ID. Unique LMT + coaching combination. Referrals only.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Enough to bring husband home from out-of-state</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
 
-      <!-- DREW GATTO -->
       <div class="attendee-card" data-phase="growth">
         <div class="ac-name">Drew Gatto <span class="ac-phase growth">Growth</span></div>
         <div class="ac-offer">Coaching for people with physical limitations. 12 current clients, 20+ total. Organic acquisition only. Networking as primary stated bottleneck.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Live comfortably</div>
-        <div class="ac-intel-badge">🔍 Intelligence Report: Pending</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Live comfortably</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
 
-      <!-- ANASTASIA RILEY -->
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Leah Natera <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Gym confidence + macro coaching + accountability. $300/mo. 1 current client, 8 total. FB group leads that don't convert &mdash; positioning problem.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $20K/month</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">VonRay Johnson <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Performance athletics (strength, speed, power). $70&ndash;90/session. 15&ndash;20 current clients. 1,000+ lifetime clients. Zero digital presence currently.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> $25K/month online</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
+      <div class="attendee-card" data-phase="starter">
+        <div class="ac-name">Stephen Turner <span class="ac-phase starter">Starter</span></div>
+        <div class="ac-offer">Gym-based PT + word of mouth. Philosophy: educate clients enough to fire me. 5 current clients, 20&ndash;30 total. Re-entering coaching career.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Re-establishing coaching career</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
+      </div>
+
       <div class="attendee-card" data-phase="zero">
         <div class="ac-name">Anastasia Riley <span class="ac-phase zero">Pre-Launch</span></div>
-        <div class="ac-offer">Still defining offer. No clients yet. Interested in ads as primary future acquisition channel. Starting from scratch — niche + offer architecture needed first.</div>
-        <div class="ac-goal"><span class="arrow">→</span> Successful online coaching business</div>
+        <div class="ac-offer">Still defining offer and niche. No clients yet. Interested in paid ads as primary acquisition. Starting from scratch &mdash; offer architecture needed first.</div>
+        <div class="ac-goal"><span class="arrow">&rarr;</span> Successful online coaching business</div>
+        <div class="ac-intel-badge">&#x1F50D; Intelligence Report: Pending</div>
       </div>
 
     </div>
   </div>
 
-  <!-- ── BOOK A CALL CTA ── -->
+  <!-- CTA SECTION BOTTOM -->
   <div class="section">
     <div class="cta-section">
       <div class="cta-eyebrow">What Happens Next</div>
       <h2 class="cta-title">Book Your Free<br><span>Business Audit Call</span></h2>
-      <p class="cta-sub">No pressure. No obligation. Just a real conversation about your business — and whether IFCA is the right fit to accelerate your growth.</p>
+      <p class="cta-sub">No pressure. No obligation. Just a real conversation about your business &mdash; and whether IFCA is the right fit to accelerate your growth.</p>
       <div class="cta-offer-grid">
-        <div class="cta-offer-item"><span class="check">✓</span>Live business diagnostic with an IFCA advisor</div>
-        <div class="cta-offer-item"><span class="check">✓</span>Your #1 constraint identified and mapped</div>
-        <div class="cta-offer-item"><span class="check">✓</span>Custom 90-day growth plan built for you</div>
-        <div class="cta-offer-item"><span class="check">✓</span>Full demo of the Client Engine system</div>
-        <div class="cta-offer-item"><span class="check">✓</span>DM Closing Scripts just for showing up</div>
-        <div class="cta-offer-item"><span class="check">✓</span>Call Booking Scripts just for showing up</div>
+        <div class="cta-offer-item"><span class="check">&#x2713;</span> Live business diagnostic with an IFCA advisor</div>
+        <div class="cta-offer-item"><span class="check">&#x2713;</span> Your #1 constraint identified and mapped</div>
+        <div class="cta-offer-item"><span class="check">&#x2713;</span> Custom 90-day growth plan built for you</div>
+        <div class="cta-offer-item"><span class="check">&#x2713;</span> Full demo of the Client Engine system</div>
+        <div class="cta-offer-item"><span class="check">&#x2713;</span> DM Closing Scripts just for showing up</div>
+        <div class="cta-offer-item"><span class="check">&#x2713;</span> Call Booking Scripts just for showing up</div>
       </div>
-      <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="big-cta" target="_blank">Complete the 2-Min Application →</a>
-      <div class="cta-note">Zero obligation · Zero credit card · Just a conversation</div>
+      <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="big-cta" target="_blank">Complete the 2-Min Application &rarr;</a>
+      <div class="cta-note">Zero obligation &middot; Zero credit card &middot; Just a conversation</div>
     </div>
   </div>
 
-  <!-- ── PODCAST ── -->
+  <!-- PODCAST -->
   <div class="section">
     <div class="section-header">
       <div class="section-label">Keep Learning</div>
@@ -521,34 +523,34 @@ footer strong{color:var(--orange);}
     </div>
     <div class="podcast-row">
       <div class="pod-card">
-        <div class="pod-icon">🎙️</div>
+        <div class="pod-icon">&#x1F399;&#xFE0F;</div>
         <div>
           <div class="pod-title">The Fitness Business Podcast</div>
           <div class="pod-sub">Basically a free health and fitness business MBA. Jordan + Erin break down every system, strategy, and framework that built IFCA.</div>
           <div class="pod-links">
-            <a href="https://podcasts.apple.com/us/podcast/the-fitness-business-podcast-with-erin-dimond/id1431786884" class="pod-link" target="_blank">🍎 Apple</a>
-            <a href="https://open.spotify.com/show/78IMkwtdbpHnv7Sal7fGBE?si=73dcbbdfe5e24ce1" class="pod-link" target="_blank">🟢 Spotify</a>
+            <a href="https://podcasts.apple.com/us/podcast/the-fitness-business-podcast-with-erin-dimond/id1431786884" class="pod-link" target="_blank">&#x1F34E; Apple</a>
+            <a href="https://open.spotify.com/show/78IMkwtdbpHnv7Sal7fGBE?si=73dcbbdfe5e24ce1" class="pod-link" target="_blank">&#x1F7E2; Spotify</a>
           </div>
         </div>
       </div>
       <div class="pod-card">
-        <div class="pod-icon">📺</div>
+        <div class="pod-icon">&#x1F4FA;</div>
         <div>
           <div class="pod-title">Jordan Dugger on YouTube</div>
           <div class="pod-sub">Deep dives on offer creation, lead gen, and scaling. Two fan-favorites: "First 10 Clients with No Following" and the upgrade your offer episode.</div>
           <div class="pod-links">
-            <a href="https://youtube.com/@jordandugger?si=hc8gbveVUyEVr1XJ" class="pod-link" target="_blank">▶ YouTube Channel</a>
-            <a href="https://youtu.be/KNqBbG9YFrI?si=yaBygELWUpkDxy_w" class="pod-link" target="_blank">First 10 Clients →</a>
+            <a href="https://youtube.com/@jordandugger?si=hc8gbveVUyEVr1XJ" class="pod-link" target="_blank">&#x25B6; YouTube Channel</a>
+            <a href="https://youtu.be/KNqBbG9YFrI?si=yaBygELWUpkDxy_w" class="pod-link" target="_blank">First 10 Clients &rarr;</a>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-</div><!-- /page -->
+</div>
 
 <footer>
-  <strong>IFCA</strong> · Impact Fitness Coaching Academy · Jordan Dugger · Private Invite Only · Confidential<br>
+  <strong>IFCA</strong> &middot; Impact Fitness Coaching Academy &middot; Jordan Dugger &middot; Private Invite Only &middot; Confidential<br>
   <a href="https://www.instagram.com/impactfitnesscoachingacademy/" style="color:var(--orange);text-decoration:none;margin-top:6px;display:inline-block;">@impactfitnesscoachingacademy</a>
 </footer>
 
@@ -556,10 +558,8 @@ footer strong{color:var(--orange);}
 function filterCards(type, btn) {
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
-
   const cards = document.querySelectorAll('#attendee-grid .attendee-card');
   let visible = 0;
-
   cards.forEach(card => {
     const phase = card.dataset.phase;
     const hasAudit = card.dataset.audit === 'true';
@@ -570,10 +570,8 @@ function filterCards(type, btn) {
     card.classList.toggle('hidden', !show);
     if (show) visible++;
   });
-
   document.getElementById('visible-count').textContent = visible + ' Coach' + (visible !== 1 ? 'es' : '');
 }
 </script>
-
 </body>
 </html>
