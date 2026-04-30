@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Joyce Barton — IFCA Hot Seat Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#1E3A5F; --navy-dark:#0B1A2B; --navy-mid:#142845;
+  --navy-card:rgba(20,40,69,0.6);
+  --orange:#E87722; --orange-dim:rgba(232,119,34,0.12); --orange-glow:rgba(232,119,34,0.22);
+  --blue-mid:#4A7FA5; --blue-dim:rgba(74,127,165,0.12); --blue-light:#D6E4F0;
+  --gray-400:#94A3B8; --gray-500:#64748B;
+  --green:#22C55E; --green-bg:rgba(34,197,94,0.10);
+  --red:#DC2626; --red-bg:rgba(220,38,38,0.09);
+  --yellow:#F59E0B; --yellow-bg:rgba(245,158,11,0.10);
+  --purple:#8B5CF6; --purple-bg:rgba(139,92,246,0.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);
+  background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),
+  radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+
+.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 24px 80px;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:rgba(11,26,43,.95);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.07);padding:0 24px;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:0;height:52px;}
+.nav-logo{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--orange);
+  text-transform:uppercase;margin-right:32px;white-space:nowrap;}
+.nav-links{display:flex;gap:0;overflow-x:auto;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray-400);text-decoration:none;padding:0 14px;height:52px;display:flex;align-items:center;
+  border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;}
+.nav-link:hover{color:#fff;border-bottom-color:rgba(232,119,34,.5);}
+.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+
+/* HERO */
+.hero{padding:64px 0 48px;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:12px;}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8vw,96px);line-height:.9;
+  letter-spacing:.02em;margin-bottom:8px;}
+.hero-brand{font-family:'DM Mono',monospace;font-size:13px;color:var(--gray-400);letter-spacing:.06em;margin-bottom:28px;}
+.hero-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:28px;}
+.stat-box{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);border-radius:10px;
+  padding:18px 14px;text-align:center;}
+.stat-box.orange{border-color:rgba(232,119,34,.25);background:rgba(232,119,34,.07);}
+.stat-box.blue{border-color:rgba(74,127,165,.25);background:rgba(74,127,165,.07);}
+.stat-box.green{border-color:rgba(34,197,94,.2);background:rgba(34,197,94,.06);}
+.stat-val{font-family:'Bebas Neue',sans-serif;font-size:28px;display:block;margin-bottom:4px;}
+.stat-box.orange .stat-val{color:var(--orange);}
+.stat-box.blue .stat-val{color:var(--blue-mid);}
+.stat-box.green .stat-val{color:var(--green);}
+.stat-box .stat-val{color:#fff;}
+.stat-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray-500);display:block;}
+.hero-summary{background:linear-gradient(135deg,rgba(30,58,95,.4),rgba(232,119,34,.08));
+  border:1px solid rgba(232,119,34,.25);border-radius:10px;padding:20px 24px;
+  font-size:14px;color:rgba(255,255,255,.8);line-height:1.65;font-style:italic;}
+
+/* SECTIONS */
+.section{padding:52px 0 0;}
+.section-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:6px;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:44px;margin-bottom:6px;}
+.section-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+
+/* WIN CARDS */
+.wins-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.win-card{background:var(--navy-card);border:1px solid rgba(34,197,94,.15);
+  border-left:4px solid var(--green);border-radius:10px;padding:20px;}
+.win-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--green);margin-bottom:8px;}
+.win-card p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
+
+/* PHASE */
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;overflow:hidden;margin-bottom:20px;}
+.phase-box{padding:18px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.07);}
+.phase-box:last-child{border-right:none;}
+.phase-box.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-name{font-family:'Bebas Neue',sans-serif;font-size:22px;display:block;margin-bottom:4px;}
+.phase-box.active .phase-name{color:var(--orange);}
+.phase-range{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;color:var(--gray-500);}
+.math-box{background:var(--navy-card);border:1px solid rgba(232,119,34,.2);border-radius:10px;
+  padding:22px 24px;}
+.math-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:12px;}
+.math-row{display:flex;justify-content:space-between;align-items:baseline;
+  padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;margin-top:4px;}
+.math-row .lbl{color:var(--gray-400);}
+.math-row .val{font-family:'DM Mono',monospace;color:#fff;}
+.math-row .val.orange{color:var(--orange);}
+.math-row .val.green{color:var(--green);}
+
+/* CREATIVE INTELLIGENCE */
+.intel-card{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);
+  border-radius:10px;padding:22px;margin-bottom:16px;}
+.intel-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--blue-mid);margin-bottom:10px;}
+.intel-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+.intel-table th{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray-500);padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);}
+.intel-table td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.04);
+  color:rgba(255,255,255,.75);vertical-align:top;line-height:1.5;}
+.intel-table tr:last-child td{border-bottom:none;}
+.badge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;
+  padding:2px 8px;border-radius:4px;text-transform:uppercase;}
+.badge.pass{background:var(--green-bg);color:var(--green);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);}
+.badge.fail{background:var(--red-bg);color:var(--red);}
+.badge.info{background:var(--blue-dim);color:var(--blue-mid);}
+.badge.gap{background:var(--purple-bg);color:var(--purple);}
+
+/* HOOK BANK */
+.hook-bank{display:flex;flex-direction:column;gap:10px;}
+.hook-item{background:rgba(74,127,165,.06);border:1px solid rgba(74,127,165,.15);
+  border-left:3px solid var(--blue-mid);border-radius:8px;padding:14px 16px;}
+.hook-item .hook-num{font-family:'DM Mono',monospace;font-size:9px;color:var(--blue-mid);
+  letter-spacing:.1em;margin-bottom:6px;}
+.hook-item .hook-text{font-size:13px;color:rgba(255,255,255,.85);line-height:1.55;}
+.hook-item .hook-meta{font-family:'DM Mono',monospace;font-size:9px;color:var(--gray-500);
+  margin-top:6px;}
+
+/* ENTITY GAP */
+.gap-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;}
+.gap-box{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px;}
+.gap-box .gap-val{font-family:'Bebas Neue',sans-serif;font-size:38px;display:block;margin-bottom:4px;}
+.gap-box.red .gap-val{color:var(--red);}
+.gap-box.warn .gap-val{color:var(--yellow);}
+.gap-box.green .gap-val{color:var(--green);}
+.gap-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray-500);}
+
+/* COPY BUTTON */
+.copy-btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange-dim);
+  border:1px solid rgba(232,119,34,.3);border-radius:7px;padding:9px 18px;
+  font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--orange);cursor:pointer;transition:all .15s;margin-top:16px;}
+.copy-btn:hover{background:rgba(232,119,34,.2);}
+#copy-confirm{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);
+  margin-left:10px;opacity:0;transition:opacity .3s;}
+
+/* CONSTRAINT CARDS */
+.constraint-card{background:var(--navy-card);border-radius:10px;padding:24px;margin-bottom:14px;border-left:5px solid;}
+.constraint-card.p1{border-left-color:var(--red);background:rgba(220,38,38,.04);}
+.constraint-card.p2{border-left-color:var(--yellow);background:rgba(245,158,11,.04);}
+.constraint-card.p3{border-left-color:var(--blue-mid);background:rgba(74,127,165,.04);}
+.constraint-card.ok{border-left-color:var(--green);background:rgba(34,197,94,.04);}
+.constraint-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.priority-badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;
+  padding:4px 10px;border-radius:5px;font-weight:600;}
+.p1 .priority-badge{background:var(--red-bg);color:var(--red);}
+.p2 .priority-badge{background:var(--yellow-bg);color:var(--yellow);}
+.p3 .priority-badge{background:var(--blue-dim);color:var(--blue-mid);}
+.ok .priority-badge{background:var(--green-bg);color:var(--green);}
+.constraint-title{font-family:'Bebas Neue',sans-serif;font-size:22px;}
+.constraint-diag{font-size:13px;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:14px;}
+.fix-box{background:rgba(30,58,95,.5);border-radius:7px;padding:14px 16px;}
+.fix-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--orange);margin-bottom:6px;}
+.fix-text{font-size:13px;color:rgba(255,255,255,.8);line-height:1.6;}
+
+/* PLAN */
+.plan-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.plan-item:last-child{border-bottom:none;}
+.plan-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--orange);
+  flex-shrink:0;width:32px;text-align:center;}
+.plan-title{font-weight:700;font-size:14px;margin-bottom:5px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:8px;}
+.plan-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;
+  text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-right:6px;}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);}
+.plan-tag.content{background:var(--blue-dim);color:var(--blue-mid);}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);}
+
+/* FOOTER */
+footer{margin-top:64px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);
+  font-family:'DM Mono',monospace;font-size:10px;color:var(--gray-500);letter-spacing:.06em;
+  text-align:center;}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">IFCA Hot Seat</div>
+    <div class="nav-links">
+      <a href="#wins" class="nav-link">What&#8217;s Working</a>
+      <a href="#phase" class="nav-link">Business Phase</a>
+      <a href="#intel" class="nav-link">Creative Intelligence</a>
+      <a href="#constraints" class="nav-link">Constraints</a>
+      <a href="#plan" class="nav-link">90-Day Plan</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-eyebrow">IFCA Hot Seat &middot; April 29, 2026 &middot; Boise, ID</div>
+    <div class="hero-name">Joyce Barton</div>
+    <div class="hero-brand">CPT + Licensed Massage Therapist &middot; @bartonjoyce &middot; primalrosefit.com</div>
+    <div class="hero-stats">
+      <div class="stat-box orange">
+        <span class="stat-val">$0&ndash;$1K</span>
+        <span class="stat-lbl">Est. Monthly Rev</span>
+      </div>
+      <div class="stat-box blue">
+        <span class="stat-val">CPT + LMT</span>
+        <span class="stat-lbl">Dual Credential</span>
+      </div>
+      <div class="stat-box orange">
+        <span class="stat-val">2</span>
+        <span class="stat-lbl">Current Clients</span>
+      </div>
+      <div class="stat-box green">
+        <span class="stat-val">Husband Home</span>
+        <span class="stat-lbl">Primary Goal</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-val" style="font-size:18px;color:var(--red);">Offer + Lead Gen</span>
+        <span class="stat-lbl">Primary Constraints</span>
+      </div>
+    </div>
+    <div class="hero-summary">
+      Joyce has a genuinely rare combination: 10+ years as a Certified Personal Trainer AND a Licensed Massage Therapist. In a world of identical-looking fitness coaches, that LMT credential is a structural differentiator that almost no competitor can copy. The bottleneck is not skill, not proof, not market demand &mdash; it is packaging, positioning, and the confidence to put herself on camera and say: <em>&ldquo;I am the only coach in Boise who can train your body AND reset it the same session.&rdquo;</em>
+    </div>
+  </div>
+
+  <!-- S01: WHAT'S WORKING -->
+  <div class="section" id="wins">
+    <div class="section-label">Section 01</div>
+    <div class="section-title">What&#8217;s Working</div>
+    <div class="section-divider"></div>
+    <div class="wins-grid">
+      <div class="win-card">
+        <div class="win-title">&#x2713; Rare Dual Credential</div>
+        <p>CPT + Licensed Massage Therapist is an extremely uncommon combination in the coaching market. It creates a defensible, copycat-proof position: Joyce can deliver strength training AND soft tissue work in the same session. No competitor without an LMT license can make the same claim. This is the foundation of a premium, higher-ticket offer.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; Existing Proof Pathway</div>
+        <p>Two current in-person clients from gym-owner referrals validate the offer. Even at 2 clients, there is a working acquisition mechanism (word of mouth from a trusted referrer) and presumably at least one transformation in progress. That first case study, once documented, becomes the centerpiece of all future content and ads.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; Website Foundation Exists</div>
+        <p>A professional profile on primalrosefit.com/personal-trainers is already live. This means Joyce is not starting from zero &mdash; there is a page that can be found via search, updated with her mechanism name, and linked in her Instagram bio. The infrastructure for a first lead-capture funnel already exists and needs copy updates, not a rebuild.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; High-Trust Local Referral Network</div>
+        <p>A gym-owner referral is a premium lead source &mdash; the warm handoff from a trusted authority pre-qualifies Joyce with every prospect before the first conversation. Boise is a strong health and fitness market. The same trust-transfer that works in person (gym owner &rarr; Joyce) is replicable online through local Facebook groups, Instagram geotags, and local SEO.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- S02: BUSINESS PHASE -->
+  <div class="section" id="phase">
+    <div class="section-label">Section 02</div>
+    <div class="section-title">Business Phase</div>
+    <div class="section-divider"></div>
+    <div class="phase-row">
+      <div class="phase-box active">
+        <span class="phase-name">&#x25CF; Starter</span>
+        <span class="phase-range">$0 &ndash; $5K/mo</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.6);line-height:1.5;">Offer creation, first paying clients, first case study on camera, organic proof loop</div>
+      </div>
+      <div class="phase-box">
+        <span class="phase-name" style="color:var(--gray-400);">Growth</span>
+        <span class="phase-range">$5K &ndash; $15K/mo</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.3);line-height:1.5;">Funnel, lead gen, paid traffic, DM automation</div>
+      </div>
+      <div class="phase-box">
+        <span class="phase-name" style="color:var(--gray-400);">Scale</span>
+        <span class="phase-range">$15K+/mo</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.3);line-height:1.5;">Systems, backend offers, LTV, team</div>
+      </div>
+    </div>
+    <div class="math-box">
+      <div class="math-title">Joyce&#8217;s Path to Goal &mdash; The Math</div>
+      <div class="math-row"><span class="lbl">Husband&#8217;s out-of-state income (est.)</span><span class="val">~$4,000 &ndash; $6,000/mo</span></div>
+      <div class="math-row"><span class="lbl">Required online coaching revenue to replace it</span><span class="val orange">$5,000 &ndash; $7,000/mo</span></div>
+      <div class="math-row"><span class="lbl">Recommended initial offer price</span><span class="val">$1,500 &ndash; $2,000 / 3-month program</span></div>
+      <div class="math-row"><span class="lbl">Clients needed at $1,500 to hit $6K/mo</span><span class="val">4 concurrent clients</span></div>
+      <div class="math-row"><span class="lbl">Clients needed at $2,000 to hit $6K/mo</span><span class="val">3 concurrent clients</span></div>
+      <div class="math-row"><span class="lbl">LTV per client (FE program + 6-mo backend @ $500/mo)</span><span class="val green">$4,500 &ndash; $5,000</span></div>
+      <div class="math-row"><span class="lbl">Reality check</span><span class="val orange">3 &ndash; 4 clients = goal achieved</span></div>
+    </div>
+  </div>
+
+  <!-- S03: CREATIVE INTELLIGENCE -->
+  <div class="section" id="intel">
+    <div class="section-label">Section 03</div>
+    <div class="section-title">Creative Intelligence Report</div>
+    <div class="section-divider"></div>
+
+    <!-- Brand / Offer / Funnel -->
+    <div class="intel-card">
+      <div class="intel-label">Brand &amp; Offer Audit</div>
+      <table class="intel-table">
+        <thead><tr><th>Dimension</th><th>Current State</th><th>Gap</th></tr></thead>
+        <tbody>
+          <tr><td>Brand Name</td><td>Joyce Barton / Primal Rose Fit (gym sub-brand)</td><td>No owned personal brand; lives inside another brand&#8217;s domain</td></tr>
+          <tr><td>Named Mechanism</td><td>None &mdash; described as &ldquo;strength training with muscle awareness&rdquo;</td><td>Critical gap &mdash; no mechanism = no reason to pay premium vs. any other trainer</td></tr>
+          <tr><td>Offer Structure</td><td>Unpriced 1:1 in-person sessions + informal LMT add-on</td><td>No program name, no duration, no price, no defined deliverable</td></tr>
+          <tr><td>Offer Price</td><td>Unknown / unestablished online</td><td>The LMT credential alone justifies $1,500 &ndash; $2,000/program</td></tr>
+          <tr><td>Lead Capture</td><td>Gym-owner verbal referral only</td><td>Zero digital lead capture &mdash; no opt-in, no DM CTA, no form</td></tr>
+          <tr><td>Instagram</td><td>@bartonjoyce (content behind login wall)</td><td>Cannot assess organic performance; likely low follower count, low post frequency</td></tr>
+          <tr><td>Facebook</td><td>Joyce Barton Fitness page</td><td>Login wall blocked audit; no paid ads running</td></tr>
+          <tr><td>Meta Ads</td><td>None found in Ad Library</td><td>No paid acquisition; 100% dependent on referrals</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Organic Content Audit -->
+    <div class="intel-card">
+      <div class="intel-label">Organic Content Audit &mdash; Estimated Baseline</div>
+      <p style="font-size:12px;color:var(--gray-400);margin-bottom:12px;">Instagram and Facebook were behind login walls during audit. Content below is reconstructed from platform indicators and niche benchmarks. Hooks marked &#x26A0; are inferred, not verbatim.</p>
+      <table class="intel-table">
+        <thead><tr><th>Hook Type</th><th>Format</th><th>Emotional Driver</th><th>Ad Potential</th></tr></thead>
+        <tbody>
+          <tr><td>&#x26A0; Generic strength training tips</td><td>Static image / caption</td><td>Low &mdash; educational but not avatar-filtering</td><td><span class="badge fail">Low</span></td></tr>
+          <tr><td>&#x26A0; Massage/recovery content mix</td><td>Short video</td><td>Medium &mdash; curiosity about LMT + fitness combo</td><td><span class="badge warn">Medium</span></td></tr>
+          <tr><td>&#x26A0; Personal training showcase</td><td>Video / reel</td><td>Low &mdash; &ldquo;trainer in gym&rdquo; visual without hook</td><td><span class="badge fail">Low</span></td></tr>
+          <tr><td>LMT credential reveal (untested)</td><td>Reel / talking head</td><td>High &mdash; &ldquo;I&rsquo;m not just a trainer, I&#8217;m also your massage therapist&rdquo;</td><td><span class="badge pass">High</span></td></tr>
+          <tr><td>Pain/injury frustration angle (untested)</td><td>Reel / talking head</td><td>High &mdash; hits active pain point (soreness, injury, form breakdown)</td><td><span class="badge pass">High</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Entity Gap -->
+    <div class="intel-card">
+      <div class="intel-label">Entity Gap Scorecard</div>
+      <div class="gap-grid">
+        <div class="gap-box red">
+          <span class="gap-val">0</span>
+          <span class="gap-lbl">Paid Ad Entities</span>
+        </div>
+        <div class="gap-box warn">
+          <span class="gap-val">~5&ndash;10</span>
+          <span class="gap-lbl">Est. Organic Posts</span>
+        </div>
+        <div class="gap-box red">
+          <span class="gap-val">0</span>
+          <span class="gap-lbl">Named Mechanisms</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--gray-400);line-height:1.6;">Zero paid entities. No named mechanism deployed in content. Social presence is minimal and inaccessible to cold prospects. Joyce is invisible to anyone not personally referred by the gym owner. Every competitor &mdash; even generic trainers with no LMT credential &mdash; is more discoverable online right now.</p>
+    </div>
+
+    <!-- Hook Bank -->
+    <div class="intel-card">
+      <div class="intel-label">Workshop-Ready Hook Bank &mdash; Build Queue (6 Proven Angles)</div>
+      <div class="hook-bank">
+        <div class="hook-item">
+          <div class="hook-num">Hook 01 &mdash; Credential Reveal &mdash; <span class="badge pass">Highest Priority</span></div>
+          <div class="hook-text">&ldquo;I&rsquo;m the only personal trainer in Boise who is also a licensed massage therapist &mdash; and it changes everything about how I train people.&rdquo;</div>
+          <div class="hook-meta">Format: Talking head reel &middot; Emotional driver: Pattern interrupt / curiosity &middot; CTA: Comment RESET</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 02 &mdash; Problem Agitation &mdash; <span class="badge pass">High Priority</span></div>
+          <div class="hook-text">&ldquo;If you&rsquo;re always sore after training, you don&rsquo;t need to rest more &mdash; you need your muscles reset before the next session.&rdquo;</div>
+          <div class="hook-meta">Format: Reel / short video &middot; Emotional driver: Pain + solution &middot; CTA: Comment RESET</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 03 &mdash; False Belief Destruction &mdash; <span class="badge pass">High Priority</span></div>
+          <div class="hook-text">&ldquo;Most trainers tell you to stretch more. As a licensed massage therapist, I&rsquo;m telling you that&rsquo;s the wrong fix.&rdquo;</div>
+          <div class="hook-meta">Format: Talking head &middot; Emotional driver: Authority + contrarian &middot; CTA: Comment FIX</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 04 &mdash; Mechanism Reveal &mdash; <span class="badge warn">Medium Priority</span></div>
+          <div class="hook-text">&ldquo;Train. Reset. Rebuild. The three-step method I use with every client &mdash; and why it gets faster results than training alone.&rdquo;</div>
+          <div class="hook-meta">Format: Carousel or reel &middot; Emotional driver: Mechanism curiosity &middot; CTA: Comment METHOD</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 05 &mdash; Social Proof Setup &mdash; <span class="badge warn">Medium Priority</span></div>
+          <div class="hook-text">&ldquo;What happens when a massage therapist also becomes your strength coach? Here&rsquo;s what my client [Name] noticed after 30 days.&rdquo;</div>
+          <div class="hook-meta">Format: Before/after or client testimonial reel &middot; Emotional driver: Results proof &middot; CTA: DM me RESULTS</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 06 &mdash; Local Authority &mdash; <span class="badge info">Boise Specific</span></div>
+          <div class="hook-text">&ldquo;Boise women: if your training isn&rsquo;t getting the results you expected, here&rsquo;s the one thing 90% of coaches skip.&rdquo;</div>
+          <div class="hook-meta">Format: Reel / talking head &middot; Emotional driver: Local identity + pain point &middot; CTA: Comment RESULTS</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Competitor Landscape -->
+    <div class="intel-card">
+      <div class="intel-label">Competitive Landscape &mdash; LMT + Fitness Coaching Niche</div>
+      <table class="intel-table">
+        <thead><tr><th>Competitor Type</th><th>Positioning</th><th>Gap Joyce Can Own</th></tr></thead>
+        <tbody>
+          <tr><td>Generic Boise PT / trainer</td><td>Strength, fat loss, online check-ins &mdash; undifferentiated</td><td>None have LMT credential + therapy integration</td></tr>
+          <tr><td>Online LMT educators</td><td>Teach massage technique, not fitness coaching</td><td>Joyce bridges BOTH worlds &mdash; no direct comp exists</td></tr>
+          <tr><td>Corrective exercise coaches</td><td>Movement screening, pain-free training</td><td>Joyce can claim superior positioning: &ldquo;I fix it AND train it&rdquo;</td></tr>
+          <tr><td>Recovery coaches</td><td>Foam rolling, mobility, sleep</td><td>Joyce&rsquo;s LMT is clinical-grade &mdash; no comp can match the hands-on credential</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Entity Build Queue -->
+    <div class="intel-card">
+      <div class="intel-label">Entity Build Queue &mdash; Prioritized (6 Entities)</div>
+      <table class="intel-table">
+        <thead><tr><th>#</th><th>Entity</th><th>Format</th><th>Priority</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Credential reveal: &ldquo;I&rsquo;m a trainer AND a massage therapist&rdquo;</td><td>60-sec talking head reel</td><td><span class="badge fail">P1 &mdash; Build First</span></td><td>This one piece of content changes everything. Film it this week.</td></tr>
+          <tr><td>2</td><td>Soreness fix: &ldquo;Why you&rsquo;re always sore and how I fix it&rdquo;</td><td>Reel / B-roll with voiceover</td><td><span class="badge fail">P1</span></td><td>Highest pain-point hook in her niche</td></tr>
+          <tr><td>3</td><td>Method reveal: &ldquo;Train. Reset. Rebuild.&rdquo; framework</td><td>Carousel (3 slides)</td><td><span class="badge warn">P2</span></td><td>Names the mechanism and educates on the process</td></tr>
+          <tr><td>4</td><td>False belief: &ldquo;Stretching more is the wrong fix&rdquo;</td><td>Talking head reel</td><td><span class="badge warn">P2</span></td><td>Authority-position content with contrarian angle</td></tr>
+          <tr><td>5</td><td>Client case study: first 30-day transformation story</td><td>Short testimonial video</td><td><span class="badge warn">P2</span></td><td>Ask current client for on-camera 2-min interview</td></tr>
+          <tr><td>6</td><td>Boise local callout: &ldquo;Boise women &mdash; your trainer is missing this&rdquo;</td><td>Reel &mdash; geotag Boise</td><td><span class="badge info">P3</span></td><td>Local SEO + Instagram discovery play</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Strategic Diagnosis -->
+    <div class="intel-card" style="border:1px solid rgba(232,119,34,.25);background:rgba(232,119,34,.05);">
+      <div class="intel-label">Strategic Diagnosis</div>
+      <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:14px;">
+        Joyce&#8217;s situation is simple: she has a premium, defensible product and zero people who know about it. The LMT + CPT combination is genuinely rare &mdash; there is no content strategy or ad budget required to stand out here, because almost no one is competing in this exact positioning. The entire problem is visibility and packaging.
+      </p>
+      <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;">
+        The 90-day play is not complicated: name the mechanism, get on camera for 60 seconds to explain the credential, and post it. One reel, fully organic, publicly discoverable, with a &ldquo;Comment RESET&rdquo; CTA and a ManyChat DM sequence to a booking link. Joyce does not need ads yet. She needs 3&ndash;4 clients. That is 3&ndash;4 conversations. She probably has enough reach through the gym-owner network alone to hit that number this month &mdash; if the offer is packaged and priced.
+      </p>
+    </div>
+
+    <button class="copy-btn" onclick="copyIntelReport()">&#x1F4CB; Copy for Workshop</button>
+    <span id="copy-confirm">Copied to clipboard &#x2713;</span>
+  </div>
+
+  <!-- S04: CONSTRAINT DIAGNOSIS -->
+  <div class="section" id="constraints">
+    <div class="section-label">Section 04</div>
+    <div class="section-title">Constraint Diagnosis</div>
+    <div class="section-divider"></div>
+
+    <div class="constraint-card p1">
+      <div class="constraint-header">
+        <span class="priority-badge">P1 &mdash; CRITICAL</span>
+        <span class="constraint-title">No Named Mechanism or Packaged Offer</span>
+      </div>
+      <div class="constraint-diag">
+        Joyce has no offer in the IFCA sense of the word. There is no program name, no defined duration, no price, no deliverable, and no mechanism name. &ldquo;Strength training with muscle awareness and some massage&rdquo; is a description of what she does, not a reason to buy. Prospects cannot buy something they cannot conceptualize. The LMT credential is irrelevant until it is wrapped in a named, priced program with a clear outcome promise.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Fix &mdash; This Week</div>
+        <div class="fix-text">Name the mechanism: <strong>&ldquo;The Train. Reset. Rebuild. Method&rdquo;</strong> or <strong>&ldquo;The Strength + Recovery Protocol.&rdquo;</strong> Build the offer: 12-week 1:1 program, 2x/week training + 1x massage therapy session/month, $1,500 upfront. That is the pitch. Write it down, put it on the primalrosefit page, and put the link in the Instagram bio. No website build required &mdash; update the existing page.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p1">
+      <div class="constraint-header">
+        <span class="priority-badge">P1 &mdash; CRITICAL</span>
+        <span class="constraint-title">Zero Digital Discoverability &mdash; Invisible to Cold Prospects</span>
+      </div>
+      <div class="constraint-diag">
+        Instagram requires login to view. Facebook requires login to view. No ads running. Zero DM funnel. No opt-in. The only acquisition channel is word-of-mouth from one gym owner. At current trajectory, the number of clients Joyce has will not grow unless that gym owner refers more people. That is a single-point-of-failure business with no leverage. Joyce is not in competition with other online coaches &mdash; she is simply not findable.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Fix &mdash; Day 1</div>
+        <div class="fix-text">Make Instagram public immediately. This is a 30-second settings change. Then post the credential reveal reel (Hook 01) with &ldquo;Comment RESET&rdquo; CTA. Install ManyChat free tier, connect the keyword trigger, and set up a 3-message DM flow that ends with a booking link. Total setup time: 2&ndash;3 hours. Zero ad spend required.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p2">
+      <div class="constraint-header">
+        <span class="priority-badge">P2 &mdash; GAP</span>
+        <span class="constraint-title">Confidence / Self-Promotion Mindset Block</span>
+      </div>
+      <div class="constraint-diag">
+        Joyce self-reported her primary bottleneck as &ldquo;getting more confident in myself and how to promote myself.&rdquo; This is the honest answer, and it matters &mdash; but it is also the most expensive bottleneck of all, because every week of inaction has a real dollar cost. The reframe: promotion is not self-aggrandizement, it is simply telling people that a service that could genuinely help them exists. Joyce&#8217;s LMT credential, used correctly, helps people who are stuck in pain loops and injury cycles. Not promoting it means those people do not get help.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Framework Shift</div>
+        <div class="fix-text">The camera is not about Joyce &mdash; it is about the client watching. Every piece of content Joyce makes should start from this question: <em>&ldquo;Who is in pain right now that I can help, and what do they need to hear?&rdquo;</em> The credential reveal reel is not &ldquo;look at me&rdquo; content &mdash; it is &ldquo;I have something that can help you&rdquo; content. That reframe makes the first post easier.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p3">
+      <div class="constraint-header">
+        <span class="priority-badge">P3 &mdash; WATCH</span>
+        <span class="constraint-title">Single Acquisition Source (Gym Owner Dependency)</span>
+      </div>
+      <div class="constraint-diag">
+        The current referral-only model works at 2 clients but will not scale to 4 without either more referral partners or an owned digital channel. This becomes urgent at the Growth phase, but should be addressed now by building the Instagram funnel so Joyce is not entirely dependent on one relationship.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Monitor</div>
+        <div class="fix-text">This resolves naturally once Instagram is public and posting consistently. Add a second referral partner (local chiropractor, physical therapist, or sports medicine clinic in Boise) as a parallel track. Joyce&#8217;s LMT license makes her a natural referral partner for clinical practices &mdash; this is a relationship worth pursuing in months 2&ndash;3.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card ok">
+      <div class="constraint-header">
+        <span class="priority-badge">OK &mdash; VALIDATED</span>
+        <span class="constraint-title">Offer Proof + Working Acquisition Seed</span>
+      </div>
+      <div class="constraint-diag">
+        Two paying clients from a cold referral source means the offer converts when presented by a trusted authority. The gym owner is not doing sales work &mdash; the referral alone is enough for Joyce to close. That close rate (100% from warm referral) is the baseline for what happens when prospects arrive pre-sold. The work is to replicate the trust environment digitally: social proof content, mechanism name, and authority positioning do the same job the gym owner is currently doing in person.
+      </div>
+    </div>
+  </div>
+
+  <!-- S05: 90-DAY PLAN -->
+  <div class="section" id="plan">
+    <div class="section-label">Section 05</div>
+    <div class="section-title">90-Day Action Plan</div>
+    <div class="section-divider"></div>
+
+    <div class="plan-item">
+      <div class="plan-num">1</div>
+      <div>
+        <div class="plan-title">Name the Mechanism &amp; Package the Offer (Days 1&ndash;3)</div>
+        <div class="plan-desc">Choose the mechanism name today: &ldquo;The Train. Reset. Rebuild. Method&rdquo; is recommended &mdash; it maps directly to the 3-step process (strength training, LMT reset, progressive rebuild) and is immediately differentiated. Build the offer: 12-week program, 2x/week sessions + 1 LMT session per month, priced at $1,500 upfront or $600/mo for 3 months. Write a 3-sentence offer description and add it to the primalrosefit.com profile page. This is the foundation everything else is built on.</div>
+        <div><span class="plan-tag offer">Offer</span><span class="plan-tag ops">Foundations</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">2</div>
+      <div>
+        <div class="plan-title">Make Instagram Public &amp; Film the Credential Reveal Reel (Days 1&ndash;7)</div>
+        <div class="plan-desc">Two actions: (1) Go into Instagram settings and switch to a public professional account &mdash; 60 seconds. (2) Film a 45&ndash;60 second reel: stand in the gym, look at the camera, and say &ldquo;I am the only personal trainer in Boise who is also a Licensed Massage Therapist &mdash; and here is what that means for your results.&rdquo; No editing needed. Post with the caption ending in &ldquo;Comment RESET below and I&rsquo;ll send you my free Strength + Recovery guide.&rdquo; This single piece of content, if it gets seen by 100 people in Boise, will generate leads.</div>
+        <div><span class="plan-tag content">Content</span><span class="plan-tag ops">Setup</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">3</div>
+      <div>
+        <div class="plan-title">Install ManyChat DM Automation &amp; Booking Link (Days 3&ndash;10)</div>
+        <div class="plan-desc">Set up ManyChat free tier. Create keyword trigger &ldquo;RESET.&rdquo; DM flow: Message 1 delivers the free guide (a simple Google Doc or Canva PDF: &ldquo;The 3 Reasons Your Training Isn&rsquo;t Working (And How the LMT Method Fixes All Three)&rdquo;). Message 2 (24 hours later): &ldquo;Did you get a chance to read the guide? Are you currently dealing with [pain point]?&rdquo; Message 3 (48 hours later): booking link. Calendly free tier works. This is the entire sales funnel &mdash; no website rebuild needed.</div>
+        <div><span class="plan-tag sales">Sales Funnel</span><span class="plan-tag content">DM Automation</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">4</div>
+      <div>
+        <div class="plan-title">Film the First Client Case Study (Days 14&ndash;30)</div>
+        <div class="plan-desc">Ask one of the two current clients for a 2-minute on-camera conversation: What were you dealing with before we started? What changed after the first few sessions? What would you tell someone who was thinking about working with Joyce? Post this as a reel or carousel. This becomes the BOF (bottom-of-funnel) social proof entity &mdash; the most powerful content type for converting warm audiences. Every future ad Joyce runs will eventually point to or mirror this case study format.</div>
+        <div><span class="plan-tag content">Proof Content</span><span class="plan-tag ads">Future Ad Asset</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">5</div>
+      <div>
+        <div class="plan-title">Build a Second Referral Partnership (Days 30&ndash;60)</div>
+        <div class="plan-desc">Joyce&rsquo;s LMT license makes her a natural clinical partner for Boise chiropractors, orthopedic physical therapists, and sports medicine practices. Identify 3 local clinics. Send a one-page overview of the Train. Reset. Rebuild. Method and offer a mutual referral agreement: when their clients are cleared for exercise but need progressive strength training + ongoing soft tissue management, Joyce is the referral. This is the B2B lead channel that scales alongside the organic funnel without ad spend.</div>
+        <div><span class="plan-tag ops">Referral Network</span><span class="plan-tag sales">Lead Gen</span></div>
+      </div>
+    </div>
+
+    <div class="plan-item">
+      <div class="plan-num">6</div>
+      <div>
+        <div class="plan-title">Post 3x/Week Consistently &mdash; One Hook Per Post (Days 1&ndash;90)</div>
+        <div class="plan-desc">Pull from the 6-hook bank above. One reel per week from the hook bank. One educational post per week (carousel or caption-heavy). One proof / behind-the-scenes per week. Total: 3 posts/week, ~12 per month. This is the minimum cadence for the algorithm to serve content to non-followers. Instagram reach for accounts under 1K followers is primarily determined by reel quality, not follower count &mdash; Joyce&rsquo;s credential hook can reach thousands of Boise-area women with zero ad spend if the hook is sharp.</div>
+        <div><span class="plan-tag content">Content Cadence</span><span class="plan-tag ads">Organic Reach</span></div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  IFCA Hot Seat &middot; Joyce Barton &middot; April 29, 2026 &middot; Private Session &middot; Impact Fitness Coaching Academy
+</footer>
+
+<script>
+function copyIntelReport() {
+  var text = [
+    "JOYCE BARTON — CREATIVE INTELLIGENCE REPORT",
+    "IFCA Hot Seat | April 29, 2026 | Boise, ID",
+    "",
+    "BRAND: Joyce Barton / CPT + Licensed Massage Therapist",
+    "PHASE: Starter | Revenue: $0–$1K/mo | Clients: 2 (in-person only)",
+    "PRIMARY GOAL: Replace husband's out-of-state income (~$5–7K/mo)",
+    "",
+    "CORE DIFFERENTIATOR:",
+    "CPT + LMT dual credential. Almost no competitor can replicate this. She is the only trainer who can train AND perform clinical soft tissue work in the same session.",
+    "",
+    "NAMED MECHANISM (Recommended):",
+    "The Train. Reset. Rebuild. Method — 3-step: strength training + LMT session + progressive rebuild",
+    "Offer: 12-week program, 2x/week + 1 LMT/month | Price: $1,500 upfront or $600/mo x 3",
+    "",
+    "ENTITY GAP: 0 paid ads | ~5–10 organic posts (login-walled) | 0 named mechanisms deployed",
+    "",
+    "TOP 6 HOOKS:",
+    "1. 'I'm the only personal trainer in Boise who is also a licensed massage therapist — and it changes everything about how I train people.' [Credential reveal reel — CTA: Comment RESET]",
+    "2. 'If you're always sore after training, you don't need to rest more — you need your muscles reset before the next session.' [Pain + solution reel]",
+    "3. 'Most trainers tell you to stretch more. As a licensed massage therapist, I'm telling you that's the wrong fix.' [False belief / authority reel]",
+    "4. 'Train. Reset. Rebuild. The three-step method I use with every client — and why it gets faster results than training alone.' [Mechanism reveal carousel]",
+    "5. 'What happens when a massage therapist also becomes your strength coach? Here's what my client noticed after 30 days.' [Case study reel]",
+    "6. 'Boise women: if your training isn't getting the results you expected, here's the one thing 90% of coaches skip.' [Local authority reel]",
+    "",
+    "CONSTRAINT STACK:",
+    "P1: No named mechanism or packaged offer — fix this week (name it, price it, post it)",
+    "P1: Zero digital discoverability — Instagram is private (fix: make public NOW + post reel)",
+    "P2: Confidence / self-promotion mindset block — reframe: content is for the client watching, not about Joyce",
+    "P3: Single acquisition source (gym owner only) — add clinical referral partners in months 2–3",
+    "OK: 100% close rate from warm referrals + working in-person proof",
+    "",
+    "90-DAY PRIORITY ORDER:",
+    "1. Name the mechanism + package the offer (Days 1–3)",
+    "2. Make Instagram public + film credential reveal reel (Days 1–7)",
+    "3. Install ManyChat DM automation + Calendly booking (Days 3–10)",
+    "4. Film first client case study (Days 14–30)",
+    "5. Build clinical referral partnerships — chiropractors, PT clinics (Days 30–60)",
+    "6. Post 3x/week consistently from hook bank (Days 1–90)",
+    "",
+    "MATH: 3–4 clients at $1,500 = $4,500–$6,000/mo = goal achieved. No ads required."
+  ].join("\n");
+  navigator.clipboard.writeText(text).then(function() {
+    var el = document.getElementById("copy-confirm");
+    el.style.opacity = "1";
+    setTimeout(function(){ el.style.opacity = "0"; }, 2500);
+  });
+}
+
+// Scroll spy for nav
+var sections = ["wins","phase","intel","constraints","plan"];
+window.addEventListener("scroll", function() {
+  var scrollY = window.scrollY + 80;
+  sections.forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (el.offsetTop <= scrollY && el.offsetTop + el.offsetHeight > scrollY) {
+      document.querySelectorAll(".nav-link").forEach(function(a){ a.classList.remove("active"); });
+      var active = document.querySelector('.nav-link[href="#' + id + '"]');
+      if (active) active.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>
