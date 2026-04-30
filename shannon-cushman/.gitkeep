@@ -1,1 +1,566 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shannon Cushman — IFCA Hot Seat Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#1E3A5F; --navy-dark:#0B1A2B; --navy-mid:#142845;
+  --navy-card:rgba(20,40,69,0.6);
+  --orange:#E87722; --orange-dim:rgba(232,119,34,0.12);
+  --blue-mid:#4A7FA5; --blue-dim:rgba(74,127,165,0.12);
+  --gray-400:#94A3B8; --gray-500:#64748B;
+  --green:#22C55E; --green-bg:rgba(34,197,94,0.10);
+  --red:#DC2626; --red-bg:rgba(220,38,38,0.09);
+  --yellow:#F59E0B; --yellow-bg:rgba(245,158,11,0.10);
+  --purple:#8B5CF6; --purple-bg:rgba(139,92,246,0.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);
+  background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),
+  radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 24px 80px;}
+nav{position:sticky;top:0;z-index:100;background:rgba(11,26,43,.95);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.07);padding:0 24px;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;height:52px;}
+.nav-logo{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--orange);text-transform:uppercase;margin-right:32px;white-space:nowrap;}
+.nav-links{display:flex;overflow-x:auto;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray-400);text-decoration:none;padding:0 14px;height:52px;display:flex;align-items:center;
+  border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;}
+.nav-link:hover{color:#fff;border-bottom-color:rgba(232,119,34,.5);}
+.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.hero{padding:64px 0 48px;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8vw,96px);line-height:.9;letter-spacing:.02em;margin-bottom:8px;}
+.hero-brand{font-family:'DM Mono',monospace;font-size:13px;color:var(--gray-400);letter-spacing:.06em;margin-bottom:28px;}
+.hero-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:28px;}
+.stat-box{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 14px;text-align:center;}
+.stat-box.orange{border-color:rgba(232,119,34,.25);background:rgba(232,119,34,.07);}
+.stat-box.blue{border-color:rgba(74,127,165,.25);background:rgba(74,127,165,.07);}
+.stat-box.green{border-color:rgba(34,197,94,.2);background:rgba(34,197,94,.06);}
+.stat-val{font-family:'Bebas Neue',sans-serif;font-size:28px;display:block;margin-bottom:4px;color:#fff;}
+.stat-box.orange .stat-val{color:var(--orange);}
+.stat-box.blue .stat-val{color:var(--blue-mid);}
+.stat-box.green .stat-val{color:var(--green);}
+.stat-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);display:block;}
+.hero-summary{background:linear-gradient(135deg,rgba(30,58,95,.4),rgba(232,119,34,.08));
+  border:1px solid rgba(232,119,34,.25);border-radius:10px;padding:20px 24px;font-size:14px;color:rgba(255,255,255,.8);line-height:1.65;font-style:italic;}
+.section{padding:52px 0 0;}
+.section-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:44px;margin-bottom:6px;}
+.section-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.wins-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.win-card{background:var(--navy-card);border:1px solid rgba(34,197,94,.15);border-left:4px solid var(--green);border-radius:10px;padding:20px;}
+.win-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px;}
+.win-card p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
+.flag-card{background:rgba(245,158,11,.05);border:1px solid rgba(245,158,11,.2);border-left:4px solid var(--yellow);border-radius:10px;padding:18px 20px;margin-bottom:20px;}
+.flag-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);margin-bottom:8px;}
+.flag-card p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;margin-bottom:20px;}
+.phase-box{padding:18px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.07);}
+.phase-box:last-child{border-right:none;}
+.phase-box.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-name{font-family:'Bebas Neue',sans-serif;font-size:22px;display:block;margin-bottom:4px;}
+.phase-box.active .phase-name{color:var(--orange);}
+.phase-range{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;color:var(--gray-500);}
+.math-box{background:var(--navy-card);border:1px solid rgba(232,119,34,.2);border-radius:10px;padding:22px 24px;}
+.math-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+.math-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;margin-top:4px;}
+.math-row .lbl{color:var(--gray-400);}
+.math-row .val{font-family:'DM Mono',monospace;color:#fff;}
+.math-row .val.orange{color:var(--orange);}
+.math-row .val.green{color:var(--green);}
+.intel-card{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:22px;margin-bottom:16px;}
+.intel-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:10px;}
+.intel-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+.intel-table th{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray-500);padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);}
+.intel-table td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);vertical-align:top;line-height:1.5;}
+.intel-table tr:last-child td{border-bottom:none;}
+.badge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;padding:2px 8px;border-radius:4px;text-transform:uppercase;}
+.badge.pass{background:var(--green-bg);color:var(--green);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);}
+.badge.fail{background:var(--red-bg);color:var(--red);}
+.badge.info{background:var(--blue-dim);color:var(--blue-mid);}
+.hook-bank{display:flex;flex-direction:column;gap:10px;}
+.hook-item{background:rgba(74,127,165,.06);border:1px solid rgba(74,127,165,.15);border-left:3px solid var(--blue-mid);border-radius:8px;padding:14px 16px;}
+.hook-item .hook-num{font-family:'DM Mono',monospace;font-size:9px;color:var(--blue-mid);letter-spacing:.1em;margin-bottom:6px;}
+.hook-item .hook-text{font-size:13px;color:rgba(255,255,255,.85);line-height:1.55;}
+.hook-item .hook-meta{font-family:'DM Mono',monospace;font-size:9px;color:var(--gray-500);margin-top:6px;}
+.gap-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;}
+.gap-box{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px;}
+.gap-box .gap-val{font-family:'Bebas Neue',sans-serif;font-size:38px;display:block;margin-bottom:4px;}
+.gap-box.red .gap-val{color:var(--red);}
+.gap-box.warn .gap-val{color:var(--yellow);}
+.gap-box.green .gap-val{color:var(--green);}
+.gap-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.copy-btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange-dim);
+  border:1px solid rgba(232,119,34,.3);border-radius:7px;padding:9px 18px;
+  font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--orange);cursor:pointer;transition:all .15s;margin-top:16px;}
+.copy-btn:hover{background:rgba(232,119,34,.2);}
+#copy-confirm{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);margin-left:10px;opacity:0;transition:opacity .3s;}
+.constraint-card{background:var(--navy-card);border-radius:10px;padding:24px;margin-bottom:14px;border-left:5px solid;}
+.constraint-card.p1{border-left-color:var(--red);background:rgba(220,38,38,.04);}
+.constraint-card.p2{border-left-color:var(--yellow);background:rgba(245,158,11,.04);}
+.constraint-card.p3{border-left-color:var(--blue-mid);background:rgba(74,127,165,.04);}
+.constraint-card.ok{border-left-color:var(--green);background:rgba(34,197,94,.04);}
+.constraint-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.priority-badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;padding:4px 10px;border-radius:5px;font-weight:600;}
+.p1 .priority-badge{background:var(--red-bg);color:var(--red);}
+.p2 .priority-badge{background:var(--yellow-bg);color:var(--yellow);}
+.p3 .priority-badge{background:var(--blue-dim);color:var(--blue-mid);}
+.ok .priority-badge{background:var(--green-bg);color:var(--green);}
+.constraint-title{font-family:'Bebas Neue',sans-serif;font-size:22px;}
+.constraint-diag{font-size:13px;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:14px;}
+.fix-box{background:rgba(30,58,95,.5);border-radius:7px;padding:14px 16px;}
+.fix-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+.fix-text{font-size:13px;color:rgba(255,255,255,.8);line-height:1.6;}
+.plan-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.plan-item:last-child{border-bottom:none;}
+.plan-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--orange);flex-shrink:0;width:32px;text-align:center;}
+.plan-title{font-weight:700;font-size:14px;margin-bottom:5px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:8px;}
+.plan-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-right:6px;}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);}
+.plan-tag.content{background:var(--blue-dim);color:var(--blue-mid);}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);
+  font-family:'DM Mono',monospace;font-size:10px;color:var(--gray-500);letter-spacing:.06em;text-align:center;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">IFCA Hot Seat</div>
+    <div class="nav-links">
+      <a href="#wins" class="nav-link">What&#8217;s Working</a>
+      <a href="#phase" class="nav-link">Business Phase</a>
+      <a href="#intel" class="nav-link">Creative Intelligence</a>
+      <a href="#constraints" class="nav-link">Constraints</a>
+      <a href="#plan" class="nav-link">90-Day Plan</a>
+    </div>
+  </div>
+</nav>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-eyebrow">IFCA Hot Seat &middot; April 29, 2026 &middot; Cleveland, OH</div>
+    <div class="hero-name">Shannon Cushman</div>
+    <div class="hero-brand">BYLT Athletics &middot; @bylt_athletics &middot; Men&#8217;s Strength &amp; Conditioning</div>
+    <div class="hero-stats">
+      <div class="stat-box orange">
+        <span class="stat-val">$0&ndash;$2K</span>
+        <span class="stat-lbl">Est. Monthly Rev</span>
+      </div>
+      <div class="stat-box blue">
+        <span class="stat-val">110</span>
+        <span class="stat-lbl">IG Followers</span>
+      </div>
+      <div class="stat-box orange">
+        <span class="stat-val">4</span>
+        <span class="stat-lbl">Current Clients</span>
+      </div>
+      <div class="stat-box green">
+        <span class="stat-val">Own a Gym</span>
+        <span class="stat-lbl">Long-Term Goal</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-val" style="font-size:16px;color:var(--red);">Offer + Goal Alignment</span>
+        <span class="stat-lbl">Primary Constraints</span>
+      </div>
+    </div>
+    <div class="hero-summary">
+      Shannon has a clean brand name, a clear avatar (men who used to be athletes), and a handful of hooks that actually land. What he does not have yet is a defined program, a priced offer, or clarity on whether online coaching is the vehicle he wants to use to get to a gym. That goal alignment question needs an honest answer before the tactical work begins &mdash; because the roadmap to a gym is very different from the roadmap to $10K/month online. The right answer shapes everything.
+    </div>
+  </div>
+
+  <div class="section" id="wins">
+    <div class="section-label">Section 01</div>
+    <div class="section-title">What&#8217;s Working</div>
+    <div class="section-divider"></div>
+
+    <div class="flag-card">
+      <div class="flag-title">&#x26A0; Coach Note &mdash; Goal Alignment Flag</div>
+      <p>Shannon&rsquo;s stated long-term goal is to own a gym, not to build a 7-figure online coaching business. This matters for audit framing. Online coaching can be a legitimate path to gym ownership &mdash; but only if Shannon understands that and commits to the online model as the vehicle. The constraint diagnosis and 90-day plan below assume he wants to use online coaching revenue as the capital-building mechanism. If that assumption is wrong, the first conversation should be about whether IFCA is the right program for his actual goal.</p>
+    </div>
+
+    <div class="wins-grid">
+      <div class="win-card">
+        <div class="win-title">&#x2713; BYLT Athletics Brand Has Real Equity</div>
+        <p>&ldquo;BYLT&rdquo; is a strong brand name &mdash; it implies &ldquo;built,&rdquo; it is clean, modern, and masculine without being aggressive. The @bylt_athletics handle is consistent with the email branding. This is a brand that does not need to be rebuilt from scratch &mdash; it needs to be activated with a defined offer and consistent content behind it.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; Avatar Language Is Already Working</div>
+        <p>Shannon&rsquo;s Instagram hooks hit real pain points for the men&rsquo;s market: &ldquo;you used to be an athlete but don&rsquo;t feel like that guy anymore&rdquo; and &ldquo;if you&rsquo;re a dad who used to be in shape but can&rsquo;t find time anymore&rdquo; are genuine emotional hooks. These are not generic fitness platitudes &mdash; they speak directly to a specific identity pain. That instinct is not common at this stage. It just needs to be systemized.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; Husband &amp; Wife Coaching Team</div>
+        <p>The Instagram bio mentions &ldquo;husband and wife fitness coaches&rdquo; which is a differentiation signal in the men&rsquo;s space. Couples-run coaching businesses have strong social proof dynamics &mdash; especially for men with families who see Shannon as a peer rather than a detached &ldquo;fitness influencer.&rdquo; The personal brand element here is an asset, not a liability.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; Clear Sunday Group Training Cadence</div>
+        <p>The &ldquo;Every. Single. Sunday.&rdquo; strength group post shows a repeatable community touchpoint already exists. Sunday group sessions are the foundation of a &ldquo;BYLT Athletics Sunday Strength Club&rdquo; that could be converted to an online group program at $100&ndash;200/month with zero new infrastructure. The seed of a community offer already exists.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="phase">
+    <div class="section-label">Section 02</div>
+    <div class="section-title">Business Phase</div>
+    <div class="section-divider"></div>
+    <div class="phase-row">
+      <div class="phase-box active">
+        <span class="phase-name">&#x25CF; Starter</span>
+        <span class="phase-range">$0 &ndash; $5K/mo</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.6);line-height:1.5;">Define the offer, price it, get 10 paying clients, deploy avatar-specific content consistently</div>
+      </div>
+      <div class="phase-box">
+        <span class="phase-name" style="color:var(--gray-400);">Growth</span>
+        <span class="phase-range">$5K &ndash; $15K/mo</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.3);line-height:1.5;">Paid traffic, funnel, DM automation, first hires</div>
+      </div>
+      <div class="phase-box">
+        <span class="phase-name" style="color:var(--gray-400);">Scale</span>
+        <span class="phase-range">$15K+/mo</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.3);line-height:1.5;">Systems, backend LTV, capital for gym goal</div>
+      </div>
+    </div>
+    <div class="math-box">
+      <div class="math-title">Path to Gym Ownership Through Online Coaching &mdash; The Math</div>
+      <div class="math-row"><span class="lbl">Recommended 1:1 program price (12-week)</span><span class="val">$1,500 &ndash; $2,000</span></div>
+      <div class="math-row"><span class="lbl">Recommended group program price (monthly)</span><span class="val">$150 &ndash; $200/mo</span></div>
+      <div class="math-row"><span class="lbl">Target: $5K/month (Starter phase exit)</span><span class="val orange">3 x $1,500 programs OR 30 x $150/mo group</span></div>
+      <div class="math-row"><span class="lbl">Target: $15K/month (Growth exit / gym capital savings begins)</span><span class="val orange">8 x $1,500 programs per month concurrent</span></div>
+      <div class="math-row"><span class="lbl">Gym down payment (estimate: $50K&ndash;$100K for small facility)</span><span class="val">24&ndash;36 months at $3&ndash;4K/mo savings from online revenue</span></div>
+      <div class="math-row"><span class="lbl">LTV per 1:1 client (FE $1,500 + 6-mo backend @ $200/mo)</span><span class="val green">$2,700 per client</span></div>
+    </div>
+  </div>
+
+  <div class="section" id="intel">
+    <div class="section-label">Section 03</div>
+    <div class="section-title">Creative Intelligence Report</div>
+    <div class="section-divider"></div>
+
+    <div class="intel-card">
+      <div class="intel-label">Brand &amp; Offer Audit</div>
+      <table class="intel-table">
+        <thead><tr><th>Dimension</th><th>Current State</th><th>Gap / Opportunity</th></tr></thead>
+        <tbody>
+          <tr><td>Brand Name</td><td>BYLT Athletics</td><td>Strong. Keep it. &ldquo;Built&rdquo; connotation is perfect for men&rsquo;s S&amp;C market.</td></tr>
+          <tr><td>Named Mechanism</td><td>None</td><td>Critical gap &mdash; &ldquo;the BYLT Method&rdquo; or &ldquo;The BYLT Performance Protocol&rdquo; needed</td></tr>
+          <tr><td>Offer Structure</td><td>Undefined online / Sunday group in-person</td><td>No priced digital offer exists. Zero purchase path for online prospects.</td></tr>
+          <tr><td>Instagram</td><td>@bylt_athletics, 110 followers, some good hooks</td><td>Small but real. Avatar hooks are working. Content cadence and offer CTA missing.</td></tr>
+          <tr><td>Facebook</td><td>Page exists (login-walled)</td><td>Cannot audit. Likely low engagement given early stage.</td></tr>
+          <tr><td>Website</td><td>Not found (apparel brand with same name)</td><td>No owned digital home. Landing page minimum needed.</td></tr>
+          <tr><td>Meta Ads</td><td>None found</td><td>Not yet needed &mdash; 110 followers is too small for paid scaling. Organic first.</td></tr>
+          <tr><td>Goal Alignment</td><td>Wants to &ldquo;build a gym&rdquo; (long-term)</td><td>Online coaching as gym capital vehicle &mdash; needs explicit framing in IFCA journey</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-label">Organic Content Audit &mdash; Confirmed Hooks</div>
+      <table class="intel-table">
+        <thead><tr><th>Hook (Verbatim or Near-Verbatim)</th><th>Format</th><span></span><th>Emotional Driver</th><th>Ad Potential</th></tr></thead>
+        <tbody>
+          <tr><td>&ldquo;you used to be an athlete but don&rsquo;t feel like that guy anymore&rdquo;</td><td>Image/text</td><td>Identity loss + nostalgia</td><td><span class="badge pass">High</span></td></tr>
+          <tr><td>&ldquo;If you&rsquo;re a dad who used to be in shape but can&rsquo;t find time anymore&rdquo;</td><td>Image/text</td><td>Guilt + identity + time scarcity</td><td><span class="badge pass">High</span></td></tr>
+          <tr><td>&ldquo;Used to be in shape, out of routine?&rdquo;</td><td>Image/text</td><td>Frustration + desire to return</td><td><span class="badge warn">Medium</span></td></tr>
+          <tr><td>&ldquo;Last call for this week&rsquo;s strength group&rdquo;</td><td>Image/text</td><td>Urgency + exclusivity</td><td><span class="badge warn">Medium</span></td></tr>
+          <tr><td>&ldquo;Every. Single. Sunday. Strength &amp; Fitness for Men.&rdquo;</td><td>Image/text</td><td>Consistency + masculine identity</td><td><span class="badge warn">Medium</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-label">Entity Gap Scorecard</div>
+      <div class="gap-grid">
+        <div class="gap-box red">
+          <span class="gap-val">0</span>
+          <span class="gap-lbl">Paid Ad Entities</span>
+        </div>
+        <div class="gap-box warn">
+          <span class="gap-val">~15&ndash;20</span>
+          <span class="gap-lbl">Est. Organic Posts</span>
+        </div>
+        <div class="gap-box red">
+          <span class="gap-val">0</span>
+          <span class="gap-lbl">Named Mechanisms</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--gray-400);line-height:1.6;">Content exists and some hooks are working. The gap is conversion architecture: there is no offer to buy, no CTA to act on, and no DM funnel to capture the prospect who resonates with the &ldquo;used to be an athlete&rdquo; hook. The hooks attract attention but there is nowhere for that attention to go.</p>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-label">Workshop-Ready Hook Bank (6 Angles)</div>
+      <div class="hook-bank">
+        <div class="hook-item">
+          <div class="hook-num">Hook 01 &mdash; Identity Loss &mdash; <span class="badge pass">Highest Priority (Already Proven)</span></div>
+          <div class="hook-text">&ldquo;You used to be an athlete. You used to be that guy. At some point, life got louder than your training &mdash; and you told yourself you would get back to it. This program is for when &lsquo;eventually&rsquo; becomes now.&rdquo;</div>
+          <div class="hook-meta">Format: Reel / talking head &middot; Emotional driver: Identity + urgency &middot; CTA: Comment BUILT</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 02 &mdash; Dad Avatar &mdash; <span class="badge pass">High Priority (Already Proven)</span></div>
+          <div class="hook-text">&ldquo;For the dads who used to be in shape and now can not find the time: I built a program specifically for you. Here is how it works in 4 hours per week.&rdquo;</div>
+          <div class="hook-meta">Format: Reel or carousel &middot; Emotional driver: Guilt + time scarcity + solution &middot; CTA: Comment DAD</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 03 &mdash; Mechanism Reveal &mdash; <span class="badge pass">High Priority</span></div>
+          <div class="hook-text">&ldquo;The BYLT Performance Protocol is 3 things: compound strength, conditioning that does not destroy you, and accountability that actually holds. Here is what changes in 12 weeks.&rdquo;</div>
+          <div class="hook-meta">Format: Talking head reel &middot; Emotional driver: Clarity + mechanism curiosity &middot; CTA: Comment PROTOCOL</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 04 &mdash; Villain Frame &mdash; <span class="badge warn">Medium Priority</span></div>
+          <div class="hook-text">&ldquo;Most men&rsquo;s fitness programs are designed for 22-year-olds with 2 hours a day and zero responsibilities. Here is what actually works when you have a job, a family, and real life.&rdquo;</div>
+          <div class="hook-meta">Format: Reel / talking head &middot; Emotional driver: Validation + villain callout &middot; CTA: Comment REAL</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 05 &mdash; Sunday Group Community &mdash; <span class="badge warn">Medium Priority</span></div>
+          <div class="hook-text">&ldquo;Every Sunday we train together. No excuses. No missing. The men who show up consistently are the men who change. Here is what that looks like after 8 weeks.&rdquo;</div>
+          <div class="hook-meta">Format: Group training video / reel &middot; Emotional driver: Brotherhood + accountability &middot; CTA: Comment SUNDAY</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 06 &mdash; Husband &amp; Wife Angle &mdash; <span class="badge info">Differentiation</span></div>
+          <div class="hook-text">&ldquo;My wife and I coach together. She keeps the program accountable. I keep it hard. Here is what we built for men who want to be strong for their family.&rdquo;</div>
+          <div class="hook-meta">Format: Couple talking head reel &middot; Emotional driver: Trust + family values + masculine identity &middot; CTA: Comment TOGETHER</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-label">Entity Build Queue &mdash; Prioritized (6 Entities)</div>
+      <table class="intel-table">
+        <thead><tr><th>#</th><th>Entity</th><th>Format</th><th>Priority</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>&ldquo;You used to be an athlete&rdquo; identity reel (already works organically)</td><td>Talking head reel with text overlay</td><td><span class="badge fail">P1 &mdash; Build First</span></td><td>Best organic hook already proven &mdash; upgrade to reel format immediately</td></tr>
+          <tr><td>2</td><td>BYLT Protocol reveal: &ldquo;Here is exactly what you get in 12 weeks&rdquo;</td><td>Reel or carousel</td><td><span class="badge fail">P1</span></td><td>There is no offer content posted &mdash; prospects have nothing to act on</td></tr>
+          <tr><td>3</td><td>Dad avatar reel (already works &mdash; upgrade to video)</td><td>Talking head reel</td><td><span class="badge warn">P2</span></td><td>Dad + fitness + family = massive men&rsquo;s niche. Goes viral with the right delivery.</td></tr>
+          <tr><td>4</td><td>Sunday group training video &mdash; one week of footage</td><td>Short form video (30&ndash;60 sec)</td><td><span class="badge warn">P2</span></td><td>Community proof &mdash; turns the Sunday group into a public trust asset</td></tr>
+          <tr><td>5</td><td>Husband &amp; wife couple reel &mdash; who you are and why you coach</td><td>Talking head reel</td><td><span class="badge warn">P2</span></td><td>Differentiation content &mdash; the couple angle is not common in men&rsquo;s S&amp;C</td></tr>
+          <tr><td>6</td><td>Villain: &ldquo;Why mainstream fitness programs fail busy men&rdquo;</td><td>Reel &middot; talking head</td><td><span class="badge info">P3</span></td><td>Authority positioning against generic gym culture</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="intel-card" style="border:1px solid rgba(232,119,34,.25);background:rgba(232,119,34,.05);">
+      <div class="intel-label">Strategic Diagnosis</div>
+      <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:14px;">
+        Shannon is earlier stage than most in this cohort, but he has two things that matter: a real brand name and genuine avatar empathy. The hooks he is already posting &mdash; &ldquo;used to be an athlete,&rdquo; &ldquo;dad who can&rsquo;t find time&rdquo; &mdash; are legitimately good. They are just not connected to an offer anyone can buy.
+      </p>
+      <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;">
+        The 90-day play: name the protocol (&ldquo;The BYLT Performance Protocol&rdquo;), build one offer page, upgrade the two best hooks to reel format, and install a &ldquo;Comment BUILT&rdquo; CTA with ManyChat. The goal is not 100 clients &mdash; it is 10. Ten paying clients at $1,500 = $15,000. That is three months of focused execution away. The gym goal becomes real when the online revenue is real.
+      </p>
+    </div>
+
+    <button class="copy-btn" onclick="copyIntelReport()">&#x1F4CB; Copy for Workshop</button>
+    <span id="copy-confirm">Copied to clipboard &#x2713;</span>
+  </div>
+
+  <div class="section" id="constraints">
+    <div class="section-label">Section 04</div>
+    <div class="section-title">Constraint Diagnosis</div>
+    <div class="section-divider"></div>
+
+    <div class="constraint-card p1">
+      <div class="constraint-header">
+        <span class="priority-badge">P1 &mdash; CRITICAL</span>
+        <span class="constraint-title">No Defined Online Offer &mdash; Prospects Cannot Buy Anything</span>
+      </div>
+      <div class="constraint-diag">
+        There is no priced program, no purchase page, no defined deliverable for an online client. The Sunday group is in-person. Cold DMs and friend referrals are the only acquisition methods. When a prospect lands on @bylt_athletics and resonates with the hooks, there is no next step. No CTA, no booking link, no offer description. The hooks are attracting attention that has nowhere to go. Until there is a named, priced offer with a purchase or booking path, marketing effort is wasted.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Fix &mdash; This Week</div>
+        <div class="fix-text">Create one offer: <strong>The BYLT Performance Protocol &mdash; 12-Week Program, $1,500.</strong> Write a 3-sentence description: who it is for (men who used to be athletes), what they get (customized strength + conditioning + weekly coaching calls), what changes (back to the shape and energy of their athletic years). Put it on a landing page (Carrd.co free works). Add the link to the Instagram bio. Now there is something to sell.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p1">
+      <div class="constraint-header">
+        <span class="priority-badge">P1 &mdash; CRITICAL</span>
+        <span class="constraint-title">No Goal-to-Tactic Alignment &mdash; Online Coaching Not Yet Framed as Gym Path</span>
+      </div>
+      <div class="constraint-diag">
+        Shannon wants to own a gym. That is a legitimate goal. But online coaching and gym ownership are different business models requiring different capital, timelines, and skill sets. Until Shannon explicitly understands that online coaching is the capital-building vehicle that funds the gym goal, there is a risk of low commitment to the online model because it does not feel like it is moving him toward what he actually wants. This is a motivational architecture problem, not a tactical one.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Reframe</div>
+        <div class="fix-text">The gym is the destination. Online coaching is the vehicle. Here is the math: $15K/month online for 24 months at 30% savings rate = $108,000 saved. That is a gym down payment. The fastest path to gym ownership is a thriving online coaching business, not a brick-and-mortar investment at month one. IFCA&rsquo;s success coach should make this connection explicit in the first call and return to it whenever Shannon&rsquo;s commitment to the online model wavers.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p2">
+      <div class="constraint-header">
+        <span class="priority-badge">P2 &mdash; GAP</span>
+        <span class="constraint-title">110 Followers &mdash; Content Cadence Too Inconsistent to Build Audience</span>
+      </div>
+      <div class="constraint-diag">
+        At 110 followers with a posting cadence described as &ldquo;cold DMs + friends,&rdquo; Shannon is not generating organic reach. The hooks are good but the volume is too low and the format is wrong &mdash; static image posts do not distribute to non-followers on Instagram the way reels do. Moving the two best hooks (athlete identity + dad) to reel format and posting 3x/week would generate disproportionate reach at this account size.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Fix &mdash; Days 7&ndash;30</div>
+        <div class="fix-text">Upgrade the two best hooks to talking head reels. Post 3x/week minimum: one reel, one carousel or text post, one community/proof post. Add &ldquo;Comment BUILT&rdquo; CTA to every reel. Instagram&rsquo;s algorithm distributes reels to non-followers &mdash; at Shannon&rsquo;s account size, a single strong reel can generate 2,000&ndash;5,000 views from cold Cleveland and men&rsquo;s fitness audiences without any ad spend.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p3">
+      <div class="constraint-header">
+        <span class="priority-badge">P3 &mdash; WATCH</span>
+        <span class="constraint-title">No Conversion Infrastructure &mdash; DM Funnel, Booking System, Application</span>
+      </div>
+      <div class="constraint-diag">
+        No application page, no booking system, no DM automation. When organic reach grows, there will be no system to capture and convert interested prospects. This is a Month 2 problem but should be set up before the first reel drives meaningful traffic.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Monitor &mdash; Set Up at Week 3</div>
+        <div class="fix-text">Calendly free + ManyChat free. Keyword BUILT triggers DM with a 3-message sequence ending in the booking link. Total setup: 2 hours. Do not build this before the offer exists &mdash; but do not wait until the reel hits either.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card ok">
+      <div class="constraint-header">
+        <span class="priority-badge">OK &mdash; VALIDATED</span>
+        <span class="constraint-title">Avatar Empathy &mdash; Hook Instinct Is Real</span>
+      </div>
+      <div class="constraint-diag">
+        The organic hooks Shannon is already writing &mdash; &ldquo;used to be an athlete,&rdquo; &ldquo;dad who can&rsquo;t find time&rdquo; &mdash; demonstrate genuine understanding of his target avatar&rsquo;s emotional state. This is the hardest thing to teach and Shannon already has it. Most coaches at his stage write about fitness features, not identity pain. The instinct is correct. It just needs to be systematized and connected to an offer.
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="plan">
+    <div class="section-label">Section 05</div>
+    <div class="section-title">90-Day Action Plan</div>
+    <div class="section-divider"></div>
+
+    <div class="plan-item">
+      <div class="plan-num">1</div>
+      <div>
+        <div class="plan-title">Clarify the Goal &mdash; Commit to Online Coaching as the Gym Path (Day 1)</div>
+        <div class="plan-desc">Before any tactic: Shannon and his success coach need a 15-minute alignment conversation that explicitly connects online coaching revenue to gym ownership capital. The math above shows a clear path. Once Shannon sees $15K/month online as the road to his gym, every tactic in this plan has a north star. Without that alignment, commitment will be inconsistent whenever the online work feels disconnected from the real goal.</div>
+        <div><span class="plan-tag ops">Goal Alignment</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">2</div>
+      <div>
+        <div class="plan-title">Name and Launch The BYLT Performance Protocol (Days 1&ndash;5)</div>
+        <div class="plan-desc">Build the offer: 12-week 1:1 coaching program, customized strength + conditioning plan, weekly check-in calls, nutrition guidance, $1,500 upfront. Create a free Carrd.co landing page with the offer description, who it is for, what they get, and a Calendly booking button. Update Instagram bio link. This is the minimum viable offer &mdash; nothing else in this plan works without it.</div>
+        <div><span class="plan-tag offer">Offer</span><span class="plan-tag ops">Launch</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">3</div>
+      <div>
+        <div class="plan-title">Film the Identity Reel &mdash; &ldquo;You Used to Be That Guy&rdquo; (Days 3&ndash;10)</div>
+        <div class="plan-desc">Take the best-performing organic hook and convert it to a 45-second talking head reel. Stand in a gym, look at the camera, and deliver the line. &ldquo;You used to be an athlete. You were that guy. At some point life happened and you told yourself you would get back to it. This is the program for when eventually becomes now. Comment BUILT and I will send you the details.&rdquo; This single reel, posted as the first real content piece behind an actual offer, can generate the first qualified inquiry.</div>
+        <div><span class="plan-tag content">Content</span><span class="plan-tag sales">Lead Gen</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">4</div>
+      <div>
+        <div class="plan-title">Warm Network Launch &mdash; DM 20 People in Shannon&rsquo;s Network (Days 5&ndash;14)</div>
+        <div class="plan-desc">Before waiting for organic reach to grow: DM 20 people Shannon knows personally who fit the avatar (former athletes, dads, men in their 30s&ndash;40s who have let fitness slide). Simple message: &ldquo;Hey man &mdash; I just launched a 12-week program for guys who want to get back in serious shape. I am taking 3 guys to start. Here is the link if you want to see what it looks like.&rdquo; This is the fastest path to the first paying client &mdash; no content, no ads, just a warm personal message.</div>
+        <div><span class="plan-tag sales">Warm Outreach</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">5</div>
+      <div>
+        <div class="plan-title">Install ManyChat &amp; Post 3x/Week (Days 10&ndash;90)</div>
+        <div class="plan-desc">Set up ManyChat free tier with keyword BUILT. 3-message DM flow ending in Calendly booking link. Then maintain 3 posts per week: one reel (from the hook bank), one carousel or text post (education or authority), one proof or community post (Sunday group footage, any early client results). This cadence compounds over 90 days and is the mechanism that takes Shannon from 110 to 500+ followers organically.</div>
+        <div><span class="plan-tag content">Content Cadence</span><span class="plan-tag sales">DM Funnel</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">6</div>
+      <div>
+        <div class="plan-title">Film the Husband &amp; Wife &ldquo;Who We Are&rdquo; Reel &mdash; Differentiation Content (Days 21&ndash;45)</div>
+        <div class="plan-desc">The couple angle is a genuine differentiator in the men&rsquo;s S&amp;C market. Film a 60-second reel with both Shannon and his wife: &ldquo;We coach together. Here is why that makes you better.&rdquo; This piece of content builds brand identity, trust, and emotional connection &mdash; three things generic fitness coaches cannot replicate. It also builds the personal brand equity that makes BYLT Athletics more than just another training account.</div>
+        <div><span class="plan-tag content">Brand Content</span><span class="plan-tag offer">Differentiation</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>IFCA Hot Seat &middot; Shannon Cushman &middot; April 29, 2026 &middot; Private Session &middot; Impact Fitness Coaching Academy</footer>
+<script>
+function copyIntelReport() {
+  var text = [
+    "SHANNON CUSHMAN — CREATIVE INTELLIGENCE REPORT",
+    "IFCA Hot Seat | April 29, 2026 | Cleveland, OH",
+    "",
+    "BRAND: BYLT Athletics | @bylt_athletics | bylt.athletics@gmail.com",
+    "PHASE: Starter | Revenue: $0–2K/mo | Clients: 4 | Followers: 110",
+    "GOAL: Build a gym (long-term) — online coaching = capital vehicle",
+    "",
+    "FLAG: Goal alignment is the first conversation. Shannon wants a gym, not an online business. The reframe: online coaching IS the gym road. $15K/mo x 24 months at 30% savings = $108K gym down payment.",
+    "",
+    "NAMED MECHANISM (Recommended):",
+    "The BYLT Performance Protocol — 12-week 1:1 coaching: customized strength + conditioning + weekly check-ins",
+    "Price: $1,500 upfront | Backend: 6-month continuation at $200/mo",
+    "",
+    "WHAT IS WORKING (Avatar hooks already proven organically):",
+    "- 'You used to be an athlete but don't feel like that guy anymore' — identity hook",
+    "- 'If you're a dad who used to be in shape but can't find time' — dad avatar hook",
+    "These hooks are genuinely good. They just need to be in reel format and connected to an offer.",
+    "",
+    "ENTITY GAP: 0 paid ads | ~15–20 posts (static only) | 0 named mechanisms | 0 purchase path",
+    "",
+    "TOP 6 HOOKS:",
+    "1. 'You used to be an athlete. You were that guy. Comment BUILT when eventually becomes now.' [Identity reel — CTA: Comment BUILT]",
+    "2. 'For dads who used to be in shape and can't find time — I built this for you. 4 hours a week.' [Dad reel]",
+    "3. 'The BYLT Performance Protocol: compound strength, conditioning that doesn't destroy you, accountability that holds.' [Mechanism reveal]",
+    "4. 'Most men's programs are built for 22-year-olds with 2 hours a day. Here is what actually works with real life.' [Villain frame]",
+    "5. 'Every Sunday we train together. Here is what 8 weeks looks like.' [Community proof reel]",
+    "6. 'My wife and I coach together. Here is what we built for men who want to be strong for their family.' [Couple differentiation]",
+    "",
+    "CONSTRAINT STACK:",
+    "P1: No defined online offer — no purchase path exists. Fix: The BYLT Performance Protocol at $1,500 on a Carrd.co page this week.",
+    "P1: Online coaching not framed as gym capital vehicle — reframe first, then tactics.",
+    "P2: 110 followers + static-only content = no organic reach. Fix: Upgrade 2 best hooks to reels, post 3x/week.",
+    "P3: No DM funnel or booking system — set up ManyChat + Calendly at Week 3.",
+    "OK: Avatar empathy is real — the hooks Shannon writes naturally are genuinely good.",
+    "",
+    "90-DAY PRIORITY ORDER:",
+    "1. Goal alignment conversation — online coaching = gym capital (Day 1)",
+    "2. Name and launch The BYLT Performance Protocol at $1,500 (Days 1–5)",
+    "3. Film identity reel: 'You used to be that guy' (Days 3–10)",
+    "4. DM 20 warm contacts in the avatar — personal launch (Days 5–14)",
+    "5. Install ManyChat + post 3x/week from hook bank (Days 10–90)",
+    "6. Film husband & wife differentiation reel (Days 21–45)"
+  ].join("\n");
+  navigator.clipboard.writeText(text).then(function() {
+    var el = document.getElementById("copy-confirm");
+    el.style.opacity = "1";
+    setTimeout(function(){ el.style.opacity = "0"; }, 2500);
+  });
+}
+window.addEventListener("scroll", function() {
+  var scrollY = window.scrollY + 80;
+  ["wins","phase","intel","constraints","plan"].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (el.offsetTop <= scrollY && el.offsetTop + el.offsetHeight > scrollY) {
+      document.querySelectorAll(".nav-link").forEach(function(a){ a.classList.remove("active"); });
+      var active = document.querySelector('.nav-link[href="#' + id + '"]');
+      if (active) active.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>
