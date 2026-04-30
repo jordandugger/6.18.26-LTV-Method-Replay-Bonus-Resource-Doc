@@ -1,1 +1,559 @@
-.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jameel Courtney — IFCA Hot Seat Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy:#1E3A5F; --navy-dark:#0B1A2B; --navy-mid:#142845;
+  --navy-card:rgba(20,40,69,0.6);
+  --orange:#E87722; --orange-dim:rgba(232,119,34,0.12); --orange-glow:rgba(232,119,34,0.22);
+  --blue-mid:#4A7FA5; --blue-dim:rgba(74,127,165,0.12); --blue-light:#D6E4F0;
+  --gray-400:#94A3B8; --gray-500:#64748B;
+  --green:#22C55E; --green-bg:rgba(34,197,94,0.10);
+  --red:#DC2626; --red-bg:rgba(220,38,38,0.09);
+  --yellow:#F59E0B; --yellow-bg:rgba(245,158,11,0.10);
+  --purple:#8B5CF6; --purple-bg:rgba(139,92,246,0.10);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);
+  background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),
+  radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.wrap{position:relative;z-index:1;max-width:960px;margin:0 auto;padding:0 24px 80px;}
+nav{position:sticky;top:0;z-index:100;background:rgba(11,26,43,.95);backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(255,255,255,.07);padding:0 24px;}
+.nav-inner{max-width:960px;margin:0 auto;display:flex;align-items:center;height:52px;}
+.nav-logo{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.16em;color:var(--orange);
+  text-transform:uppercase;margin-right:32px;white-space:nowrap;}
+.nav-links{display:flex;overflow-x:auto;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray-400);text-decoration:none;padding:0 14px;height:52px;display:flex;align-items:center;
+  border-bottom:2px solid transparent;transition:all .15s;white-space:nowrap;}
+.nav-link:hover{color:#fff;border-bottom-color:rgba(232,119,34,.5);}
+.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.hero{padding:64px 0 48px;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+.hero-name{font-family:'Bebas Neue',sans-serif;font-size:clamp(56px,8vw,96px);line-height:.9;letter-spacing:.02em;margin-bottom:8px;}
+.hero-brand{font-family:'DM Mono',monospace;font-size:13px;color:var(--gray-400);letter-spacing:.06em;margin-bottom:28px;}
+.hero-stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:28px;}
+.stat-box{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px 14px;text-align:center;}
+.stat-box.orange{border-color:rgba(232,119,34,.25);background:rgba(232,119,34,.07);}
+.stat-box.blue{border-color:rgba(74,127,165,.25);background:rgba(74,127,165,.07);}
+.stat-box.green{border-color:rgba(34,197,94,.2);background:rgba(34,197,94,.06);}
+.stat-val{font-family:'Bebas Neue',sans-serif;font-size:28px;display:block;margin-bottom:4px;color:#fff;}
+.stat-box.orange .stat-val{color:var(--orange);}
+.stat-box.blue .stat-val{color:var(--blue-mid);}
+.stat-box.green .stat-val{color:var(--green);}
+.stat-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);display:block;}
+.hero-summary{background:linear-gradient(135deg,rgba(30,58,95,.4),rgba(232,119,34,.08));
+  border:1px solid rgba(232,119,34,.25);border-radius:10px;padding:20px 24px;font-size:14px;color:rgba(255,255,255,.8);line-height:1.65;font-style:italic;}
+.section{padding:52px 0 0;}
+.section-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+.section-title{font-family:'Bebas Neue',sans-serif;font-size:44px;margin-bottom:6px;}
+.section-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.wins-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.win-card{background:var(--navy-card);border:1px solid rgba(34,197,94,.15);border-left:4px solid var(--green);border-radius:10px;padding:20px;}
+.win-title{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:8px;}
+.win-card p{font-size:13px;color:rgba(255,255,255,.75);line-height:1.6;}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;border:1px solid rgba(255,255,255,.08);border-radius:10px;overflow:hidden;margin-bottom:20px;}
+.phase-box{padding:18px 20px;text-align:center;border-right:1px solid rgba(255,255,255,.07);}
+.phase-box:last-child{border-right:none;}
+.phase-box.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-name{font-family:'Bebas Neue',sans-serif;font-size:22px;display:block;margin-bottom:4px;}
+.phase-box.active .phase-name{color:var(--orange);}
+.phase-range{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;color:var(--gray-500);}
+.math-box{background:var(--navy-card);border:1px solid rgba(232,119,34,.2);border-radius:10px;padding:22px 24px;}
+.math-title{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.16em;text-transform:uppercase;color:var(--orange);margin-bottom:12px;}
+.math-row{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;margin-top:4px;}
+.math-row .lbl{color:var(--gray-400);}
+.math-row .val{font-family:'DM Mono',monospace;color:#fff;}
+.math-row .val.orange{color:var(--orange);}
+.math-row .val.green{color:var(--green);}
+.math-row .val.red{color:var(--red);}
+.intel-card{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:22px;margin-bottom:16px;}
+.intel-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--blue-mid);margin-bottom:10px;}
+.intel-table{width:100%;border-collapse:collapse;font-size:13px;margin-top:8px;}
+.intel-table th{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--gray-500);padding:8px 12px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);}
+.intel-table td{padding:9px 12px;border-bottom:1px solid rgba(255,255,255,.04);color:rgba(255,255,255,.75);vertical-align:top;line-height:1.5;}
+.intel-table tr:last-child td{border-bottom:none;}
+.badge{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;padding:2px 8px;border-radius:4px;text-transform:uppercase;}
+.badge.pass{background:var(--green-bg);color:var(--green);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);}
+.badge.fail{background:var(--red-bg);color:var(--red);}
+.badge.info{background:var(--blue-dim);color:var(--blue-mid);}
+.badge.gap{background:var(--purple-bg);color:var(--purple);}
+.hook-bank{display:flex;flex-direction:column;gap:10px;}
+.hook-item{background:rgba(74,127,165,.06);border:1px solid rgba(74,127,165,.15);border-left:3px solid var(--blue-mid);border-radius:8px;padding:14px 16px;}
+.hook-item .hook-num{font-family:'DM Mono',monospace;font-size:9px;color:var(--blue-mid);letter-spacing:.1em;margin-bottom:6px;}
+.hook-item .hook-text{font-size:13px;color:rgba(255,255,255,.85);line-height:1.55;}
+.hook-item .hook-meta{font-family:'DM Mono',monospace;font-size:9px;color:var(--gray-500);margin-top:6px;}
+.gap-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;margin-bottom:16px;}
+.gap-box{background:var(--navy-card);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:18px;}
+.gap-box .gap-val{font-family:'Bebas Neue',sans-serif;font-size:38px;display:block;margin-bottom:4px;}
+.gap-box.red .gap-val{color:var(--red);}
+.gap-box.warn .gap-val{color:var(--yellow);}
+.gap-box.green .gap-val{color:var(--green);}
+.gap-lbl{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.copy-btn{display:inline-flex;align-items:center;gap:8px;background:var(--orange-dim);
+  border:1px solid rgba(232,119,34,.3);border-radius:7px;padding:9px 18px;
+  font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--orange);cursor:pointer;transition:all .15s;margin-top:16px;}
+.copy-btn:hover{background:rgba(232,119,34,.2);}
+#copy-confirm{font-family:'DM Mono',monospace;font-size:10px;color:var(--green);margin-left:10px;opacity:0;transition:opacity .3s;}
+.constraint-card{background:var(--navy-card);border-radius:10px;padding:24px;margin-bottom:14px;border-left:5px solid;}
+.constraint-card.p1{border-left-color:var(--red);background:rgba(220,38,38,.04);}
+.constraint-card.p2{border-left-color:var(--yellow);background:rgba(245,158,11,.04);}
+.constraint-card.p3{border-left-color:var(--blue-mid);background:rgba(74,127,165,.04);}
+.constraint-card.ok{border-left-color:var(--green);background:rgba(34,197,94,.04);}
+.constraint-header{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.priority-badge{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.08em;padding:4px 10px;border-radius:5px;font-weight:600;}
+.p1 .priority-badge{background:var(--red-bg);color:var(--red);}
+.p2 .priority-badge{background:var(--yellow-bg);color:var(--yellow);}
+.p3 .priority-badge{background:var(--blue-dim);color:var(--blue-mid);}
+.ok .priority-badge{background:var(--green-bg);color:var(--green);}
+.constraint-title{font-family:'Bebas Neue',sans-serif;font-size:22px;}
+.constraint-diag{font-size:13px;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:14px;}
+.fix-box{background:rgba(30,58,95,.5);border-radius:7px;padding:14px 16px;}
+.fix-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--orange);margin-bottom:6px;}
+.fix-text{font-size:13px;color:rgba(255,255,255,.8);line-height:1.6;}
+.plan-item{display:flex;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.05);}
+.plan-item:last-child{border-bottom:none;}
+.plan-num{font-family:'Bebas Neue',sans-serif;font-size:32px;color:var(--orange);flex-shrink:0;width:32px;text-align:center;}
+.plan-title{font-weight:700;font-size:14px;margin-bottom:5px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.7);line-height:1.6;margin-bottom:8px;}
+.plan-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;margin-right:6px;}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);}
+.plan-tag.content{background:var(--blue-dim);color:var(--blue-mid);}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);}
+footer{margin-top:64px;padding-top:24px;border-top:1px solid rgba(255,255,255,.07);
+  font-family:'DM Mono',monospace;font-size:10px;color:var(--gray-500);letter-spacing:.06em;text-align:center;}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="nav-logo">IFCA Hot Seat</div>
+    <div class="nav-links">
+      <a href="#wins" class="nav-link">What&#8217;s Working</a>
+      <a href="#phase" class="nav-link">Business Phase</a>
+      <a href="#intel" class="nav-link">Creative Intelligence</a>
+      <a href="#constraints" class="nav-link">Constraints</a>
+      <a href="#plan" class="nav-link">90-Day Plan</a>
+    </div>
+  </div>
+</nav>
+<div class="wrap">
+
+  <div class="hero">
+    <div class="hero-eyebrow">IFCA Hot Seat &middot; April 29, 2026 &middot; Louisiana</div>
+    <div class="hero-name">Jameel Courtney</div>
+    <div class="hero-brand">Body By Jameel &middot; bodybyjameel@gmail.com &middot; Body Transformation Coach</div>
+    <div class="hero-stats">
+      <div class="stat-box orange">
+        <span class="stat-val">$2&ndash;4K</span>
+        <span class="stat-lbl">Est. Monthly Rev</span>
+      </div>
+      <div class="stat-box blue">
+        <span class="stat-val">$25&ndash;$55/hr</span>
+        <span class="stat-lbl">Current Pricing</span>
+      </div>
+      <div class="stat-box orange">
+        <span class="stat-val">17</span>
+        <span class="stat-lbl">Current Clients</span>
+      </div>
+      <div class="stat-box green">
+        <span class="stat-val">$150K/yr</span>
+        <span class="stat-lbl">Stated Goal</span>
+      </div>
+      <div class="stat-box">
+        <span class="stat-val" style="font-size:18px;color:var(--red);">Offer Model + Pricing</span>
+        <span class="stat-lbl">Primary Constraint</span>
+      </div>
+    </div>
+    <div class="hero-summary">
+      Jameel has done the hardest thing in coaching: he built real proof. Hundreds of career clients. 17 active right now. A branded identity called &ldquo;Body By Jameel&rdquo; that already has equity. The problem is not lack of results &mdash; it is that he is trading hours for $25&ndash;$55 when those hundreds of transformations are worth a $2,500 program. The entire business model needs to shift from session-rate to outcome-based packaging. The proof already exists. The audience already trusts him. He just needs to charge what the result is actually worth.
+    </div>
+  </div>
+
+  <div class="section" id="wins">
+    <div class="section-label">Section 01</div>
+    <div class="section-title">What&#8217;s Working</div>
+    <div class="section-divider"></div>
+    <div class="wins-grid">
+      <div class="win-card">
+        <div class="win-title">&#x2713; Proof Bank &mdash; Hundreds of Transformations</div>
+        <p>Jameel has coached &ldquo;hundreds&rdquo; of clients over his career. That is not a small number &mdash; that is a social proof library that most coaches would spend years trying to build. Every one of those transformations is a potential case study reel, a testimonial video, a before/after carousel, or a hook. The raw material for a 6-figure content strategy already exists inside his client history.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; Body By Jameel Brand Identity</div>
+        <p>The &ldquo;Body By Jameel&rdquo; brand is memorable, personal, and result-oriented. It does not need to be replaced &mdash; it needs to be elevated. A brand name that naturally implies before-and-after transformation is one of the more valuable naming conventions in the fitness coaching market. This is a real asset that competitors built from scratch cannot replicate.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; 17 Active Clients &mdash; Proof the System Works Now</div>
+        <p>Seventeen concurrent clients means the delivery is working, the retention is working, and the in-person trust is established. No other bottleneck matters as much as the business model itself. The clients are there. The system works. What is missing is packaging it into a program with an outcome promise instead of selling an hour of time.</p>
+      </div>
+      <div class="win-card">
+        <div class="win-title">&#x2713; Clear Bottleneck Self-Awareness</div>
+        <p>Jameel articulated his bottleneck clearly: &ldquo;assuring them that my system works and explaining how.&rdquo; This is not a vague &ldquo;I need more clients&rdquo; answer &mdash; it is a conversion diagnosis. He knows the problem is trust-building and mechanism clarity with online prospects. That clarity means the fix is direct: name the system, demonstrate it through transformation content, and let proof do the persuasion.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="phase">
+    <div class="section-label">Section 02</div>
+    <div class="section-title">Business Phase</div>
+    <div class="section-divider"></div>
+    <div class="phase-row">
+      <div class="phase-box active">
+        <span class="phase-name">&#x25CF; Starter</span>
+        <span class="phase-range">$0 &ndash; $5K/mo online</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.6);line-height:1.5;">Repackage offer, name mechanism, convert proof bank into content, launch to existing client network</div>
+      </div>
+      <div class="phase-box">
+        <span class="phase-name" style="color:var(--gray-400);">Growth</span>
+        <span class="phase-range">$5K &ndash; $15K/mo</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.3);line-height:1.5;">Lead gen funnel, DM automation, first paid ads</div>
+      </div>
+      <div class="phase-box">
+        <span class="phase-name" style="color:var(--gray-400);">Scale</span>
+        <span class="phase-range">$15K+/mo</span>
+        <div style="margin-top:8px;font-size:12px;color:rgba(255,255,255,.3);line-height:1.5;">Systems, backend LTV, group offer, team</div>
+      </div>
+    </div>
+    <div class="math-box">
+      <div class="math-title">The Business Model Problem &mdash; Current vs. Required</div>
+      <div class="math-row"><span class="lbl">Current rate (30-min session)</span><span class="val red">$25 / session</span></div>
+      <div class="math-row"><span class="lbl">Current rate (1-hour session)</span><span class="val red">$55 / session</span></div>
+      <div class="math-row"><span class="lbl">Sessions needed per month at $55/hr to hit $12,500/mo</span><span class="val red">~227 sessions &mdash; physically impossible</span></div>
+      <div class="math-row"><span class="lbl">Recommended program price (3-month transformation)</span><span class="val">$2,000 &ndash; $2,500</span></div>
+      <div class="math-row"><span class="lbl">Clients needed at $2,000 to hit $12,500/mo</span><span class="val orange">6&ndash;7 concurrent program clients</span></div>
+      <div class="math-row"><span class="lbl">Jameel has right now</span><span class="val">17 active clients (can convert some)</span></div>
+      <div class="math-row"><span class="lbl">LTV per client (FE $2,000 + 3-mo backend $300/mo)</span><span class="val green">$2,900 per client</span></div>
+      <div class="math-row"><span class="lbl">$150K/year requires</span><span class="val green">~52 program clients/year = ~4.3/mo closed</span></div>
+    </div>
+  </div>
+
+  <div class="section" id="intel">
+    <div class="section-label">Section 03</div>
+    <div class="section-title">Creative Intelligence Report</div>
+    <div class="section-divider"></div>
+
+    <div class="intel-card">
+      <div class="intel-label">Brand &amp; Offer Audit</div>
+      <table class="intel-table">
+        <thead><tr><th>Dimension</th><th>Current State</th><th>Gap / Opportunity</th></tr></thead>
+        <tbody>
+          <tr><td>Brand Name</td><td>Body By Jameel</td><td>Strong &mdash; keep it, elevate it. &ldquo;Body By Jameel Transformation System&rdquo; as the mechanism name.</td></tr>
+          <tr><td>Named Mechanism</td><td>None deployed publicly</td><td>Critical gap &mdash; &ldquo;the system works&rdquo; is on Jameel&rsquo;s mind but never explained to cold prospects</td></tr>
+          <tr><td>Offer Structure</td><td>Session-rate: $25 (30 min), $55/hr</td><td>Completely wrong model for $150K/yr goal. Switch to 90-day program at $2,000+</td></tr>
+          <tr><td>Proof Assets</td><td>Hundreds of transformations (undeployed)</td><td>Highest-value untapped asset in the cohort &mdash; every transformation = a reel</td></tr>
+          <tr><td>Instagram</td><td>bodybyjameel (audit limited by login wall)</td><td>Personal brand exists; content strategy unknown but likely untapped</td></tr>
+          <tr><td>Meta Ads</td><td>None found</td><td>Not yet needed &mdash; proof content + DM funnel first</td></tr>
+          <tr><td>Pricing Psychology</td><td>$25&ndash;55 signals &ldquo;commodity&rdquo;</td><td>$2,000 program signals &ldquo;investment&rdquo; &mdash; price is a credibility signal, not just a revenue lever</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-label">Organic Content Audit &mdash; Hooks Identified</div>
+      <p style="font-size:12px;color:var(--gray-400);margin-bottom:12px;">Platform content was login-walled during audit. Hooks below are constructed from available brand signals, niche benchmarks, and Jameel&rsquo;s stated positioning. Hooks marked &#x26A0; are built, not verbatim.</p>
+      <table class="intel-table">
+        <thead><tr><th>Hook Type</th><th>Format</th><th>Emotional Driver</th><th>Ad Potential</th></tr></thead>
+        <tbody>
+          <tr><td>&#x26A0; Generic &ldquo;fitness motivation&rdquo; content (likely current)</td><td>Static / caption</td><td>Low &mdash; does not filter avatar or demonstrate system</td><td><span class="badge fail">Low</span></td></tr>
+          <tr><td>Transformation before/after (if posted)</td><td>Carousel / side-by-side</td><td>High &mdash; proof triggers trust instantly</td><td><span class="badge pass">High</span></td></tr>
+          <tr><td>&#x26A0; System explanation: &ldquo;Here is why most transformations fail&rdquo;</td><td>Talking head reel</td><td>High &mdash; authority positioning + mechanism reveal</td><td><span class="badge pass">High</span></td></tr>
+          <tr><td>&#x26A0; Client story: &ldquo;[Name] came to me [X lbs/problem], here is what changed&rdquo;</td><td>Client reel / interview</td><td>Highest &mdash; social proof + story arc</td><td><span class="badge pass">Highest</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-label">Entity Gap Scorecard</div>
+      <div class="gap-grid">
+        <div class="gap-box red">
+          <span class="gap-val">0</span>
+          <span class="gap-lbl">Paid Ad Entities</span>
+        </div>
+        <div class="gap-box warn">
+          <span class="gap-val">Unknown</span>
+          <span class="gap-lbl">Organic Posts (login-walled)</span>
+        </div>
+        <div class="gap-box red">
+          <span class="gap-val">0</span>
+          <span class="gap-lbl">Named Mechanisms Deployed</span>
+        </div>
+      </div>
+      <p style="font-size:12px;color:var(--gray-400);line-height:1.6;">The biggest gap is not content quantity &mdash; it is that &ldquo;hundreds of transformations&rdquo; exist offline and have never been converted into public-facing proof content. Every before/after that stays in a DM conversation or text message is a wasted asset. Jameel&rsquo;s proof bank is the most underdeploy ed resource in this cohort.</p>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-label">Workshop-Ready Hook Bank (6 Angles)</div>
+      <div class="hook-bank">
+        <div class="hook-item">
+          <div class="hook-num">Hook 01 &mdash; Transformation Result Lead &mdash; <span class="badge pass">Highest Priority</span></div>
+          <div class="hook-text">&ldquo;[Client name] came to me [X lbs overweight / struggling with X]. Here is exactly what changed in 90 days with the Body By Jameel system.&rdquo;</div>
+          <div class="hook-meta">Format: Before/after carousel or client reel &middot; Emotional driver: Social proof + story &middot; CTA: Comment TRANSFORM</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 02 &mdash; System Reveal &mdash; <span class="badge pass">High Priority</span></div>
+          <div class="hook-text">&ldquo;I have helped hundreds of people transform their bodies. Here is the exact system I use every single time &mdash; and why it works when everything else has failed.&rdquo;</div>
+          <div class="hook-meta">Format: Talking head reel &middot; Emotional driver: Authority + mechanism curiosity &middot; CTA: Comment SYSTEM</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 03 &mdash; Failure Diagnosis &mdash; <span class="badge pass">High Priority</span></div>
+          <div class="hook-text">&ldquo;If you have been working out for months and still are not seeing results, it is not your effort. Here is the real problem.&rdquo;</div>
+          <div class="hook-meta">Format: Reel / talking head &middot; Emotional driver: Pain validation + false belief bust &middot; CTA: Comment WHY</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 04 &mdash; Volume Proof &mdash; <span class="badge warn">Medium Priority</span></div>
+          <div class="hook-text">&ldquo;I have coached over 200 bodies. No two were the same. Here is what they all had in common.&rdquo;</div>
+          <div class="hook-meta">Format: Carousel &middot; Emotional driver: Social proof volume + curiosity &middot; CTA: Comment RESULTS</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 05 &mdash; 90-Day Challenge Frame &mdash; <span class="badge warn">Medium Priority</span></div>
+          <div class="hook-text">&ldquo;What can actually change in 90 days? I will show you 5 real transformations from real people who doubted it too.&rdquo;</div>
+          <div class="hook-meta">Format: Before/after series carousel &middot; Emotional driver: Skepticism-busting proof &middot; CTA: DM me READY</div>
+        </div>
+        <div class="hook-item">
+          <div class="hook-num">Hook 06 &mdash; Price Reframe &mdash; <span class="badge info">Sales Conversion</span></div>
+          <div class="hook-text">&ldquo;Most people spend $500&ndash;1,000 a year on gym memberships they barely use. My clients spend $2,000 once and change their body permanently. Here is the difference.&rdquo;</div>
+          <div class="hook-meta">Format: Reel / talking head &middot; Emotional driver: Investment logic &middot; CTA: Comment INVEST</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="intel-card">
+      <div class="intel-label">Entity Build Queue &mdash; Prioritized (6 Entities)</div>
+      <table class="intel-table">
+        <thead><tr><th>#</th><th>Entity</th><th>Format</th><th>Priority</th><th>Notes</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>First client transformation reel &mdash; pick your best result from the last 12 months</td><td>Before/after + talking head</td><td><span class="badge fail">P1 &mdash; Build First</span></td><td>One piece of proof content is worth 100 motivational posts</td></tr>
+          <tr><td>2</td><td>System explanation: &ldquo;The Body By Jameel Method, explained in 60 seconds&rdquo;</td><td>Talking head reel</td><td><span class="badge fail">P1</span></td><td>Directly addresses the stated bottleneck: &ldquo;assuring them my system works&rdquo;</td></tr>
+          <tr><td>3</td><td>&ldquo;Hundreds of transformations &mdash; here are 5&rdquo; carousel</td><td>Proof carousel (5 slides)</td><td><span class="badge warn">P2</span></td><td>Volume proof signals that results are repeatable, not lucky</td></tr>
+          <tr><td>4</td><td>Why transformations fail reel (false belief content)</td><td>Talking head</td><td><span class="badge warn">P2</span></td><td>Authority positioning while educating &mdash; builds trust before the ask</td></tr>
+          <tr><td>5</td><td>Client video testimonial (ask 1 current client this week)</td><td>Short 60-90 sec interview</td><td><span class="badge warn">P2</span></td><td>Best BOF conversion asset &mdash; closes warm leads who need the final push</td></tr>
+          <tr><td>6</td><td>Offer reveal: &ldquo;Here is exactly what the Body By Jameel 90-Day Program includes&rdquo;</td><td>Reel or carousel</td><td><span class="badge info">P3</span></td><td>Only run after proof entities are live &mdash; sell after trust is established</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="intel-card" style="border:1px solid rgba(232,119,34,.25);background:rgba(232,119,34,.05);">
+      <div class="intel-label">Strategic Diagnosis</div>
+      <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;margin-bottom:14px;">
+        Jameel&rsquo;s situation is the clearest in the cohort: he has everything needed to run a 6-figure coaching business except the right business model. The session-rate structure &mdash; $25 for 30 minutes, $55 for an hour &mdash; is a physical impossibility at $150K/year. No one can work enough hours at those rates. The shift to outcome-based program pricing is not optional; it is structural.
+      </p>
+      <p style="font-size:14px;color:rgba(255,255,255,.85);line-height:1.7;">
+        The fastest path forward: take his single best client transformation from the last year, build a 60-second reel around it, post it publicly with &ldquo;Comment TRANSFORM&rdquo; as the CTA, and price the new 90-day program at $2,000. He can send that reel to every one of his current 17 clients and ask them to share it. That alone &mdash; without a single dollar of ads &mdash; can generate the first 3&ndash;4 program clients. $6,000&ndash;$8,000 from a reel and a price change.
+      </p>
+    </div>
+
+    <button class="copy-btn" onclick="copyIntelReport()">&#x1F4CB; Copy for Workshop</button>
+    <span id="copy-confirm">Copied to clipboard &#x2713;</span>
+  </div>
+
+  <div class="section" id="constraints">
+    <div class="section-label">Section 04</div>
+    <div class="section-title">Constraint Diagnosis</div>
+    <div class="section-divider"></div>
+
+    <div class="constraint-card p1">
+      <div class="constraint-header">
+        <span class="priority-badge">P1 &mdash; CRITICAL</span>
+        <span class="constraint-title">Wrong Business Model &mdash; Session-Rate Pricing Blocks $150K/Year Mathematically</span>
+      </div>
+      <div class="constraint-diag">
+        At $55/hour, reaching $150K/year requires 2,727 billable hours &mdash; 52 hours per week, every week, with zero time off. It is physically impossible. This is not a marketing problem or a sales problem. It is a structural problem. Session-rate pricing converts Jameel&rsquo;s expertise into a commodity traded by the hour. The moment he packages the same outcome into a 90-day program at $2,000, he needs only 75 clients per year (6.25 per month) to hit his goal &mdash; a number that is completely achievable with 17 active clients and hundreds in his network.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Fix &mdash; This Week</div>
+        <div class="fix-text">Create one new offer immediately: <strong>The Body By Jameel 90-Day Transformation Program, $2,000 upfront.</strong> What is included: 3 months of 1:1 coaching, customized training plan, nutrition structure, and weekly check-ins. Retire the $25 and $55 session rates for new clients. Existing clients can finish their current arrangement, but all new inquiries from this point forward get the program pitch only. Update the Instagram bio link to a simple booking page (Calendly free works).</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p1">
+      <div class="constraint-header">
+        <span class="priority-badge">P1 &mdash; CRITICAL</span>
+        <span class="constraint-title">Hundreds of Transformations Never Converted to Public Proof Content</span>
+      </div>
+      <div class="constraint-diag">
+        Jameel&rsquo;s stated bottleneck is &ldquo;assuring them that my system works and explaining how.&rdquo; The solution to that problem already exists: he has the transformations. What he has not done is put them on camera and made them publicly visible. Every client who got a result but whose story has never been posted is a lost conversion asset. Cold prospects cannot be &ldquo;assured&rdquo; of results they cannot see. The proof is there; the deployment is not.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Fix &mdash; Days 1&ndash;7</div>
+        <div class="fix-text">Text or DM 5 former clients today: &ldquo;Hey [Name], I am putting together some content about the results we got together &mdash; would you be comfortable with me sharing your story? I would just need a quick before/after photo and 2 sentences about what changed.&rdquo; Take the best response and post it as a reel this week. That one post will do more for Jameel&rsquo;s online conversion than any amount of motivational content ever will.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p2">
+      <div class="constraint-header">
+        <span class="priority-badge">P2 &mdash; GAP</span>
+        <span class="constraint-title">No Named Mechanism &mdash; &ldquo;The System&rdquo; Has No Public Identity</span>
+      </div>
+      <div class="constraint-diag">
+        Jameel knows his system works. His clients know. But there is no public-facing name, framework, or explanation that a cold prospect can understand before they book. &ldquo;Body transformations&rdquo; is a category, not a mechanism. The fix is simple: give the system a name and a 3-step structure that can be explained in 60 seconds.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Name Recommendation</div>
+        <div class="fix-text"><strong>The Body By Jameel Method</strong> or <strong>The BBJ Transformation System.</strong> Three-step framework: (1) Diagnose &mdash; assess the specific body composition and lifestyle factors, (2) Design &mdash; build a custom protocol, (3) Drive &mdash; 90 days of coached accountability to the outcome. This is the &ldquo;how it works&rdquo; content that converts skeptics into buyers.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card p3">
+      <div class="constraint-header">
+        <span class="priority-badge">P3 &mdash; WATCH</span>
+        <span class="constraint-title">No Digital Lead Generation System Beyond Existing Network</span>
+      </div>
+      <div class="constraint-diag">
+        Currently 100% dependent on in-person referrals and existing relationships. This resolves naturally once proof content is live and a DM funnel is installed. Not urgent now &mdash; the first goal is converting the existing warm network to the new program price.
+      </div>
+      <div class="fix-box">
+        <div class="fix-label">Monitor &mdash; Address at Month 2</div>
+        <div class="fix-text">Once 3&ndash;4 program clients are closed at $2,000 and proof content is generating organic reach, install ManyChat &ldquo;Comment TRANSFORM&rdquo; automation. At that point, the organic-to-DM funnel is the primary acquisition system before any ad spend is needed.</div>
+      </div>
+    </div>
+
+    <div class="constraint-card ok">
+      <div class="constraint-header">
+        <span class="priority-badge">OK &mdash; VALIDATED</span>
+        <span class="constraint-title">Delivery Works &mdash; 17 Active Clients, Hundreds of Career Results</span>
+      </div>
+      <div class="constraint-diag">
+        The hardest problem in coaching &mdash; getting results for clients &mdash; is already solved. Jameel does not need a new methodology, a new certification, or more experience. He needs to charge what the result is worth and put the evidence on camera. The delivery engine is running; the business model just needs to be rebuilt around it.
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="plan">
+    <div class="section-label">Section 05</div>
+    <div class="section-title">90-Day Action Plan</div>
+    <div class="section-divider"></div>
+
+    <div class="plan-item">
+      <div class="plan-num">1</div>
+      <div>
+        <div class="plan-title">Kill the Session Rate &mdash; Launch the 90-Day Program (Days 1&ndash;3)</div>
+        <div class="plan-desc">Create one offer: The Body By Jameel 90-Day Transformation Program at $2,000 upfront. Write a 5-sentence description: who it is for, what the outcome is, what is included, and what makes it different. Update Instagram bio with booking link (Calendly free). This single change is the most important business decision Jameel will make this year &mdash; everything else is downstream of it.</div>
+        <div><span class="plan-tag offer">Offer Architecture</span><span class="plan-tag ops">Pricing</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">2</div>
+      <div>
+        <div class="plan-title">Activate the Proof Bank &mdash; DM 5 Former Clients for Testimonials (Days 1&ndash;7)</div>
+        <div class="plan-desc">Text or DM 5 former clients and ask for a before/after photo and 2-sentence result statement. Take the single best response and build a 60-second reel: show the transformation, narrate what changed, end with &ldquo;Comment TRANSFORM if you want results like this.&rdquo; Post it. This is the first proof entity and the first organic lead-generation mechanism in the business.</div>
+        <div><span class="plan-tag content">Proof Content</span><span class="plan-tag sales">Lead Gen</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">3</div>
+      <div>
+        <div class="plan-title">Pitch the New Program to Current 17 Clients (Days 3&ndash;14)</div>
+        <div class="plan-desc">Every current session-rate client is a warm lead for the 90-day program. Have a 5-minute conversation with each one: &ldquo;I am restructuring my coaching into a 90-day program because it gets better results than individual sessions. Here is what it looks like. I would love to transition you into it.&rdquo; Even converting 3 of 17 generates $6,000 upfront. This is the fastest path to the first significant online revenue number without a single new lead.</div>
+        <div><span class="plan-tag sales">Warm Conversion</span><span class="plan-tag offer">Offer Transition</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">4</div>
+      <div>
+        <div class="plan-title">Name and Film the BBJ Method Explainer (Days 7&ndash;21)</div>
+        <div class="plan-desc">Film a 60-second talking head reel: &ldquo;I have helped hundreds of people transform their bodies. Here is the exact 3-step system I use: Diagnose, Design, Drive.&rdquo; Explain each step in 15 seconds. End with &ldquo;Comment SYSTEM and I will send you the full breakdown.&rdquo; This is the mechanism content that directly answers the bottleneck Jameel identified &mdash; &ldquo;assuring them my system works and explaining how.&rdquo;</div>
+        <div><span class="plan-tag content">Mechanism Content</span><span class="plan-tag offer">Brand</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">5</div>
+      <div>
+        <div class="plan-title">Install ManyChat DM Automation (Days 14&ndash;30)</div>
+        <div class="plan-desc">Set up ManyChat free tier. Keyword: TRANSFORM. DM flow: Message 1 sends a PDF or short video about the BBJ Method. Message 2 (24 hours): &ldquo;What is your biggest challenge right now?&rdquo; Message 3 (48 hours): booking link for a free 15-minute consult call. This turns every reel viewer who comments into a managed prospect without Jameel manually responding to every DM.</div>
+        <div><span class="plan-tag sales">DM Funnel</span><span class="plan-tag ops">Automation</span></div>
+      </div>
+    </div>
+    <div class="plan-item">
+      <div class="plan-num">6</div>
+      <div>
+        <div class="plan-title">Post 3x/Week &mdash; Proof First, Method Second, Offer Third (Days 1&ndash;90)</div>
+        <div class="plan-desc">Content hierarchy for the 90-day sprint: 50% proof content (client results, transformations, testimonials), 30% method content (system explainers, false belief content, &ldquo;why transformations fail&rdquo;), 20% offer content (what the program includes, who it is for). Proof builds trust. Method builds authority. Offer converts. Running them in the wrong order &mdash; leading with the offer &mdash; is why most coaches get ignored online.</div>
+        <div><span class="plan-tag content">Content Cadence</span><span class="plan-tag ads">Organic Reach</span></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+<footer>IFCA Hot Seat &middot; Jameel Courtney &middot; April 29, 2026 &middot; Private Session &middot; Impact Fitness Coaching Academy</footer>
+<script>
+function copyIntelReport() {
+  var text = [
+    "JAMEEL COURTNEY — CREATIVE INTELLIGENCE REPORT",
+    "IFCA Hot Seat | April 29, 2026 | Louisiana",
+    "",
+    "BRAND: Body By Jameel | bodybyjameel@gmail.com",
+    "PHASE: Starter (online) | Revenue: $2–4K/mo session-rate | Clients: 17 active, hundreds career",
+    "GOAL: $150K/year",
+    "",
+    "CORE PROBLEM: Business model, not marketing. $55/hr requires 2,727 hours/year to hit $150K. Structurally impossible.",
+    "",
+    "SOLUTION: Repackage into a 90-Day Transformation Program at $2,000 upfront.",
+    "At $2,000: need 75 clients/year = 6.25/mo closed. Completely achievable with existing network.",
+    "",
+    "NAMED MECHANISM (Recommended):",
+    "The Body By Jameel Method / The BBJ Transformation System",
+    "3-step: (1) Diagnose — assess body comp + lifestyle (2) Design — custom protocol (3) Drive — 90 days coached accountability",
+    "",
+    "ENTITY GAP: 0 paid ads | 0 named mechanisms deployed | Hundreds of transformations NEVER posted publicly",
+    "",
+    "TOP 6 HOOKS:",
+    "1. '[Client name] came to me [struggling with X]. Here is exactly what changed in 90 days.' [Before/after + client reel — CTA: Comment TRANSFORM]",
+    "2. 'I have helped hundreds of people transform. Here is the exact system I use every time.' [System reveal reel — CTA: Comment SYSTEM]",
+    "3. 'If you have been working out for months with no results, it is not your effort. Here is the real problem.' [False belief reel]",
+    "4. 'I have coached over 200 bodies. Here is what they all had in common.' [Volume proof carousel]",
+    "5. '5 real transformations from real people who doubted it too. What can change in 90 days.' [Proof series carousel]",
+    "6. 'Most people spend $1,000/year on gym memberships. My clients invest $2,000 once and change permanently.' [Price reframe reel]",
+    "",
+    "CONSTRAINT STACK:",
+    "P1: Session-rate pricing mathematically blocks $150K/year goal — fix: 90-day program at $2,000",
+    "P1: Hundreds of transformations never posted publicly — fix: DM 5 former clients for testimonials today",
+    "P2: No named mechanism deployed — fix: name The BBJ Method, film explainer reel",
+    "P3: No digital lead gen system — fix at Month 2 via ManyChat after warm network converted",
+    "OK: Delivery proven — 17 active clients, hundreds of career results, conversion rate is 100% from in-person",
+    "",
+    "90-DAY PRIORITY ORDER:",
+    "1. Kill session rate, launch 90-Day Program at $2,000 (Days 1–3)",
+    "2. DM 5 former clients for proof content, post first transformation reel (Days 1–7)",
+    "3. Pitch new program to all 17 current clients (Days 3–14)",
+    "4. Film BBJ Method explainer reel: Diagnose, Design, Drive (Days 7–21)",
+    "5. Install ManyChat DM automation — keyword TRANSFORM (Days 14–30)",
+    "6. Post 3x/week: 50% proof / 30% method / 20% offer (Days 1–90)"
+  ].join("\n");
+  navigator.clipboard.writeText(text).then(function() {
+    var el = document.getElementById("copy-confirm");
+    el.style.opacity = "1";
+    setTimeout(function(){ el.style.opacity = "0"; }, 2500);
+  });
+}
+window.addEventListener("scroll", function() {
+  var scrollY = window.scrollY + 80;
+  ["wins","phase","intel","constraints","plan"].forEach(function(id) {
+    var el = document.getElementById(id);
+    if (!el) return;
+    if (el.offsetTop <= scrollY && el.offsetTop + el.offsetHeight > scrollY) {
+      document.querySelectorAll(".nav-link").forEach(function(a){ a.classList.remove("active"); });
+      var active = document.querySelector('.nav-link[href="#' + id + '"]');
+      if (active) active.classList.add("active");
+    }
+  });
+});
+</script>
+</body>
+</html>
