@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Crystal Harrington — IFCA Business Audit | April 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1E3A5F;--navy-dark:#0B1A2B;--navy-mid:#142845;--orange:#E87722;--orange-dim:rgba(232,119,34,0.12);--orange-glow:rgba(232,119,34,0.22);--blue-mid:#4A7FA5;--blue-dim:rgba(74,127,165,0.12);--blue-light:#D6E4F0;--gray-400:#94A3B8;--gray-500:#64748B;--green:#22C55E;--green-bg:rgba(34,197,94,0.10);--red:#DC2626;--red-bg:rgba(220,38,38,0.09);--yellow:#F59E0B;--yellow-bg:rgba(245,158,11,0.10);--purple:#8B5CF6;--purple-bg:rgba(139,92,246,0.10);}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--navy-dark);color:#fff;min-height:100vh;overflow-x:hidden;}
+body::before{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background-image:linear-gradient(rgba(255,255,255,.018)1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.018)1px,transparent 1px);background-size:48px 48px;}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(ellipse 80% 60% at 5% 5%,rgba(74,127,165,.09)0%,transparent 55%),radial-gradient(ellipse 60% 50% at 95% 95%,rgba(232,119,34,.06)0%,transparent 55%);}
+.page{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px 120px;}
+.hero{padding:60px 0 52px;border-bottom:1px solid rgba(255,255,255,.07);margin-bottom:0;position:relative;}
+.hero-eyebrow{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.2em;color:var(--orange);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px;}
+.hero-eyebrow::before{content:'';width:32px;height:2px;background:var(--orange);border-radius:1px;}
+.hero-name{font-family:'Bebas Neue';font-size:clamp(52px,8vw,96px);line-height:.88;letter-spacing:.02em;color:#fff;margin-bottom:6px;}
+.hero-name span{color:var(--orange);}
+.hero-title{font-family:'DM Mono',monospace;font-size:14px;letter-spacing:.08em;color:rgba(255,255,255,.4);text-transform:uppercase;margin-bottom:28px;}
+.hero-stats{display:flex;gap:0;margin-bottom:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;}
+.hs{flex:1;padding:20px 24px;border-right:1px solid rgba(255,255,255,.06);}
+.hs:last-child{border-right:none;}
+.hs-val{font-family:'Bebas Neue';font-size:40px;line-height:1;margin-bottom:4px;}
+.hs-val.orange{color:var(--orange);}.hs-val.green{color:var(--green);}.hs-val.blue{color:#7ABFDD;}.hs-val.white{color:#fff;}.hs-val.red{color:#F87171;}
+.hs-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+.hero-summary{font-size:15px;color:rgba(255,255,255,.65);line-height:1.7;max-width:720px;border-left:3px solid var(--orange);padding-left:20px;}
+.hero-summary strong{color:rgba(255,255,255,.9);}
+.doc-nav{position:sticky;top:0;z-index:50;background:rgba(11,26,43,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.07);padding:0;margin:0 -24px;}
+.doc-nav-inner{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none;}
+.doc-nav-inner::-webkit-scrollbar{display:none;}
+.nav-link{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:14px 16px;white-space:nowrap;color:var(--gray-500);text-decoration:none;border-bottom:2px solid transparent;transition:color .18s,border-color .18s;}
+.nav-link:hover{color:rgba(255,255,255,.7);}.nav-link.active{color:var(--orange);border-bottom-color:var(--orange);}
+.doc-section{padding:56px 0 0;}
+.sec-eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;}
+.sec-heading{font-family:'Bebas Neue';font-size:clamp(30px,4vw,44px);line-height:.95;letter-spacing:.02em;color:#fff;margin-bottom:24px;}
+.sec-divider{height:1px;background:rgba(255,255,255,.07);margin-bottom:28px;}
+.card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;padding:22px 24px;}
+.card.orange-left{border-left:3px solid var(--orange);border-radius:0 14px 14px 0;background:var(--orange-dim);}
+.card.green-left{border-left:3px solid var(--green);border-radius:0 14px 14px 0;background:var(--green-bg);}
+.card.red-left{border-left:3px solid var(--red);border-radius:0 14px 14px 0;background:var(--red-bg);}
+.card.yellow-left{border-left:3px solid var(--yellow);border-radius:0 14px 14px 0;background:var(--yellow-bg);}
+.card.blue-left{border-left:3px solid var(--blue-mid);border-radius:0 14px 14px 0;background:var(--blue-dim);}
+.mb-sm{margin-bottom:12px;}.mb-md{margin-bottom:20px;}.mb-lg{margin-bottom:32px;}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+.grid-3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;}
+@media(max-width:720px){.grid-2,.grid-3{grid-template-columns:1fr;}.hero-stats{flex-direction:column;}.hs{border-right:none;border-bottom:1px solid rgba(255,255,255,.06);}.hs:last-child{border-bottom:none;}}
+.win-card{background:var(--green-bg);border:1px solid rgba(34,197,94,.2);border-radius:12px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
+.win-icon{font-size:20px;flex-shrink:0;padding-top:2px;}
+.win-label{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:4px;}
+.win-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.55;}
+.tbl-wrap{background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:16px;}
+.mtbl{width:100%;border-collapse:collapse;}
+.mtbl thead tr{background:rgba(255,255,255,.03);}
+.mtbl th{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);padding:10px 14px;text-align:left;border-bottom:1px solid rgba(255,255,255,.06);white-space:nowrap;}
+.mtbl td{padding:12px 14px;font-size:13px;color:rgba(255,255,255,.7);border-bottom:1px solid rgba(255,255,255,.04);vertical-align:middle;}
+.mtbl tbody tr:last-child td{border-bottom:none;}
+.mtbl tbody tr:hover td{background:rgba(255,255,255,.02);}
+.t-strong{color:rgba(255,255,255,.9);font-weight:600;}
+.badge{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;white-space:nowrap;}
+.badge.pass{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.badge.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.badge.fail{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.25);}
+.badge.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.badge.gold{background:rgba(245,158,11,.15);color:var(--yellow);border:1px solid rgba(245,158,11,.3);}
+.gap-pill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;}
+.gap-pill.opportunity{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.2);}
+.gap-pill.warn{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.2);}
+.gap-pill.missing{background:var(--red-bg);color:#F87171;border:1px solid rgba(220,38,38,.2);}
+.gap-pill.info{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.2);}
+.phase-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:14px;overflow:hidden;margin-bottom:28px;}
+.phase-item{padding:20px 22px;border-right:1px solid rgba(255,255,255,.07);text-align:center;}
+.phase-item:last-child{border-right:none;}
+.phase-item.active{background:var(--orange-dim);border-top:3px solid var(--orange);}
+.phase-label{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--gray-500);margin-bottom:6px;}
+.phase-name{font-family:'Bebas Neue';font-size:22px;color:rgba(255,255,255,.5);}
+.phase-item.active .phase-name{color:var(--orange);}
+.phase-range{font-size:11px;color:var(--gray-500);margin-top:4px;}
+.phase-item.active .phase-range{color:rgba(255,255,255,.6);}
+.diag-card{border-radius:14px;padding:22px 24px;margin-bottom:12px;border:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.03);}
+.diag-card.p1{border-left:4px solid var(--red);background:var(--red-bg);}
+.diag-card.p2{border-left:4px solid var(--yellow);background:var(--yellow-bg);}
+.diag-card.p3{border-left:4px solid var(--blue-mid);background:var(--blue-dim);}
+.diag-card.ok{border-left:4px solid var(--green);background:var(--green-bg);}
+.diag-rank{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:6px;}
+.diag-card.p1 .diag-rank{color:var(--red);}.diag-card.p2 .diag-rank{color:var(--yellow);}.diag-card.p3 .diag-rank{color:#7ABFDD;}.diag-card.ok .diag-rank{color:var(--green);}
+.diag-title{font-family:'Bebas Neue';font-size:24px;margin-bottom:8px;line-height:1;}
+.diag-desc{font-size:13px;color:rgba(255,255,255,.65);line-height:1.6;margin-bottom:10px;}
+.diag-fix{font-size:12px;color:rgba(255,255,255,.5);line-height:1.5;padding:10px 14px;background:rgba(255,255,255,.03);border-radius:8px;border:1px solid rgba(255,255,255,.06);}
+.diag-fix strong{color:rgba(255,255,255,.8);}
+.plan-item{display:flex;align-items:flex-start;gap:16px;padding:18px 20px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);border-radius:12px;margin-bottom:10px;}
+.plan-num{font-family:'Bebas Neue';font-size:36px;line-height:1;color:var(--orange);flex-shrink:0;min-width:32px;}
+.plan-title{font-weight:600;font-size:14px;margin-bottom:4px;}
+.plan-desc{font-size:13px;color:rgba(255,255,255,.55);line-height:1.55;}
+.plan-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;}
+.plan-tag{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.08em;text-transform:uppercase;padding:3px 9px;border-radius:4px;}
+.plan-tag.ads{background:var(--orange-dim);color:var(--orange);border:1px solid rgba(232,119,34,.25);}
+.plan-tag.offer{background:var(--purple-bg);color:var(--purple);border:1px solid rgba(139,92,246,.25);}
+.plan-tag.content{background:var(--blue-dim);color:#7ABFDD;border:1px solid rgba(74,127,165,.25);}
+.plan-tag.ops{background:var(--green-bg);color:var(--green);border:1px solid rgba(34,197,94,.25);}
+.plan-tag.sales{background:var(--yellow-bg);color:var(--yellow);border:1px solid rgba(245,158,11,.25);}
+.entity-item{padding:16px 18px;background:rgba(255,255,255,.025);border:1px solid rgba(255,255,255,.06);border-radius:10px;margin-bottom:8px;}
+.entity-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;flex-wrap:wrap;gap:8px;}
+.entity-id{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);}
+.entity-hook{font-size:13px;color:rgba(255,255,255,.9);font-style:italic;margin-bottom:6px;}
+.entity-meta{font-size:12px;color:rgba(255,255,255,.45);}
+.math-box{background:var(--navy-mid);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:24px 28px;margin-bottom:20px;}
+.math-box-title{font-family:'Bebas Neue';font-size:22px;color:var(--orange);margin-bottom:16px;}
+.math-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:13px;}
+.math-row:last-child{border-bottom:none;}
+.math-row .lbl{color:rgba(255,255,255,.5);}
+.math-row .val{font-family:'DM Mono',monospace;font-size:13px;color:var(--green);}
+.math-row .val.orange{color:var(--orange);}
+.olympian-badge{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,rgba(245,158,11,.15),rgba(232,119,34,.12));border:1px solid rgba(245,158,11,.35);border-radius:10px;padding:12px 18px;margin-bottom:20px;}
+.olympian-badge .ob-icon{font-size:24px;}
+.olympian-badge .ob-text{font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--yellow);}
+footer{margin-top:80px;padding:28px 0;border-top:1px solid rgba(255,255,255,.07);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;}
+.footer-brand{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gray-500);}
+.footer-brand strong{color:var(--orange);}
+.footer-tag{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-500);}
+</style></head><body><div class="page">
+<div class="hero"><div class="hero-eyebrow">IFCA Prospect Intelligence Audit · April 2026</div>
+<div class="hero-name">Crystal <span>Harrington</span></div>
+<div class="hero-title">No confirmed social handle · Busy Moms Fitness · Starter Phase</div>
+<div class="hero-stats"><div class="hs"><div class="hs-val red">$100–$150/mo</div><div class="hs-label">Current Price</div></div><div class="hs"><div class="hs-val orange">16</div><div class="hs-label">Active Clients</div></div><div class="hs"><div class="hs-val blue">237</div><div class="hs-label">Total Past Clients</div></div><div class="hs"><div class="hs-val green">$10K</div><div class="hs-label">Monthly Goal</div></div><div class="hs"><div class="hs-val white">P1+P1</div><div class="hs-label">Pricing + Volume Trap</div></div></div><p class="hero-summary">Crystal Harrington has 237 total past clients and 16 active clients — one of the largest proven client bases in this cohort. She is also critically underpriced. At $150/month, hitting $10K/month requires 67 concurrent clients. At $1,200 for a 3-month program, she needs 8. The same business. Completely different math.</p></div>
+<nav class="doc-nav"><div class="doc-nav-inner">
+<a class="nav-link active" href="#working">What’s Working</a>
+<a class="nav-link" href="#phase">Business Phase</a>
+<a class="nav-link" href="#creative">Creative Intelligence</a>
+<a class="nav-link" href="#constraints">Constraint Diagnosis</a>
+<a class="nav-link" href="#plan">90-Day Plan</a></div></nav>
+<section class="doc-section" id="working"><div class="sec-eyebrow">Section 01</div>
+<div class="sec-heading">What’s Working</div><div class="sec-divider"></div>
+<div class="grid-2"><div class="win-card"><div class="win-icon">💪</div><div><div class="win-label">237 Total Past Clients — Massive Reactivation List</div><div class="win-desc">237 people who have paid Crystal for coaching is one of the largest warm lists in this cohort. A single reactivation email at the repriced offer could generate months of revenue with zero ad spend.</div></div></div><div class="win-card"><div class="win-icon">👥</div><div><div class="win-label">16 Active Clients — Strong Retention</div><div class="win-desc">16 concurrent clients means people stay. Retention is not the problem. The price is.</div></div></div><div class="win-card"><div class="win-icon">🤝</div><div><div class="win-label">Referral Channel Working</div><div class="win-desc">Growing to 16 clients organically proves word-of-mouth is active. At the correct price, referrals continue to compound.</div></div></div><div class="win-card"><div class="win-icon">🎯</div><div><div class="win-label">Busy Moms Is a High-Resonance Niche</div><div class="win-desc">Large audience, strong community bonds, high referral potential. The pain is universal: no time, no energy, guilt about self-care.</div></div></div></div></section>
+<section class="doc-section" id="phase"><div class="sec-eyebrow">Section 02</div>
+<div class="sec-heading">Business Phase Diagnosis</div><div class="sec-divider"></div>
+<div class="phase-row"><div class="phase-item active"><div class="phase-label">Current Phase ▼</div><div class="phase-name">Starter</div><div class="phase-range">$0–$5K/mo</div></div><div class="phase-item"><div class="phase-label">Phase 2 Target</div><div class="phase-name">Growth</div><div class="phase-range">$5K–$15K/mo</div></div><div class="phase-item"><div class="phase-label">Phase 3 Goal</div><div class="phase-name">Scale</div><div class="phase-range">$15K–$100K+/mo</div></div></div>
+<div class="math-box"><div class="math-box-title">Path to First Revenue</div><div class="math-row"><span class="lbl">Current: $150/mo x 16 = $2,400/mo</span><span class="val red">red</span></div><div class="math-row"><span class="lbl">To hit $10K at $150/mo: needs 67 concurrent clients</span><span class="val red">red</span></div><div class="math-row"><span class="lbl">Repriced: $1,200 / 3-month Busy Mom Transformation</span><span class="val orange">orange</span></div><div class="math-row"><span class="lbl">To hit $10K at $1,200: 8 new clients per month</span><span class="val green">green</span></div><div class="math-row"><span class="lbl">237 past clients at 5% response = 4–5 new clients, $0 spent</span><span class="val green">green</span></div></div></section>
+<section class="doc-section" id="creative"><div class="sec-eyebrow">Section 03</div>
+<div class="sec-heading">Creative Intelligence Report</div><div class="sec-divider"></div>
+<div class="card orange-left mb-md"><div style="font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.12em;color:var(--orange);text-transform:uppercase;margin-bottom:8px;">Note on Data Availability</div>
+<p style="font-size:13px;color:rgba(255,255,255,.75);line-height:1.7;">Limited public digital footprint for full creative audit. Hook bank below uses IFCA Phase 1 frameworks applied to this niche. Prescriptive starting points, not confirmed organic winners.</p></div>
+<div class="sec-eyebrow" style="margin-bottom:10px;">Starter Hook Bank</div>
+<div class="tbl-wrap mb-md"><table class="mtbl"><thead><tr><th>#</th><th>Hook</th><th>Format</th><th>Driver</th></tr></thead>
+<tbody><tr><td class="t-strong">1</td><td>"Being a mom is not an excuse to put your health last. It’s exactly why you need to prioritize it."</td><td>Talking head</td><td>Permission + empathy</td></tr><tr><td class="t-strong">2</td><td>"I help busy moms get fit in 30 minutes a day. No gym. No babysitter. Here’s what that looks like."</td><td>Process reel</td><td>Curiosity + accessibility</td></tr><tr><td class="t-strong">3</td><td>"The ‘I don’t have time’ excuse isn’t a time problem. Here’s what it actually is."</td><td>Education reel</td><td>Validation</td></tr><tr><td class="t-strong">4</td><td>"Mom of [X]. Works [X] hours. Here’s what 90 days looked like."</td><td>Case study</td><td>Social proof</td></tr><tr><td class="t-strong">5</td><td>"Comment MOM for my free 30-minute busy mom workout guide"</td><td>Lead capture</td><td>Action</td></tr><tr><td class="t-strong">6</td><td>"237 moms have done this program. Here is what the first 30 days actually look like."</td><td>Authority + proof</td><td>Social proof + curiosity</td></tr></tbody></table></div>
+<div style="text-align:center;margin-bottom:8px;"><button onclick="copyCrystalHarringtonIntel()" style="background:var(--orange);border:none;border-radius:8px;padding:12px 28px;font-family:'DM Mono',monospace;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:#fff;cursor:pointer;">📋 Copy for Workshop</button></div></section>
+<section class="doc-section" id="constraints"><div class="sec-eyebrow">Section 04</div>
+<div class="sec-heading">Constraint Diagnosis</div><div class="sec-divider"></div><div class="diag-card p1"><div class="diag-rank">P1 — Critical</div><div class="diag-title">$100–$150/Month Creates a 67-Client Volume Trap</div><div class="diag-desc">The math makes $10K/month impossible at the current price without burning out completely. The transformation justifies 8–10x more.</div><div class="diag-fix"><strong>Fix:</strong> Reprice to $1,200 for a 3-month Busy Mom Transformation. All new inquiries at the new price only. Current clients grandfathered one more cycle.</div></div><div class="diag-card p1"><div class="diag-rank">P1 — Critical</div><div class="diag-title">237 Past Clients Never Reactivated</div><div class="diag-desc">This is the highest ROI action in the business. It costs nothing and converts at 5–10x cold lead rates.</div><div class="diag-fix"><strong>Fix:</strong> This week: email or message every past client. “Hey [Name] — I rebuilt my program into a full 3-month transformation. Would you be interested?” Target: 4–5 new clients.</div></div><div class="diag-card p2"><div class="diag-rank">P2 — Gap</div><div class="diag-title">No Confirmed Social Content Presence</div><div class="diag-desc">No confirmed handles means no content reach beyond the existing network. Without content, the referral channel stays capped.</div><div class="diag-fix"><strong>Fix:</strong> Create Instagram this week. 3 reels/week using the hook bank. Bio: ‘237 moms transformed · 30-min workouts · Comment MOM for free guide.’</div></div><div class="diag-card ok"><div class="diag-rank">OK — Validated</div><div class="diag-title">237 Past Clients Proves the Offer Works</div><div class="diag-desc">Irrefutable proof. Use the number in every hook.</div><div class="diag-fix"><strong>Fix:</strong> Use ‘237 moms’ as a recurring credibility anchor in all content and the bio.</div></div></section>
+<section class="doc-section" id="plan"><div class="sec-eyebrow">Section 05</div>
+<div class="sec-heading">90-Day Action Plan</div><div class="sec-divider"></div><div class="plan-item"><div class="plan-num">1</div><div class="plan-body"><div class="plan-title">This Week: Reprice + Email Past Clients</div><div class="plan-desc">New price: $1,200 / 3-month program. Message all past clients today.</div><div class="plan-tags"><span class="plan-tag offer">Offer</span><span class="plan-tag sales">Sales</span></div></div></div><div class="plan-item"><div class="plan-num">2</div><div class="plan-body"><div class="plan-title">Week 2: Create Instagram + First 3 Reels</div><div class="plan-desc">Build the profile. Bio with 237-client stat. Film 3 reels using hook bank.</div><div class="plan-tags"><span class="plan-tag ops">Ops</span><span class="plan-tag content">Content</span></div></div></div><div class="plan-item"><div class="plan-num">3</div><div class="plan-body"><div class="plan-title">Weeks 3–4: 3 Reels Per Week Consistently</div><div class="plan-desc">Busy mom lane only. 237-client stat in every hook. Comment MOM CTA.</div><div class="plan-tags"><span class="plan-tag content">Content</span></div></div></div><div class="plan-item"><div class="plan-num">4</div><div class="plan-body"><div class="plan-title">Month 2: DM Automation Setup</div><div class="plan-desc">Comment MOM → free guide → follow-up → booking link.</div><div class="plan-tags"><span class="plan-tag ops">Ops</span></div></div></div><div class="plan-item"><div class="plan-num">5</div><div class="plan-body"><div class="plan-title">Month 3: First Paid Ad</div><div class="plan-desc">$20/day. Moms 28–48. Kill if CPL >$15.</div><div class="plan-tags"><span class="plan-tag ads">Ads</span></div></div></div></section>
+<footer><div class="footer-brand"><strong>IFCA</strong> · Prospect Intelligence Audit · Confidential</div>
+<div class="footer-tag">Jordan Dugger · Impact Fitness Coaching Academy · April 2026</div></footer></div>
+<script>
+const sections=document.querySelectorAll('.doc-section');const navLinks=document.querySelectorAll('.nav-link');
+const observer=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){navLinks.forEach(l=>l.classList.remove('active'));const id=entry.target.getAttribute('id');const active=document.querySelector('.nav-link[href="#'+id+'"]');if(active)active.classList.add('active');}});},{threshold:0.2,rootMargin:'-60px 0px 0px 0px'});
+sections.forEach(s=>observer.observe(s));
+function copyCrystalHarringtonIntel(){const text=`CRYSTAL HARRINGTON
+Busy Moms Fitness | April 2026
+P1: $150/mo requires 67 clients to hit $10K — reprice to $1,200/3-month program NOW
+P1: 237 past clients never reactivated — email them today
+P2: No confirmed social presence
+First actions: Reprice today, email 237 past clients today, create Instagram this week.`;navigator.clipboard.writeText(text).then(()=>{const btn=event.target.closest('button');const orig=btn.innerHTML;btn.innerHTML='✓ Copied!';setTimeout(()=>btn.innerHTML=orig,2000);});}
+</script></body></html>
