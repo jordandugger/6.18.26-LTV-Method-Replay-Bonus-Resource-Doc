@@ -74,7 +74,7 @@ h2 span{color:var(--orange)}
 .discount-pill .label{font-size:.78rem;color:var(--muted);display:block;margin-top:2px}
 .guarantee-row{display:flex;align-items:center;gap:12px;background:rgba(34,197,94,.06);border:1px solid rgba(34,197,94,.18);border-radius:10px;padding:16px 22px;margin:24px 0;text-align:left}
 .guarantee-icon{font-size:1.6rem;flex-shrink:0}
-.guarantee-text{font-size:.88rem;line-height:1.5;color:rgba(255,255,255,.82]}
+.guarantee-text{font-size:.88rem;line-height:1.5;color:rgba(255,255,255,.82)}
 .guarantee-text strong{color:var(--green)}
 .btn-primary{display:inline-block;background:var(--orange);color:#fff;font-weight:800;font-size:1.05rem;padding:18px 40px;border-radius:10px;letter-spacing:.02em;transition:opacity .15s,transform .1s;cursor:pointer;border:none;text-align:center;width:100%;max-width:480px}
 .btn-primary:hover{opacity:.9;transform:translateY(-1px)}
@@ -108,7 +108,7 @@ h2 span{color:var(--orange)}
 
 /* ─── CHECKLIST ─── */
 .check-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:10px}
-.check-list li{display:flex;align-items:flex-start;gap:10px;font-size:.95rem;color:rgba(255,255,255,.82]}
+.check-list li{display:flex;align-items:flex-start;gap:10px;font-size:.95rem;color:rgba(255,255,255,.82)}
 .check-list li::before{content:'✓';color:var(--green);font-weight:800;flex-shrink:0;margin-top:1px}
 
 /* ─── FOOTER ─── */
@@ -122,6 +122,55 @@ footer a{color:var(--muted);text-decoration:underline}
 .mt-16{margin-top:16px}
 .mt-24{margin-top:24px}
 .badge{display:inline-block;background:var(--orange-dim);border:1px solid rgba(232,119,34,.25);color:var(--orange);font-size:.72rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:3px 10px;border-radius:20px;vertical-align:middle;margin-left:8px}
+
+/* ─── BIG CTA BUTTON (clear, separate color) ─── */
+.big-cta-wrap{text-align:center;margin:28px 0 6px}
+.big-cta{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(135deg,#22c55e,#16a34a);color:#fff;font-weight:900;font-size:1.18rem;padding:20px 44px;border-radius:12px;letter-spacing:.01em;box-shadow:0 8px 28px rgba(34,197,94,.32);transition:transform .12s,box-shadow .15s;cursor:pointer;text-transform:none;line-height:1.25}
+.big-cta:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(34,197,94,.42)}
+.big-cta-note{font-size:.85rem;color:var(--muted);margin-top:12px}
+.spots-banner{display:inline-block;background:rgba(232,119,34,.12);border:1px solid rgba(232,119,34,.32);border-radius:8px;padding:9px 18px;font-size:.85rem;color:rgba(255,255,255,.88);margin-bottom:18px}
+.spots-banner strong{color:var(--orange)}
+
+/* ─── TOOLS LIST (clear "access" rows) ─── */
+.tools-list{display:flex;flex-direction:column;gap:14px;margin-top:28px}
+.tool-row{display:flex;align-items:center;gap:18px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px 22px;transition:border-color .2s,transform .15s}
+.tool-row:hover{border-color:rgba(232,119,34,.4);transform:translateY(-2px)}
+.tool-icon{width:52px;height:52px;border-radius:11px;background:var(--orange-dim);border:1px solid rgba(232,119,34,.28);display:flex;align-items:center;justify-content:center;font-size:1.55rem;flex-shrink:0}
+.tool-body{flex:1;min-width:0}
+.tool-body h3{font-size:1.05rem;font-weight:800;margin-bottom:4px}
+.tool-body p{font-size:.85rem;color:var(--muted);line-height:1.5}
+.tool-cta{flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:var(--orange);color:#fff;font-weight:800;font-size:.82rem;padding:12px 20px;border-radius:8px;letter-spacing:.03em;text-transform:uppercase;transition:opacity .15s;white-space:nowrap}
+.tool-cta:hover{opacity:.88}
+@media(max-width:600px){.tool-row{flex-direction:column;align-items:flex-start;gap:14px}.tool-cta{width:100%;justify-content:center}}
+
+/* ─── TRUSTPILOT + TESTIMONIALS ─── */
+.tp-wrap{background:#fff;border-radius:12px;padding:6px;margin-bottom:10px}
+.testi-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-top:26px}
+@media(max-width:700px){.testi-grid{grid-template-columns:1fr}}
+.testi-cell{position:relative;padding-top:177.78%;border-radius:12px;overflow:hidden;border:1px solid rgba(255,255,255,.1)}
+.testi-cell iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* ─── INSTAGRAM FOLLOW ─── */
+.ig-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+@media(max-width:600px){.ig-grid{grid-template-columns:1fr}}
+.ig-card{display:block;background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:20px 22px;transition:border-color .2s}
+.ig-card:hover{border-color:rgba(232,119,34,.4)}
+.ig-head{display:flex;align-items:center;gap:14px;margin-bottom:12px}
+.ig-avatar{width:50px;height:50px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:21px;flex-shrink:0}
+.ig-name{font-weight:700;font-size:.95rem}
+.ig-handle{font-size:.78rem;color:var(--muted)}
+.ig-desc{font-size:.8rem;color:rgba(255,255,255,.6);line-height:1.5;margin-bottom:12px}
+.ig-follow{display:inline-flex;align-items:center;gap:7px;border:1px solid rgba(232,119,34,.3);border-radius:7px;padding:8px 16px;font-size:.78rem;font-weight:700;letter-spacing:.04em;color:var(--orange)}
+
+/* ─── KEEP LEARNING ─── */
+.learn-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:24px}
+@media(max-width:600px){.learn-grid{grid-template-columns:1fr}}
+.learn-card{background:rgba(255,255,255,.03);border:1px solid var(--border);border-radius:12px;padding:20px 22px}
+.learn-eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--orange);margin-bottom:6px}
+.learn-card h3{font-size:1rem;font-weight:700;margin-bottom:6px}
+.learn-card p{font-size:.82rem;color:var(--muted);line-height:1.5;margin-bottom:14px}
+.learn-link{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:11px 14px;font-size:.85rem;font-weight:600;margin-bottom:9px;transition:border-color .2s}
+.learn-link:hover{border-color:rgba(232,119,34,.4)}
 </style>
 </head>
 <body>
@@ -167,8 +216,18 @@ footer a{color:var(--muted);text-decoration:underline}
     <h2>Book Your <span>Free Business Audit Call</span></h2>
     <p class="lead">Get a live diagnostic with an IFCA advisor. We'll map your #1 constraint, build your custom 90-day LTV plan, and show you exactly how to implement the re-sign system in your business — on the house.</p>
 
+    <!-- PROMINENT CTA, MOVED UP -->
+    <div class="big-cta-wrap">
+      <div class="spots-banner">⚡ <strong>Limited spots available</strong> — first 5 action takers get <strong>$2,500 off</strong></div>
+      <br/>
+      <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="big-cta" target="_blank">
+        👉 Click Here to Book Your Free Audit Call →
+      </a>
+      <p class="big-cta-note">2-min application · No credit card · Just a real conversation</p>
+      <p style="font-size:.9rem;color:rgba(255,255,255,.78);max-width:560px;margin:20px auto 0;line-height:1.55">Plus, get access to the following bonuses — <strong style="color:var(--orange)">reserved for workshop attendees only, for a limited time:</strong></p>
+    </div>
+
     <div class="cta-card">
-      <p style="font-size:.8rem;color:var(--orange);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px">⚡ Limited Spots Available — Act Fast</p>
       <div class="deadline-banner">
         <strong>First 5 action takers</strong> who book a call and enroll get <strong>$2,500 off</strong> — beyond that, <strong>$1,500 off</strong> for everyone else from this workshop
       </div>
@@ -244,10 +303,52 @@ footer a{color:var(--muted);text-decoration:underline}
         </div>
       </div>
 
-      <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="btn-primary">
-        Click Here to Fill Out Your Short Application &amp; Book a Call with Our Expert Advisory Team →
-      </a>
-      <p class="btn-note">2-min application · No credit card · Just a real conversation</p>
+      <div class="big-cta-wrap" style="margin-top:8px">
+        <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="big-cta" target="_blank">
+          👉 Fill Out Your Short Application &amp; Book a Call →
+        </a>
+        <p class="big-cta-note">2-min application · No credit card · Just a real conversation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREE TOOLS & RESOURCES (moved up, right under the bonuses/CTA) -->
+<section class="resources-section section" id="resources">
+  <div class="section-inner-wide">
+    <div style="text-align:center;margin-bottom:8px">
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Free Bonus Resources</span>
+    </div>
+    <h2 style="text-align:center;margin-bottom:10px">Your <span>Free Tools</span> from Tonight</h2>
+    <p style="text-align:center;color:var(--muted);font-size:.95rem;max-width:580px;margin:0 auto 8px">Everything Jordan walked through tonight — yours to download and implement immediately. Just click to access each one.</p>
+
+    <div class="tools-list">
+      <div class="tool-row">
+        <div class="tool-icon">📊</div>
+        <div class="tool-body">
+          <h3>FIT-BIZ Calculator</h3>
+          <p>Reverse-engineer your revenue goal. Plug in your front-end price, back-end price, and close rate — and instantly see how many clients, leads, and calls you need per month.</p>
+        </div>
+        <a href="https://docs.google.com/spreadsheets/d/1Ur8nGdc9eq8vjhMuvvx_oIwB857DlHBNcQMMzYnUJkE/copy" target="_blank" class="tool-cta">Click to Access →</a>
+      </div>
+
+      <div class="tool-row">
+        <div class="tool-icon">📝</div>
+        <div class="tool-body">
+          <h3>LTV Method Re-Sign Script</h3>
+          <p>The exact word-for-word script to re-sign clients from your front-end offer into your back-end program. The single highest-ROI conversation you can have in your business.</p>
+        </div>
+        <a href="https://docs.google.com/document/d/10NzAGYFn6c3idwcKHbb2T7SkJX6wRsERp79mcurdKn4/copy" target="_blank" class="tool-cta">Click to Access →</a>
+      </div>
+
+      <div class="tool-row">
+        <div class="tool-icon">🎯</div>
+        <div class="tool-body">
+          <h3>LTV Method Slide Deck</h3>
+          <p>The complete slide deck from tonight's workshop — the full LTV framework, offer structure flowchart, client naming examples, and the architecture upgrade list.</p>
+        </div>
+        <a href="https://docs.google.com/presentation/d/12p7FFJH4XFoss2BwFkwEBRZ20P5fruGyXHvMQ1uafXY/copy" target="_blank" class="tool-cta">Click to Access →</a>
+      </div>
     </div>
   </div>
 </section>
@@ -289,60 +390,124 @@ footer a{color:var(--muted);text-decoration:underline}
   </div>
 </section>
 
-<!-- FREE TOOLS & RESOURCES -->
-<section class="resources-section section" id="resources">
+<!-- WHAT OUR STUDENTS SAY: TRUSTPILOT + TESTIMONIAL VIDEOS -->
+<section class="section" style="background:#0d1e2e;border-top:1px solid var(--border)">
   <div class="section-inner-wide">
     <div style="text-align:center;margin-bottom:8px">
-      <span style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Free Bonus Resources</span>
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">What Our Students Say</span>
     </div>
-    <h2 style="text-align:center;margin-bottom:10px">Your <span>Free Tools</span> from Tonight</h2>
-    <p style="text-align:center;color:var(--muted);font-size:.95rem;max-width:580px;margin:0 auto 32px">Everything Jordan walked through tonight — yours to download and implement immediately.</p>
+    <h2 style="text-align:center;margin-bottom:24px">Real Coaches. <span>Real Results.</span></h2>
 
-    <div class="resource-grid">
-      <div class="resource-card">
-        <div class="resource-thumb">📊</div>
-        <div class="resource-body">
-          <h3>FIT-BIZ Calculator</h3>
-          <p>Reverse-engineer your revenue goal. Plug in your front-end price, back-end price, and close rate — and instantly see how many clients, leads, and calls you need per month.</p>
-          <a href="https://docs.google.com/spreadsheets/d/1Ur8nGdc9eq8vjhMuvvx_oIwB857DlHBNcQMMzYnUJkE/copy" target="_blank" class="resource-btn">Make a Copy →</a>
-        </div>
+    <!-- Trustpilot scrolling carousel -->
+    <div class="tp-wrap">
+      <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+      <div class="trustpilot-widget" data-locale="en-US" data-template-id="539ad60defb9600b94d7df2c" data-businessunit-id="6438440785b039aeec26ef27" data-style-height="520px" data-style-width="100%" data-token="1c019716-91bc-41d5-b22e-3ab7b0f11769" data-stars="4,5" data-review-languages="en" data-review-disclaimer="true">
+        <a href="https://www.trustpilot.com/review/impactcoachacademy.com" target="_blank" rel="noopener">Trustpilot</a>
       </div>
+    </div>
 
-      <div class="resource-card">
-        <div class="resource-thumb">📝</div>
-        <div class="resource-body">
-          <h3>LTV Method Re-Sign Script</h3>
-          <p>The exact word-for-word script to re-sign clients from your front-end offer into your back-end program. The single highest-ROI conversation you can have in your business.</p>
-          <a href="https://docs.google.com/document/d/10NzAGYFn6c3idwcKHbb2T7SkJX6wRsERp79mcurdKn4/copy" target="_blank" class="resource-btn">Make a Copy →</a>
-        </div>
+    <!-- Testimonial videos -->
+    <h3 style="text-align:center;font-size:1.3rem;font-weight:800;margin:38px 0 6px">Hear What Our Students Have to Say</h3>
+    <p style="text-align:center;color:var(--muted);font-size:.9rem;max-width:560px;margin:0 auto 6px">Real coaches sharing what changed once they implemented the system.</p>
+    <div class="testi-grid">
+      <div class="testi-cell">
+        <iframe src="https://player.vimeo.com/video/1187506650?badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Student Testimonial"></iframe>
       </div>
-
-      <div class="resource-card">
-        <div class="resource-thumb">🎯</div>
-        <div class="resource-body">
-          <h3>LTV Method Slide Deck</h3>
-          <p>The complete slide deck from tonight's workshop — the full LTV framework, offer structure flowchart, client naming examples, and the architecture upgrade list.</p>
-          <a href="https://docs.google.com/presentation/d/12p7FFJH4XFoss2BwFkwEBRZ20P5fruGyXHvMQ1uafXY/copy" target="_blank" class="resource-btn">Make a Copy →</a>
-        </div>
+      <div class="testi-cell">
+        <iframe src="https://player.vimeo.com/video/1187506709?badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Student Testimonial"></iframe>
+      </div>
+      <div class="testi-cell">
+        <iframe src="https://player.vimeo.com/video/1187506545?badge=0&autopause=0&player_id=0&app_id=58479" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" title="Student Testimonial"></iframe>
       </div>
     </div>
   </div>
 </section>
 
-<!-- FINAL CTA -->
+<!-- INSTAGRAM FOLLOW -->
 <section class="section" style="background:#0a1825;border-top:1px solid var(--border)">
-  <div class="section-inner" style="text-align:center">
-    <h2>Ready to Implement the <span>LTV Method</span> in Your Business?</h2>
-    <p style="color:var(--muted);font-size:.95rem;max-width:540px;margin:14px auto 32px">The math is simple. You don't need more leads. You need a better offer structure, a back-end program, and a re-sign system. We'll build it with you.</p>
-    <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="btn-primary" style="display:inline-block;width:auto">
-      Fill Out Your Application &amp; Book a Call →
-    </a>
-    <p class="btn-note" style="margin-top:12px">2-minute application · Zero obligation · First 5 get $2,500 off</p>
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:8px">
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Follow Us on Instagram</span>
+    </div>
+    <h2 style="text-align:center;margin-bottom:6px">Stay <span>Connected</span></h2>
+    <p style="text-align:center;color:var(--muted);font-size:.9rem;max-width:560px;margin:0 auto">Daily content, behind-the-scenes, client wins, and free frameworks dropped every week.</p>
+    <div class="ig-grid">
+      <a href="https://www.instagram.com/taelerdehaes/" target="_blank" class="ig-card">
+        <div class="ig-head">
+          <div class="ig-avatar" style="background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888)">💪</div>
+          <div>
+            <div class="ig-name">Taeler De Haes</div>
+            <div class="ig-handle">@taelerdehaes</div>
+          </div>
+        </div>
+        <div class="ig-desc">Your workshop co-host — offer frameworks, mindset, and behind-the-scenes of building a coaching business.</div>
+        <div class="ig-follow">❤️ Follow @taelerdehaes</div>
+      </a>
+
+      <a href="https://www.instagram.com/impactfitnesscoachingacademy/" target="_blank" class="ig-card">
+        <div class="ig-head">
+          <div class="ig-avatar" style="background:linear-gradient(135deg,#E87722,#c0510a)">🏋️</div>
+          <div>
+            <div class="ig-name">Impact Fitness Coaching Academy</div>
+            <div class="ig-handle">@impactfitnesscoachingacademy</div>
+          </div>
+        </div>
+        <div class="ig-desc">Client wins, free trainings, and every tool IFCA uses to help coaches scale to 6 &amp; 7 figures.</div>
+        <div class="ig-follow">❤️ Follow @impactfitnesscoachingacademy</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="cta-section section" style="border-top:1px solid var(--border)">
+  <div class="section-inner">
+    <div class="cta-card">
+      <p style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange);margin-bottom:12px">What Happens Next</p>
+      <h2 style="margin-bottom:10px">Ready to Implement the <span>LTV Method</span> in Your Business?</h2>
+      <p style="color:var(--muted);font-size:.95rem;max-width:540px;margin:0 auto 8px">No pressure. No obligation. Just a real conversation about your business — and whether IFCA is the right fit to accelerate your growth.</p>
+
+      <div class="big-cta-wrap">
+        <div class="spots-banner">⚡ <strong>Limited spots available</strong> — first 5 action takers get <strong>$2,500 off</strong></div>
+        <br/>
+        <a href="https://www.impactcoachacademy.com/apply-viralcontentworkshop" class="big-cta" target="_blank">
+          👉 Click Here to Book Your Free Audit Call →
+        </a>
+        <p class="big-cta-note">2-minute application · Zero obligation · Just a conversation</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- KEEP LEARNING -->
+<section class="section" style="background:#0d1e2e;border-top:1px solid var(--border)">
+  <div class="section-inner">
+    <div style="text-align:center;margin-bottom:8px">
+      <span style="font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--orange)">Keep Learning</span>
+    </div>
+    <h2 style="text-align:center;margin-bottom:6px">While You Prep for <span>Your Call</span></h2>
+    <p style="text-align:center;color:var(--muted);font-size:.9rem;max-width:560px;margin:0 auto">Dive into the podcast and YouTube channel — basically a free fitness business MBA. No tuition, no gatekeeping.</p>
+    <div class="learn-grid">
+      <div class="learn-card">
+        <div class="learn-eyebrow">Podcast</div>
+        <h3>The Fitness Business Podcast</h3>
+        <p>Jordan &amp; Erin break down every system and framework that built IFCA — 738 episodes and counting. 4.9 stars, 166 reviews.</p>
+        <a href="https://podcasts.apple.com/us/podcast/the-fitness-business-podcast-with-erin-dimond/id1431786884" target="_blank" class="learn-link">🍎 Listen on Apple Podcasts</a>
+        <a href="https://open.spotify.com/show/78IMkwtdbpHnv7Sal7fGBE?si=73dcbbdfe5e24ce1" target="_blank" class="learn-link">🟢 Listen on Spotify</a>
+      </div>
+      <div class="learn-card">
+        <div class="learn-eyebrow">YouTube</div>
+        <h3>Jordan Dugger — @jordandugger</h3>
+        <p>Deep dives on offer creation, paid ads, and scaling systems. Start with the fan favorites below.</p>
+        <a href="https://youtu.be/KNqBbG9YFrI?si=yaBygELWUpkDxy_w" target="_blank" class="learn-link">▶️ First 10 Clients with No Following</a>
+        <a href="https://youtube.com/@jordandugger?si=h71yorsusgoLZIFh" target="_blank" class="learn-link">▶️ Browse All Videos on the Channel</a>
+      </div>
+    </div>
   </div>
 </section>
 
 <footer>
-  <p>IFCA · Impact Fitness Coaching Academy · Jordan Dugger & Taeler De Haes</p>
+  <p>IFCA · Impact Fitness Coaching Academy · Jordan Dugger &amp; Taeler De Haes</p>
   <p style="margin-top:6px"><a href="https://www.impactcoachacademy.com">impactcoachacademy.com</a> · Private replay page · Registered attendees only</p>
 </footer>
 
